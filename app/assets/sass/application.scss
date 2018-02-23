@@ -208,9 +208,9 @@ $input-border-color:$grey;
 @import 'webchat';
 
 //-PROJECT SPECIFIC
-@import 'styleguide';//not needed for live site
+@import 'design-system';//not needed for live site
 @import 'sticky-nav';//not currently needed for live site
-@import 'modern-gov'; //not needed for live site
+//@import 'modern-gov'; //not needed for live site
 
 @import 'leedsgov-specific';
 @import 'leedsgov-overrides';
