@@ -1,0 +1,77 @@
+{% extends "design-system-page-layout-landing.html" %}
+
+{% set section_id = "home" %} <!-- Section id var for main nav --> 
+{% set page_title = "Home" %} <!-- Page title var for page header (H1) and page title -->       
+
+{% block sectionOneTop %}
+<style>
+    .main-nav {
+        background:#ffffff;
+    }
+    .sectionOne{
+        background:#f5f5f6;
+    }
+</style>
+<section class="section-brand hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-8 hero-content">
+                <h1>LEEDS.GOV.UK <span>DESIGN SYSTEM</span></h1>
+                <p>Use these styles, components and patterns to make all Leeds City Council services consistent with LEEDS.GOV.UK</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block sectionLeftHandColumn %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+{% endblock %}
+
+{% block sectionOneFull %}
+<h1 class="sr-only">LEEDS.GOV.UK Design System Home</h1>
+<div class="groupPromo home three">
+    <div class="listWebpart">
+        <ul>
+            <li>
+                <a href="/design-system/styles">
+                    <h3>Styles</h3>	                
+                    <p>Guides for applying layout, typography, color and images.</p>	   
+                </a>
+            </li>
+            <li>
+                <a href="/design-system/components">
+                    <h3>Components</h3>	                
+                    <p>Re-usable, accessible components for forms, navigation, panels and more.</p>		   
+                </a>
+            </li>
+            <li>
+                <a href="/design-system/patterns">
+                    <h3>Patterns</h3>	                
+                    <p>Common tasks like entering names and addresses and filling in forms.</p>		   
+                </a>
+            </li>
+        </ul>
+    </div>
+</div> 
+
+<!-- <div class="box-layout main">
+    <div class="box-layout-item">
+        <h3>Styles</h3>	                
+        <p>Guides for applying layout, typography, color and images.</p>
+        <a href="/design-system/styles">Browse styles</a>	
+    </div>
+    <div class="box-layout-item">
+        <h3>Components</h3>	                
+        <p>Re-usable, accessible components for forms, navigation, panels and more.</p>	
+        <a href="/design-system/components">Browse components</a>	
+    </div>
+    <div class="box-layout-item">
+        <h3>Patterns</h3>	                
+        <p>Common tasks like entering names and addresses and filling in forms.</p>		
+        <a href="/design-system/patterns">Browse patterns</a>	
+    </div>
+</div>-->
+{% endblock %}

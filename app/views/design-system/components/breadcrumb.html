@@ -1,0 +1,46 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "breadcrumb" %} <!-- Page id var for side nav --> 
+{% set page_title = "Breadcrumb" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">The user needs to know their location in the website's hierarchical structure in order to possibly browse back to a higher level in the hierarchy.</p>
+</div>
+
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#breadcrumb-overview">Overview</a></li>
+        <li><a href="#sharepoint">SharePoint guidance</a></li>
+    </ul>
+</div>
+
+<div class="text">
+
+</div>
+<div class="example">
+
+</div>
+<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for breadcrumb</span></h3>
+<pre>
+    <code class="line-numbers language-markup">
+
+    </code>
+</pre>
+
+<div class="text">
+    <h2 class="heading-large" id="sharepoint">SharePoint guidance</h2>
+    <p>Sharepoint instructions to go here...</p>
+</div>
+
+{% endblock %}

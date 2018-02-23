@@ -1,0 +1,89 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "alerts" %} <!-- Page id var for side nav --> 
+{% set page_title = "Alerts" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead"></p>
+</div>
+
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#alerts-emergencey-message">Emergencey message</a></li>
+        <li><a href="#alerts-announcement">Announcement</a></li>
+        <li><a href="#sharepoint">SharePoint guidance</a></li>
+    </ul>
+</div>
+
+
+<h2 id="alerts-emergencey-message" class="heading-large top">Emergency message</h2>
+<div class="example">
+  <div class="alert alert-warning alert-dismissible" role="alert">
+    <div class="container-fluid">
+      <div class="alertInner"><button href="#" type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        <h2>Emergency message header</h2>
+        <p>Here's where the information goes</p>
+        <a class="btn btn-default" href="#">Link</a>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for emergencey message</span></h3>
+<pre>
+    <code class="line-numbers language-markup">
+        &lt;div class="alert alert-warning alert-dismissible" role="alert">
+          &lt;div class="container-fluid">
+            &lt;div class="alertInner">&lt;button href="#" type="button" class="close" data-dismiss="alert" aria-label="Close">&lt;span class="glyphicon glyphicon-remove" aria-hidden="true">&lt;/span>&lt;/button>
+              &lt;h2>Emergency message header&lt;/h2>
+              &lt;p>Here's where the information goes&lt;/p>
+              &lt;a class="btn btn-default" href="#">Link&lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+    </code>
+</pre>
+
+<h2 id="alerts-announcement" class="heading-large">Announcement</h2>
+<div class="example">
+  <div class="alert alert-info alert-dismissible" role="alert">
+    <div class="container-fluid">
+      <div class="alertInner"><button href="#" type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        <h2>Announcement header</h2>
+        <p>Here's where the information goes</p>
+        <a class="btn btn-default" href="#">Link</a>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for announcement</span></h3>
+<pre>
+    <code class="line-numbers language-markup">
+        &lt;div class="alert alert-info alert-dismissible" role="alert">
+          &lt;div class="container-fluid">
+            &lt;div class="alertInner">&lt;button href="#" type="button" class="close" data-dismiss="alert" aria-label="Close">&lt;span class="glyphicon glyphicon-remove" aria-hidden="true">&lt;/span>&lt;/button>
+              &lt;h2>Announcement header&lt;/h2>
+              &lt;p>Here's where the information goes&lt;/p>
+              &lt;a class="btn btn-default" href="#">Link&lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+    </code>
+</pre>
+
+<div class="text">
+    <h2 class="heading-large" id="sharepoint">SharePoint guidance</h2>
+    <p>Sharepoint instructions to go here...</p>
+</div>
+
+{% endblock %}

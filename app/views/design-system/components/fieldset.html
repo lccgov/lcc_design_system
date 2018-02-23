@@ -1,0 +1,81 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "fieldset" %} <!-- Page id var for side nav --> 
+{% set page_title = "Fieldset" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">Use fieldsets to group related form controls. The first element inside a fieldset must be a <code class="code">legend</code> element which describes the group.</p>
+</div>
+
+<div class="text">
+    <div role="note" aria-label="Information" class="text-highlight">
+        <p>Any general text which is important for filling in the form and cannot be put into a <a href="/design-system/components/labels#hint-text">hint</a>, should be in that legend (as shown in the <a href="#example">checkbox example</a>). But the legend shouldn't be too long either.</p>
+    </div>
+</div>
+<div id="example" class="example">
+    <h1 class="heading-medium">What bins do you currently have?</h1>
+    <p>Select all that apply</p>
+    <form>
+        <div class="form-group">
+            <fieldset>
+                <legend class="sr-only">What bins do you currently have?</legend>
+                <label class="block-label" for="waste-type-1" data-target="waste-type-1">
+                    <input type="checkbox" id="waste-type-1" name="waste-types" value="Black bin (General waste)" aria-controls="waste-type-1" aria-expanded="false">
+                    Black bin (General waste)
+                </label>
+                <label class="block-label" for="waste-type-2" data-target="waste-type-2">
+                    <input type="checkbox" id="waste-type-2" name="waste-types" value="Brown bin (Garden waste)" aria-controls="waste-type-2" aria-expanded="false">
+                    Brown bin (Garden waste)
+                </label>
+                <label class="block-label" for="waste-type-3" data-target="waste-type-3">
+                    <input type="checkbox" id="waste-type-3" name="waste-types" value="Green bin (Recycling)" aria-controls="waste-type-3" aria-expanded="false">
+                    Green bin (Recycling)
+                </label>
+            </fieldset>
+        </div>
+    </form>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for fieldset</span></h3>
+    <pre>
+        <code id="snippet-fieldset" class="line-numbers language-markup">
+            &lt;h1 class="heading-medium">What bins do you currently have?&lt;/h1>
+            &lt;p>Select all that apply&lt;/p>
+            &lt;form>
+                &lt;div class="form-group">
+                    &lt;fieldset>
+                        &lt;legend class="sr-only">What bins do you currently have?&lt;/legend>
+                        &lt;label class="block-label" for="waste-type-1" data-target="waste-type-1">
+                            &lt;input type="checkbox" id="waste-type-1" name="waste-types" value="Black bin (General waste)" aria-controls="waste-type-1" aria-expanded="false">
+                            Black bin (General waste)
+                        &lt;/label>
+                        &lt;label class="block-label" for="waste-type-2" data-target="waste-type-2">
+                            &lt;input type="checkbox" id="waste-type-2" name="waste-types" value="Brown bin (Garden waste)" aria-controls="waste-type-2" aria-expanded="false">
+                            Brown bin (Garden waste)
+                        &lt;/label>
+                        &lt;label class="block-label" for="waste-type-3" data-target="waste-type-3">
+                            &lt;input type="checkbox" id="waste-type-3" name="waste-types" value="Green bin (Recycling)" aria-controls="waste-type-3" aria-expanded="false">
+                            Green bin (Recycling)
+                        &lt;/label>
+                    &lt;/fieldset>
+                &lt;/div>
+            &lt;/form>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-fieldset">
+        Copy <span class="sr-only">HTML snippet for fieldset"</span>
+    </button>
+</div>
+
+
+{% endblock %}

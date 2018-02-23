@@ -1,0 +1,723 @@
+{% extends "page-layout-styleguide.html" %}
+
+{% block page_title %}
+	Panels
+{% endblock %}
+
+
+  {% block css_register %}
+    <script src="https://use.typekit.net/pws7qio.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link href="{{ asset_path }}stylesheets/application.css" rel="stylesheet">
+   {% endblock %}
+
+{% block additional_page_scripts %}
+    <script src="/public/javascripts/prism.js" type="text/javascript"></script>  
+{% endblock %}  
+ 
+
+{% block header %}
+Panels
+{% endblock %}
+
+ {% block main_nav %}
+  {% include "includes/main_nav.html" %}
+ {% endblock %}
+
+
+
+ {% block sectionOneTop %}
+{% endblock %} 
+
+{% block sectionOneFull%}
+{% endblock %}
+
+
+ {% block breadcrumb %}
+  {% include "includes/breadcrumb_sp.html" %}
+ {% endblock %}
+
+{% block sectionOneContent %}
+{% endblock %}
+
+{% block pageContent %}
+
+
+{% endblock %}
+
+{% block sectionOneFullBottom %}
+{% endblock %}
+
+{% block sectionOneRightHandColumn %}
+
+{% endblock %}
+
+{% block sectionLeftHandColumn %}
+<div id="sticky-anchor"></div>
+<div id="sticky" class="secondary-nav">
+    <a href="/design-system/styleguide" class="link-back">Back to style guide</a>
+    <h3 class="heading-xsmall heading-contents">Contents:</h3>
+    <ul class="list list-contents">
+        <li><a href="#panel-text">Panel text</a></li>
+        <li><a href="#panel-border">Panel border</a></li>
+        <li><a href="#panel-alternative-color">Panel alternative colour</a></li>
+        <li><a href="#panel-image">Panel image</a></li>
+        <li><a href="#panel-quote">Panel quote</a></li>
+        <li><a href="#panel-quote-and-image">Panel quote and image</a></li>
+        <li><a href="#panel-event">Panel event</a></li>
+        <li><a href="#panel-event-list">Panel event list</a></li>
+        <li><a href="#how-to-use-panel">Using a panel</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="text">
+    <p class="lead">A panel highlights various types of content.</p>
+</div>
+<h2 class="heading-large" id="panel-text">Panel text</h2>
+<div class="example">
+      <div class="panel">
+          <h3>Panel header</h3>
+          <p>This is the body copy of the text panel. You can have <a href="#">links</a> within the copy.</p>
+      </div>
+      <div class="panel">
+          <h3>Panel header (H3)</h3>
+          <p>This is the body copy of the text panel. You can have <a href="#">links</a> within the copy.</p>
+          <a class="btn btn-secondary btn-small">Secondary button small</a>
+      </div>
+      <div class="panel">
+          <h2>Panel header (H2)</h2>
+          <ul class="list list-bullet">
+            <li>here is a bulleted list</li>
+            <li>in tincidunt dolor volutpat</li>
+            <li>est non tempus malesuada</li>
+            <li>imperdiet lorem consequat sit amet</li>
+        </ul>
+          <a class="btn btn-primary btn-arrow">Primary button</a>
+      </div>
+      <div class="panel">
+        <h2>Contact us</h2>
+        <p><strong>Telephone</strong></p>
+        <div class="text-block">
+            <p>0113 222 4404 <br><span class="font-xsmall">(Monday to Friday, 9am to 5pm)</span> </p>
+        </div>
+        <p><strong>Email</strong></p>
+        <div class="text-block">
+            <p><a ref="mailto:council.tax@leeds.gov.uk">council.tax@leeds.gov.uk</a></p>
+        </div>
+        <p><strong>Post</strong></p>
+        <div class="text-block">
+            <p>Leeds City Council, <br>PO Box 60, <br>Leeds <br>LS2 8JR</p>
+        </div>
+        <p><strong>In person</strong></p>
+        <div class="text-block">
+            <p><a ref="#">Find your nearest One Stop Centre</a></p>
+        </div>
+    </div>
+      <div class="code-reveal">
+        <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#panel-text-reveal" aria-expanded="false" aria-controls="panel-text-reveal">
+        See code
+        </a>
+        <div class="collapse exampleCode" id="panel-text-reveal">
+            <pre>
+                <code class="line-numbers language-markup">
+                    &lt;div class="panel">
+                        &lt;h3>Panel header&lt;/h3>
+                        &lt;p>This is the body copy of the text panel. You can have &lt;a href="#">links&lt;/a> within the copy.&lt;/p>
+                    &lt;/div>
+
+                    &lt;div class="panel">
+                        &lt;h3>Panel header (H3)&lt;/h3>
+                        &lt;p>This is the body copy of the text panel. You can have &lt;a href="#">links&lt;/a> within the copy.&lt;/p>
+                        &lt;a class="btn btn-secondary btn-small">Secondary button small&lt;/a>
+                    &lt;/div>
+
+                    &lt;div class="panel">
+                        &lt;h2>Panel header (H2)&lt;/h2>
+                        &lt;ul class="list list-bullet">
+                            &lt;li>here is a bulleted list&lt;/li>
+                            &lt;li>in tincidunt dolor volutpat&lt;/li>
+                            &lt;li>est non tempus malesuada&lt;/li>
+                            &lt;li>imperdiet lorem consequat sit amet&lt;/li>
+                        &lt;/ul>
+                        &lt;a class="btn btn-primary btn-arrow">Primary button&lt;/a>
+                    &lt;/div>
+                    &lt;div class="panel">
+                        &lt;h2>Contact us&lt;/h2>
+                        &lt;p>&lt;strong>Telephone&lt;/strong>&lt;/p>
+                        &lt;div class="text-block">
+                            &lt;p>0113 222 4404 &lt;br>&lt;span class="font-xsmall">(Monday to Friday, 9am to 5pm)&lt;/span> &lt;/p>
+                        &lt;/div>
+                        &lt;p>&lt;strong>Email&lt;/strong>&lt;/p>
+                        &lt;div class="text-block">
+                            &lt;p>&lt;a ref="mailto:council.tax@leeds.gov.uk">council.tax@leeds.gov.uk&lt;/a>&lt;/p>
+                        &lt;/div>
+                        &lt;p>&lt;strong>Post&lt;/strong>&lt;/p>
+                        &lt;div class="text-block">
+                            &lt;p>Leeds City Council, &lt;br>PO Box 60, &lt;br>Leeds &lt;br>LS2 8JR&lt;/p>
+                        &lt;/div>
+                        &lt;p>&lt;strong>In person&lt;/strong>&lt;/p>
+                        &lt;div class="text-block">
+                            &lt;p>&lt;a ref="#">Find your nearest One Stop Centre&lt;/a>&lt;/p>
+                        &lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+<h2 class="heading-large" id="panel-border">Panel border</h2>
+<div class="example">
+      <div class="panel panel-border"><h2>Organisations that offer debt advice</h2><ul class="list list-bullet"><li>
+            <a href="https://www.citizensadvice.org.uk/debt-and-money/" rel="external">Citizens Advice <span class="sr-only">External link</span></a> provides free, independent and confidential advice on debt and money problems</li><li>
+            <a href="http://www.debtadvicefoundation.org/" rel="external">Debt Advice Foundation <span class="sr-only">External link</span></a> offer free, confidential support and advice about debt</li><li>
+            <a href="https://www.moneyadviceservice.org.uk/en" rel="external">The Money Advice Service <span class="sr-only">External link</span></a> is a free and impartial money advice service, set up by the government</li><li>
+            <a href="http://www.leeds.gov.uk/c/Pages/leedsmic/default.aspx" rel="external">The Money Information Centre <span class="sr-only">External link</span></a> provides details of the various organisations and agencies in Leeds that offer free help and advice on money, debt, budgeting, reducing bills and affordable loans</li><li>
+            <a href="https://www.nationaldebtline.org/EW/Pages/default.aspx" rel="external">National Debtline <span class="sr-only">External link</span></a> provides free, impartial and confidential debt advice to people across the UK</li><li>
+            <a href="http://www.stepchange.org/" rel="external">StepChange <span class="sr-only">External link</span></a> offer advice and practical solutions to help people with debt and money problems</li>
+        </ul>
+    </div>
+      <div class="code-reveal">
+        <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#panel-border-reveal" aria-expanded="false" aria-controls="panel-border-reveal">
+        See code
+        </a>
+        <div class="collapse exampleCode" id="panel-border-reveal">
+            <pre>
+                <code class="line-numbers language-markup">
+                    &lt;div class="panel panel-border">
+                        &lt;h2>Organisations that offer debt advice&lt;/h2>
+                        &lt;ul class="list list-bullet">
+                            &lt;li>&lt;a href="https://www.citizensadvice.org.uk/debt-and-money/" rel="external">Citizens Advice &lt;span class="sr-only">External link&lt;/span>&lt;/a> provides free, independent and confidential advice on debt and money problems&lt;/li>
+                            &lt;li>&lt;a href="http://www.debtadvicefoundation.org/" rel="external">Debt Advice Foundation &lt;span class="sr-only">External link&lt;/span>&lt;/a> offer free, confidential support and advice about debt&lt;/li>
+                            &lt;li>&lt;a href="https://www.moneyadviceservice.org.uk/en" rel="external">The Money Advice Service &lt;span class="sr-only">External link&lt;/span>&lt;/a> is a free and impartial money advice service, set up by the government&lt;/li>
+                            &lt;li>&lt;a href="http://www.leeds.gov.uk/c/Pages/leedsmic/default.aspx" rel="external">The Money Information Centre &lt;span class="sr-only">External link&lt;/span>&lt;/a> provides details of the various organisations and agencies in Leeds that offer free help and advice on money, debt, budgeting, reducing bills and affordable loans&lt;/li>
+                            &lt;li>&lt;a href="https://www.nationaldebtline.org/EW/Pages/default.aspx" rel="external">National Debtline &lt;span class="sr-only">External link&lt;/span>&lt;/a> provides free, impartial and confidential debt advice to people across the UK&lt;/li>
+                            &lt;li>&lt;a href="http://www.stepchange.org/" rel="external">StepChange &lt;span class="sr-only">External link&lt;/span>&lt;/a> offer advice and practical solutions to help people with debt and money problems&lt;/li>
+                        &lt;/ul>
+                    &lt;/div>
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+<h2 class="heading-large" id="panel-alternative-color">Panel alternative colour</h2>
+<div class="text">
+    You can use the alternative background colour by adding the class 'alt' to the panel. 
+</div>
+<div class="example">
+      <div class="panel alt">
+          <h3>Panel header for alternative colour</h3>
+          <p>This is the body copy of the text panel. You can have <a href="#">links</a> within the copy.</p>
+          <a class="btn btn-outline btn-small btn-arrow">Panel button text</a>
+      </div>
+      <div class="code-reveal">
+        <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#panel-alternative-color-reveal" aria-expanded="false" aria-controls="panel-alternative-color-reveal">
+        See code
+        </a>
+        <div class="collapse exampleCode" id="panel-alternative-color-reveal">
+            <pre>
+                <code class="line-numbers language-markup">
+                    &lt;div class="panel alt">
+                        &lt;h3>Panel header for alternative colour&lt;/h3>
+                        &lt;p>This is the body copy of the text panel. You can have &lt;a href="#">links&lt;/a> within the copy.&lt;/p>
+                        &lt;a class="btn btn-outline btn-small btn-arrow">Panel button text&lt;/a>
+                    &lt;/div>
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+<h2 class="heading-large" id="panel-image">Panel image</h2>
+<div class="example">
+      <div class="panel img">
+        <div class="img-container right col-md-6" style="background-image: url('/public/images/food-festival-2.jpg');">
+        </div>
+        <div class="col-md-6 content">
+            <h2>Panel with an image</h2>
+            <p>Panel button text with us and a member of our team will get in touch and answer any questions you may have.</p>
+            <a class="btn btn-secondary btn-arrow">Panel button text</a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="panel img alt">
+        <div class="img-container right col-md-6" style="background-image: url('/public/images/food-festival-2.jpg');">
+        </div>
+        <div class="col-md-6 content">
+            <h2>Panel alt with an image</h2>
+            <p>Panel button text with us and a member of our team will get in touch and answer any questions you may have.</p>
+            <a class="btn btn-outline btn-arrow">Panel button text</a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="panel img alt">
+        <div class="img-container col-md-6" style="background-image: url('/public/images/food-festival-2.jpg');">
+        </div>
+        <div class="col-md-6 col-md-offset-6 content">
+            <h3>Image to the left</h3>
+            <p>Panel button text with us and a member of our team will get in touch and answer any questions you may have.</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+      <div class="code-reveal">
+        <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#panel-image-reveal" aria-expanded="false" aria-controls="panel-image-reveal">
+        See code
+        </a>
+        <div class="collapse exampleCode" id="panel-image-reveal">
+            <pre>
+                <code class="line-numbers language-markup">
+                    &lt;div class="panel img">
+                        &lt;div class="img-container right col-md-6" style="background-image: url('/public/images/food-festival-2.jpg');">
+                        &lt;/div>
+                        &lt;div class="col-md-6 content">
+                            &lt;h2>Panel with an image&lt;/h2>
+                            &lt;p>Panel button text with us and a member of our team will get in touch and answer any questions you may have.&lt;/p>
+                            &lt;a class="btn btn-secondary btn-arrow">Panel button text&lt;/a>
+                        &lt;/div>
+                        &lt;div class="clearfix">&lt;/div>
+                    &lt;/div>
+
+                    &lt;div class="panel img alt">
+                        &lt;div class="img-container right col-md-6" style="background-image: url('/public/images/food-festival-2.jpg');">
+                        &lt;/div>
+                        &lt;div class="col-md-6 content">
+                            &lt;h2>Panel alt with an image&lt;/h2>
+                            &lt;p>Panel button text with us and a member of our team will get in touch and answer any questions you may have.&lt;/p>
+                            &lt;a class="btn btn-outline btn-arrow">Panel button text&lt;/a>
+                        &lt;/div>
+                        &lt;div class="clearfix">&lt;/div>
+                    &lt;/div>
+
+                    &lt;div class="panel img alt">
+                        &lt;div class="img-container col-md-6" style="background-image: url('/public/images/food-festival-2.jpg');">
+                        &lt;/div>
+                        &lt;div class="col-md-6 col-md-offset-6 content">
+                            &lt;h3>Image to the left&lt;/h3>
+                            &lt;p>Panel button text with us and a member of our team will get in touch and answer any questions you may have.&lt;/p>
+                        &lt;/div>
+                        &lt;div class="clearfix">&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+<h2 class="heading-large" id="panel-quote">Panel quote</h2>
+<div class="example">
+    <div class="panel">
+        <blockquote>
+            There is no such thing as a typical foster carer - everybody has something to bring in terms of experience and knowledge.
+        </blockquote>
+        <div class="clearfix"></div>
+    </div>
+    <div class="panel panel-border">
+        <blockquote>
+            There is no such thing as a typical foster carer - everybody has something to bring in terms of experience and knowledge.
+            <footer>Larry David</footer>
+        </blockquote>
+        <div class="clearfix"></div>
+    </div>
+    <div class="panel alt">
+        <blockquote>
+            There is no such thing as a typical foster carer - everybody has something to bring in terms of experience and knowledge.
+        </blockquote>
+        <div class="clearfix"></div>
+    </div>
+      <div class="code-reveal">
+        <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#panel-quote-reveal" aria-expanded="false" aria-controls="panel-quote-reveal">
+        See code
+        </a>
+        <div class="collapse exampleCode" id="panel-quote-reveal">
+            <pre>
+                <code class="line-numbers language-markup">
+                    &lt;div class="panel">
+                        &lt;blockquote>
+                            There is no such thing as a typical foster carer - everybody has something to bring in terms of experience and knowledge.
+                        &lt;/blockquote>
+                        &lt;div class="clearfix">&lt;/div>
+                    &lt;/div>
+
+                    &lt;div class="panel panel-border">
+                        &lt;blockquote>
+                            There is no such thing as a typical foster carer - everybody has something to bring in terms of experience and knowledge.
+                            &lt;footer>Larry David&lt;/footer>
+                        &lt;/blockquote>
+                        &lt;div class="clearfix">&lt;/div>
+                    &lt;/div>
+
+                    &lt;div class="panel alt">
+                        &lt;blockquote>
+                            There is no such thing as a typical foster carer - everybody has something to bring in terms of experience and knowledge.
+                        &lt;/blockquote>
+                        &lt;div class="clearfix">&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+<h2 class="heading-large" id="panel-quote-and-image">Panel quote with an image</h2>
+<div class="example">
+    <div class="panel img">
+        <div class="img-container right col-md-6" style="background-image: url('/public/images/food-festival-2.jpg');">
+        </div>
+        <div class="col-md-6 content">
+            <blockquote>
+                There is no such thing as a typical foster carer - everybody has something to bring in terms of experience and knowledge.
+            </blockquote>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+      <div class="panel img alt">
+        <div class="img-container right col-md-6" style="background-image: url('/public/images/food-festival-2.jpg');">
+        </div>
+        <div class="col-md-6 content">
+            <blockquote>
+                There is no such thing as a typical foster carer - everybody has something to bring in terms of experience and knowledge.
+            </blockquote>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="panel img alt">
+        <div class="img-container col-md-6" style="background-image: url('/public/images/food-festival-2.jpg');">
+        </div>
+        <div class="col-md-6 col-md-offset-6 content">
+            <blockquote>
+                There is no such thing as a typical foster carer - everybody has something to bring in terms of experience and knowledge.
+            </blockquote>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+      <div class="code-reveal">
+        <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#panel-quote-and-image-reveal" aria-expanded="false" aria-controls="panel-quote-and-image-reveal">
+        See code
+        </a>
+        <div class="collapse exampleCode" id="panel-quote-and-image-reveal">
+            <pre>
+                <code class="line-numbers language-markup">
+                    &lt;div class="panel img">
+                        &lt;div class="img-container right col-md-6" style="background-image: url('/public/images/food-festival-2.jpg');">
+                        &lt;/div>
+                        &lt;div class="col-md-6 content">
+                            &lt;blockquote>
+                                There is no such thing as a typical foster carer - everybody has something to bring in terms of experience and knowledge.
+                            &lt;/blockquote>
+                        &lt;/div>
+                        &lt;div class="clearfix">&lt;/div>
+                    &lt;/div>
+
+                    &lt;div class="panel img alt">
+                        &lt;div class="img-container right col-md-6" style="background-image: url('/public/images/food-festival-2.jpg');">
+                        &lt;/div>
+                        &lt;div class="col-md-6 content">
+                            &lt;blockquote>
+                                There is no such thing as a typical foster carer - everybody has something to bring in terms of experience and knowledge.
+                            &lt;/blockquote>
+                        &lt;/div>
+                        &lt;div class="clearfix">&lt;/div>
+                    &lt;/div>
+
+                    &lt;div class="panel img alt">
+                        &lt;div class="img-container col-md-6" style="background-image: url('/public/images/food-festival-2.jpg');">
+                        &lt;/div>
+                        &lt;div class="col-md-6 col-md-offset-6 content">
+                            &lt;blockquote>
+                                There is no such thing as a typical foster carer - everybody has something to bring in terms of experience and knowledge.
+                            &lt;/blockquote>
+                        &lt;/div>
+                        &lt;div class="clearfix">&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+<h2 class="heading-large" id="panel-event">Panel event</h2>
+<div class="example">
+    <div class="panel img panel-event">
+        <div class="img-container col-sm-6 col-md-3" style="background-image: url('/public/images/food-festival-2.jpg');">
+        </div>
+        <div class="col-sm-6 col-sm-offset-6 col-md-offset-3 col-md-3 panel-event-date">
+            <div class="panel-event-date-wrapper">
+                <p aria-hidden="true" class="panel-event-date-details">
+                    <span>WED</span>
+                    <span class="big-number">6</span>
+                    <span>DEC 2017</span>
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-md-offset-6 content panel-event-content">
+            <h3 class="panel-event-title">Fostering children with complex needs / disabilities</h3>
+            <p class="panel-event-description">Free on-site parking</p>
+            <div class="panel-event-info">
+                <p class="panel-event-info-location"><strong>Location</strong> <a href="https://www.google.co.uk/maps/place/Village+Hotel+Leeds+North/@53.834195,-1.589756,15z/data=!4m5!3m4!1s0x0:0xf7d7911c75845ff6!8m2!3d53.834195!4d-1.589756">Village Hotel North, 186 Otley Rd, Headingley, Leeds LS16 5PR <span class="sr-only">Get directions. External link.</span></a></p>
+                <p class="panel-event-info-time"><strong>Time</strong> 6pm to 8:30pm</p>
+                <p class="panel-event-info-date"><strong>Date</strong> Wednesday 6th December 2017</p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+      <div class="code-reveal">
+        <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#panel-event-reveal" aria-expanded="false" aria-controls="panel-event-reveal">
+        See code
+        </a>
+        <div class="collapse exampleCode" id="panel-event-reveal">
+            <pre>
+                <code class="line-numbers language-markup">
+                    &lt;div class="panel img panel-event">
+                        &lt;div class="img-container col-sm-6 col-md-3" style="background-image: url('/public/images/food-festival-2.jpg');">
+                        &lt;/div>
+                        &lt;div class="col-sm-6 col-sm-offset-6 col-md-offset-3 col-md-3 panel-event-date">
+                            &lt;div class="panel-event-date-wrapper">
+                                &lt;p aria-hidden="true" class="panel-event-date-details">
+                                    &lt;span>WED&lt;/span>
+                                    &lt;span class="big-number">6&lt;/span>
+                                    &lt;span>DEC 2017&lt;/span>
+                                &lt;/p>
+                            &lt;/div>
+                        &lt;/div>
+                        &lt;div class="col-sm-12 col-md-6 col-md-offset-6 content panel-event-content">
+                            &lt;h3 class="panel-event-title">Fostering children with complex needs / disabilities&lt;/h3>
+                            &lt;p class="panel-event-description">Free on-site parking&lt;/p>
+                            &lt;div class="panel-event-info">
+                                &lt;p class="panel-event-info-location">&lt;strong>Location&lt;/strong> &lt;a href="https://www.google.co.uk/maps/place/Village+Hotel+Leeds+North/@53.834195,-1.589756,15z/data=!4m5!3m4!1s0x0:0xf7d7911c75845ff6!8m2!3d53.834195!4d-1.589756">Village Hotel North, 186 Otley Rd, Headingley, Leeds LS16 5PR &lt;span class="sr-only">Get directions. External link.&lt;/span>&lt;/a>&lt;/p>
+                                &lt;p class="panel-event-info-time">&lt;strong>Time&lt;/strong> 6pm to 8:30pm&lt;/p>
+                                &lt;p class="panel-event-info-date">&lt;strong>Date&lt;/strong> Wednesday 6th December 2017&lt;/p>
+                            &lt;/div>
+                        &lt;/div>
+                        &lt;div class="clearfix">&lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+<h2 class="heading-large" id="panel-event-list">Panel event list</h2>
+<div class="example">
+            <div class="panel-event-list">
+        <h2>Events</h2>
+        <p class="text">Come along and have a coffee with one of our foster carers and a member of staff from the recruitment team, they can anser all your questions.</p>
+        <div class="panel img panel-event">
+        <div class="img-container col-sm-6 col-md-3" style="background-image: url('/public/images/food-festival-2.jpg');">
+        </div>
+        <div class="col-sm-6 col-sm-offset-6 col-md-offset-3 col-md-3 panel-event-date">
+            <div class="panel-event-date-wrapper">
+                <p class="panel-event-date-details">
+                    <span>TUES</span>
+                    <span class="big-number">27</span>
+                    <span>OCT 2017</span>
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-md-offset-6 content panel-event-content">
+            <h3 class="panel-event-title">Information event</h3>
+            <p class="panel-event-description">Event space area at the bottom of the indoor market, near the food outlets</p>
+            <div class="panel-event-info">
+                <p class="panel-event-info-location"><strong>Location</strong> <a href="https://www.google.co.uk/maps/place/Leeds+Kirkgate+Market,+Kirkgate,+Leeds+LS2/@53.7971889,-1.5410197,17z/data=!3m1!4b1!4m5!3m4!1s0x48795c19fbb16a6b:0x6a81ca2e80255197!8m2!3d53.7972642!4d-1.5387237">Leeds Kirkgate Market <span class="sr-only">Get directions. External link.</span></a></p>
+                <p class="panel-event-info-time"><strong>Time</strong> Drop in from 11am to 3pm</p>
+                <p class="panel-event-info-date"><strong>Date</strong> Tuesday 27th October 2017</p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="panel img panel-event">
+        <div class="img-container col-sm-6 col-md-3" style="background-image: url('/public/images/food-festival-2.jpg');">
+        </div>
+        <div class="col-sm-6 col-sm-offset-6 col-md-offset-3 col-md-3 panel-event-date">
+            <div class="panel-event-date-wrapper">
+                <p class="panel-event-date-details">
+                    <span>WED</span>
+                    <span class="big-number">6</span>
+                    <span>DEC 2017</span>
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-md-offset-6 content panel-event-content">
+            <h3 class="panel-event-title">Fostering children with complex needs / disabilities</h3>
+            <p class="panel-event-description">Free on-site parking</p>
+            <div class="panel-event-info">
+                <p class="panel-event-info-location"><strong>Location</strong> <a href="https://www.google.co.uk/maps/place/Village+Hotel+Leeds+North/@53.834195,-1.589756,15z/data=!4m5!3m4!1s0x0:0xf7d7911c75845ff6!8m2!3d53.834195!4d-1.589756">Village Hotel North, 186 Otley Rd, Headingley, Leeds LS16 5PR <span class="sr-only">Get directions. External link.</span></a></p>
+                <p class="panel-event-info-time"><strong>Time</strong> 6pm to 8:30pm</p>
+                <p class="panel-event-info-date"><strong>Date</strong> Wednesday 6th December 2017</p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    </div>
+      <div class="code-reveal">
+        <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#panel-event-list-reveal" aria-expanded="false" aria-controls="panel-event-list-reveal">
+        See code
+        </a>
+        <div class="collapse exampleCode" id="panel-event-list-reveal">
+            <pre>
+                <code class="line-numbers language-markup">
+                    &lt;div class="panel-event-list">
+                        &lt;h2>Events&lt;/h2>
+                        &lt;p class="text">Come along and have a coffee with one of our foster carers and a member of staff from the recruitment team, they can anser all your questions.&lt;/p>
+                        &lt;div class="panel img panel-event">
+                        &lt;div class="img-container col-sm-6 col-md-3" style="background-image: url('/public/images/food-festival-2.jpg');">
+                        &lt;/div>
+                        &lt;div class="col-sm-6 col-sm-offset-6 col-md-offset-3 col-md-3 panel-event-date">
+                            &lt;div class="panel-event-date-wrapper">
+                                &lt;p class="panel-event-date-details">
+                                    &lt;span>TUES&lt;/span>
+                                    &lt;span class="big-number">27&lt;/span>
+                                    &lt;span>OCT 2017&lt;/span>
+                                &lt;/p>
+                            &lt;/div>
+                        &lt;/div>
+                        &lt;div class="col-sm-12 col-md-6 col-md-offset-6 content panel-event-content">
+                            &lt;h3 class="panel-event-title">Information event&lt;/h3>
+                            &lt;p class="panel-event-description">Event space area at the bottom of the indoor market, near the food outlets&lt;/p>
+                            &lt;div class="panel-event-info">
+                                &lt;p class="panel-event-info-location">&lt;strong>Location&lt;/strong> &lt;a href="https://www.google.co.uk/maps/place/Leeds+Kirkgate+Market,+Kirkgate,+Leeds+LS2/@53.7971889,-1.5410197,17z/data=!3m1!4b1!4m5!3m4!1s0x48795c19fbb16a6b:0x6a81ca2e80255197!8m2!3d53.7972642!4d-1.5387237">Leeds Kirkgate Market &lt;span class="sr-only">Get directions. External link.&lt;/span>&lt;/a>&lt;/p>
+                                &lt;p class="panel-event-info-time">&lt;strong>Time&lt;/strong> Drop in from 11am to 3pm&lt;/p>
+                                &lt;p class="panel-event-info-date">&lt;strong>Date&lt;/strong> Tuesday 27th October 2017&lt;/p>
+                            &lt;/div>
+                        &lt;/div>
+                        &lt;div class="clearfix">&lt;/div>
+                    &lt;/div>
+                    &lt;div class="panel img panel-event">
+                        &lt;div class="img-container col-sm-6 col-md-3" style="background-image: url('/public/images/food-festival-2.jpg');">
+                        &lt;/div>
+                        &lt;div class="col-sm-6 col-sm-offset-6 col-md-offset-3 col-md-3 panel-event-date">
+                            &lt;div class="panel-event-date-wrapper">
+                                &lt;p class="panel-event-date-details">
+                                    &lt;span>WED&lt;/span>
+                                    &lt;span class="big-number">6&lt;/span>
+                                    &lt;span>DEC 2017&lt;/span>
+                                &lt;/p>
+                            &lt;/div>
+                        &lt;/div>
+                        &lt;div class="col-sm-12 col-md-6 col-md-offset-6 content panel-event-content">
+                            &lt;h3 class="panel-event-title">Fostering children with complex needs / disabilities&lt;/h3>
+                            &lt;p class="panel-event-description">Free on-site parking&lt;/p>
+                            &lt;div class="panel-event-info">
+                                &lt;p class="panel-event-info-location">&lt;strong>Location&lt;/strong> &lt;a href="https://www.google.co.uk/maps/place/Village+Hotel+Leeds+North/@53.834195,-1.589756,15z/data=!4m5!3m4!1s0x0:0xf7d7911c75845ff6!8m2!3d53.834195!4d-1.589756">Village Hotel North, 186 Otley Rd, Headingley, Leeds LS16 5PR &lt;span class="sr-only">Get directions. External link.&lt;/span>&lt;/a>&lt;/p>
+                                &lt;p class="panel-event-info-time">&lt;strong>Time&lt;/strong> 6pm to 8:30pm&lt;/p>
+                                &lt;p class="panel-event-info-date">&lt;strong>Date&lt;/strong> Wednesday 6th December 2017&lt;/p>
+                            &lt;/div>
+                        &lt;/div>
+                        &lt;div class="clearfix">&lt;/div>
+                    &lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+        </div>
+    </div>
+</div>
+<h2 id="how-to-use-panel">Using a panel</h2>        
+<p>Copy and paste the HTML to the page content and edit (if needed) the heading, description, hyperlink and image URL.</p>
+<div role="note" aria-label="Information" class="text-highlight">
+    <h3>Using the same panel on multiple pages</h3>
+    <p>Rather than duplicating the mark-up; add the HTML to a .txt file, upload it to SharePoint and link to it using a content editor webpart.</p>
+</div>
+</div>
+{% endblock %}
+
+{% block sectionOneThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionOneThirdCol2 %}
+ {% endblock %}
+
+{% block sectionOneThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionTwoTop %}
+{% endblock %} 
+
+{% block sectionTwoFull%} 
+{% endblock %}
+
+{% block sectionTwoContent %}
+{% endblock %}
+
+{% block sectionTwoRightHandColumn %}
+{% endblock %}
+
+{% block sectionTwoThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionTwoThirdCol2 %}
+ {% endblock %}
+
+{% block sectionTwoThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionThreeTop %}
+{% endblock %} 
+
+{% block sectionThreeFull%}
+{% endblock %}
+
+{% block sectionThreeContent %}
+{% endblock %}
+
+{% block sectionThreeRightHandColumn %}
+{% endblock %}
+
+{% block sectionThreeThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionThreeThirdCol2 %}
+ {% endblock %}
+
+{% block sectionThreeThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionFourTop %}
+{% endblock %} 
+
+{% block sectionFourFull%}
+
+{% endblock %}
+
+{% block sectionFourContent %}
+{% endblock %}
+
+{% block sectionFourRightHandColumn %}
+{% endblock %}
+
+{% block sectionFourThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionFourThirdCol2 %}
+ {% endblock %}
+
+{% block sectionFourThirdCol3 %}
+ {% endblock %}
+
+
+
+{% block sectionFiveTop %}
+{% endblock %} 
+
+{% block sectionFiveFull%}
+{% endblock %}
+
+{% block sectionFiveContent %}
+{% endblock %}
+
+{% block sectionFiveRightHandColumn %}
+{% endblock %}
+
+{% block sectionFiveThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionFiveThirdCol2 %}
+
+ {% endblock %}
+
+{% block sectionFiveThirdCol3 %}
+ {% endblock %}
+
+  {% block footer_nav %}
+ {% endblock %}
+
+  {% block reusablecontent_footer %}
+     {% include "includes/footer-styleguide.html" %}
+ {% endblock %}

@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+- 4.0
+before_install:
+- npm install -g gulp-cli
+install:
+- npm install
+after_success:
+- chmod +x ./bin/create-release-tag.sh
+- "./bin/create-release-tag.sh"
+branches:
+  except:
+  - "/^v/"
+deploy:
+  provider: heroku
+  api_key:
+    secure: ZeRemsmtlwqk+EKcauwLJT78+haYEkc59HS2B0NJSvl33crgIXzqr9YIPGzb871j3vfYEju8qQpCVrmjERLK2BCJOrNfw7JfcBBFAiBiEyDT3Kqw+1ktLeiouULW1DzUo12FJyWt8zkXMMrhofoisVBI20+pBWmAPtiFZSlblnQX3rMxVwes/9CnmurPJCPUxAaEEvnFzMb2QSHnStpsfl6eeXo+eJb5fx/DGqB2gb0ltlHrLaAycylbMEe5fKBN6jFNdvlBgVBbTojvPc3NLrvZmgxl4iQiFpaC0pDcVCBYfZBGuJmAl9KSniDxv2j034P3QFczVrELvEiNUFjBYCMVU0uJkgEblsnlcujYJRgixZdtdoLaJy266gCHqo792IQ8bTBk+W2jAWTUx/dpTSxHFNowStwC/E6nRjTvVxX0CDORuccoM2L3lcnJsaMtuHO+XC4f2VarYAcRbehkv88ijLplGv+YBuRl1F91lr+zXhamgsU60qYH00Kzg3j0HKMR9HK5k21fJ40eR+Q1cxvw4AJpq2DCDOEmneIpDAT+NhWue4a2slv1vuXFU3TSc2bJt0mRUJtjeW4IdjTIZuV9gSFCH0njwerGxhFqZTQcbge4ayuAWN7BhKqI9LbG3Dhun9dfYo/r/9RmSDqxVQa+Hdlh2l6Jtna8JsMN57I=
+  app: lcc-prototype-kit
+  on: master
+notifications:
+  email: false
+sudo: false

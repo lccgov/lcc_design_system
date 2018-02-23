@@ -1,0 +1,98 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "label" %} <!-- Page id var for side nav --> 
+{% set page_title = "Label" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">All form fields should be given labels.</p>
+</div>
+
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#label-example">Label example</a></li>
+        <li><a href="#hint-text">Hint text</a></li>
+    </ul>
+</div>
+<div class="text">
+    <ul class="text list list-bullet">
+        <li>don’t hide labels, unless the surrounding context makes them unnecessary</li>
+        <li>labels should be aligned above their fields</li>
+        <li>label text should be short, direct and in sentence case</li>
+        <li>avoid colons at the end of labels</li>
+    </ul>
+</div>
+<div id="label-example" class="example">
+    <div class="form-group">
+        <label class="form-label" for="full-name">Full name</label>
+        <input class="form-control" id="full-name" type="text" name="full-name">
+    </div>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for label</span></h3>
+    <pre>
+        <code id="snippet-label" class="line-numbers language-markup">
+            &lt;div class="form-group">
+                &lt;label class="form-label" for="full-name">Full name&lt;/label>
+                &lt;input class="form-control" id="full-name" type="text" name="full-name">
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-label">
+        Copy <span class="sr-only">HTML snippet for label"</span>
+    </button>
+</div>
+<div class="text">
+    <h2 id="hint-text" class="heading-large">Hint text</h2>
+    <ul class="list list-bullet">
+        <li>don’t use placeholder text in form fields, as this will disappear once content is entered into the form field</li>
+        <li>use hint text for supporting contextual help, this will always be shown</li>
+        <li>hint text should sit above a form field</li>
+    </ul>
+</div>
+<div class="example">
+    <div class="form-group">
+        <label class="form-label" for="ct-number">
+            Your council tax number
+            <span class="form-hint">
+            This can be found on your bill.
+            <br>
+            For example, CT041116
+            </span>
+        </label>
+        <input class="form-control" id="ct-number" type="text" name="ct-number">
+    </div>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for hint text</span></h3>
+    <pre>
+        <code id="snippet-hint-text" class="line-numbers language-markup">
+            &lt;div class="form-group">
+                &lt;label class="form-label" for="ct-number">
+                    Your council tax number
+                    &lt;span class="form-hint">
+                    This can be found on your bill.
+                    &lt;br>
+                    For example, CT041116
+                    &lt;/span>
+                &lt;/label>
+                &lt;input class="form-control" id="ct-number" type="text" name="ct-number">
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-hint-text">
+        Copy <span class="sr-only">HTML snippet for hint text"</span>
+    </button>
+</div>
+
+{% endblock %}

@@ -1,0 +1,143 @@
+/*temporarily hide masterhead*/
+.masterhead {
+    display:none;
+
+    &.lcc{
+      display:block;
+    }
+}
+
+@media screen and (max-width: 400px){
+  .highlighted a.btn {
+      width: auto;
+  }
+}
+
+//hr
+hr {
+    margin-top: 40px;
+}
+
+.copyright{
+  @media (min-width: 767px){
+      text-align:left !important;
+      margin-top:15px;
+  }
+}
+
+.intro{
+    text-align:center;
+    max-width:35em;
+    margin:70px auto;
+
+    @media (max-width: 641px){
+        margin:40px auto;
+    }
+
+    h1{
+        font-size:70px;
+        margin:0 0 25px;
+
+        @media (max-width: 641px){
+            font-size:40px;
+            margin:0 0 20px;
+        }
+        
+        span{
+            font-size:20px;
+            display:block;
+        }
+    }
+
+    p.lead{
+        margin:0 0 40px;
+
+        @media (max-width: 641px){
+            margin:0 0 30px;
+        }
+    }
+}
+
+.logo-footer span {
+    background: url('/public/images/lcc-logo-white-01.svg') left center no-repeat;
+}
+
+//nav
+.main-nav {
+    background:$lighter-grey;
+    border-bottom:3px solid $light-grey;
+    @media (min-width: 641px){
+        border-bottom:3px solid $light-grey;
+    }
+    @media (max-width: 990px){
+        position: relative;
+        left: 0;
+        top: 0px;
+        z-index: 0;
+        min-height: auto;
+        width: 100%;
+        transition: none;
+    }
+    .container-fluid {
+        @media (max-width: 990px){
+            padding:0 15px;
+        }
+        ul{
+            margin-bottom: -3px;
+            li{
+                @media (max-width: 990px){
+                    border-top: 0;
+                    margin: 0px;
+                    padding-top: 0 !important;
+                    width: auto;
+                }
+                &.active{
+                    a{
+                        border-bottom:3px solid $base-link-color;
+                        font-weight:bold;
+                    }
+                }
+                a{
+                    font-size:19px;
+                    padding:10px;
+                    text-decoration:none;
+                    margin:0;
+                    color:$base-link-color;
+                    border-bottom:3px solid transparent;
+                    border-top:3px solid transparent;
+                    @media (max-width: 641px){
+                        border-bottom:3px solid transparent;
+                        border-top:3px solid transparent; 
+                        padding:7px;
+                    }
+                    &:hover{
+                        background:none;
+                        text-decoration:none;
+                        color:$base-link-color;
+                        border-bottom:3px solid $base-link-color;
+                        @media (max-width: 641px){
+                            border-bottom:3px solid $base-link-color;
+                        }
+                    }
+                    @media (max-width: 990px){
+                        width:auto;
+                        font-size:19px;
+                        padding:10px;
+                        text-decoration:none;
+                        &:hover{
+                            background:transparent;
+                        }
+                    }
+                    @media (max-width: 500px){
+                        font-size:16px;
+                        padding:7px;
+                    }
+                    @media (max-width: 400px){
+                        font-size:14px;
+                    }
+                }
+            }
+        }
+    }
+}
+

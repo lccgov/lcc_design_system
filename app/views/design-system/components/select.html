@@ -1,0 +1,77 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "select" %} <!-- Page id var for side nav --> 
+{% set page_title = "Select" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">Avoid using select boxes (drop-down lists) - use <a href="/design-system/components/radios">radio buttons</a> or <a href="/design-system/components/checkboxes">checkboxes</a> instead.</p>
+</div>
+
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#select-example">Select example</a></li>
+        <li><a href="#error-handling">Error handling</a></li>
+    </ul>
+</div>
+
+<div id="select-example" class="example top">
+    <div class="form-group">
+        <label class="form-label" for="select-box">This is the label text</label>
+        <select class="form-control" id="select-box" name="select-box">
+            <option>LEEDS.GOV.UK elements option 1</option>
+            <option>LEEDS.GOV.UK elements option 2</option>
+            <option>LEEDS.GOV.UK elements option 3</option>
+        </select>
+    </div>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for select</span></h3>
+    <pre>
+        <code id="snippet-select" class="line-numbers language-markup">
+            &lt;div class="form-group">
+                &lt;label class="form-label" for="select-box">This is the label text&lt;/label>
+                &lt;select class="form-control" id="select-box" name="select-box">
+                    &lt;option>LEEDS.GOV.UK elements option 1&lt;/option>
+                    &lt;option>LEEDS.GOV.UK elements option 2&lt;/option>
+                    &lt;option>LEEDS.GOV.UK elements option 3&lt;/option>
+                &lt;/select>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-select">
+        Copy <span class="sr-only">HTML snippet for select"</span>
+    </button>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="error-handling">Error handling</h2>
+    <ul class="list list-bullet">
+        <li>add a class of <code>form-group-error</code> to <code>&lt;div class="form-group"></code></li>
+        <li>the error message <code>&lt;span class="error-message">Choose an answer&lt;/span></code> goes beneath the <code>&lt;label></code></li>
+        <li>add a class of <code>form-control-error</code> to <code>&lt;select class="form-control"></code></li>
+    </ul>
+</div>
+<div class="example">
+    <div class="form-group form-group-error">
+        <label class="form-label" for="select-box">This is the label text</label>
+        <span class="error-message">Error message goes here</span>
+        <select class="form-control form-control-error" id="select-box" name="select-box">
+            <option>LEEDS.GOV.UK elements option 1</option>
+            <option>LEEDS.GOV.UK elements option 2</option>
+            <option>LEEDS.GOV.UK elements option 3</option>
+        </select>
+    </div>
+</div>
+
+{% endblock %}

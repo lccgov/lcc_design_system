@@ -1,0 +1,203 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "styles" %} <!-- Section id var for main nav --> 
+{% set page_id = "colour" %} <!-- Page id var for side nav --> 
+{% set page_title = "Colour" %} <!-- Page title var for page header (H1) and page title -->  
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">The LEEDS.GOV.UK colour palette.</p>
+</div>
+
+<!-- Page content goes here -->
+
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#main-colours">Main colours</a></li>
+        <li><a href="#greys">Shades of grey</a></li>
+        <li><a href="#colour-usage">Colour usage</a></li>
+        <li><a href="#colour-contrast">Colour contrast</a></li>
+    </ul>
+</div>
+
+<div class="text">
+    <h2 class="heading-large top" id="main-colours">Main colours</h2>
+</div>
+
+<div class="colour-palette">
+    <div class="colour-palette_item blue">
+        <div class="colour-palette_variant">
+            $blue
+        </div>
+        <div class="colour-palette_variant">
+            $light-blue
+        </div>
+        <div class="colour-palette_variant">
+            $dark-blue
+        </div>
+        <div class="colour-palette_variant">
+            $lighter-blue
+        </div>
+    </div>
+    <div class="colour-palette_item green">
+        <div class="colour-palette_variant">
+            $green
+        </div>
+        <div class="colour-palette_variant">
+            $light-green
+        </div>
+        <div class="colour-palette_variant">
+            $dark-green
+        </div>
+        <div class="colour-palette_variant">
+            $lighter-green
+        </div>
+    </div>
+    <div class="colour-palette_item red">
+        <div class="colour-palette_variant">
+            $red
+        </div>
+        <div class="colour-palette_variant">
+            $light-red
+        </div>
+        <div class="colour-palette_variant">
+            $dark-red
+        </div>
+        <div class="colour-palette_variant">
+            $lighter-red
+        </div>
+    </div>
+    <div class="colour-palette_item yellow">
+        <div class="colour-palette_variant">
+            $yellow
+        </div>
+        <div class="colour-palette_variant">
+            $light-yellow
+        </div>
+        <div class="colour-palette_variant">
+            $dark-yellow
+        </div>
+        <div class="colour-palette_variant">
+            $lighter-yellow
+        </div>
+    </div>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="greys">Shades of grey</h2>
+</div>
+
+<div class="colour-palette">
+    <div class="colour-palette_item single black">
+        <div class="colour-palette_variant">
+            $black
+        </div>
+    </div>
+    <div class="colour-palette_item single light-black">
+        <div class="colour-palette_variant">
+            $light-black
+        </div>
+    </div>
+    <div class="colour-palette_item single dark-grey">
+        <div class="colour-palette_variant">
+            $dark-grey
+        </div>
+    </div>
+    <div class="colour-palette_item single grey">
+        <div class="colour-palette_variant">
+            $grey
+        </div>
+    </div>
+    <div class="colour-palette_item single light-grey">
+        <div class="colour-palette_variant">
+            $light-grey
+        </div>
+    </div>
+    <div class="colour-palette_item single lighter-grey">
+        <div class="colour-palette_variant">
+            $lighter-grey
+        </div>
+    </div>
+    <div class="colour-palette_item single white">
+        <div class="colour-palette_variant">
+            $white
+        </div>
+    </div>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="colour-usage">Colour usage</h2>
+</div>
+
+<div class="colour-palette">
+    <div class="colour-palette_item single blue">
+        <div class="colour-palette_variant">
+            <span>Brand / link colour</span>
+            $blue
+        </div>
+    </div>
+    <div class="colour-palette_item single green">
+        <div class="colour-palette_variant">
+            <span>Button colour</span>
+            $green
+        </div>
+    </div>
+    <div class="colour-palette_item single red">
+        <div class="colour-palette_variant">
+            <span>Error colour</span>
+            $red
+        </div>
+    </div>
+    <div class="colour-palette_item single lighter-blue">
+        <div class="colour-palette_variant">
+            <span>Panel colour</span>
+            $lighter-blue
+        </div>
+    </div>
+    <div class="colour-palette_item single black">
+        <div class="colour-palette_variant">
+            <span>Main font colour</span>
+            $black
+        </div>
+    </div>
+    <div class="colour-palette_item single light-black">
+        <div class="colour-palette_variant">
+            <span>Secondary font colour</span>
+            $light-black
+        </div>
+    </div>
+    <div class="colour-palette_item single grey">
+        <div class="colour-palette_variant">
+            <span>Input border colour</span>
+            $grey
+        </div>
+    </div>
+    <div class="colour-palette_item single light-grey">
+        <div class="colour-palette_variant">
+            <span>Border colour</span>
+            $light-grey
+        </div>
+    </div>
+    <div class="colour-palette_item single lighter-grey">
+        <div class="colour-palette_variant">
+            <span>Section background colour</span>
+            $lighter-grey
+        </div>
+    </div>
+</div>
+
+<div id="colour-contrast" role="note" aria-label="Information" class="text-highlight">
+    <h2 class="heading-medium top">Accessibility: Colour contrast</h2>
+    <p class="text">The colour contrast ratio for text and interactive elements should be at least 4.5:1 <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="external">as recommended by the W3C</a>. </p>
+</div>
+
+{% endblock %}

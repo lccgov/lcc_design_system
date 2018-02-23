@@ -1,0 +1,16 @@
+{% extends "design-system-master-page.html" %}
+
+{% block sectionOneTopGlobal %}{% endblock %}
+
+{% block body_content %}
+<section id="main" class="sectionOne">
+    {% block sectionOneTop %}{% endblock %}
+    <div class="container">
+        <div class="row">
+                <div class="col-sm-12 design-system-landing-page">
+                    {% block sectionOneFull %}{% endblock %}
+                </div>
+           </div>
+    </div>         
+</section>
+{% endblock %}

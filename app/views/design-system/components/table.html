@@ -1,0 +1,257 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "table" %} <!-- Page id var for side nav --> 
+{% set page_title = "Table" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead"></p>
+</div>
+
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#data-table-numeric">Data table numeric</a></li>
+        <li><a href="#data-table">Data table</a></li>
+        <li><a href="#table-accessibility">Table accessiblity</a></li>
+    </ul>
+</div>
+
+<div class="text">
+    <h2 class="heading-large top" id="data-table-numeric">Numeric tabular data</h2>
+    <p>When comparing rows of numbers, align numbers to the right in table cells.</p>
+</div>
+<div class="example">
+    <h2>Council tax bands for properties in Leeds</h2>
+    <div class="table-responsive">
+        <table>
+            <caption class="sr-only">Council tax bands for properties in Leeds</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Band</th>
+                    <th class="numeric" scope="col">Annual council tax charge</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A <span class="font-xsmall">(reduced rate for <a href="#">disability discount</a>)</span></td>
+                    <td class="numeric">£826.69</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td class="numeric">£992.03</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td class="numeric">£1,157.37</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td class="numeric">£1,322.71</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td class="numeric">£1,488.05</td>
+                </tr>
+                <tr>
+                    <td>E</td>
+                    <td class="numeric">£1,818.72</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td class="numeric">£2,149.40</td>
+                </tr>
+                <tr>
+                    <td>G</td>
+                    <td class="numeric">£2,480.07</td>
+                </tr>
+                <tr>
+                    <td>H</td>
+                    <td class="numeric">£2,976.09</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for Numeric tabular data</span></h3>
+    <pre>
+        <code id="snippet-numeric-tabular-data" class="line-numbers language-markup">
+            &lt;h2>Council tax bands for properties in Leeds&lt;/h2>
+            &lt;div class="table-responsive">
+                &lt;table>
+                    &lt;caption class="sr-only">Council tax bands for properties in Leeds&lt;/caption>
+                    &lt;thead>
+                        &lt;tr>
+                            &lt;th scope="col">Band&lt;/th>
+                            &lt;th class="numeric" scope="col">Annual council tax charge&lt;/th>
+                        &lt;/tr>
+                    &lt;/thead>
+                    &lt;tbody>
+                        &lt;tr>
+                            &lt;td>A &lt;span class="font-xsmall">(reduced rate for &lt;a href="#">disability discount&lt;/a>)&lt;/span>&lt;/td>
+                            &lt;td class="numeric">£826.69&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>A&lt;/td>
+                            &lt;td class="numeric">£992.03&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>B&lt;/td>
+                            &lt;td class="numeric">£1,157.37&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>C&lt;/td>
+                            &lt;td class="numeric">£1,322.71&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>D&lt;/td>
+                            &lt;td class="numeric">£1,488.05&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>E&lt;/td>
+                            &lt;td class="numeric">£1,818.72&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>F&lt;/td>
+                            &lt;td class="numeric">£2,149.40&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>G&lt;/td>
+                            &lt;td class="numeric">£2,480.07&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>H&lt;/td>
+                            &lt;td class="numeric">£2,976.09&lt;/td>
+                        &lt;/tr>
+                    &lt;/tbody>
+                &lt;/table>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-numeric-tabular-data">
+        Copy <span class="sr-only">HTML snippet for Numeric tabular data</span>
+    </button>
+</div>
+<div class="text">
+    <h2 class="heading-large" id="data-table">Data in a table</h2>
+    <p>Not all content in tables should be right aligned.</p>
+</div>
+<div class="example">
+    <h2>Important dates for primary school applications</h2>
+    <div class="table-responsive">
+        <table>
+            <caption class="sr-only">Important dates for primary school applications</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Stage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1 November 2017 to 15 January 2018</td>
+                    <td>Apply for a place</td>
+                </tr>
+                <tr>
+                    <td>16 April 2018</td>
+                    <td>Offers go out</td>
+                </tr>
+                <tr>
+                    <td>30 April 2018</td>
+                    <td>Waiting list deadline</td>
+                </tr>
+                <tr>
+                    <td>16 May 2018</td>
+                    <td>Deadline for accepting offers and appeals</td>
+                </tr>
+                <tr>
+                    <td>April to July 2018</td>
+                    <td>Places allocated from the waiting lists and appeals held<br/></td>
+                </tr>
+                <tr>
+                    <td>September 2018</td>
+                    <td>Start primary school</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for data table</span></h3>
+    <pre>
+        <code id="snippet-data-table" class="line-numbers language-markup">
+            &lt;h2>Council tax bands for properties in Leeds&lt;/h2>
+            &lt;div class="table-responsive">
+                &lt;table>
+                    &lt;caption class="sr-only">Council tax bands for properties in Leeds&lt;/caption>
+                    &lt;thead>
+                        &lt;tr>
+                            &lt;th scope="col">Band&lt;/th>
+                            &lt;th class="numeric" scope="col">Annual council tax charge&lt;/th>
+                        &lt;/tr>
+                    &lt;/thead>
+                    &lt;tbody>
+                        &lt;tr>
+                            &lt;td>A &lt;span class="font-xsmall">(reduced rate for &lt;a href="#">disability discount&lt;/a>)&lt;/span>&lt;/td>
+                            &lt;td class="numeric">£826.69&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>A&lt;/td>
+                            &lt;td class="numeric">£992.03&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>B&lt;/td>
+                            &lt;td class="numeric">£1,157.37&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>C&lt;/td>
+                            &lt;td class="numeric">£1,322.71&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>D&lt;/td>
+                            &lt;td class="numeric">£1,488.05&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>E&lt;/td>
+                            &lt;td class="numeric">£1,818.72&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>F&lt;br/>&lt;/td>
+                            &lt;td class="numeric">£2,149.40&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>G&lt;/td>
+                            &lt;td class="numeric">£2,480.07&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>H&lt;/td>
+                            &lt;td class="numeric">£2,976.09&lt;/td>
+                        &lt;/tr>
+                    &lt;/tbody>
+                &lt;/table>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-data-table">
+        Copy <span class="sr-only">HTML snippet for data table</span>
+    </button>
+</div>
+<div role="note" aria-label="Information" class="text-highlight text-highlight">
+    <h3 id="table-accessibility">Accessibility: tables</h3>
+    <p><a rel="external" href="https://a11yproject.com/posts/accessible-data-tables/">Making an accessible table</a> isn’t hard and can be broken down into two main things.</p>
+    <ul class="list list-bullet">
+        <li>add a table caption</li>
+        <li>mark row and column headings using the ‘scope’ attribute</li>
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{
+  "name": "express-sp-prototype",
+  "description": "LCC SharePoint prototyping app in Express",
+  "version": "1.2.0",
+  "private": true,
+  "engines": {
+    "node": ">=4.0 <5.0"
+  },
+  "scripts": {
+    "start": "node start.js"
+  },
+  "dependencies": {
+    "basic-auth": "^1.0.3",
+    "basic-auth-connect": "^1.0.0",
+    "body-parser": "^1.14.1",
+    "consolidate": "0.x",
+    "express": "4.13.3",
+    "express-nunjucks": "^0.9.3",
+    "express-session": "^1.13.0",
+    "express-writer": "0.0.4",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.2.2",
+    "gulp-foreach": "^0.1.0",
+    "gulp-install": "^1.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "lcc_frontend_toolkit": "^0.234.0",
+    "lcc_templates_nunjucks": "1.1.105",
+    "minimist": "0.0.8",
+    "portscanner": "^1.0.0",
+    "prompt": "^0.2.14",
+    "readdir": "0.0.6",
+    "rmdir": "^1.2.0",
+    "serve-favicon": "2.3.0",
+    "syncy": "^2.0.1"
+  },
+  "devDependencies": {
+    "gulp-install": "^1.1.0",
+    "pinkie-promise": "^2.0.1"
+  }
+}

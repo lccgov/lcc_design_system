@@ -1,0 +1,831 @@
+{% extends "page-layout-styleguide.html" %}
+
+{% block page_title %}
+	Form elements
+{% endblock %}
+
+
+  {% block css_register %}
+    <script src="https://use.typekit.net/pws7qio.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link href="{{ asset_path }}stylesheets/application.css" rel="stylesheet">
+   {% endblock %}
+
+ {% block additional_page_scripts %}
+    <script src="/public/javascripts/prism.js" type="text/javascript"></script>  
+{% endblock %}  
+
+{% block header %}
+    Form elements
+{% endblock %}
+
+ {% block main_nav %}
+  {% include "includes/main_nav.html" %}
+ {% endblock %}
+
+
+
+ {% block sectionOneTop %}
+{% endblock %} 
+
+{% block sectionOneFull%}
+{% endblock %}
+
+
+ {% block breadcrumb %}
+  {% include "includes/breadcrumb_sp.html" %}
+ {% endblock %}
+
+{% block sectionOneContent %}
+{% endblock %}
+
+{% block pageContent %}
+
+
+{% endblock %}
+
+{% block sectionOneFullBottom %}
+
+{% endblock %}
+
+{% block sectionOneRightHandColumn %}
+
+{% endblock %}
+
+{% block sectionLeftHandColumn %}
+<div id="sticky-anchor"></div>
+<div id="sticky">
+    <a href="/design-system/styleguide" class="link-back">Back to style guide</a>
+    <h3 class="heading-xsmall heading-contents">Contents:</h3>
+    <ul class="list list-contents">
+        <li><a href="#optional-and-mandatory-fields">Optional and mandatory fields</a></li>
+        <li><a href="#labels">Labels</a></li>
+        <li><a href="#textarea">Textarea</a></li>
+        <li><a href="#focus-states">Form focus states</a></li>
+        <li><a href="#hint-text">Hint text</a></li>
+        <li><a href="#spacing-between-form-elements">Spacing between form elements</a></li>
+        <li><a href="#file-upload">File upload</a></li>
+        <li><a href="#fieldsets-and-legends">Fieldsets and legends</a></li>
+        <li><a href="#date-input">Date input pattern</a></li>
+        <li><a href="#select-boxes">Select boxes</a></li>
+        <li><a href="#radio-buttons">Radio buttons</a></li>
+        <li><a href="#checkboxes">Checkboxes</a></li>
+        <li><a href="#conditionally-revealing-content">Conditionally revealing content</a></li>
+        <li><a href="#examples">Examples</a></li>
+      </ul>
+</div>
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="text">
+    <p class="lead">Keep forms as simple as possible – only ask what’s needed to run the service.</p>
+
+    <h2 class="heading-large" id="optional-and-mandatory-fields">Optional and mandatory fields</h2>
+    <ul class="text list list-bullet">
+        <li>only ask for the information you absolutely need</li>
+        <li>if you do ask for optional information, mark the labels of optional fields with ‘(optional)’</li>
+        <li>don’t mark mandatory fields with asterisks</li>
+    </ul>
+</div>
+<div class="example">
+    <label class="form-label" for="postcode">Postcode (optional)</label>
+    <input class="form-control" id="postcode" type="text" name="postcode">
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="labels">Labels</h2>
+    <ul class="text list list-bullet">
+        <li>all form fields should be given labels</li>
+        <li>don’t hide labels, unless the surrounding context makes them unnecessary</li>
+        <li>labels should be aligned above their fields</li>
+        <li>label text should be short, direct and in sentence case</li>
+        <li>avoid colons at the end of labels</li>
+        <li>labels should be associated with form fields using the <code class="code">for</code> attribute</li>
+    </ul>
+</div>
+<div class="example">
+    <label class="form-label" for="full-name-f1">Full name</label>
+    <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+</div>
+<div class="code-reveal">
+    <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#labels-markup" aria-expanded="false" aria-controls="labels-markup">
+    See code
+    </a>
+    <div class="collapse exampleCode" id="labels-markup">
+        <pre>
+            <code class="line-numbers language-markup">
+                &lt;label class="form-label" for="full-name-f1">Full name&lt;/label>
+                &lt;input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+            </code>
+        </pre>
+    </div>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="textarea">Textarea</h2>
+    <p>Make the height of a textarea proportional to the amount of text to be entered.</p>
+</div>
+<div class="example">
+    <label class="form-label" for="textarea">
+    Why can't you provide a National Insurance number?
+  </label>
+  <textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
+</div>
+<div class="code-reveal">
+    <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#textarea-markup" aria-expanded="false" aria-controls="textarea-markup">
+    See code
+    </a>
+    <div class="collapse exampleCode" id="textarea-markup">
+        <pre>
+            <code class="line-numbers language-markup">
+                &lt;label class="form-label" for="textarea">
+                    Why can't you provide a National Insurance number?
+                &lt;/label>
+                &lt;textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5">&lt;/textarea>
+            </code>
+        </pre>
+    </div>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="focus-states">Form focus states</h2>
+    <p>All elements use the yellow focus style as a highlight, as either a fill or 3px outline.</p>
+    <p>Click on the label “Full name” or inside the form field to show the focus state.</p>
+</div>
+<div class="example">
+    <div class="col-md-12">
+        <label class="form-label" for="full-name-f1">Full name</label>
+        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+    </div>
+    <div class="col-md-12">
+        <div class="swatch">
+            <div class="swatch-item-wrapper">
+                <div class="swatch-item">
+                    <span class="colour focus"></span>
+                    <div class="colour-details">
+                        <h3>Focus</h3>
+                        <p class="hex">#FFBF47</p>
+                        <p class="variable">$focus-color</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="hint-text">Hint text</h2>
+    <ul class="list list-bullet">
+        <li>don’t use placeholder text in form fields, as this will disappear once content is entered into the form field</li>
+        <li>use hint text for supporting contextual help, this will always be shown</li>
+        <li>hint text should sit above a form field</li>
+        <li>ensure hint text can be read correctly by screen readers</li>
+    </ul>
+</div>
+<div class="example">
+    <label class="form-label" for="ni-number">
+        National Insurance number
+        <span class="form-hint">
+        It's on your National Insurance card, benefit letter, payslip or P60.
+        <br>
+        For example, ‘QQ 12 34 56 C’.
+        </span>
+    </label>
+    <input class="form-control" id="ni-number" type="text" name="ni-number">
+</div>
+<div class="code-reveal">
+    <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#hinttext-markup" aria-expanded="false" aria-controls="hinttext-markup">
+    See code
+    </a>
+    <div class="collapse exampleCode" id="hinttext-markup">
+        <pre>
+            <code class="line-numbers language-markup">
+                &lt;label class="form-label" for="ni-number">
+                    National Insurance number
+                    &lt;span class="form-hint">
+                    It's on your National Insurance card, benefit letter, payslip or P60.
+                    &lt;br>
+                    For example, ‘QQ 12 34 56 C’.
+                    &lt;/span>
+                &lt;/label>
+                &lt;input class="form-control" id="ni-number" type="text" name="ni-number">
+            </code>
+        </pre>
+    </div>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="spacing-between-form-elements">Spacing between form elements</h2>
+    <p>Ensure there is sufficient spacing between form elements.</p>
+</div>
+<div class="example">
+    <div class="form-group">
+        <label class="form-label" for="first-name-f1">First name</label>
+        <input class="form-control" id="first-name-f1" type="text" name="first-name-f1">
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="last-name-f1">Last name</label>
+        <input class="form-control" id="last-name-f1" type="text" name="last-name-f1">
+    </div>
+</div>
+<div class="code-reveal">
+    <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#spacing-markup" aria-expanded="false" aria-controls="spacing-markup">
+    See code
+    </a>
+    <div class="collapse exampleCode" id="spacing-markup">
+        <pre>
+            <code class="line-numbers language-markup">
+                &lt;div class="form-group">
+                    &lt;label class="form-label" for="first-name-f1">First name&lt;/label>
+                    &lt;input class="form-control" id="first-name-f1" type="text" name="first-name-f1">
+                &lt;/div>
+                &lt;div class="form-group">
+                    &lt;label class="form-label" for="last-name-f1">Last name&lt;/label>
+                    &lt;input class="form-control" id="last-name-f1" type="text" name="last-name-f1">
+                &lt;/div>
+            </code>
+        </pre>
+    </div>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="file-upload">File upload</h2>
+    <p>A control that lets the user select a file.</p>
+</div>
+<div class="example">
+    <label class="form-label" for="file-input">
+        Upload a file
+    </label>
+    <input type="file" id="file-input">
+</div>
+<div class="code-reveal">
+    <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#file-markup" aria-expanded="false" aria-controls="file-markup">
+    See code
+    </a>
+    <div class="collapse exampleCode" id="file-markup">
+        <pre>
+            <code class="line-numbers language-markup">
+                &lt;label class="form-label" for="file-input">
+                    Upload a file
+                &lt;/label>
+                &lt;input type="file" id="file-input">
+            </code>
+        </pre>
+    </div>
+</div>
+<div class="text">
+    <p>We recommend using a native input using <code class="code">type="file"</code>, rather than a custom implementation.</p>
+    <p class="lead-in">This is so:</p>
+    <ul class="list list-bullet">
+      <li>the control gains focus when tabbing through the page</li>
+      <li>the control functions using a keyboard</li>
+      <li>the control functions using assistive technology</li>
+      <li>the control functions when javascript is not available</li>
+    </ul>
+    <p>A custom implementation of this control would need to meet the criteria above.</p>
+</div>
+  
+<div class="text">
+    <h2 class="heading-large" id="fieldsets-and-legends">Fieldsets and legends</h2>
+    <p>Use fieldsets to group related form controls. The first element inside a fieldset must be a <code class="code">legend</code> element which describes the group.</p>
+    <p>Any general text which is important for filling in the form and cannot be put into a <a href="#hint-text">hint</a>, should be in that legend (as shown in the <a href="#checkboxes">checkbox example</a>). But the legend shouldn't be too long either.</p>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="date-input">Date input pattern</h2>
+</div>
+<div class="example">
+    <form>
+        <div class="form-group">
+            <fieldset>
+                <legend>
+                    <span class="form-label-bold">What is your date of birth?</span>
+                    <span class="form-hint">For example, 31 3 1980</span>
+                </legend>
+                <div class="form-date">
+                    <div class="form-group form-group-day">
+                    <label class="form-label" for="dob-day">Day</label>
+                    <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                    </div>
+                    <div class="form-group form-group-month">
+                    <label class="form-label" for="dob-month">Month</label>
+                    <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                    </div>
+                    <div class="form-group form-group-year">
+                    <label class="form-label" for="dob-year">Year</label>
+                    <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </form>
+</div>
+<div class="code-reveal">
+    <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#date-markup" aria-expanded="false" aria-controls="date-markup">
+    See code
+    </a>
+    <div class="collapse exampleCode" id="date-markup">
+        <pre>
+            <code class="line-numbers language-markup">
+                 &lt;form>
+                     &lt;div class="form-group">
+                         &lt;fieldset>
+                             &lt;legend>
+                                 &lt;span class="form-label-bold">What is your date of birth? &lt;/span>
+                                 &lt;span class="form-hint">For example, 31 3 1980 &lt;/span>
+                             &lt;/legend>
+                             &lt;div class="form-date">
+                                 &lt;div class="form-group form-group-day">
+                                 &lt;label class="form-label" for="dob-day">Day &lt;/label>
+                                 &lt;input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                                 &lt;/div>
+                                 &lt;div class="form-group form-group-month">
+                                 &lt;label class="form-label" for="dob-month">Month &lt;/label>
+                                 &lt;input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                                 &lt;/div>
+                                 &lt;div class="form-group form-group-year">
+                                 &lt;label class="form-label" for="dob-year">Year &lt;/label>
+                                 &lt;input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                                 &lt;/div>
+                             &lt;/div>
+                         &lt;/fieldset>
+                     &lt;/div>
+                 &lt;/form>
+            </code>
+        </pre>
+    </div>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="select-boxes">Select boxes</h2>
+    <p>Avoid using select boxes (drop-down lists) - use radio buttons or checkboxes instead.</p>
+</div>
+<div class="example">
+    <div class="form-group">
+        <label class="form-label" for="select-box">This is the label text</label>
+        <select class="form-control" id="select-box" name="select-box">
+            <option>LEEDS.GOV.UK elements option 1</option>
+            <option>LEEDS.GOV.UK elements option 2</option>
+            <option>LEEDS.GOV.UK elements option 3</option>
+        </select>     
+    </div>
+</div>
+<div class="code-reveal">
+    <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#select-markup" aria-expanded="false" aria-controls="select-markup">
+    See code
+    </a>
+    <div class="collapse exampleCode" id="select-markup">
+        <pre>
+            <code class="line-numbers language-markup">
+                &lt;div class="form-group">
+                    &lt;label class="form-label" for="select-box">This is the label text&lt;/label>
+                    &lt;select class="form-control" id="select-box" name="select-box">
+                        &lt;option>LEEDS.GOV.UK elements option 1&lt;/option>
+                        &lt;option>LEEDS.GOV.UK elements option 2&lt;/option>
+                        &lt;option>LEEDS.GOV.UK elements option 3&lt;/option>
+                    &lt;/select>     
+                &lt;/div>
+            </code>
+        </pre>
+    </div>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="radio-buttons">Radio buttons</h2>
+    <ul class="list list-bullet">
+        <li>use these to let users choose a single option from a list</li>
+        <li>radio buttons with large hit areas are easier to select with a mouse or touch devices</li>
+    </ul>
+</div>
+<div class="example">
+    <h1 class="heading-medium">Where do you live?</h1>
+    <form>
+        <div class="form-group">
+            <fieldset>
+                <legend class="sr-only">Where do you live?</legend>
+                <label class="block-label" for="radio-1" data-target="radio-1">
+                <input type="radio" id="radio-1" name="radio-group" value="Northern Ireland" aria-controls="radio-1" aria-expanded="false">
+                Northern Ireland
+                </label>
+                <label class="block-label" for="radio-2" data-target="radio-2">
+                <input type="radio" id="radio-2" name="radio-group" value="Isle of Man or the Channel Islands" aria-controls="radio-2" aria-expanded="false">
+                Isle of Man or the Channel Islands
+                </label>
+                <label class="block-label" for="radio-3" data-target="radio-3">
+                <input type="radio" id="radio-3" name="radio-group" value="I am a British citizen living abroad" aria-controls="radio-3" aria-expanded="false">
+                I am a British citizen living abroad
+                </label>         
+            </fieldset>
+        </div>
+    </form>
+</div>
+<div class="code-reveal">
+    <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#radio-markup" aria-expanded="false" aria-controls="radio-markup">
+    See code
+    </a>
+    <div class="collapse exampleCode" id="radio-markup">
+        <pre>
+            <code class="line-numbers language-markup">
+                &lt;h1 class="heading-medium">Where do you live?&lt;/h1>
+                &lt;form>
+                    &lt;div class="form-group">
+                        &lt;fieldset>
+                            &lt;legend class="sr-only">Where do you live?&lt;/legend>
+                            &lt;label class="block-label" for="radio-1" data-target="radio-1">
+                            &lt;input type="radio" id="radio-1" name="radio-group" value="Northern Ireland" aria-controls="radio-1" aria-expanded="false">
+                            Northern Ireland
+                            &lt;/label>
+                            &lt;label class="block-label" for="radio-2" data-target="radio-2">
+                            &lt;input type="radio" id="radio-2" name="radio-group" value="Isle of Man or the Channel Islands" aria-controls="radio-2" aria-expanded="false">
+                            Isle of Man or the Channel Islands
+                            &lt;/label>
+                            &lt;label class="block-label" for="radio-3" data-target="radio-3">
+                            &lt;input type="radio" id="radio-3" name="radio-group" value="I am a British citizen living abroad" aria-controls="radio-3" aria-expanded="false">
+                            I am a British citizen living abroad
+                            &lt;/label>         
+                        &lt;/fieldset>
+                    &lt;/div>
+                &lt;/form>
+            </code>
+        </pre>
+    </div>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="checkboxes">Checkboxes</h2>
+    <ul class="list list-bullet">
+        <li>use these to select either on/off toggles or multiple selections</li>
+        <li>make it clear with words when users can select one or multiple options</li>
+    </ul>
+</div>
+<div class="example">
+    <h1 class="heading-medium">Which types of waste do you transport regularly?</h1>
+    <p>Select all that apply</p>
+    <form>
+        <div class="form-group">
+            <fieldset>
+                <legend class="sr-only">Which types of waste do you transport regularly?</legend>
+                <label class="block-label" for="waste-type-1" data-target="waste-type-1">
+                    <input type="checkbox" id="waste-type-1" name="waste-types" value="Waste from animal carcasses" aria-controls="waste-type-1" aria-expanded="false">
+                    Waste from animal carcasses
+                </label>
+                <label class="block-label" for="waste-type-2" data-target="waste-type-2">
+                    <input type="checkbox" id="waste-type-2" name="waste-types" value="Waste from animal carcasses" aria-controls="waste-type-2" aria-expanded="false">
+                    Waste from mines or quarries
+                </label>
+                <label class="block-label" for="waste-type-3" data-target="waste-type-3">
+                    <input type="checkbox" id="waste-type-3" name="waste-types" value="Waste from animal carcasses" aria-controls="waste-type-3" aria-expanded="false">
+                    Farm or agricultural waste
+                </label>
+            </fieldset>
+        </div>
+    </form>
+</div>
+<div class="code-reveal">
+    <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#checkboxes-markup" aria-expanded="false" aria-controls="checkboxes-markup">
+    See code
+    </a>
+    <div class="collapse exampleCode" id="checkboxes-markup">
+        <pre>
+            <code class="line-numbers language-markup">
+                 &lt;h1 class="heading-medium">Which types of waste do you transport regularly? &lt;/h1>
+                 &lt;p>Select all that apply &lt;/p>
+                 &lt;form>
+                    &lt;div class="form-group">
+                        &lt;fieldset>
+                            &lt;legend class="sr-only">Which types of waste do you transport regularly? &lt;/legend>
+                            &lt;label class="block-label" for="waste-type-1" data-target="waste-type-1">
+                                &lt;input type="checkbox" id="waste-type-1" name="waste-types" value="Waste from animal carcasses" aria-controls="waste-type-1" aria-expanded="false">
+                                Waste from animal carcasses
+                            &lt;/label>
+                            &lt;label class="block-label" for="waste-type-2" data-target="waste-type-2">
+                                &lt;input type="checkbox" id="waste-type-2" name="waste-types" value="Waste from animal carcasses" aria-controls="waste-type-2" aria-expanded="false">
+                                Waste from mines or quarries
+                            &lt;/label>
+                            &lt;label class="block-label" for="waste-type-3" data-target="waste-type-3">
+                                &lt;input type="checkbox" id="waste-type-3" name="waste-types" value="Waste from animal carcasses" aria-controls="waste-type-3" aria-expanded="false">
+                                Farm or agricultural waste
+                            &lt;/label>
+                        &lt;/fieldset>
+                     &lt;/div>
+                 &lt;/form>
+            </code>
+        </pre>
+    </div>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="conditionally-revealing-content">Conditionally revealing content</h2>
+    <ul class="list list-bullet">
+        <li>reveal additional questions, depending on the context</li>
+        <li>a left border is used to emphasise this supporting information</li>
+    </ul>
+    <h3 class="heading-medium top">Radio buttons</h3>
+    <p>Choose an option below to see how this works.</p>
+</div>
+<div class="example">
+    <h1 class="heading-medium">How do you want to be contacted?</h1>
+
+    <form>
+        <div class="form-group">
+            <fieldset>
+
+            <legend class="sr-only">How do you want to be contacted?</legend>
+
+            <label class="block-label" for="contact-by-email" data-target="contact-by-email">
+                <input type="radio" id="contact-by-email" name="radio-contact-group" value="Email" aria-controls="contact-by-email" aria-expanded="false">
+                Email
+            </label>
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-email">
+                <label class="form-label" for="contact-email">Email address</label>
+                <input class="form-control" name="contact-email" type="text" id="contact-email">
+            </div>
+
+            <label class="block-label" for="contact-by-phone" data-target="contact-by-phone">
+                <input type="radio" id="contact-by-phone" name="radio-contact-group" value="phone" aria-controls="contact-by-phone" aria-expanded="false">
+                Phone
+            </label>
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
+                <label class="form-label" for="contact-phone">Phone number</label>
+                <input class="form-control" name="contact-phone" type="text" id="contact-phone">
+            </div>
+
+            <label class="block-label" for="contact-by-text" data-target="contact-by-text">
+                <input type="radio" id="contact-by-text" name="radio-contact-group" value="text message" aria-controls="contact-by-text" aria-expanded="false">
+                Text message
+            </label>
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+                <label class="form-label" for="contact-text-message">Mobile phone number</label>
+                <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+            </div>
+
+            </fieldset>
+        </div>
+    </form>
+</div>
+<div class="code-reveal">
+    <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#radio-reveal-markup" aria-expanded="false" aria-controls="radio-reveal-markup">
+    See code
+    </a>
+    <div class="collapse exampleCode" id="radio-reveal-markup">
+        <pre>
+            <code class="line-numbers language-markup">
+                 &lt;h1 class="heading-medium">How do you want to be contacted? &lt;/h1>
+
+                 &lt;form>
+                     &lt;div class="form-group">
+                         &lt;fieldset>
+
+                         &lt;legend class="sr-only">How do you want to be contacted? &lt;/legend>
+
+                         &lt;label class="block-label" for="contact-by-email" data-target="contact-by-email">
+                             &lt;input type="radio" id="contact-by-email" name="radio-contact-group" value="Email" aria-controls="contact-by-email" aria-expanded="false">
+                            Email
+                         &lt;/label>
+                         &lt;div class="panel panel-border-narrow js-hidden" id="contact-by-email">
+                             &lt;label class="form-label" for="contact-email">Email address &lt;/label>
+                             &lt;input class="form-control" name="contact-email" type="text" id="contact-email">
+                         &lt;/div>
+
+                         &lt;label class="block-label" for="contact-by-phone" data-target="contact-by-phone">
+                             &lt;input type="radio" id="contact-by-phone" name="radio-contact-group" value="phone" aria-controls="contact-by-phone" aria-expanded="false">
+                            Phone
+                         &lt;/label>
+                         &lt;div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
+                             &lt;label class="form-label" for="contact-phone">Phone number &lt;/label>
+                             &lt;input class="form-control" name="contact-phone" type="text" id="contact-phone">
+                         &lt;/div>
+
+                         &lt;label class="block-label" for="contact-by-text" data-target="contact-by-text">
+                             &lt;input type="radio" id="contact-by-text" name="radio-contact-group" value="text message" aria-controls="contact-by-text" aria-expanded="false">
+                            Text message
+                         &lt;/label>
+                         &lt;div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+                             &lt;label class="form-label" for="contact-text-message">Mobile phone number &lt;/label>
+                             &lt;input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+                         &lt;/div>
+
+                         &lt;/fieldset>
+                     &lt;/div>
+                 &lt;/form>
+            </code>
+        </pre>
+    </div>
+</div>
+<div class="text">
+    <p>In the code snippet above, the <code class=" language-markup">data-target=""</code> attribute is present on every label, as each option reveals an extra field.</p>
+    <p>A grey left hand border is used to visually connect the revealed content with the question above.</p>
+</div>
+<div class="example">
+    <div class="form-group">
+        <div class="panel panel-border-narrow">
+            <label class="form-label" for="example-phone-number">Mobile phone number</label>
+            <input class="form-control" id="example-phone-number" name="example-phone-number" type="text">
+        </div>
+    </div>
+</div>
+<p>The <a href="/design-system/design-elements/typography#typography-inset-text">inset text section</a> has more information on where and how to use panels (content with a grey left hand border).</p>
+<div class="text">
+    <h3 class="heading-medium top">Checkboxes</h3>
+    <p>Click on "Citizen of a different country" to see how this works.</p>
+</div>
+<div class="example">
+    <h1 class="heading-medium">What is your nationality?</h1>
+    <p>Select all options that are relevant to you.</p>
+
+    <form>
+    <div class="form-group">
+        <fieldset>
+
+        <legend class="sr-only">What is your nationality?</legend>
+
+        <div class="form-group">
+            <label class="block-label" for="nationalities-british" data-target="nationalities-british">
+                <input type="checkbox" id="nationalities-british" name="nationalities" value="British (including English, Scottish, Welsh and Northern Irish)" aria-controls="nationalities-british" aria-expanded="false">
+                British (including English, Scottish, Welsh and Northern Irish)
+            </label>
+            <label class="block-label" for="nationalities-irish" data-target="nationalities-irish">
+                <input type="checkbox" id="nationalities-irish" name="nationalities" value="Irish" aria-controls="nationalities-irish" aria-expanded="false">
+                Irish
+            </label>
+            <label class="block-label" for="nationalities-other" data-target="nationalities-other">
+                <input type="checkbox" id="nationalities-other" name="nationalities" value="Citizen of a different country" aria-controls="nationalities-other" aria-expanded="false">
+                Citizen of a different country
+            </label>
+            <div class="panel panel-border-narrow js-hidden" id="example-different-country">
+                <label class="form-label" for="nationalities-other-country">Country name</label>
+                <input class="form-control" type="text" id="nationalities-other-country" name="nationalities-other-country">
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="register-button" class="btn btn-primary">
+            Continue to payment
+            </button>
+        </div>
+
+        </fieldset>
+    </div>
+    </form>
+</div>
+<div class="code-reveal">
+    <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#checkbox-reveal-markup" aria-expanded="false" aria-controls="checkbox-reveal-markup">
+    See code
+    </a>
+    <div class="collapse exampleCode" id="checkbox-reveal-markup">
+        <pre>
+            <code class="line-numbers language-markup">
+                 &lt;h1 class="heading-medium">What is your nationality? &lt;/h1>
+                 &lt;p>Select all options that are relevant to you. &lt;/p>
+
+                 &lt;form>
+                 &lt;div class="form-group">
+                     &lt;fieldset>
+
+                     &lt;legend class="sr-only">What is your nationality? &lt;/legend>
+
+                     &lt;div class="form-group">
+                         &lt;label class="block-label" for="nationalities-british" data-target="nationalities-british">
+                             &lt;input type="checkbox" id="nationalities-british" name="nationalities" value="British (including English, Scottish, Welsh and Northern Irish)" aria-controls="nationalities-british" aria-expanded="false">
+                            British (including English, Scottish, Welsh and Northern Irish)
+                         &lt;/label>
+                         &lt;label class="block-label" for="nationalities-irish" data-target="nationalities-irish">
+                             &lt;input type="checkbox" id="nationalities-irish" name="nationalities" value="Irish" aria-controls="nationalities-irish" aria-expanded="false">
+                            Irish
+                         &lt;/label>
+                         &lt;label class="block-label" for="nationalities-other" data-target="nationalities-other">
+                             &lt;input type="checkbox" id="nationalities-other" name="nationalities" value="Citizen of a different country" aria-controls="nationalities-other" aria-expanded="false">
+                            Citizen of a different country
+                         &lt;/label>
+                         &lt;div class="panel panel-border-narrow js-hidden" id="example-different-country">
+                             &lt;label class="form-label" for="nationalities-other-country">Country name &lt;/label>
+                             &lt;input class="form-control" type="text" id="nationalities-other-country" name="nationalities-other-country">
+                         &lt;/div>
+                     &lt;/div>
+                     &lt;div class="form-group">
+                         &lt;button type="submit" id="register-button" class="btn btn-primary"">
+                        Continue to payment
+                         &lt;/button>
+                     &lt;/div>
+
+                     &lt;/fieldset>
+                 &lt;/div>
+                 &lt;/form>
+            </code>
+        </pre>
+    </div>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="examples">Form examples</h2>
+    <ul class="list list-bullet">
+        <li><a href="/pages-lcc/form-elements-errors">error handling</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block sectionOneThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionOneThirdCol2 %}
+ {% endblock %}
+
+{% block sectionOneThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionTwoTop %}
+{% endblock %} 
+
+{% block sectionTwoFull%} 
+{% endblock %}
+
+{% block sectionTwoContent %}
+{% endblock %}
+
+{% block sectionTwoRightHandColumn %}
+{% endblock %}
+
+{% block sectionTwoThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionTwoThirdCol2 %}
+ {% endblock %}
+
+{% block sectionTwoThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionThreeTop %}
+{% endblock %} 
+
+{% block sectionThreeFull%}
+{% endblock %}
+
+{% block sectionThreeContent %}
+{% endblock %}
+
+{% block sectionThreeRightHandColumn %}
+{% endblock %}
+
+{% block sectionThreeThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionThreeThirdCol2 %}
+ {% endblock %}
+
+{% block sectionThreeThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionFourTop %}
+{% endblock %} 
+
+{% block sectionFourFull%}
+
+{% endblock %}
+
+{% block sectionFourContent %}
+{% endblock %}
+
+{% block sectionFourRightHandColumn %}
+{% endblock %}
+
+{% block sectionFourThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionFourThirdCol2 %}
+ {% endblock %}
+
+{% block sectionFourThirdCol3 %}
+ {% endblock %}
+
+
+
+{% block sectionFiveTop %}
+{% endblock %} 
+
+{% block sectionFiveFull%}
+{% endblock %}
+
+{% block sectionFiveContent %}
+{% endblock %}
+
+{% block sectionFiveRightHandColumn %}
+{% endblock %}
+
+{% block sectionFiveThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionFiveThirdCol2 %}
+
+ {% endblock %}
+
+{% block sectionFiveThirdCol3 %}
+ {% endblock %}
+
+  {% block footer_nav %}
+ {% endblock %}
+
+  {% block reusablecontent_footer %}
+    {% include "includes/footer-styleguide.html" %}
+ {% endblock %}

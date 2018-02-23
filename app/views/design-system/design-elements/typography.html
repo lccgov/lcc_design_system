@@ -1,0 +1,613 @@
+{% extends "page-layout-styleguide.html" %}
+
+{% block page_title %}
+	Typography
+{% endblock %}
+
+
+  {% block css_register %}
+         <link href="{{ asset_path }}stylesheets/application.css" rel="stylesheet">
+   {% endblock %}
+
+ {% block additional_page_scripts %}
+    <script src="/public/javascripts/prism.js" type="text/javascript"></script>  
+{% endblock %}  
+
+{% block header %}
+Typography
+{% endblock %}
+
+ {% block main_nav %}
+  {% include "includes/main_nav.html" %}
+ {% endblock %}
+
+
+
+ {% block sectionOneTop %}
+{% endblock %} 
+
+{% block sectionOneFull%}
+{% endblock %}
+
+
+ {% block breadcrumb %}
+  {% include "includes/breadcrumb_sp.html" %}
+ {% endblock %}
+
+{% block sectionOneContent %}
+{% endblock %}
+
+{% block pageContent %}
+
+
+{% endblock %}
+
+{% block sectionOneFullBottom %}
+{% endblock %}
+
+{% block sectionOneRightHandColumn %}
+
+{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <div id="sticky-anchor"></div>
+    <div id="sticky" class="secondary-nav">
+        <a href="/design-system/styleguide" class="link-back">Back to style guide</a>
+        <h3 class="heading-xsmall heading-contents">Contents:</h2>
+        <ul class="list list-contents">
+            <li><a href="#typography-headings">Headings</a></li>
+            <li><a href="#typography-lead-paragraph">Lead paragraph</a></li>
+            <li><a href="#typography-body-copy">Body copy</a></li>
+            <li><a href="#typography-links">Links</a></li>
+            <li><a href="#typography-lists">Lists</a></li>
+            <li><a href="#typography-inset-text">Inset text</a></li>
+            <li><a href="#typography-text-block">Text block</a></li>
+            <li><a href="#typography-legal-text">Legal text</a></li>
+            <li><a href="#typography-blockquote">Blockquote</a></li>
+            <li><a href="#hidden-text">Hidden text (progressive disclosure)</a></li>
+            <li><a href="#examples">Examples</a></li>
+        </ul>
+    </div>
+{% endblock %}
+{% block sectionOneRightContent %}
+    <div class="text">
+        <p class="lead">For Leeds.gov.uk domains, always use the <a href="https://fonts.google.com/specimen/Open+Sans" rel="external">Open Sans</a> font in Regular for body text, and <a href="https://fonts.google.com/specimen/Montserrat?selection.family=Montserrat" rel="external">Montserrat <span class="sr-only">External link</span></a> in Bold for headings.</p>
+    </div>
+    <div class="text">
+        <h2 class="heading-large" id="typography-headings">Headings</h2>
+        <ul class="list list-bullet text">
+            <li>use sentence case for headings</li>
+            <li>use headings consistently to create a clear hierarchy</li>
+            <li>use semantic headings and structure. <a href="http://www.webpagemistakes.ca/heading-structure-heading-tag/" rel="external">Read article on heading structure<span class="sr-only">External link</span></a></li>
+        </ul>
+    </div>
+    <div class="example">
+        <h1 class="heading-xlarge">A xlarge heading</h1>
+        <h2 class="heading-large">A large heading</h2>
+        <h3 class="heading-medium">A medium heading</h3>
+        <h4 class="heading-small">A small heading</h4>
+        <div class="code-reveal">
+            <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#typographyHeadingsCode" aria-expanded="false" aria-controls="typographyHeadingsCode">
+            See code
+            </a>
+            <div class="collapse exampleCode" id="typographyHeadingsCode">
+                <pre>
+                    <code class="line-numbers language-markup">
+                        &lt;h1 class="heading-xlarge">A xlarge heading&lt;/h1>
+
+                        &lt;h2 class="heading-large">A large heading&lt;/h2>
+
+                        &lt;h3 class="heading-medium">A medium heading&lt;/h3>
+
+                        &lt;h4 class="heading-small">A small heading&lt;/h4>
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="text">
+    <h2 class="heading-large" id="typography-lead-paragraph">
+        Lead paragraph
+    </h2>
+
+    <p>There should only be one lead paragraph per page.</p>
+    </div>
+    <div class="example">
+    <div class="text">
+        <p class="lead">This is a lead paragraph. Pretium molestie ligula in, volutpat mattis libero. Aenean dapibus augue id dolor egestas, in tincidunt dolor volutpat.</p>
+        <p>This is a body copy paragraph. Felis at varius tincidunt, turpis dui finibus risus, ac varius libero eros ac dolor.</p>
+    </div>
+    
+    <div class="code-reveal">
+        <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#typographyLeadParagraphCode" aria-expanded="false" aria-controls="typographyLeadParagraphCode">
+        See code
+        </a>
+        <div class="collapse exampleCode" id="typographyLeadParagraphCode">
+            <pre>
+                <code class="line-numbers language-markup">
+                    &lt;p class="lead">This is a lead paragraph. Pretium molestie ligula in, volutpat mattis libero. Aenean dapibus augue id dolor egestas, in tincidunt dolor volutpat.&lt;/p>
+                    
+                    &lt;p>This is a body copy paragraph. Felis at varius tincidunt, turpis dui finibus risus, ac varius libero eros ac dolor.&lt;/p>
+                </code>
+            </pre>
+        </div>
+    </div>
+    </div>
+
+    <div class="text">
+    <h2 class="heading-large" id="typography-body-copy">Body copy</h2>
+    <p>Avoid using bold and italics.</p>
+    </div>
+    <div class="example">
+    <div class="text">
+        <p>This is a body copy paragraph. Pretium molestie ligula in, volutpat mattis libero. Aenean dapibus augue id dolor egestas, in tincidunt dolor volutpat.</p>
+        <p class="font-xsmall">A supporting text paragraph. Felis at varius tincidunt, turpis dui finibus risus, ac varius libero eros ac dolor.</p>
+    </div>
+    
+    <div class="code-reveal">
+        <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#typographyBodyCopyCode" aria-expanded="false" aria-controls="typographyBodyCopyCode">
+        See code
+        </a>
+        <div class="collapse exampleCode" id="typographyBodyCopyCode">
+            <pre>
+                <code class="line-numbers language-markup">
+                    &lt;div class="text">
+                        &lt;p>This is a body copy paragraph. Pretium molestie ligula in, volutpat mattis libero. Aenean dapibus augue id dolor egestas, in tincidunt dolor volutpat.&lt;/p>
+                    
+                        &lt;p class="font-xsmall">A supporting text paragraph. Felis at varius tincidunt, turpis dui finibus risus, ac varius libero eros ac dolor.&lt;/p>
+                    &lt;div>
+                </code>
+            </pre>
+        </div>
+    </div>
+    </div>
+
+    <div class="text">
+    <h2 class="heading-large" id="typography-links">Links</h2>
+    <p>Links without surrounding text should not have a full stop at the end.</p>
+    </div>
+    <div class="example">
+        <div class="text">
+            <p><a href="#">A link without surrounding text</a></p>
+            <p><a href="#">A body copy link</a>. Pretium molestie ligula in, volutpat mattis libero. Aenean dapibus augue id dolor egestas, in tincidunt dolor volutpat.</p>
+            <p>A body copy <a href="#" rel="external">external link <span class="sr-only">External link</span></a>. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p>A body copy <a href="#" rel="pdf">PDF document (PDF, 1MB) <span class="sr-only">External link</span></a>. Fusce dapibus, tellus ac cursus commodo.</p>
+            <a href="#" class="link-back">Back</a>
+        </div>
+    
+    <div class="code-reveal">
+        <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#typographyLinksCode" aria-expanded="false" aria-controls="typographyLinksCode">
+            See code</a>
+        <div class="collapse exampleCode" id="typographyLinksCode">
+            <pre>
+                <code class="line-numbers language-markup">
+                    &lt;p>&lt;a href="#">A link without surrounding text&lt;/a>&lt;/p>
+                    
+                    &lt;p>&lt;a href="#">A body copy link&lt;/a>. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p>
+
+                    &lt;p>A body copy &lt;a href="#" rel="external">external link &lt;span class="sr-only">External link&lt;/span>&lt;/a>. Fusce dapibus, tellus ac cursus commodo.&lt;/p>
+
+                    &lt;p>A body copy &lt;a href="#" rel="pdf">PDF document (PDF, 1MB) &lt;span class="sr-only">External link&lt;/span>&lt;/a>. Fusce dapibus, tellus ac cursus commodo.&lt;/p>
+                    
+                    &lt;a href="#" class="link-back">Back&lt;/a>
+                </code>
+            </pre>
+        </div>
+    </div>
+    </div>
+
+    <div class="text">
+    <h2 class="heading-large" id="typography-lists">Lists</h2>
+    <p class="text">
+        List items start with a lowercase letter and have no full stop at the end.
+    </p>
+    </div>
+    <div class="example">
+        <h3>Bullet list</h3>
+        <ul class="list list-bullet">
+            <li>here is a bulleted list</li>
+            <li>in tincidunt dolor volutpat</li>
+            <li>est non tempus malesuada</li>
+            <li>imperdiet lorem consequat sit amet</li>
+        </ul>
+        <h3>Numbered list</h3>
+        <ol class="list list-number">
+            <li>here is a numbered list</li>
+            <li>in tincidunt dolor volutpat</li>
+            <li>est non tempus malesuada</li>
+            <li>imperdiet lorem consequat sit amet</li>
+        </ol>
+        <h3>Navigation list</h3>
+        <ul class="list list-nav">
+            <li><a href="#">Related link</a></li>
+            <li><a href="#">Related link</a></li>
+            <li><a href="#" rel="external">External link <span class="sr-only">External link</span></a></li>
+            <li><a href="#" class="more">More</a></li>
+        </ul>
+        <h3>Stepped list</h3>
+        <ol class="list list-step">
+            <li>A home visit</li>
+            <li>Completion of an application form</li>
+            <li>Attending a three day training course</li>
+            <li>General medical and criminal records check (known as a Disclosure and Barring Service – DBS check)</li>
+            <li>Working with a social worker on your assessment and portfolio</li>
+            <li>Attending a fostering panel</li>
+            <li>Registration as a foster carer</li>
+        </ol>
+    <div class="code-reveal">
+        <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#typographyListsCode" aria-expanded="false" aria-controls="typographyListsCode">
+        See code
+        </a>
+        <div class="collapse exampleCode" id="typographyListsCode">
+            <pre>
+                <code class="line-numbers language-markup">
+                    &lt;ul class="list list-bullet">
+                        &lt;li>here is a bulleted list&lt;/li>
+                        &lt;li>in tincidunt dolor volutpat&lt;/li>
+                        &lt;li>est non tempus malesuada&lt;/li>
+                        &lt;li>imperdiet lorem consequat sit amet&lt;/li>
+                    &lt;/ul>
+
+                    &lt;ol class="list list-number">
+                        &lt;li>here is a numbered list&lt;/li>
+                        &lt;li>in tincidunt dolor volutpat&lt;/li>
+                        &lt;li>est non tempus malesuada&lt;/li>
+                        &lt;li>imperdiet lorem consequat sit amet&lt;/li>
+                    &lt;/ol>
+
+                    &lt;ul class="list list-nav">
+                        &lt;li>&lt;a href="#">Related link&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">Related link&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">Related link&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#" rel="external">External link &lt;span class="sr-only">External link&lt;/span>&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#" class="more">More&lt;/a>&lt;/li>
+                    &lt;/ul>
+
+                    &lt;ol class="list list-step">
+                        &lt;li>A home visit&lt;/li>
+                        &lt;li>Completion of an application form&lt;/li>
+                        &lt;li>Attending a three day training course&lt;/li>
+                        &lt;li>General medical and criminal records check (known as a Disclosure and Barring Service – DBS check)&lt;/li>
+                        &lt;li>Working with a social worker on your assessment and portfolio&lt;/li>
+                        &lt;li>Attending a fostering panel&lt;/li>
+                        &lt;li>Registration as a foster carer&lt;/li>
+                    &lt;/ol>
+                </code>
+            </pre>
+        </div>
+    </div>
+    </div>
+
+    <div class="text">
+        <h2 class="heading-large" id="typography-inset-text">Inset text</h2>
+        <p class="text">
+            Use bordered inset text to draw attention to important content on the page.
+        </p>
+    </div>
+    <div class="example">
+        <div class="text">
+            <div role="note" aria-label="Information" class="text-highlight">
+                <p>It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.</p>
+            </div>
+            <div role="note" aria-label="Information" class="text-highlight text-highlight--blue">
+                <p>It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.</p>
+            </div>
+            <div role="note" aria-label="Information" class="text-highlight text-highlight--green">
+                <p>It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.</p>
+            </div>
+            <div role="note" aria-label="Information" class="text-highlight text-highlight--red">
+                <h2>Emergency and out-of-hours</h2>
+                <p>If you need to contact the council urgently when our offices are closed phone one of our <a href="#">emergency numbers</a>.</p>
+            </div>
+        </div>
+    
+    <div class="code-reveal">
+        <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#typographyInsetTextCode" aria-expanded="false" aria-controls="typographyInsetTextCode">
+        See code
+        </a>
+        <div class="collapse exampleCode" id="typographyInsetTextCode">
+            <pre>
+                <code class="line-numbers language-markup">
+                &lt;div role="note" aria-label="Information" class="text-highlight">
+                    &lt;p>It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.&lt;/p>
+                &lt;/div>
+                &lt;div role="note" aria-label="Information" class="text-highlight text-highlight--blue">
+                    &lt;p>It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.&lt;/p>
+                &lt;/div>
+                &lt;div role="note" aria-label="Information" class="text-highlight text-highlight--green">
+                    &lt;p>It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.&lt;/p>
+                &lt;/div>
+                &lt;div role="note" aria-label="Information" class="text-highlight text-highlight--red">
+                    &lt;h2>Emergency and out-of-hours&lt;/h2>
+                    &lt;p>If you need to contact the council urgently when our offices are closed phone one of our &lt;a href="#">emergency numbers&lt;/a>.&lt;/p>
+                &lt;/div>
+                </code>
+            </pre>
+        </div>
+    </div>
+    </div>
+    <div class="text">
+        <h2 class="heading-large" id="typography-text-block">Text block</h2>
+        <p class="text">
+        Use text block to highlight information. For example: phone numbers, addresses and banking information.
+        </p>
+    </div>
+    <div class="example">
+        <p>Complete and return your form by post to:</p>
+        <div class="text-block">
+            <p>Leeds City Council<br>
+            PO BOX 60<br>
+            Leeds<br>
+            LS2 8JR</p>
+        </div>
+        <p>You can call us on:</p>
+        <div class="text-block">
+            <p>0113 456 7676</p>
+        </div>
+        <p>You will need the following information:</p>
+        <div class="text-block">
+            <p><strong>Name of organisation:</strong>&nbsp;Leeds City Council<br>
+            <strong>Bank and branch name:</strong> National Westminster Bank, 8 Park Row, Leeds LS1 1QS <br>
+            <strong>Branch address:</strong> Head Office Collection<br>
+            <strong>Account number:</strong> 00000000<br>
+            <strong>Sort code:</strong> 57-12-72</p>
+        </div>
+    
+    <div class="code-reveal">
+        <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#typographyTextBlockCode" aria-expanded="false" aria-controls="typographyTextBlockCode">
+        See code
+        </a>
+        <div class="collapse exampleCode" id="typographyTextBlockCode">
+            <pre>
+                <code class="line-numbers language-markup">
+                &lt;p>Complete and return your form by post to:&lt;/p>
+                &lt;div class="text-block">
+                    &lt;p>Leeds City Council&lt;br>
+                    PO BOX 60&lt;br>
+                    Leeds&lt;br>
+                    LS2 8JR&lt;/p>
+                &lt;/div>
+                &lt;p>You can call us on:&lt;/p>
+                &lt;div class="text-block">
+                    &lt;p>0113 456 7676&lt;/p>
+                &lt;/div>
+                &lt;p>You will need the following information:&lt;/p>
+                &lt;div class="text-block">
+                    &lt;p>&lt;strong>Name of organisation:&lt;/strong>&nbsp;Leeds City Council&lt;br>
+                    &lt;strong>Bank and branch name:&lt;/strong> National Westminster Bank, 8 Park Row, Leeds LS1 1QS &lt;br>
+                    &lt;strong>Branch address:&lt;/strong> Head Office Collection&lt;br>
+                    &lt;strong>Account number:&lt;/strong> 00000000&lt;br>
+                    &lt;strong>Sort code:&lt;/strong> 57-12-72&lt;/p>
+                &lt;/div>
+                </code>
+            </pre>
+        </div>
+    </div>
+    </div>
+
+    <div class="text">
+        <h2 class="heading-large" id="typography-legal-text">Legal text</h2>
+        <p class="text">
+        Use bold text with an exclamation icon if there are legal consequences - for example, a fine or prison sentence.
+        </p>
+    </div>
+    <div class="example">
+        <div class="text">
+            <div class="notice">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true">
+                    <span class="sr-only">Warning</span>
+                </i>
+                <strong class="bold-small">
+                You can be fined up to £5,000 if you don’t register.
+                </strong>
+            </div>
+        </div>
+    
+    <div class="code-reveal">
+        <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#typographyLegalTextCode" aria-expanded="false" aria-controls="typographyLegalTextCode">
+        See code
+        </a>
+        <div class="collapse exampleCode" id="typographyLegalTextCode">
+            <pre>
+                <code class="line-numbers language-markup">
+                &lt;div class="notice">
+                    &lt;i class="fa fa-exclamation-triangle" aria-hidden="true">
+                        &lt;span class="sr-only">Warning&lt;/span>
+                    &lt;/i>
+                    &lt;strong class="bold-small">You can be fined up to £5,000 if you don’t register.&lt;/strong>
+                &lt;/div>
+                </code>
+            </pre>
+        </div>
+    </div>
+    </div>
+
+    <div class="text">
+        <h2 class="heading-large" id="typography-blockquote">Blockquote</h2>
+    </div>
+    <div class="example">
+        <blockquote>
+            <span class="open-quote"></span>
+            <p>I had the opportunity to work with a number of partners on this project and engaged with a number of senior managers across the authority.</p>
+            <footer class="blockquote-footer">
+                <cite title="Source Title">Headteacher - Calverley Church of England Primary School</cite>
+            </footer>
+        </blockquote>
+    
+    <div class="code-reveal">
+        <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#typographyBlockquoteCode" aria-expanded="false" aria-controls="typographyBlockquoteCode">
+        See code
+        </a>
+        <div class="collapse exampleCode" id="typographyBlockquoteCode">
+            <pre>
+                <code class="line-numbers language-markup">
+                &lt;blockquote>
+                    &lt;span class="open-quote">&lt;/span>
+                    &lt;p>I had the opportunity to work with a number of partners on this project and engaged with a number of senior managers across the authority.&lt;/p>
+                    &lt;footer class="blockquote-footer">
+                        &lt;cite title="Source Title">Headteacher - Calverley Church of England Primary School&lt;/cite>
+                    &lt;/footer>
+                &lt;/blockquote>
+                </code>
+            </pre>
+        </div>
+    </div>
+    </div>
+
+    <div class="text">
+        <h2 class="heading-large" id="hidden-text">Hidden text (progressive disclosure)</h2>
+        <p>Use this to make your page easier to scan, only showing contextual information when required.</p>
+        <p>Click on "Help with nationality" to see how this works.</p>
+    </div>
+    <div class="example">
+        <div class="hidden-text">
+            <a class="text-link reveal collapsed" role="button" data-toggle="collapse" href="#hidden-text-example" aria-expanded="false" aria-controls="hidden-text-example">
+            Help with nationality
+            </a>
+            <div class="collapse" id="hidden-text-example">
+                <div class="panel panel-border">
+                    <p> If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.</p>
+                    <p>We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.</p>
+                </div>
+            </div>
+        </div>
+    
+    <div class="code-reveal">
+        <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#hidden-text-reveal" aria-expanded="false" aria-controls="hidden-text-reveal">
+        See code
+        </a>
+        <div class="collapse exampleCode" id="hidden-text-reveal">
+            <pre>
+                <code class="line-numbers language-markup">
+                    &lt;div class="hidden-text">
+                        &lt;a class="text-link reveal collapsed" role="button" data-toggle="collapse" href="#hidden-text-example" aria-expanded="false" aria-controls="hidden-text-example">
+                        Help with nationality
+                        &lt;/a>
+                        &lt;div class="collapse" id="hidden-text-example">
+                            &lt;div class="panel panel-border">
+                                &lt;p> If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.&lt;/p>
+                                &lt;p>We need to know your nationality so we can work out which elections you’re entitled to vote in. If you can’t provide your nationality, you’ll have to send copies of identity documents through the post.&lt;/p>
+                            &lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+                </code>
+            </pre>
+        </div>
+    </div>
+    </div>
+
+    <div class="text">
+        <h2 id="examples">Examples</h2>
+        <ul class="list list-bullet">
+            <li><a href="/design-system/design-elements/content-examples">Content examples<a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block sectionOneThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionOneThirdCol2 %}
+ {% endblock %}
+
+{% block sectionOneThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionTwoTop %}
+{% endblock %} 
+
+{% block sectionTwoFull%} 
+{% endblock %}
+
+{% block sectionTwoContent %}
+{% endblock %}
+
+{% block sectionTwoRightHandColumn %}
+{% endblock %}
+
+{% block sectionTwoThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionTwoThirdCol2 %}
+ {% endblock %}
+
+{% block sectionTwoThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionThreeTop %}
+{% endblock %} 
+
+{% block sectionThreeFull%}
+{% endblock %}
+
+{% block sectionThreeContent %}
+{% endblock %}
+
+{% block sectionThreeRightHandColumn %}
+{% endblock %}
+
+{% block sectionThreeThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionThreeThirdCol2 %}
+ {% endblock %}
+
+{% block sectionThreeThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionFourTop %}
+{% endblock %} 
+
+{% block sectionFourFull%}
+
+{% endblock %}
+
+{% block sectionFourContent %}
+{% endblock %}
+
+{% block sectionFourRightHandColumn %}
+{% endblock %}
+
+{% block sectionFourThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionFourThirdCol2 %}
+ {% endblock %}
+
+{% block sectionFourThirdCol3 %}
+ {% endblock %}
+
+
+
+{% block sectionFiveTop %}
+{% endblock %} 
+
+{% block sectionFiveFull%}
+{% endblock %}
+
+{% block sectionFiveContent %}
+{% endblock %}
+
+{% block sectionFiveRightHandColumn %}
+{% endblock %}
+
+{% block sectionFiveThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionFiveThirdCol2 %}
+
+ {% endblock %}
+
+{% block sectionFiveThirdCol3 %}
+ {% endblock %}
+
+  {% block footer_nav %}
+ {% endblock %}
+
+  {% block reusablecontent_footer %}
+     {% include "includes/footer-styleguide.html" %}
+ {% endblock %}

@@ -1,0 +1,7 @@
+.sass-cache
+.DS_Store
+.port.tmp
+lib/lcc_template.html
+lcc_modules
+node_modules/*
+Thumbs.db

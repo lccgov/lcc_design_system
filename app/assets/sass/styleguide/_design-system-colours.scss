@@ -1,0 +1,152 @@
+@mixin color-palette-variant($main-color,$light-color,$dark-color,$lighter-color){
+.colour-palette_variant{
+    background:$main-color;
+    &:after{
+      content:"#{$main-color}";
+    }
+    &:nth-child(2){
+      background:$light-color;
+      color:$base-font-color;
+      &:after{
+        content:"#{$light-color}";
+      }
+    }
+    &:nth-child(3){
+      background:$dark-color;
+      &:after{
+        content:"#{$dark-color}";
+      }
+    }
+    &:nth-child(4){
+      background:$lighter-color;
+      &:after{
+        content:"#{$lighter-color}";
+      }
+    }
+  }
+}
+
+@mixin color-palette-variant-single($main-color,$color){
+.colour-palette_variant{
+    background:$main-color;
+    color:$color;
+    font-size:14px;
+    @media (min-width: 641px) {
+      font-size:16px;
+    }
+    &:after{
+      content:"#{$main-color}";
+    }
+  }
+}
+      
+.colour-palette{
+  @include flexbox();
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  margin:15px 0 45px -15px;
+  @media (min-width: 641px) {   
+    margin:15px 0 60px -15px;
+  }
+  .colour-palette_item{
+    width: 100% !important;
+    margin:15px 0 0 15px;
+    float: left;
+    @media (min-width: 641px) {
+      width: calc(100% * (1/2) - 15px) !important;
+      margin:15px 0 0 15px;
+    }
+    @media (min-width: 990px) {
+      width: calc(100% * (1/4) - 15px) !important;
+      margin:15px 0 0 15px;
+    }
+    .colour-palette_variant{
+      padding:15px;
+      background:$grey;
+      color:white;
+      font-size:14px;
+      line-height:1.6;
+      @media (min-width: 641px) {
+        font-size:16px;
+        padding:30px;
+      }
+      &:after{
+        opacity:0.9;
+        display:block;
+      }
+      &:first-of-type{
+        padding:30px 15px;
+        border-radius:3px 3px 0 0;
+        @media (min-width: 641px) {
+          padding:50px 30px;
+        }
+      }
+      &:last-of-type{
+        border-radius:0 0 3px 3px;
+        color:$base-font-color;
+      }
+    }
+    &.single{
+      .colour-palette_variant{
+        @include border-radius(3px);
+        padding:15px;
+        color:white;
+        @media (min-width: 641px) {
+          font-size:16px;
+          padding:30px;
+        }
+      }
+    }
+    span{
+      display:block;
+      font-size:16px;
+      line-height:1.4;
+      font-family:$font-secondary;
+      font-weight:700;
+      @media (min-width: 641px) {
+        font-size:19px;
+      }
+    }
+    &.blue{
+        @include color-palette-variant($blue,$light-blue,$dark-blue,$lighter-blue);
+    }
+    &.green{
+      @include color-palette-variant($green,$light-green,$dark-green,$lighter-green);
+    }
+    &.red{
+      @include color-palette-variant($red,$light-red,$dark-red,$lighter-red);
+    }
+    &.yellow{
+      @include color-palette-variant($yellow,$light-yellow,$dark-yellow,$lighter-yellow);
+      .colour-palette_variant{
+        color:$base-font-color;
+      }
+    }
+    &.black{
+      @include color-palette-variant-single($black,white);
+    }
+    &.light-black{
+      @include color-palette-variant-single($light-black,white);
+    }
+    &.dark-grey{
+      @include color-palette-variant-single($dark-grey,white);
+    }
+    &.grey{
+      @include color-palette-variant-single($grey,$base-font-color);
+    }
+    &.light-grey{
+      @include color-palette-variant-single($light-grey,$base-font-color);
+    }
+    &.lighter-grey{
+      @include color-palette-variant-single($lighter-grey,$base-font-color);
+      border:1px solid $border-color;
+    }
+    &.white{
+      @include color-palette-variant-single($white,$base-font-color);
+      border:1px solid $border-color;
+    }
+    &.lighter-blue{
+      @include color-palette-variant-single($lighter-blue,$base-font-color);
+    }
+  }
+}

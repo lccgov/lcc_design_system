@@ -1,0 +1,184 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "description-list" %} <!-- Page id var for side nav --> 
+{% set page_title = "Description list" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead"></p>
+</div>
+
+<div class="example">
+    <div class="description-list">
+        <div class="description-list__item">
+            <h3>Name</h3>
+            <div class="description-list__item-content">
+                <p>Central library</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="description-list__item">
+            <h3>Address</h3>
+            <div class="description-list__item-content">
+                <p>Municipal Buildings, <br>Calverley Street, <br>Leeds <br>WF3 2DL</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="description-list__item">
+            <h3>Library enquires - Telephone</h3>
+            <div class="description-list__item-content">
+                <p>0113 378 5005</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="description-list__item">
+            <h3>Library enquires - Email</h3>
+            <div class="description-list__item-content">
+                <p><a href="mailto:libraryenquiries@leeds.gov.uk">libraryenquiries@leeds.gov.uk</a></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="description-list__item">
+            <h3>Meeting room hire - Email</h3>
+            <div class="description-list__item-content">
+                <p><a href="mailto:centrallibrarybookings@leeds.gov.uk">centrallibrarybookings@leeds.gov.uk</a></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="description-list__item">
+            <h3>Opening hours</h3>
+            <div class="description-list__item-content">
+                <ul class="list">
+                    <li><strong>Monday: </strong>9am to 7pm</li>
+                    <li><strong>Tuesday: </strong>9am to 7pm</li>
+                    <li><strong>Wednesday: </strong>9am to 7pm</li>
+                    <li><strong>Thursday: </strong>9am to 6pm</li>
+                    <li><strong>Friday: </strong>9am to 5pm</li>
+                    <li><strong>Saturday: </strong>10am to 5pm</li>
+                    <li><strong>Sunday: </strong>11am to 3pm</li>
+                </ul>
+                <div role="note" aria-label="Information" class="text-highlight text-highlight--blue">
+                    <p>Please note the library is closed on Bank Holidays</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="description-list__item">
+            <h3>Location</h3>
+            <div class="description-list__item-content">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2356.398918160101!2d-1.5508306841443953!3d53.80018498007656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795c1d0783ae7b%3A0xf2e1318bde1573ce!2sLeeds+Central+Library!5e0!3m2!1sen!2suk!4v1501752856711" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="description-list__item">
+            <h3>Specialist departments</h3>
+            <div class="description-list__item-content">
+                <ul class="list list-bullet">
+                    <li><a href="/Pages/Music-and-art.aspx">Music and Art&#8203;</a></li>
+                    <li><a href="/Pages/Information-and-research-library.aspx">Information and research library</a></li>
+                    <li><a rel="external" href="/bipcleeds">Business &amp; IP Centre</a></li>
+                    <li><a href="/Pages/Local-and-family-history-service.aspx">Leeds and&nbsp;Local and Family History</a></li>
+                    <li><a href="/Pages/Drama-library.aspx">Drama library</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for description list</span></h3>
+    <pre>
+        <code id="snippet-description-list" class="line-numbers language-markup">
+            &lt;div class="description-list">
+                &lt;div class="description-list__item">
+                    &lt;h3>Name&lt;/h3>
+                    &lt;div class="description-list__item-content">
+                        &lt;p>Central library&lt;/p>
+                    &lt;/div>
+                    &lt;div class="clear">&lt;/div>
+                &lt;/div>
+                &lt;div class="description-list__item">
+                    &lt;h3>Address&lt;/h3>
+                    &lt;div class="description-list__item-content">
+                        &lt;p>Municipal Buildings, &lt;br>Calverley Street, &lt;br>Leeds &lt;br>WF3 2DL&lt;/p>
+                    &lt;/div>
+                    &lt;div class="clear">&lt;/div>
+                &lt;/div>
+                &lt;div class="description-list__item">
+                    &lt;h3>Library enquires - Telephone&lt;/h3>
+                    &lt;div class="description-list__item-content">
+                        &lt;p>0113 378 5005&lt;/p>
+                    &lt;/div>
+                    &lt;div class="clear">&lt;/div>
+                &lt;/div>
+                &lt;div class="description-list__item">
+                    &lt;h3>Library enquires - Email&lt;/h3>
+                    &lt;div class="description-list__item-content">
+                        &lt;p>&lt;a href="mailto:libraryenquiries@leeds.gov.uk">libraryenquiries@leeds.gov.uk&lt;/a>&lt;/p>
+                    &lt;/div>
+                    &lt;div class="clear">&lt;/div>
+                &lt;/div>
+                &lt;div class="description-list__item">
+                    &lt;h3>Meeting room hire - Email&lt;/h3>
+                    &lt;div class="description-list__item-content">
+                        &lt;p>&lt;a href="mailto:centrallibrarybookings@leeds.gov.uk">centrallibrarybookings@leeds.gov.uk&lt;/a>&lt;/p>
+                    &lt;/div>
+                    &lt;div class="clear">&lt;/div>
+                &lt;/div>
+                &lt;div class="description-list__item">
+                    &lt;h3>Opening hours&lt;/h3>
+                    &lt;div class="description-list__item-content">
+                        &lt;ul class="list">
+                            &lt;li>&lt;strong>Monday: &lt;/strong>9am to 7pm&lt;/li>
+                            &lt;li>&lt;strong>Tuesday: &lt;/strong>9am to 7pm&lt;/li>
+                            &lt;li>&lt;strong>Wednesday: &lt;/strong>9am to 7pm&lt;/li>
+                            &lt;li>&lt;strong>Thursday: &lt;/strong>9am to 6pm&lt;/li>
+                            &lt;li>&lt;strong>Friday: &lt;/strong>9am to 5pm&lt;/li>
+                            &lt;li>&lt;strong>Saturday: &lt;/strong>10am to 5pm&lt;/li>
+                            &lt;li>&lt;strong>Sunday: &lt;/strong>11am to 3pm&lt;/li>
+                        &lt;/ul>
+                        &lt;div role="note" aria-label="Information" class="text-highlight text-highlight--blue">
+                            &lt;p>Please note the library is closed on Bank Holidays&lt;/p>
+                        &lt;/div>
+                    &lt;/div>
+                    &lt;div class="clear">&lt;/div>
+                &lt;/div>
+                &lt;div class="description-list__item">
+                    &lt;h3>Location&lt;/h3>
+                    &lt;div class="description-list__item-content">
+                        &lt;iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2356.398918160101!2d-1.5508306841443953!3d53.80018498007656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795c1d0783ae7b%3A0xf2e1318bde1573ce!2sLeeds+Central+Library!5e0!3m2!1sen!2suk!4v1501752856711" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen>&lt;/iframe>
+                    &lt;/div>
+                    &lt;div class="clear">&lt;/div>
+                &lt;/div>
+                &lt;div class="description-list__item">
+                    &lt;h3>Specialist departments&lt;/h3>
+                    &lt;div class="description-list__item-content">
+                        &lt;ul class="list list-bullet">
+                            &lt;li>&lt;a href="/Pages/Music-and-art.aspx">Music and Art&#8203;&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="/Pages/Information-and-research-library.aspx">Information and research library&lt;/a>&lt;/li>
+                            &lt;li>&lt;a rel="external" href="/bipcleeds">Business &amp; IP Centre&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="/Pages/Local-and-family-history-service.aspx">Leeds and&nbsp;Local and Family History&lt;/a>&lt;/li>
+                            &lt;li>&lt;a href="/Pages/Drama-library.aspx">Drama library&lt;/a>&lt;/li>
+                        &lt;/ul>
+                    &lt;/div>
+                    &lt;div class="clear">&lt;/div>
+                &lt;/div>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-description-list">
+        Copy <span class="sr-only">HTML snippet for description list"</span>
+    </button>
+</div>
+
+{% endblock %}

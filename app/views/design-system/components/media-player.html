@@ -1,0 +1,97 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "media-player" %} <!-- Page id var for side nav --> 
+{% set page_title = "Media player" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">Only YouTube videos can be embedded on to LEEDS.GOV.UK pages.</p>
+</div>
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#media-player-example">Media player example</a></li>
+        <li><a href="#media-player-with-content">Media player with content</a></li>
+    </ul>
+</div>
+<div class="text">
+    <div role="note" aria-label="Information" class="text-highlight">
+        <p>You embed the video directly into your page using the code below.</p>
+    </div> 
+</div>
+<div id="media-player-example" class="example">
+    <div class="media-container">
+        <p>
+            <a rel="external" href="https://www.youtube.com/watch?v=oapZ3AXIMzI">Leeds City Council Graduate Programme</a>
+        </p>
+    </div>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for media player</span></h3>
+    <pre>
+        <code id="snippet-media-player" class="line-numbers language-markup">
+            &lt;div class="media-container">
+                &lt;p>
+                    &lt;a rel="external" href="https://www.youtube.com/watch?v=oapZ3AXIMzI">Leeds City Council Graduate Programme&lt;/a>
+                &lt;/p>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-media-player">
+        Copy <span class="sr-only">HTML snippet for media player"</span>
+    </button>
+</div>
+<h2 class="heading-large" id="media-player-with-content">Media player with content</h2>
+<div class="example">
+    <div class="panel">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="heading-large">Child friendly Leeds: play your part!</h3>
+                <p>We want Leeds to be the best city to grow up in, and to make this happen, the city is bringing together people, places and organisations to make Leeds a child friendly city. ​​</p>
+            </div>
+            <div class="col-md-6">
+                <div class="media-container">
+                    <p>
+                        <a rel="external" href="https://www.youtube.com/watch?v=oapZ3AXIMzI">Leeds City Council Graduate Programme</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for media player with content</span></h3>
+    <pre>
+        <code id="snippet-media-player-with-content" class="line-numbers language-markup">
+            &lt;div class="panel">
+                &lt;div class="row">
+                    &lt;div class="col-md-6">
+                        &lt;h3 class="heading-large">Child friendly Leeds: play your part!&lt;/h3>
+                        &lt;p>We want Leeds to be the best city to grow up in, and to make this happen, the city is bringing together people, places and organisations to make Leeds a child friendly city. ​​&lt;/p>
+                    &lt;/div>
+                    &lt;div class="col-md-6">
+                        &lt;div class="media-container">
+                            &lt;p>
+                                &lt;a rel="external" href="https://www.youtube.com/watch?v=oapZ3AXIMzI">Leeds City Council Graduate Programme&lt;/a>
+                            &lt;/p>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-media-player-with-content">
+        Copy <span class="sr-only">HTML snippet for media player with content"</span>
+    </button>
+</div>
+
+{% endblock %}

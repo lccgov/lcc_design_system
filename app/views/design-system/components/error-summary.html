@@ -1,0 +1,115 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "error-summary" %} <!-- Page id var for side nav --> 
+{% set page_title = "Error summary" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead"></p>
+</div>
+
+<div class="text">
+    <h2 class="heading-large top" id="summarise-errors">Summarise errors at the top of the page</h2>
+    <ul class="text list list-bullet">
+        <li>show an error summary at the top of the page</li>
+        <li>include a heading to alert the user to the error</li>
+        <li>link to each of the problematic questions</li>
+    </ul>
+    <div role="note" aria-label="Information" class="text-highlight">
+        <p>Additionally, you should reflect that there's been an error in the <code>&lt;title&gt;</code> by prefixing the existing title with "Error: ". That will make sure screen readers are alerted to there being an error as soon as possible.</p>
+    </div>  
+</div>
+<h3>Error message and summary box</h2>
+<div class="example">
+    <div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+        <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+            Message to alert the user to a problem goes here
+        </h2>
+        <p>
+            Optional description of the errors and how to correct them
+        </p>
+        <ul class="error-summary-list">
+            <li><a href="#where-do-you-live">Descriptive link to the question with an error</a></li>
+        </ul>
+    </div>
+    <h1 class="heading-large">Where do you live?</h1>
+    <form>
+        <div class="form-group form-group-error">
+            <fieldset>
+                <legend id="where-do-you-live" class="sr-only">Where do you live?</legend>
+                <span class="error-message">Choose an answer</span>
+                <label class="block-label" for="radio-1-error" data-target="radio-1-error">
+                    <input type="radio" id="radio-1-error" name="radio-group" value="Northern Ireland" aria-controls="radio-1-error" aria-expanded="false">
+                    Northern Ireland
+                </label>
+                <label class="block-label" for="radio-2-error" data-target="radio-2-error">
+                    <input type="radio" id="radio-2-error" name="radio-group" value="Isle of Man or the Channel Islands" aria-controls="radio-2-error" aria-expanded="false">
+                    Isle of Man or the Channel Islands
+                </label>
+                <label class="block-label" for="radio-3-error" data-target="radio-3-error">
+                    <input type="radio" id="radio-3-error" name="radio-group" value="I am a British citizen living abroad" aria-controls="radio-3-error" aria-expanded="false">
+                    I am a British citizen living abroad
+                </label>
+            </fieldset>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary btn-arrow">Continue</button>
+        </div>
+    </form>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for error summary</span></h3>
+    <pre>
+        <code id="snippet-error-summary"class="line-numbers language-markup">
+            &lt;div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+                &lt;h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+                    Message to alert the user to a problem goes here
+                &lt;/h2>
+                &lt;p>
+                    Optional description of the errors and how to correct them
+                &lt;/p>
+                &lt;ul class="error-summary-list">
+                    &lt;li>&lt;a href="#where-do-you-live">Descriptive link to the question with an error&lt;/a>&lt;/li>
+                &lt;/ul>
+            &lt;/div>
+            &lt;h1 class="heading-large">Where do you live?&lt;/h1>
+            &lt;form>
+                &lt;div class="form-group form-group-error">
+                    &lt;fieldset>
+                        &lt;legend id="where-do-you-live" class="sr-only">Where do you live?&lt;/legend>
+                        &lt;span class="error-message">Choose an answer&lt;/span>
+                        &lt;label class="block-label" for="radio-1-error" data-target="radio-1-error">
+                            &lt;input type="radio" id="radio-1-error" name="radio-group" value="Northern Ireland" aria-controls="radio-1-error" aria-expanded="false">
+                            Northern Ireland
+                        &lt;/label>
+                        &lt;label class="block-label" for="radio-2-error" data-target="radio-2-error">
+                            &lt;input type="radio" id="radio-2-error" name="radio-group" value="Isle of Man or the Channel Islands" aria-controls="radio-2-error" aria-expanded="false">
+                            Isle of Man or the Channel Islands
+                        &lt;/label>
+                        &lt;label class="block-label" for="radio-3-error" data-target="radio-3-error">
+                            &lt;input type="radio" id="radio-3-error" name="radio-group" value="I am a British citizen living abroad" aria-controls="radio-3-error" aria-expanded="false">
+                            I am a British citizen living abroad
+                        &lt;/label>
+                    &lt;/fieldset>
+                &lt;/div>
+                &lt;div class="form-group">
+                    &lt;button class="btn btn-primary btn-arrow">Continue&lt;/button>
+                &lt;/div>
+            &lt;/form>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-error-summary">
+        Copy <span class="sr-only">HTML snippet for error summary"</span>
+    </button>
+</div>
+
+{% endblock %}

@@ -1,0 +1,113 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "accordion" %} <!-- Page id var for side nav --> 
+{% set page_title = "Accordion" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">Accordion allows organising the content into logical, titled sections in a space-saving way.</p>
+</div>
+
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#accordion">Accordion example</a></li>
+        <li><a href="#sharepoint">SharePoint guidance</a></li>
+    </ul>
+</div>
+
+<div id="accordion" class="text">
+    <p class="top">The number of panels should be small, for example: less than 10.</p>
+</div>
+
+<div class="example">
+
+    <div class="accordion"
+        data-aria-accordion
+        data-multi
+        data-default="none">
+
+        <h3 class="accordion__heading">
+            Heading 1
+        </h3>
+        <div class="accordion__panel">
+            <p>
+                Here is the first panel of content.
+            </p>
+        </div>
+
+        <h3 class="accordion__heading">
+            Heading 2
+        </h3>
+        <div class="accordion__panel">
+            <p>
+                Here is the second panel of content.
+            </p>
+            <ul class="list list-bullet">
+                <li>list item one</li>
+                <li>list item two</li>
+                <li>list item three</li>
+            </ul>
+        </div>
+
+        <h3 class="accordion__heading">
+            Heading 3
+        </h3>
+        <div class="accordion__panel">
+            <p>
+                Here is the third panel of content.
+            </p>
+        </div>
+    </div>
+</div>
+<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for accordion</span></h3>
+<pre>
+    <code class="line-numbers language-markup">
+        &lt;div class="accordion"
+            data-aria-accordion
+            data-multi
+            data-default="none">
+
+            &lt;h3 class="accordion__heading">
+                Heading 1
+            &lt;/h3>
+            &lt;div class="accordion__panel">
+                &lt;p>
+                    Here is the first panel of content.
+                &lt;/p>
+            &lt;/div>
+
+            &lt;h3 class="accordion__heading">
+                Heading 2
+            &lt;/h3>
+            &lt;div class="accordion__panel">
+                &lt;p>
+                    Here is the second panel of content.
+                &lt;/p>
+            &lt;/div>
+
+            &lt;h3 class="accordion__heading">
+                Heading 3
+            &lt;/h3>
+            &lt;div class="accordion__panel">
+                &lt;p>
+                    Here is the third panel of content.
+                &lt;/p>
+            &lt;/div>
+        &lt;/div>
+    </code>
+</pre>
+<div class="text">
+        <h2 class="heading-large" id="sharepoint">SharePoint guidance</h2>
+        <p>Sharepoint instructions to go here...</p>
+</div>
+{% endblock %}

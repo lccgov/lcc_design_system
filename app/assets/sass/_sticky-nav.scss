@@ -1,0 +1,31 @@
+//sticky
+#sticky-anchor {
+    @media (max-width: 990px) {
+        display: none;
+    }
+}
+
+#sticky {
+    padding: 0;
+}
+
+#sticky.stick {
+    margin-top: 0 !important;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    @media (max-width: 990px) {
+        position: relative;
+        top: auto;
+        padding: 0;
+        z-index: 1;
+        height:auto !important;
+    }
+}
+
+.list-contents {
+    li {
+        margin-bottom: 10px;
+    }
+}
+

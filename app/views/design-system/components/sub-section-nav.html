@@ -1,0 +1,121 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "sub-section-nav" %} <!-- Page id var for side nav --> 
+{% set page_title = "Sub-section nav" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead"></p>
+</div>
+
+<div class="example top">
+    <div class="sub-section-nav">       
+        <div class="sub-section">
+            <h2 class="heading-medium sub-section-heading">Manage your council tax online</h2>
+            <ul class="list list-nav">
+                <li>
+                    <a href="#">What you can do online</a>
+                </li>
+                <li>
+                    <a href="#">Register <span class="sr-only">to manage your council tax online</span></a>
+                </li>
+                <li>
+                    <a href="#">Sign in <span class="sr-only">to manage your council tax online</span></a>
+                </li>                    
+            </ul>
+        </div>     
+        <div class="sub-section">
+            <h2 class="heading-medium sub-section-heading">Landlords, lettings agents and tenants</h2>
+            <ul class="list list-nav">
+                <li>
+                    <a href="#">Report a change of tenancy</a>
+                </li>
+                <li>
+                    <a href="#">Who is responsible for the bill?</a>
+                </li>
+                <li>
+                    <a href="#">Houses in multiple occupation</a>
+                </li>           
+            </ul>
+        </div>
+        <div class="sub-section">
+            <h2 class="heading-medium sub-section-heading">What happens if you don't pay</h2>
+            <ul class="list list-nav">
+                <li>
+                    <a href="#">Overiew <span class="sr-only">of what happens if you don't pay your council tax</span></a>
+                </li>
+                <li>
+                    <a href="#">Court summons</a>
+                </li>
+                <li>
+                    <a href="#">Liability orders</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for sub-section nav</span></h3>
+    <pre>
+        <code id="snippet-sub-section-nav" class="line-numbers language-markup">
+            &lt;div class="sub-section-nav">       
+                &lt;div class="sub-section">
+                    &lt;h2 class="heading-medium sub-section-heading">Manage your council tax online&lt;/h2>
+                    &lt;ul class="list list-nav">
+                        &lt;li>
+                            &lt;a href="#">What you can do online&lt;/a>
+                        &lt;/li>
+                        &lt;li>
+                            &lt;a href="#">Register &lt;span class="sr-only">to manage your council tax online&lt;/span>&lt;/a>
+                        &lt;/li>
+                        &lt;li>
+                            &lt;a href="#">Sign in &lt;span class="sr-only">to manage your council tax online&lt;/span>&lt;/a>
+                        &lt;/li>                    
+                    &lt;/ul>
+                &lt;/div>     
+                &lt;div class="sub-section">
+                    &lt;h2 class="heading-medium sub-section-heading">Landlords, lettings agents and tenants&lt;/h2>
+                    &lt;ul class="list list-nav">
+                        &lt;li>
+                            &lt;a href="#">Report a change of tenancy&lt;/a>
+                        &lt;/li>
+                        &lt;li>
+                            &lt;a href="#">Who is responsible for the bill?&lt;/a>
+                        &lt;/li>
+                        &lt;li>
+                            &lt;a href="#">Houses in multiple occupation&lt;/a>
+                        &lt;/li>           
+                    &lt;/ul>
+                &lt;/div>
+                &lt;div class="sub-section">
+                    &lt;h2 class="heading-medium sub-section-heading">What happens if you don't pay&lt;/h2>
+                    &lt;ul class="list list-nav">
+                        &lt;li>
+                            &lt;a href="#">Overiew &lt;span class="sr-only">of what happens if you don't pay your council tax&lt;/span>&lt;/a>
+                        &lt;/li>
+                        &lt;li>
+                            &lt;a href="#">Court summons&lt;/a>
+                        &lt;/li>
+                        &lt;li>
+                            &lt;a href="#">Liability orders&lt;/a>
+                        &lt;/li>
+                    &lt;/ul>
+                &lt;/div>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-sub-section-nav">
+        Copy <span class="sr-only">HTML snippet for sub-section nav"</span>
+    </button>
+</div>
+
+{% endblock %}

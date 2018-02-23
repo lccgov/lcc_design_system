@@ -1,0 +1,47 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "patterns" %} <!-- Section id var for main nav --> 
+{% set section_name = "Help users to..." %} <!-- Section id var for main nav --> 
+{% set page_id = "check-answers" %} <!-- Page id var for side nav --> 
+{% set page_title = "Check answers" %} <!-- Page title var for page header (H1) and page title -->  
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1><span>{{ section_name }}</span> {{ page_title }}</h1>
+    <p class="lead"></p>
+</div>
+
+<!-- Page content goes here -->
+
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#"></a></li>
+    </ul>
+</div>
+
+<div class="example">
+
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for </span></h3>
+    <pre>
+        <code id="snippet-" class="line-numbers language-markup">
+            &lt;
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-">
+        Copy <span class="sr-only">HTML snippet for </span>
+    </button>
+</div>
+
+
+{% endblock %}

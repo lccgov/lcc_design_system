@@ -1,0 +1,246 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "checkboxes" %} <!-- Page id var for side nav --> 
+{% set page_title = "Checkboxes" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">Use these to select either on/off toggles or multiple selections.</p>
+</div>
+
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#checkboxes">Checkboxes example</a></li>
+        <li><a href="#checkboxes-conditionally-revealing-content">Conditionally revealing content</a></li>
+        <li><a href="#error-handling">Error handling</a></li>
+    </ul>
+</div>
+
+<div class="text" id="checkboxes">
+    <p>Make it clear with words when users can select one or multiple options.</p>
+</div>
+<div class="example">
+    <h1 class="heading-medium">What bins do you currently have?</h1>
+    <p>Select all that apply</p>
+    <form>
+        <div class="form-group">
+            <fieldset>
+                <legend class="sr-only">What bins do you currently have?</legend>
+                <label class="block-label" for="waste-type-1" data-target="waste-type-1">
+                    <input type="checkbox" id="waste-type-1" name="waste-types" value="Black bin (General waste)" aria-controls="waste-type-1" aria-expanded="false">
+                    Black bin (General waste)
+                </label>
+                <label class="block-label" for="waste-type-2" data-target="waste-type-2">
+                    <input type="checkbox" id="waste-type-2" name="waste-types" value="Brown bin (Garden waste)" aria-controls="waste-type-2" aria-expanded="false">
+                    Brown bin (Garden waste)
+                </label>
+                <label class="block-label" for="waste-type-3" data-target="waste-type-3">
+                    <input type="checkbox" id="waste-type-3" name="waste-types" value="Green bin (Recycling)" aria-controls="waste-type-3" aria-expanded="false">
+                    Green bin (Recycling)
+                </label>
+            </fieldset>
+        </div>
+    </form>
+</div>
+<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for checkboxes</span></h3>
+<pre>
+    <code class="line-numbers language-markup">
+        &lt;h1 class="heading-medium">What bins do you currently have?&lt;/h1>
+        &lt;p>Select all that apply&lt;/p>
+        &lt;form>
+            &lt;div class="form-group">
+                &lt;fieldset>
+                    &lt;legend class="sr-only">What bins do you currently have?&lt;/legend>
+                    &lt;label class="block-label" for="waste-type-1" data-target="waste-type-1">
+                        &lt;input type="checkbox" id="waste-type-1" name="waste-types" value="Black bin (General waste)" aria-controls="waste-type-1" aria-expanded="false">
+                        Black bin (General waste)
+                    &lt;/label>
+                    &lt;label class="block-label" for="waste-type-2" data-target="waste-type-2">
+                        &lt;input type="checkbox" id="waste-type-2" name="waste-types" value="Brown bin (Garden waste)" aria-controls="waste-type-2" aria-expanded="false">
+                        Brown bin (Garden waste)
+                    &lt;/label>
+                    &lt;label class="block-label" for="waste-type-3" data-target="waste-type-3">
+                        &lt;input type="checkbox" id="waste-type-3" name="waste-types" value="Green bin (Recycling)" aria-controls="waste-type-3" aria-expanded="false">
+                        Green bin (Recycling)
+                    &lt;/label>
+                &lt;/fieldset>
+            &lt;/div>
+        &lt;/form>
+    </code>
+</pre>
+
+<div class="text">
+    <h2 class="heading-large" id="checkboxes-conditionally-revealing-content">Conditionally revealing content</h2>
+    <p>Reveal additional questions, depending on the context.</p>
+    <p>Select 'Other'</p>
+</div>
+
+<div class="example">
+    <h1 class="heading-medium">How do you travel to work?</h1>
+    <p>Select all options that are relevant to you.</p>
+
+    <form>
+        <div class="form-group">
+            <fieldset>
+
+            <legend class="sr-only">How do you travel to work?</legend>
+
+            <div class="form-group">
+                <label class="block-label" for="car" data-target="car">
+                    <input type="checkbox" id="car" name="work travel" value="Car" aria-controls="car" aria-expanded="false">
+                    Car
+                </label>
+                <label class="block-label" for="train" data-target="train">
+                    <input type="checkbox" id="train" name="work travel" value="Irish" aria-controls="train" aria-expanded="false">
+                    Train
+                </label>
+                <label class="block-label" for="bus" data-target="bus">
+                    <input type="checkbox" id="bus" name="work travel" value="Bus" aria-controls="bus" aria-expanded="false">
+                    Bus
+                </label>
+                <label class="block-label" for="walking" data-target="walking">
+                    <input type="checkbox" id="walking" name="work travel" value="I walk" aria-controls="walking" aria-expanded="false">
+                    I walk
+                </label>
+                <label class="block-label" for="other" data-target="other">
+                    <input type="checkbox" id="other" name="work travel" value="Other" aria-controls="other" aria-expanded="false">
+                    Other
+                </label>
+                <div class="panel panel-border-narrow js-hidden" id="example-other-transport">
+                    <label class="form-label" for="other-transport">Tell us how</label>
+                    <input class="form-control" type="text" id="other-transport" name="other-transport">
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="register-button" class="btn btn-primary">
+                Continue to payment
+                </button>
+            </div>
+
+            </fieldset>
+        </div>
+    </form>
+</div>
+
+<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for conditionally revealing content</span></h3>
+<pre>
+    <code class="line-numbers language-markup">
+        &lt;h1 class="heading-medium">How do you travel to work?&lt;/h1>
+        &lt;p>Select all options that are relevant to you.&lt;/p>
+
+        &lt;form>
+            &lt;div class="form-group">
+                &lt;fieldset>
+
+                &lt;legend class="sr-only">How do you travel to work?&lt;/legend>
+
+                &lt;div class="form-group">
+                    &lt;label class="block-label" for="car" data-target="car">
+                        &lt;input type="checkbox" id="car" name="work travel" value="Car" aria-controls="car" aria-expanded="false">
+                        Car
+                    &lt;/label>
+                    &lt;label class="block-label" for="train" data-target="train">
+                        &lt;input type="checkbox" id="train" name="work travel" value="Irish" aria-controls="train" aria-expanded="false">
+                        Train
+                    &lt;/label>
+                    &lt;label class="block-label" for="bus" data-target="bus">
+                        &lt;input type="checkbox" id="bus" name="work travel" value="Bus" aria-controls="bus" aria-expanded="false">
+                        Bus
+                    &lt;/label>
+                    &lt;label class="block-label" for="walking" data-target="walking">
+                        &lt;input type="checkbox" id="walking" name="work travel" value="I walk" aria-controls="walking" aria-expanded="false">
+                        I walk
+                    &lt;/label>
+                    &lt;label class="block-label" for="other" data-target="other">
+                        &lt;input type="checkbox" id="other" name="work travel" value="Other" aria-controls="other" aria-expanded="false">
+                        Other
+                    &lt;/label>
+                    &lt;div class="panel panel-border-narrow js-hidden" id="example-other-transport">
+                        &lt;label class="form-label" for="other-transport">Tell us how&lt;/label>
+                        &lt;input class="form-control" type="text" id="other-transport" name="other-transport">
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="form-group">
+                    &lt;button type="submit" id="register-button" class="btn btn-primary">
+                    Continue to payment
+                    &lt;/button>
+                &lt;/div>
+
+                &lt;/fieldset>
+            &lt;/div>
+        &lt;/form>
+    </code>
+</pre>
+
+<div class="text">
+    <h2 class="heading-large" id="error-handling">Error handling</h2>
+    <ul class="list list-bullet">
+        <li>add a class of <code>form-group-error</code> to <code>&lt;div class="form-group"></code></li>
+        <li>the error message <code>&lt;span class="error-message">Choose an answer&lt;/span></code> goes beneath the <code>&lt;legend></code></li>
+    </ul>
+</div>
+
+<div class="example">
+    <h1 class="heading-medium">What bins do you currently have?</h1>
+    <p>Select all that apply</p>
+    <form>
+        <div class="form-group form-group-error">
+            <fieldset>
+                <legend class="sr-only">What bins do you currently have?</legend>
+                <span class="error-message">Choose an answer</span>
+                <label class="block-label" for="waste-type-1-error" data-target="waste-type-1-error">
+                    <input type="checkbox" id="waste-type-1-error" name="waste-types-error" value="Black bin (General waste)" aria-controls="waste-type-1-error" aria-expanded="false">
+                    Black bin (General waste)
+                </label>
+                <label class="block-label" for="waste-type-2-error" data-target="waste-type-2-error">
+                    <input type="checkbox" id="waste-type-2-error" name="waste-types-error" value="Brown bin (Garden waste)" aria-controls="waste-type-2-error" aria-expanded="false">
+                    Brown bin (Garden waste)
+                </label>
+                <label class="block-label" for="waste-type-3-error" data-target="waste-type-3-error">
+                    <input type="checkbox" id="waste-type-3-error" name="waste-types-error" value="Green bin (Recycling)" aria-controls="waste-type-3-error" aria-expanded="false">
+                    Green bin (Recycling)
+                </label>
+            </fieldset>
+        </div>
+    </form>
+</div>
+
+<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for conditionally revealing content</span></h3>
+<pre>
+    <code class="line-numbers language-markup">
+        &lt;h1 class="heading-medium">What bins do you currently have?&lt;/h1>
+        &lt;p>Select all that apply&lt;/p>
+        &lt;form>
+            &lt;div class="form-group form-group-error">
+                &lt;fieldset>
+                    &lt;legend class="sr-only">What bins do you currently have?&lt;/legend>
+                    &lt;span class="error-message">Choose an answer&lt;/span>
+                    &lt;label class="block-label" for="waste-type-1-error" data-target="waste-type-1-error">
+                        &lt;input type="checkbox" id="waste-type-1-error" name="waste-types-error" value="Black bin (General waste)" aria-controls="waste-type-1-error" aria-expanded="false">
+                        Black bin (General waste)
+                    &lt;/label>
+                    &lt;label class="block-label" for="waste-type-2-error" data-target="waste-type-2-error">
+                        &lt;input type="checkbox" id="waste-type-2-error" name="waste-types-error" value="Brown bin (Garden waste)" aria-controls="waste-type-2-error" aria-expanded="false">
+                        Brown bin (Garden waste)
+                    &lt;/label>
+                    &lt;label class="block-label" for="waste-type-3-error" data-target="waste-type-3-error">
+                        &lt;input type="checkbox" id="waste-type-3-error" name="waste-types-error" value="Green bin (Recycling)" aria-controls="waste-type-3-error" aria-expanded="false">
+                        Green bin (Recycling)
+                    &lt;/label>
+                &lt;/fieldset>
+            &lt;/div>
+        &lt;/form>
+    </code>
+</pre>
+
+{% endblock %}

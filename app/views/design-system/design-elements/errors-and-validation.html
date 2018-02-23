@@ -1,0 +1,382 @@
+{% extends "page-layout-styleguide.html" %}
+
+{% block page_title %}
+	Errors and validation
+{% endblock %}
+
+
+  {% block css_register %}
+  <script src="https://use.typekit.net/pws7qio.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+         <link href="{{ asset_path }}stylesheets/application.css" rel="stylesheet">
+   {% endblock %}
+
+ {% block additional_page_scripts %}
+    <script src="/public/javascripts/prism.js" type="text/javascript"></script>  
+{% endblock %}  
+
+{% block header %}
+    Errors and validation
+{% endblock %}
+
+ {% block main_nav %}
+  {% include "includes/main_nav.html" %}
+ {% endblock %}
+
+
+
+ {% block sectionOneTop %}
+{% endblock %} 
+
+{% block sectionOneFull%}
+{% endblock %}
+
+
+ {% block breadcrumb %}
+  {% include "includes/breadcrumb_sp.html" %}
+ {% endblock %}
+
+{% block sectionOneContent %}
+{% endblock %}
+
+{% block pageContent %}
+
+{% endblock %}
+
+{% block sectionOneFullBottom %}
+
+{% endblock %}
+
+{% block sectionOneRightHandColumn %}
+
+{% endblock %}
+
+{% block sectionLeftHandColumn %}
+<div id="sticky-anchor"></div>
+<div id="sticky">
+    <a href="/design-system/styleguide" class="link-back">Back to style guide</a>
+    <h3 class="heading-xsmall heading-contents">Contents:</h3>
+    <ul class="list list-contents">
+        <li><a href="#one-question-page">One question per page</a></li>
+        <li><a href="#summarise-errors">Summarise the errors</a></li>
+        <li><a href="#highlight-errors-in-forms">Highlight errors on forms</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="text">
+    <h2 class="heading-large" id="one-question-page">Ask one question per page</h2>
+    <p>Recovering from errors can be hard for users, especially if a page contains multiple errors.</p>
+    <p>Simplify forms by rewriting and where possible, splitting long forms across multiple pages - with each page asking a single question.</p>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="summarise-errors">Summarise errors at the top of the page</h2>
+    <ul class="text list list-bullet">
+        <li>show an error summary at the top of the page</li>
+        <li>include a heading to alert the user to the error</li>
+        <li>link to each of the problematic questions</li>
+    </ul>
+    <p>Additionally, you should reflect that there's been an error in the <code>&lt;title&gt;</code> by prefixing the existing title with "Error: ". That will make sure screen readers are alerted to there being an error as soon as possible.</p>
+</div>
+<h3>Error message and summary box</h2>
+  <div class="example">
+        <div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+            <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+                Message to alert the user to a problem goes here
+            </h2>
+            <p>
+                Optional description of the errors and how to correct them
+            </p>
+            <ul class="error-summary-list">
+                <li><a href="#where-do-you-live">Descriptive link to the question with an error</a></li>
+            </ul>
+        </div>
+        <h1 class="heading-large">Where do you live?</h1>
+        <form>
+            <div class="form-group form-group-error">
+                <fieldset>
+
+                <legend id="where-do-you-live" class="sr-only">Where do you live?</legend>
+                <span class="error-message">Choose an answer</span>
+
+                    <label class="block-label" for="radio-1-error" data-target="radio-1-error">
+                    <input type="radio" id="radio-1-error" name="radio-group" value="Northern Ireland" aria-controls="radio-1-error" aria-expanded="false">
+                    Northern Ireland
+                    </label>
+                    <label class="block-label" for="radio-2-error" data-target="radio-2-error">
+                    <input type="radio" id="radio-2-error" name="radio-group" value="Isle of Man or the Channel Islands" aria-controls="radio-2-error" aria-expanded="false">
+                    Isle of Man or the Channel Islands
+                    </label>
+                    <label class="block-label" for="radio-3-error" data-target="radio-3-error">
+                    <input type="radio" id="radio-3-error" name="radio-group" value="I am a British citizen living abroad" aria-controls="radio-3-error" aria-expanded="false">
+                    I am a British citizen living abroad
+                    </label>
+                
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <input class="btn btn-primary btn-arrow" type="submit" value="Continue">
+            </div>
+            </form>
+    <div class="code-reveal">
+    <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#summarise-errors-reveal" aria-expanded="false" aria-controls="summarise-errors-reveal">
+    See code
+    </a>
+    <div class="collapse exampleCode" id="summarise-errors-reveal">
+        <pre>
+            <code class="line-numbers language-markup">
+            &lt;div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+                    &lt;h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+                        Message to alert the user to a problem goes here
+                    &lt;/h2>
+                    &lt;p>
+                        Optional description of the errors and how to correct them
+                    &lt;/p>
+                    &lt;ul class="error-summary-list">
+                        &lt;li>&lt;a href="#where-do-you-live">Descriptive link to the question with an error&lt;/a>&lt;/li>
+                    &lt;/ul>
+                &lt;/div>
+                &lt;h1 class="heading-large">Where do you live?&lt;/h1>
+                &lt;form>
+                    &lt;div class="form-group form-group-error">
+                        &lt;fieldset>
+
+                        &lt;legend id="where-do-you-live" class="sr-only">Where do you live?&lt;/legend>
+                        &lt;span class="error-message">Choose an answer&lt;/span>
+
+                            &lt;label class="block-label" for="radio-1-error" data-target="radio-1-error">
+                            &lt;input type="radio" id="radio-1-error" name="radio-group" value="Northern Ireland" aria-controls="radio-1-error" aria-expanded="false">
+                            Northern Ireland
+                            &lt;/label>
+                            &lt;label class="block-label" for="radio-2-error" data-target="radio-2-error">
+                            &lt;input type="radio" id="radio-2-error" name="radio-group" value="Isle of Man or the Channel Islands" aria-controls="radio-2-error" aria-expanded="false">
+                            Isle of Man or the Channel Islands
+                            &lt;/label>
+                            &lt;label class="block-label" for="radio-3-error" data-target="radio-3-error">
+                            &lt;input type="radio" id="radio-3-error" name="radio-group" value="I am a British citizen living abroad" aria-controls="radio-3-error" aria-expanded="false">
+                            I am a British citizen living abroad
+                            &lt;/label>
+                        
+                        &lt;/fieldset>
+                    &lt;/div>
+                    &lt;div class="form-group">
+                        &lt;input class="btn btn-primary btn-arrow" type="submit" value="Continue">
+                    &lt;/div>
+                    &lt;/form>
+            </code>
+        </pre>
+    </div>
+</div>
+  </div>
+
+<div role="note" aria-label="Information" class="text-highlight">
+    <p>The error summary must appear at the top of the page, so it is visible when the page is refreshed and is immediately read out by assistive technology.</p>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="highlight-errors-in-forms">Summarise errors at the top of the page</h2>
+    <p>For each error:</p>
+    <ul class="list list-bullet">
+        <li>write a message that helps the user to understand why the error occurred and what to do about it</li>
+        <li>put the message in the <code class="code">&lt;label&gt;</code> or <code class="code">&lt;legend&gt;</code> for the question,
+        after the question text, in red</li>
+    </ul>
+</div>
+<div class="example">
+        <div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+            <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+                Message to alert the user to a problem goes here
+            </h2>
+            <p>Optional description of the errors and how to correct them </p>
+            <ul class="error-summary-list">
+                <li><a href="#full-name">Descriptive link to full name question with an error</a></li>
+                <li><a href="#email-address">Descriptive link to email address question with an error</a></li>
+            </ul>
+        </div>
+        <h1 class="heading-large">Personal details</h1>
+        <form>
+            <div class="form-group form-group-error">
+                <fieldset>
+
+                <legend id="personal-details" class="sr-only">Personal details</legend>
+                        <label class="form-label" for="full-name">
+                            Full name
+                            <span class="form-hint">
+                            As shown on your birth certificate or passport
+                            </span>
+                        </label>
+                        <span class="error-message">Error message about full name goes here</span>
+                        <input class="form-control form-control-error" id="full-name" type="text" name="full-name">
+                    </div>
+                    <div class="form-group form-group-error">
+                        <label class="form-label" for="email-address">
+                            Email address
+                        </label>
+                        <span class="error-message">Error message about email address goes here</span>
+                        <input class="form-control form-control-error" id="email-address" type="text" name="email-address">
+                    </div>
+                </fieldset>
+            <div class="form-group">
+                <input class="btn btn-primary btn-arrow" type="submit" value="Continue">
+            </div>
+        </form>
+    <div class="code-reveal">
+    <a class="text-link reveal reveal-code collapsed" role="button" data-toggle="collapse" href="#errors-on-forms-reveal" aria-expanded="false" aria-controls="errors-on-forms-reveal">
+    See code
+    </a>
+    <div class="collapse exampleCode" id="errors-on-forms-reveal">
+        <pre>
+            <code class="line-numbers language-markup">
+            &lt;div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+                &lt;h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+                    Message to alert the user to a problem goes here
+                &lt;/h2>
+                &lt;p>Optional description of the errors and how to correct them &lt;/p>
+                &lt;ul class="error-summary-list">
+                    &lt;li>&lt;a href="#full-name">Descriptive link to full name question with an error&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#email-address">Descriptive link to email address question with an error&lt;/a>&lt;/li>
+                &lt;/ul>
+            &lt;/div>
+            &lt;h1 class="heading-large">Personal details&lt;/h1>
+            &lt;form>
+                &lt;div class="form-group form-group-error">
+                    &lt;fieldset>
+
+                    &lt;legend id="personal-details" class="sr-only">Personal details&lt;/legend>
+                            &lt;label class="form-label" for="full-name">
+                                Full name
+                                &lt;span class="form-hint">
+                                As shown on your birth certificate or passport
+                                &lt;/span>
+                            &lt;/label>
+                            &lt;span class="error-message">Error message about full name goes here&lt;/span>
+                            &lt;input class="form-control form-control-error" id="full-name" type="text" name="full-name">
+                        &lt;/div>
+                        &lt;div class="form-group form-group-error">
+                            &lt;label class="form-label" for="email-address">
+                                Email address
+                            &lt;/label>
+                            &lt;span class="error-message">Error message about email address goes here&lt;/span>
+                            &lt;input class="form-control form-control-error" id="email-address" type="text" name="email-address">
+                        &lt;/div>
+                    &lt;/fieldset>
+                &lt;div class="form-group">
+                    &lt;input class="btn btn-primary btn-arrow" type="submit" value="Continue">
+                &lt;/div>
+            &lt;/form>
+            </code>
+        </pre>
+    </div>
+</div>
+  </div>
+ 
+{% endblock %}
+
+{% block sectionOneThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionOneThirdCol2 %}
+ {% endblock %}
+
+{% block sectionOneThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionTwoTop %}
+{% endblock %} 
+
+{% block sectionTwoFull%} 
+{% endblock %}
+
+{% block sectionTwoContent %}
+{% endblock %}
+
+{% block sectionTwoRightHandColumn %}
+{% endblock %}
+
+{% block sectionTwoThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionTwoThirdCol2 %}
+ {% endblock %}
+
+{% block sectionTwoThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionThreeTop %}
+{% endblock %} 
+
+{% block sectionThreeFull%}
+{% endblock %}
+
+{% block sectionThreeContent %}
+{% endblock %}
+
+{% block sectionThreeRightHandColumn %}
+{% endblock %}
+
+{% block sectionThreeThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionThreeThirdCol2 %}
+ {% endblock %}
+
+{% block sectionThreeThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionFourTop %}
+{% endblock %} 
+
+{% block sectionFourFull%}
+
+{% endblock %}
+
+{% block sectionFourContent %}
+{% endblock %}
+
+{% block sectionFourRightHandColumn %}
+{% endblock %}
+
+{% block sectionFourThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionFourThirdCol2 %}
+ {% endblock %}
+
+{% block sectionFourThirdCol3 %}
+ {% endblock %}
+
+
+
+{% block sectionFiveTop %}
+{% endblock %} 
+
+{% block sectionFiveFull%}
+{% endblock %}
+
+{% block sectionFiveContent %}
+{% endblock %}
+
+{% block sectionFiveRightHandColumn %}
+{% endblock %}
+
+{% block sectionFiveThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionFiveThirdCol2 %}
+
+ {% endblock %}
+
+{% block sectionFiveThirdCol3 %}
+ {% endblock %}
+
+  {% block footer_nav %}
+ {% endblock %}
+
+  {% block reusablecontent_footer %}
+    {% include "includes/footer-styleguide.html" %}
+ {% endblock %}

@@ -1,0 +1,228 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "radio-buttons" %} <!-- Page id var for side nav --> 
+{% set page_title = "Radio buttons" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">Use these to let users choose a single option from a list.</p>
+</div>
+
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#radio-buttons-example">Radio example</a></li>
+        <li><a href="#checkboxes-conditionally-revealing-content">Conditionally revealing content</a></li>
+        <li><a href="#error-handling">Error handling</a></li>
+    </ul>
+</div>
+
+<div id="radio-buttons-example" class="example">
+    <h1 class="heading-medium">Which bin is damaged?</h1>
+    <form>
+        <div class="form-group">
+            <fieldset>
+                <legend class="sr-only">Which bin is damaged?</legend>
+                <label class="block-label" for="radio-1" data-target="radio-1">
+                    <input type="radio" id="radio-1" name="radio-group" value="Black bin (General waste)" aria-controls="radio-1" aria-expanded="false">
+                    Black bin (General waste)
+                </label>
+                <label class="block-label" for="radio-2" data-target="radio-2">
+                    <input type="radio" id="radio-2" name="radio-group" value="Brown bin (Garden waste)" aria-controls="radio-2" aria-expanded="false">
+                    Brown bin (Garden waste)
+                </label>
+                <label class="block-label" for="radio-3" data-target="radio-3">
+                    <input type="radio" id="radio-3" name="radio-group" value="Green bin (Recycling)" aria-controls="radio-3" aria-expanded="false">
+                    Green bin (Recycling)
+                </label>
+            </fieldset>
+        </div>
+    </form>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for radio buttons</span></h3>
+    <pre>
+        <code id="snippet-radio-buttons" class="line-numbers language-markup">
+            &lt;h1 class="heading-medium">Which bin is damaged?&lt;/h1>
+            &lt;form>
+                &lt;div class="form-group">
+                    &lt;fieldset>
+                        &lt;legend class="sr-only">Which bin is damaged?&lt;/legend>
+                        &lt;label class="block-label" for="radio-1" data-target="radio-1">
+                            &lt;input type="radio" id="radio-1" name="radio-group" value="Black bin (General waste)" aria-controls="radio-1" aria-expanded="false">
+                            Black bin (General waste)
+                        &lt;/label>
+                        &lt;label class="block-label" for="radio-2" data-target="radio-2">
+                            &lt;input type="radio" id="radio-2" name="radio-group" value="Isle of Man or the Channel Islands" aria-controls="radio-2" aria-expanded="false">
+                            Brown bin (Garden waste)
+                        &lt;/label>
+                        &lt;label class="block-label" for="radio-3" data-target="radio-3">
+                            &lt;input type="radio" id="radio-3" name="radio-group" value="Green bin (Recycling)" aria-controls="radio-3" aria-expanded="false">
+                            Green bin (Recycling)
+                        &lt;/label>
+                    &lt;/fieldset>
+                &lt;/div>
+            &lt;/form>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-radio-buttons">
+        Copy <span class="sr-only">HTML snippet for radio buttons</span>
+    </button>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="checkboxes-conditionally-revealing-content">Conditionally revealing content</h2>
+    <p>Reveal additional questions, depending on the context.</p>
+    <p>Choose an option below to see how this works.</p>
+</div>
+
+<div class="example">
+    <h1 class="heading-medium">How do you want to be contacted? </h1>
+    <form>
+        <div class="form-group">
+            <fieldset>
+                <legend class="sr-only">How do you want to be contacted? </legend>
+                <label class="block-label" for="contact-by-email" data-target="contact-by-email">
+                    <input type="radio" id="contact-by-email" name="radio-contact-group" value="Email" aria-controls="contact-by-email" aria-expanded="false">
+                Email
+                </label>
+                <div class="panel panel-border-narrow js-hidden" id="contact-by-email">
+                    <label class="form-label" for="contact-email">Email address </label>
+                    <input class="form-control" name="contact-email" type="text" id="contact-email">
+                </div>
+                <label class="block-label" for="contact-by-phone" data-target="contact-by-phone">
+                    <input type="radio" id="contact-by-phone" name="radio-contact-group" value="phone" aria-controls="contact-by-phone" aria-expanded="false">
+                Phone
+                </label>
+                <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
+                    <label class="form-label" for="contact-phone">Phone number </label>
+                    <input class="form-control" name="contact-phone" type="text" id="contact-phone">
+                </div>
+                <label class="block-label" for="contact-by-text" data-target="contact-by-text">
+                    <input type="radio" id="contact-by-text" name="radio-contact-group" value="text message" aria-controls="contact-by-text" aria-expanded="false">
+                Text message
+                </label>
+                <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+                    <label class="form-label" for="contact-text-message">Mobile phone number </label>
+                    <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+                </div>
+            </fieldset>
+        </div>
+    </form>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for conditionally revealing content</span></h3>
+    <pre>
+        <code id="snippet-conditionally-revealing-content" class="line-numbers language-markup">
+            &lt;h1 class="heading-medium">How do you want to be contacted? &lt;/h1>
+            &lt;form>
+                &lt;div class="form-group">
+                    &lt;fieldset>
+                        &lt;legend class="sr-only">How do you want to be contacted? &lt;/legend>
+                        &lt;label class="block-label" for="contact-by-email" data-target="contact-by-email">
+                            &lt;input type="radio" id="contact-by-email" name="radio-contact-group" value="Email" aria-controls="contact-by-email" aria-expanded="false">
+                        Email
+                        &lt;/label>
+                        &lt;div class="panel panel-border-narrow js-hidden" id="contact-by-email">
+                            &lt;label class="form-label" for="contact-email">Email address &lt;/label>
+                            &lt;input class="form-control" name="contact-email" type="text" id="contact-email">
+                        &lt;/div>
+                        &lt;label class="block-label" for="contact-by-phone" data-target="contact-by-phone">
+                            &lt;input type="radio" id="contact-by-phone" name="radio-contact-group" value="phone" aria-controls="contact-by-phone" aria-expanded="false">
+                        Phone
+                        &lt;/label>
+                        &lt;div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
+                            &lt;label class="form-label" for="contact-phone">Phone number &lt;/label>
+                            &lt;input class="form-control" name="contact-phone" type="text" id="contact-phone">
+                        &lt;/div>
+                        &lt;label class="block-label" for="contact-by-text" data-target="contact-by-text">
+                            &lt;input type="radio" id="contact-by-text" name="radio-contact-group" value="text message" aria-controls="contact-by-text" aria-expanded="false">
+                        Text message
+                        &lt;/label>
+                        &lt;div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+                            &lt;label class="form-label" for="contact-text-message">Mobile phone number &lt;/label>
+                            &lt;input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+                        &lt;/div>
+                    &lt;/fieldset>
+                &lt;/div>
+            &lt;/form>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-conditionally-revealing-content">
+        Copy <span class="sr-only">HTML snippet for conditionally revealing content</span>
+    </button>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="error-handling">Error handling</h2>
+    <ul class="list list-bullet">
+        <li>add a class of <code>form-group-error</code> to <code>&lt;div class="form-group"></code></li>
+        <li>the error message <code>&lt;span class="error-message">Choose an answer&lt;/span></code> goes beneath the <code>&lt;legend></code></li>
+    </ul>
+</div>
+
+<div class="example">
+    <h1 class="heading-medium">Which bin is damaged?</h1>
+    <form>
+        <div class="form-group form-group-error">
+            <fieldset>
+                <legend class="sr-only">Which bin is damaged?</legend>
+                <span class="error-message">Choose an answer</span>
+                <label class="block-label" for="radio-1-error" data-target="radio-1-error">
+                    <input type="radio" id="radio-1-error" name="radio-group-error" value="Black bin (General waste)" aria-controls="radio-1-error" aria-expanded="false">
+                    Black bin (General waste)
+                </label>
+                <label class="block-label" for="radio-2-error" data-target="radio-2-error">
+                    <input type="radio" id="radio-2-error" name="radio-group-error" value="Brown bin (Garden waste)" aria-controls="radio-2-error" aria-expanded="false">
+                    Brown bin (Garden waste)
+                </label>
+                <label class="block-label" for="radio-3-error" data-target="radio-3-error">
+                    <input type="radio" id="radio-3-error" name="radio-group-error" value="Green bin (Recycling)" aria-controls="radio-3-error" aria-expanded="false">
+                    Green bin (Recycling)
+                </label>
+            </fieldset>
+        </div>
+    </form>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for radio buttons error handling</span></h3>
+    <pre>
+        <code id="snippet-radio-buttons-error" class="line-numbers language-markup">
+            &lt;h1 class="heading-medium">Which bin is damaged?&lt;/h1>
+            &lt;form>
+                &lt;div class="form-group form-group-error">
+                    &lt;fieldset>
+                        &lt;legend class="sr-only">Which bin is damaged?&lt;/legend>
+                        &lt;span class="error-message">Choose an answer&lt;/span>
+                        &lt;label class="block-label" for="radio-1-error" data-target="radio-1-error">
+                            &lt;input type="radio" id="radio-1-error" name="radio-group-error" value="Black bin (General waste)" aria-controls="radio-1-error" aria-expanded="false">
+                            Black bin (General waste)
+                        &lt;/label>
+                        &lt;label class="block-label" for="radio-2-error" data-target="radio-2-error">
+                            &lt;input type="radio" id="radio-2-error" name="radio-group-error" value="Brown bin (Garden waste)" aria-controls="radio-2-error" aria-expanded="false">
+                            Brown bin (Garden waste)
+                        &lt;/label>
+                        &lt;label class="block-label" for="radio-3-error" data-target="radio-3-error">
+                            &lt;input type="radio" id="radio-3-error" name="radio-group-error" value="Green bin (Recycling)" aria-controls="radio-3-error" aria-expanded="false">
+                            Green bin (Recycling)
+                        &lt;/label>
+                    &lt;/fieldset>
+                &lt;/div>
+            &lt;/form>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-radio-buttons-error">
+        Copy <span class="sr-only">HTML snippet for radio buttons error handling</span>
+    </button>
+</div>
+
+{% endblock %}

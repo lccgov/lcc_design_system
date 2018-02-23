@@ -1,0 +1,41 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "back-link" %} <!-- Page id var for side nav --> 
+{% set page_title = "Back link" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">Always include a back link on question pages.</p>
+</div>
+
+<div class="text">
+    <p>Some users don’t trust browser ‘back’ buttons when they’re entering data.</p>
+    <p>Adding a ‘back’ link reassures them that it’s possible to go back and change previous answers.</p>
+    <p>It should:</p>
+    <ul class="list list-bullet">
+        <li>be at the top of the page</li>
+        <li>take them to the previous page</li>
+        <li>work when JavaScript isn’t available</li>
+    </ul>
+    <img class="img-content" src="/public/images/design-system/back-link.png" alt="" />
+</div>
+<div class="example">
+    <a href="#" class="link-back">Back</a>
+</div>
+<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for back link</span></h3>
+<pre>
+    <code class="line-numbers language-markup">
+        &lt;a href="#" class="link-back">Back&lt;/a>
+    </code>
+</pre>
+
+{% endblock %}

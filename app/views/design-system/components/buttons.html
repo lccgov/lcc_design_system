@@ -1,0 +1,87 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "buttons" %} <!-- Page id var for side nav --> 
+{% set page_title = "Buttons" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">Use buttons to move though a transaction, aim to use only one button per page.</p>
+</div>
+
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#buttons-primary">Primary button</a></li>
+        <li><a href="#buttons-alignment">Button alignment</a></li>
+        <li><a href="#buttons-external">External link</a></li>
+    </ul>
+</div>
+
+<div class="text">
+    <h2 class="heading-large top" id="buttons-primary">Primary button</h2>  
+    <p class="text">Button text should be short and describe the action the button performs.</p>   
+</div>
+  
+<div class="example">
+    <a class="btn btn-primary btn-arrow" href="#">Save and continue</a>
+</div>
+<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for primary button</span></h3>
+<pre>
+    <code class="line-numbers language-markup">
+        &lt;a class="btn btn-primary btn-arrow" href="#">Save and continue&lt;/a>
+    </code>
+</pre>
+
+<div class="text">
+    <h2 class="heading-large" id="buttons-alignment">Button alignment</h2>  
+    <p class="text">Align the primary action button to the left edge of your form, in the user’s line of sight.</p>   
+</div>
+  
+<div class="example">
+    <div class="form-group">
+        <label class="form-label" for="full-name-f1">Full name</label>
+        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary btn-arrow" href="#">Save and continue</button>
+    </div>
+</div>
+<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for button alignment</span></h3>
+<pre>
+    <code class="line-numbers language-markup">
+        &lt;div class="form-group">
+            &lt;label class="form-label" for="full-name-f1">Full name&lt;/label>
+            &lt;input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+        &lt;/div>
+        &lt;div class="form-group">
+            &lt;button class="btn btn-primary btn-arrow" href="#">Save and continue&lt;/button>
+        &lt;/div>
+    </code>
+</pre>
+
+<div class="text">
+    <h2 class="heading-large" id="buttons-external">Button with external link</h2>  
+    <p class="text">For accessibility, hyperlinks to external websites need to include <code>rel="external"</code> and <code>&lt;span class="sr-only">External link&lt;/span></code>.</p>   
+</div>
+  
+<div class="example">
+    <a rel="external" class="btn btn-primary btn-arrow" href="#">Start now <span class="sr-only">External link</span></a>
+</div>
+<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for button with external link</span></h3>
+<pre>
+    <code class="line-numbers language-markup">
+        &lt;a rel="external" class="btn btn-primary btn-arrow" href="#">Start now &lt;span class="sr-only">External link&lt;/span>&lt;/a>
+    </code>
+</pre>
+
+
+{% endblock %}

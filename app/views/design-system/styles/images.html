@@ -1,0 +1,121 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "styles" %} <!-- Section id var for main nav --> 
+{% set page_id = "images" %} <!-- Page id var for side nav --> 
+{% set page_title = "Images" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">Avoid unnecessary decoration - only use icons and images if there’s a real user need.</p>
+</div>
+
+<!-- Page content goes here -->
+
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#icons">Icons</a></li>
+        <li><a href="#images">Images</a></li>
+        <li><a href="#images-within-body-content">Images within body content</a></li>
+    </ul>
+</div>
+
+<h2 class="heading-large top" id="icons">Icons</h2>
+<ul class="list list-bullet text">
+  <li>if icons are needed ensure they are clear, simple and accompanied by relevant text</li>
+  <li>don’t hide functionality under icons</li>
+</ul>
+<p class="text">Use <a href="http://fontawesome.io/icons/" rel="external">font awesome</a> for all icons.</p>
+<h3 class="heading-small">Legal text</h3>
+<p class="text">Use bold text with an exclamation icon if there are legal consequences - for example, a fine or prison sentence.</p>
+<div class="example">
+    <div class="text">
+        <div class="notice">
+            <i class="fa fa-exclamation-triangle" aria-hidden="true">
+                <span class="sr-only">Warning</span>
+            </i>
+            <strong class="bold-small">
+            You must complete and return this form within 14 days. If you don’t, or if you provide false information, you could be fined and you may end up with a criminal record.
+            </strong>
+        </div>
+    </div>
+</div>
+<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for headings</span></h3>
+<pre>
+    <code class="line-numbers language-markup">
+    &lt;div class="notice">
+        &lt;i class="fa fa-exclamation-triangle" aria-hidden="true">
+            &lt;span class="sr-only">Warning&lt;/span>
+        &lt;/i>
+        &lt;strong class="bold-small">You must complete and return this form within 14 days. If you don’t, or if you provide false information, you could be fined and you may end up with a criminal record.&lt;/strong>
+    &lt;/div>
+    </code>
+</pre>
+
+
+<div class="text">
+    <h2 class="heading-large" id="images">Images</h2>
+    <p>If images are needed they should be landscape, 16:9 aspect ratio.</p>
+</div>
+<div class="example example-images">
+  <div class="row">
+    <div class="col-md-6">
+      <img class="img-responsive" src="/public/images/16-9-image.png" alt="16:9">
+    </div>
+    <div class="col-md-6">
+      <img class="img-responsive" src="/public/images/food-festival.jpg" alt="">
+    </div>
+  </div>
+</div>
+<div class="text">
+    <div role="note" aria-label="Information" class="text-highlight">
+        <p>You can check the images aspect ratio with this <a href="http://calculateaspectratio.com/" rel="external">online calculator</a>.</p>
+    </div>
+    <h3 id="images-within-body-content" class="heading-medium">Images within body content</h3>
+</div>
+
+<div class="example">
+    <div class="text">
+        <h2 class="heading-medium top">A full width image</h2>
+        <img class="img-content" src="/public/images/16-9-image-leeds.jpg" alt="" />
+        <p>Mauris tortor eros, vehicula ut turpis quis, feugiat ullamcorper arcu. Aenean venenatis sem quis purus rutrum, vel blandit libero ultricies. Vivamus facilisis eget velit a consectetur.</p>
+        <h2 class="heading-medium">Image aligned to the right</h2>
+        <img class="img-content img-right" src="/public/images/16-9-image-leeds.jpg" alt="" />
+        <p>Donec nulla diam, dapibus vitae consectetur at, suscipit ac est. </p>
+        <div class="clear"></div>
+        <h2 class="heading-medium">Image aligned to the left</h2>
+        <img class="img-content img-left" src="/public/images/16-9-image-leeds.jpg" alt="" />
+        <p>If you already pay by Direct Debit and want to spread your payments email the Council Tax team.</p>
+        <div class="clear"></div>
+    </div>
+</div>
+<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for images within body content</span></h3>
+<pre>
+    <code class="line-numbers language-markup">
+    &lt;div class="text">
+
+        &lt;h2 class="heading-medium top">A full width image&lt;/h2>
+        &lt;img class="img-content" src="/public/images/16-9-image-leeds.jpg" alt="" />
+        &lt;p>Mauris tortor eros, vehicula ut turpis quis, feugiat ullamcorper arcu. Aenean venenatis sem quis purus rutrum, vel blandit libero ultricies. Vivamus facilisis eget velit a consectetur.&lt;/p>
+        
+        &lt;h2 class="heading-medium">Image aligned to the right&lt;/h2>
+        &lt;img class="img-content img-right" src="/public/images/16-9-image-leeds.jpg" alt="" />
+        &lt;p>Donec nulla diam, dapibus vitae consectetur at, suscipit ac est. &lt;/p>
+        
+        &lt;h2 class="heading-medium">Image aligned to the left&lt;/h2>
+        &lt;img class="img-content img-left" src="/public/images/16-9-image-leeds.jpg" alt="" />
+        &lt;p>If you already pay by Direct Debit and want to spread your payments email the Council Tax team.&lt;/p>
+
+    &lt;/div>
+    </code>
+</pre>
+
+{% endblock %}

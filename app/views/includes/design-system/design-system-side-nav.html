@@ -1,0 +1,12 @@
+<div id="sticky-anchor"></div>
+<div id="sticky" class="design-system-side-nav">
+    {% if section_id == "styles" %}
+        {% include "includes/design-system/design-system-side-nav-styles.html" %}
+    {% elif section_id == "components" %}
+        {% include "includes/design-system/design-system-side-nav-components.html" %}
+    {% elif section_id == "patterns" %}
+        {% include "includes/design-system/design-system-side-nav-patterns.html" %}
+    {% else %}
+        Check the page_id us set correctly
+    {% endif %}
+</div>

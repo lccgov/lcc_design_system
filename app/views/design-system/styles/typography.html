@@ -1,0 +1,496 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "styles" %} <!-- Section id var for main nav --> 
+{% set page_id = "typography" %} <!-- Page id var for side nav --> 
+{% set page_title = "Typography" %} <!-- Page title var for page header (H1) and page title -->     
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">Typography is used to create clear hierarchy throughout the layout.</p>
+</div>
+
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#typography-fonts">Fonts</a></li>
+        <li><a href="#typography-headings">Headings</a></li>
+        <li><a href="#typography-text-wrapper">Text wrapper</a></li>
+        <li><a href="#typography-lead-paragraph">Lead paragraph</a></li>
+        <li><a href="#typography-body-copy">Body copy</a></li>
+        <li><a href="#typography-links">Links</a></li>
+        <li><a href="#typography-lists">Lists</a></li>
+        <li><a href="#typography-inset-text">Inset text</a></li>
+        <li><a href="#typography-text-block">Text block</a></li>
+        <li><a href="#typography-legal-text">Legal text</a></li>
+        <li><a href="#typography-blockquote">Blockquote</a></li>
+        <li><a href="#typography-hidden-text">Hidden text (progressive disclosure)</a></li>
+    </ul>
+</div>
+    <div class="text">
+        <h2 class="heading-large top" id="typography-fonts">Fonts</h2>
+        <h3><a href="https://fonts.google.com/specimen/Montserrat?selection.family=Montserrat">Montserrat<span class="sr-only">External link</span></a> in Bold for headings.</h3>
+        <p><a href="https://fonts.google.com/specimen/Open+Sans">Open Sans</a> font in Regular for body text.</p>
+    </div>
+    <div class="text">
+        <h2 class="heading-large" id="typography-headings">Headings</h2>
+        <p>Use sentence case for headings</p>
+        <div role="note" aria-label="Information" class="text-highlight">
+            <h3>Accessibility for headings</h3>
+            <p>Use semantic headings and structure. Find out more about <a href="https://www.w3.org/WAI/tutorials/page-structure/headings/" rel="external">heading structure<span class="sr-only">External link</span></a>.</p>
+        </div>
+    </div>
+    <div class="example">
+        <h1 class="heading-xlarge">A xlarge heading</h1>
+        <h2 class="heading-large">A large heading</h2>
+        <h3 class="heading-medium">A medium heading</h3>
+        <h4 class="heading-small">A small heading</h4>
+    </div>
+    <div class="code-snippet">
+        <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for headings</span></h3>
+        <pre>
+            <code id="snippet-headings" class="line-numbers language-markup">
+                &lt;h1 class="heading-xlarge">A xlarge heading&lt;/h1>
+
+                &lt;h2 class="heading-large">A large heading&lt;/h2>
+
+                &lt;h3 class="heading-medium">A medium heading&lt;/h3>
+
+                &lt;h4 class="heading-small">A small heading&lt;/h4>
+            </code>
+        </pre>
+        <button class="clipboard" data-clipboard-target="#snippet-headings">
+            Copy
+        </button>
+    </div>
+
+    <div class="text">
+    <h2 class="heading-large" id="typography-text-wrapper">
+        Text wrapper
+    </h2>
+
+    <p>Use this to make sure lines of text don't exceed 75 characters, as they become harder to read beyond that point.</p>
+    <p>You can apply it to a block of content or a single element.
+    </div>
+    <div class="example">
+        <div class="text">
+            <p>This is body copy paragraph within the text wrapper. Pretium molestie ligula in, volutpat mattis libero.</p>
+            <p>Felis at varius tincidunt, turpis dui finibus risus, ac varius libero eros ac dolor.</p>
+        </div>
+        <p class="text">This is body copy paragraph with a class of text applied to it. Pretium molestie ligula in, volutpat mattis libero.</p>
+    </div>
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for text wrapper</span></h3>
+    <pre>
+        <code class="line-numbers language-markup">
+            &lt;div class="text">
+                &lt;p>This is body copy within the text wrapper. Pretium molestie ligula in, volutpat mattis libero.&lt;/p>
+            &lt;/div>
+
+            &lt;p class="text">This is body copy paragraph with a class of text applied to it. Pretium molestie ligula in, volutpat mattis libero.&lt;/p>
+        </code>
+    </pre>
+
+    <div class="text">
+    <h2 class="heading-large" id="typography-lead-paragraph">
+        Lead paragraph
+    </h2>
+
+    <p>There should only be one lead paragraph per page.</p>
+    </div>
+    <div class="example">
+        <div class="text">
+            <p class="lead">This is a lead paragraph. Pretium molestie ligula in, volutpat mattis libero. Aenean dapibus augue id dolor egestas, in tincidunt dolor volutpat.</p>
+            <p>This is a body copy paragraph. Felis at varius tincidunt, turpis dui finibus risus, ac varius libero eros ac dolor.</p>
+        </div>
+    </div>
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for a lead paragraph</span></h3>
+    <pre>
+        <code class="line-numbers language-markup">
+            &lt;div class="text">
+                &lt;p class="lead">This is a lead paragraph. Pretium molestie ligula in, volutpat mattis libero. Aenean dapibus augue id dolor egestas, in tincidunt dolor volutpat.&lt;/p>
+                
+                &lt;p>This is a body copy paragraph. Felis at varius tincidunt, turpis dui finibus risus, ac varius libero eros ac dolor.&lt;/p>
+            &lt;/div>
+        </code>
+    </pre>
+
+    <div class="text">
+    <h2 class="heading-large" id="typography-body-copy">Body copy</h2>
+    <p>Avoid using bold and italics.</p>
+    </div>
+    <div class="example">
+        <div class="text">
+            <p>This is a body copy paragraph. Pretium molestie ligula in, volutpat mattis libero. Aenean dapibus augue id dolor egestas, in tincidunt dolor volutpat.</p>
+            <p>Pretium molestie ligula in, volutpat mattis libero. Aenean dapibus augue id dolor egestas, in tincidunt dolor volutpat.</p>
+        </div>
+    </div>
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for body copy</span></h3>
+    <pre>
+        <code class="line-numbers language-markup">
+            &lt;div class="text">
+                &lt;p>This is a body copy paragraph. Pretium molestie ligula in, volutpat mattis libero. Aenean dapibus augue id dolor egestas, in tincidunt dolor volutpat.&lt;/p>
+                &lt;p>Pretium molestie ligula in, volutpat mattis libero. Aenean dapibus augue id dolor egestas, in tincidunt dolor volutpat.&lt;/p>
+            &lt;div>
+        </code>
+    </pre>
+
+    <div class="text">
+    <h2 class="heading-large" id="typography-links">Links</h2>
+    <p>Links without surrounding text should not have a full stop at the end.</p>
+    </div>
+    <div class="example">
+        <div class="text">
+            <h3>Link with surround text</h3>
+            <p><a href="#">See all events</a></p>
+        </div>
+        <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for links with surrounding text</span></h3>
+        <pre>
+            <code class="line-numbers language-markup">
+                &lt;div class="text">
+                    &lt;p>&lt;a href="#">See all events&lt;/a>&lt;/p>
+                &lt;div>
+            </code>
+        </pre>
+        <div class="text">
+            <h3>Body copy link</h3>
+            <p>This is what a <a href="#">body copy link</a> looks like.</p>
+        </div>
+        <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for body copy links</span></h3>
+        <pre>
+            <code class="line-numbers language-markup">
+                &lt;div class="text">
+                     &lt;p>This is what a &lt;a href="#">body copy link&lt;/a> looks like.&lt;/p>
+                &lt;div>
+            </code>
+        </pre>
+        <div class="text">
+            <h3>External link</h3>
+            <p>A body copy <a href="#" rel="external">external link <span class="sr-only">External link</span></a>. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for external links</span></h3>
+        <pre>
+            <code class="line-numbers language-markup">
+                &lt;div class="text">
+                    &lt;p>A body copy &lt;a href="#" rel="external">external link &lt;span class="sr-only">External link&lt;/span>&lt;/a>. Fusce dapibus, tellus ac cursus commodo.&lt;/p>
+                &lt;div>
+            </code>
+        </pre>
+        <div class="text">
+            <h3>Document links</h3>
+            <p>A <a href="#" rel="pdf">PDF document (PDF, 1MB)<span class="sr-only"> External link</span></a> within body copy.</p>
+            <p>A <a href="#" rel="doc">Word document (Word, 1.5MB)<span class="sr-only"> External link</span></a> within body copy.</p>
+            <p>A <a href="#" rel="xl">Excel document (Excel, 0.5MB)<span class="sr-only"> External link</span></a> within body copy.</p>
+            <p>A <a href="#" rel="pp">PowerPoint document (PowerPoint, 2MB)<span class="sr-only"> External link</span></a> within body copy.</p>
+        </div>
+        <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for document links</span></h3>
+        <pre>
+            <code class="line-numbers language-markup">
+                &lt;div class="text">
+                    &lt;p>A &lt;a href="#" rel="pdf">PDF document (PDF, 1MB)&lt;span class="sr-only"> External link&lt;/span>&lt;/a> within body copy.&lt;/p>
+                    &lt;p>A &lt;a href="#" rel="doc">Word document (Word, 1.5MB)&lt;span class="sr-only"> External link&lt;/span>&lt;/a> within body copy.&lt;/p>
+                    &lt;p>A &lt;a href="#" rel="xl">Excel document (Excel, 0.5MB)&lt;span class="sr-only"> External link&lt;/span>&lt;/a> within body copy.&lt;/p>
+                    &lt;p>A &lt;a href="#" rel="pp">PowerPoint document (PowerPoint, 2MB)&lt;span class="sr-only"> External link&lt;/span>&lt;/a> within body copy.&lt;/p>
+                &lt;div>
+            </code>
+        </pre>
+    </div>
+
+    <div class="text">
+    <h2 class="heading-large" id="typography-lists">Lists</h2>
+    <p class="text">
+        List items start with a lowercase letter and have no full stop at the end.
+    </p>
+    </div>
+    <div class="example">
+        <h3>Bullet list</h3>
+        <ul class="list list-bullet">
+            <li>here is a bulleted list</li>
+            <li>in tincidunt dolor volutpat</li>
+            <li>est non tempus malesuada</li>
+            <li>imperdiet lorem consequat sit amet</li>
+        </ul>
+                <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for list bullet</span></h3>
+        <pre>
+            <code class="line-numbers language-markup">
+                &lt;ul class="list list-bullet">
+                    &lt;li>here is a bulleted list&lt;/li>
+                    &lt;li>in tincidunt dolor volutpat&lt;/li>
+                    &lt;li>est non tempus malesuada&lt;/li>
+                    &lt;li>imperdiet lorem consequat sit amet&lt;/li>
+                &lt;/ul>
+            </code>
+        </pre>
+        <h3>Numbered list</h3>
+        <ol class="list list-number">
+            <li>here is a numbered list</li>
+            <li>in tincidunt dolor volutpat</li>
+            <li>est non tempus malesuada</li>
+            <li>imperdiet lorem consequat sit amet</li>
+        </ol>
+        <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for list numbers</span></h3>
+        <pre>
+            <code class="line-numbers language-markup">
+                &lt;ol class="list list-number">
+                    &lt;li>here is a numbered list&lt;/li>
+                    &lt;li>in tincidunt dolor volutpat&lt;/li>
+                    &lt;li>est non tempus malesuada&lt;/li>
+                    &lt;li>imperdiet lorem consequat sit amet&lt;/li>
+                &lt;/ol>
+            </code>
+        </pre>
+        <h3>Navigation list</h3>
+        <ul class="list list-nav">
+            <li><a href="#">Related link</a></li>
+            <li><a href="#">Related link</a></li>
+            <li><a href="#" rel="external">External link <span class="sr-only">External link</span></a></li>
+            <li><a href="#" class="more">More</a></li>
+        </ul>
+        <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for list nav</span></h3>
+        <pre>
+            <code class="line-numbers language-markup">
+                &lt;ul class="list list-nav">
+                    &lt;li>&lt;a href="#">Related link&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#">Related link&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#">Related link&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#" rel="external">External link &lt;span class="sr-only">External link&lt;/span>&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#" class="more">More&lt;/a>&lt;/li>
+                &lt;/ul>
+            </code>
+        </pre>
+        <h3>Stepped list</h3>
+        <ol class="list list-step">
+            <li>A home visit</li>
+            <li>Completion of an application form</li>
+            <li>Attending a three day training course</li>
+            <li>General medical and criminal records check (known as a Disclosure and Barring Service – DBS check)</li>
+            <li>Working with a social worker on your assessment and portfolio</li>
+            <li>Attending a fostering panel</li>
+            <li>Registration as a foster carer</li>
+        </ol>
+        <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for stepped list</span></h3>
+        <pre>
+            <code class="line-numbers language-markup">
+                &lt;ol class="list list-step">
+                    &lt;li>A home visit&lt;/li>
+                    &lt;li>Completion of an application form&lt;/li>
+                    &lt;li>Attending a three day training course&lt;/li>
+                    &lt;li>General medical and criminal records check (known as a Disclosure and Barring Service – DBS check)&lt;/li>
+                    &lt;li>Working with a social worker on your assessment and portfolio&lt;/li>
+                    &lt;li>Attending a fostering panel&lt;/li>
+                    &lt;li>Registration as a foster carer&lt;/li>
+                &lt;/ol>
+            </code>
+        </pre>
+    </div>
+
+    <div class="text">
+        <h2 class="heading-large" id="typography-inset-text">Inset text</h2>
+        <p class="text">
+            Use bordered inset text to draw attention to important content on the page.
+        </p>
+    </div>
+    <div class="example">
+        <div class="text">
+            <div role="note" aria-label="Information" class="text-highlight">
+                <p>Before you apply you’ll need your council tax account number - <a href="#">your account number can be found on your bill</a>.</p>
+            </div>
+            <div role="note" aria-label="Information" class="text-highlight text-highlight--red">
+                <h2>Emergency and out-of-hours</h2>
+                <p>If you need to contact the council urgently when our offices are closed phone one of our <a href="#">emergency numbers</a>.</p>
+            </div>
+        </div>
+    </div>
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for inset text</span></h3>
+    <pre>
+        <code class="line-numbers language-markup">
+        &lt;div class="text">
+
+            &lt;div role="note" aria-label="Information" class="text-highlight">
+                &lt;p>Before you apply you’ll need your council tax account number - &lt;a href="#">your account number can be found on your bill&lt;/a>.&lt;/p>
+            &lt;/div>
+
+            &lt;div role="note" aria-label="Information" class="text-highlight text-highlight--red">
+                &lt;h2>Emergency and out-of-hours&lt;/h2>
+                &lt;p>If you need to contact the council urgently when our offices are closed phone one of our &lt;a href="#">emergency numbers&lt;/a>.&lt;/p>
+            &lt;/div>
+
+        &lt;div>
+        </code>
+    </pre>
+    <div class="text">
+        <h2 class="heading-large" id="typography-text-block">Text block</h2>
+        <p class="text">
+        Use text block to highlight contact information.
+        </p>
+    </div>
+    <div class="example">
+        <div class="text">
+            <p>Complete and return your form by post to:</p>
+            <div class="text-block">
+                <p>Leeds City Council<br>
+                PO BOX 60<br>
+                Leeds<br>
+                LS2 8JR</p>
+            </div>
+            <p>You can call us on:</p>
+            <div class="text-block">
+                <p>0113 456 7676</p>
+            </div>
+            <p>You will need the following information:</p>
+            <div class="text-block">
+                <p><strong>Name of organisation:</strong>&nbsp;Leeds City Council<br>
+                <strong>Bank and branch name:</strong> National Westminster Bank, 8 Park Row, Leeds LS1 1QS <br>
+                <strong>Branch address:</strong> Head Office Collection<br>
+                <strong>Account number:</strong> 00000000<br>
+                <strong>Sort code:</strong> 57-12-72</p>
+            </div>
+        </div>
+    </div>
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for text block</span></h3>
+    <pre>
+        <code class="line-numbers language-markup">
+        &lt;div class="text">
+
+            &lt;p>Complete and return your form by post to:&lt;/p>
+            &lt;div class="text-block">
+                &lt;p>Leeds City Council&lt;br>
+                PO BOX 60&lt;br>
+                Leeds&lt;br>
+                LS2 8JR&lt;/p>
+            &lt;/div>
+
+            &lt;p>You can call us on:&lt;/p>
+            &lt;div class="text-block">
+                &lt;p>0113 456 7676&lt;/p>
+            &lt;/div>
+
+            &lt;p>You will need the following information:&lt;/p>
+            &lt;div class="text-block">
+                &lt;p>&lt;strong>Name of organisation:&lt;/strong>&nbsp;Leeds City Council&lt;br>
+                &lt;strong>Bank and branch name:&lt;/strong> National Westminster Bank, 8 Park Row, Leeds LS1 1QS &lt;br>
+                &lt;strong>Branch address:&lt;/strong> Head Office Collection&lt;br>
+                &lt;strong>Account number:&lt;/strong> 00000000&lt;br>
+                &lt;strong>Sort code:&lt;/strong> 57-12-72&lt;/p>
+            &lt;/div>
+
+        &lt;div>
+        </code>
+    </pre>
+
+    <div class="text">
+        <h2 class="heading-large" id="typography-legal-text">Legal text</h2>
+        <p class="text">
+            Use bold text with an exclamation icon if there are legal consequences - for example, a fine or prison sentence.
+        </p>
+    </div>
+    <div class="example">
+        <div class="text">
+            <div class="notice">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true">
+                    <span class="sr-only">Warning</span>
+                </i>
+                <strong class="bold-small">
+                You must complete and return this form within 14 days. If you don’t, or if you provide false information, you could be fined and you may end up with a criminal record.
+                </strong>
+            </div>
+        </div>
+    </div>
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for legal text</span></h3>
+    <pre>
+        <code class="line-numbers language-markup">
+        &lt;div class="notice">
+            &lt;i class="fa fa-exclamation-triangle" aria-hidden="true">
+                &lt;span class="sr-only">Warning&lt;/span>
+            &lt;/i>
+            &lt;strong class="bold-small">You must complete and return this form within 14 days. If you don’t, or if you provide false information, you could be fined and you may end up with a criminal record.&lt;/strong>
+        &lt;/div>
+        </code>
+    </pre>
+
+    <div class="text">
+        <h2 class="heading-large" id="typography-blockquote">Blockquote</h2>
+    </div>
+    <div class="example">
+        <div class="text">
+            <blockquote>
+                <span class="open-quote"></span>
+                <p>I had the opportunity to work with a number of partners on this project and engaged with a number of senior managers across the authority.</p>
+                <footer class="blockquote-footer">
+                    <cite title="Source Title">Headteacher - Calverley Church of England Primary School</cite>
+                </footer>
+            </blockquote>
+        </div>
+    </div>
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for blockquote</span></h3>
+    <pre>
+        <code class="line-numbers language-markup">
+        &lt;blockquote>
+            &lt;span class="open-quote">&lt;/span>
+            &lt;p>I had the opportunity to work with a number of partners on this project and engaged with a number of senior managers across the authority.&lt;/p>
+            &lt;footer class="blockquote-footer">
+                &lt;cite title="Source Title">Headteacher - Calverley Church of England Primary School&lt;/cite>
+            &lt;/footer>
+        &lt;/blockquote>
+        </code>
+    </pre>
+
+    <div class="text">
+        <h2 class="heading-large" id="typography-hidden-text">Hidden text (progressive disclosure)</h2>
+        <p>Use this to make your page easier to scan, only showing contextual information when required.</p>
+        <p>Click on "If you study as a full-time student elsewhere" to see how this works.</p>
+    </div>
+    <div class="example">
+        <div class="hidden-text">
+            <a class="text-link reveal collapsed" role="button" data-toggle="collapse" href="#hidden-text-example" aria-expanded="false" aria-controls="hidden-text-example">
+            If you study as a full-time student elsewhere
+            </a>
+            <div class="collapse" id="hidden-text-example">
+                <div class="panel panel-border">
+                    <div role="note" aria-label="Information" class="text-highlight">
+                        <p>You cannot apply online.</p>
+                    </div>
+                    <p>Instead you'll need to provide us with a Council tax Student Certificate from your admissions/student services department.</p>
+                    <p>You can hand this in to a <a href="#">One Stop Centre</a> or post it to:</p>
+                    <div class="text-block">
+                        <p>Leeds City Council 
+                        <br>P.O. Box 60 
+                        <br>Leeds 
+                        <br>LS2 8JR</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for hidden text</span></h3>
+    <pre>
+        <code class="line-numbers language-markup">
+            &lt;div class="hidden-text">
+                &lt;a class="text-link reveal collapsed" role="button" data-toggle="collapse" href="#hidden-text-example" aria-expanded="false" aria-controls="hidden-text-example">
+                If you study as a full-time student elsewhere
+                &lt;/a>
+                &lt;div class="collapse" id="hidden-text-example">
+                    &lt;div class="panel panel-border">
+                        &lt;div role="note" aria-label="Information" class="text-highlight">
+                            &lt;p>You cannot apply online.&lt;/p>
+                        &lt;/div>
+                        &lt;p>Instead you'll need to provide us with a Council tax Student Certificate from your admissions/student services department.&lt;/p>
+                        &lt;p>You can hand this in to a &lt;a href="#">One Stop Centre&lt;/a> or post it to:&lt;/p>
+                        &lt;div class="text-block">
+                            &lt;p>Leeds City Council 
+                            &lt;br>P.O. Box 60 
+                            &lt;br>Leeds 
+                            &lt;br>LS2 8JR&lt;/p>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        </code>
+    </pre>
+{% endblock %}

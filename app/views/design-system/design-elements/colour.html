@@ -1,0 +1,306 @@
+{% extends "page-layout-styleguide.html" %}
+
+{% block page_title %}
+	Colour
+{% endblock %}
+
+
+  {% block css_register %}
+  <script src="https://use.typekit.net/pws7qio.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+         <link href="{{ asset_path }}stylesheets/application.css" rel="stylesheet">
+   {% endblock %}
+
+ {% block additional_page_scripts %}
+    <script src="/public/javascripts/prism.js" type="text/javascript"></script>  
+{% endblock %}  
+
+{% block header %}
+    Colour
+{% endblock %}
+
+ {% block main_nav %}
+  {% include "includes/main_nav.html" %}
+ {% endblock %}
+
+
+
+ {% block sectionOneTop %}
+{% endblock %} 
+
+{% block sectionOneFull%}
+{% endblock %}
+
+
+ {% block breadcrumb %}
+  {% include "includes/breadcrumb_sp.html" %}
+ {% endblock %}
+
+{% block sectionOneContent %}
+{% endblock %}
+
+{% block pageContent %}
+
+
+{% endblock %}
+
+{% block sectionOneFullBottom %}
+
+{% endblock %}
+
+{% block sectionOneRightHandColumn %}
+
+{% endblock %}
+
+{% block sectionLeftHandColumn %}
+<div id="sticky-anchor"></div>
+<div id="sticky">
+    <a href="/design-system/styleguide" class="link-back">Back to style guide</a>
+    <h3 class="heading-xsmall heading-contents">Contents:</h3>
+    <ul class="list list-contents">
+        <li><a href="#swatch">Swatch</a></li>
+        <li><a href="#colour-contrast">Colour contrast</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="text">
+    <p class="lead">The LEEDS.GOV.UK colour palette.</p>
+</div>
+
+<div class="swatch" id="swatch">
+    <div class="swatch-item-wrapper">
+        <div class="swatch-item">
+            <span class="colour link-colour"></span>
+            <div class="colour-details">
+                <h3>Brand / Link</h3>
+                <p class="hex">#007299</p>
+                <p class="variable">$base-link-color</p>
+            </div>
+        </div>
+    </div>
+    <div class="swatch-item-wrapper">
+        <div class="swatch-item">
+            <span class="colour link-hover"></span>
+            <div class="colour-details">
+                <h3>Link hover</h3>
+                <p class="hex">#3399BB</p>
+                <p class="variable">$base-link-hover-color</p>
+            </div>
+        </div>
+    </div>
+        <div class="swatch-item-wrapper">
+        <div class="swatch-item">
+            <span class="colour link-visited"></span>
+            <div class="colour-details">
+                <h3>Link visited</h3>
+                <p class="hex">#4C2C92</p>
+                <p class="variable">$base-link-visited-color</p>
+            </div>
+        </div>
+    </div>
+        <div class="swatch-item-wrapper">
+        <div class="swatch-item">
+            <span class="colour focus"></span>
+            <div class="colour-details">
+                <h3>Focus</h3>
+                <p class="hex">#FFBF47</p>
+                <p class="variable">$focus-color</p>
+            </div>
+        </div>
+    </div>
+    <div class="swatch-item-wrapper">
+        <div class="swatch-item">
+            <span class="colour button-colour"></span>
+            <div class="colour-details">
+                <h3>Button</h3>
+                <p class="hex">#008000</p>
+                <p class="variable">$button-color</p>
+            </div>
+        </div>
+    </div>
+    <div class="swatch-item-wrapper">
+        <div class="swatch-item">
+            <span class="colour button-hover"></span>
+            <div class="colour-details">
+                <h3>Button hover</h3>
+                <p class="hex">#009A00</p>
+                <p class="variable">$button-hover-color</p>
+            </div>
+        </div>
+    </div>
+    <div class="swatch-item-wrapper">
+        <div class="swatch-item">
+            <span class="colour text"></span>
+            <div class="colour-details">
+                <h3>Text</h3>
+                <p class="hex">#212224</p>
+                <p class="variable">$base-font-color</p>
+            </div>
+        </div>
+    </div>
+    <div class="swatch-item-wrapper">
+        <div class="swatch-item">
+            <span class="colour text-secondary"></span>
+            <div class="colour-details">
+                <h3>Secondary text</h3>
+                <p class="hex">#666B76</p>
+                <p class="variable">$secondary-font-color</p>
+            </div>
+        </div>
+    </div>
+    <div class="swatch-item-wrapper">
+        <div class="swatch-item">
+            <span class="colour panel-colour"></span>
+            <div class="colour-details">
+                <h3>Panel</h3>
+                <p class="hex">#E5F1F5</p>
+                <p class="variable">$panel-color</p>
+            </div>
+        </div>
+    </div>
+    <div class="swatch-item-wrapper">
+        <div class="swatch-item">
+            <span class="colour border"></span>
+            <div class="colour-details">
+                <h3>Border</h3>
+                <p class="hex">#DCDEE1</p>
+                <p class="variable">$border-colour</p>
+            </div>
+        </div>
+    </div>
+    <div class="swatch-item-wrapper">
+        <div class="swatch-item">
+            <span class="colour background"></span>
+            <div class="colour-details">
+                <h3>Background</h3>
+                <p class="hex">#F6F7FA</p>
+                <p class="variable">$lighter-grey</p>
+            </div>
+        </div>
+    </div>
+    <div class="swatch-item-wrapper">
+        <div class="swatch-item">
+            <span class="colour page-colour"></span>
+            <div class="colour-details">
+                <h3>Page</h3>
+                <p class="hex">#FFFFFF</p>
+                <p class="variable">$white</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="colour-contrast" role="note" aria-label="Information" class="text-highlight">
+    <h2 class="heading-medium top">Accessibility: Colour contrast</h2>
+    <p class="text">The colour contrast ratio for text and interactive elements should be at least 4.5:1 <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="external">as recommended by the W3C</a>. </p>
+</div>
+{% endblock %}
+
+{% block sectionOneThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionOneThirdCol2 %}
+ {% endblock %}
+
+{% block sectionOneThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionTwoTop %}
+{% endblock %} 
+
+{% block sectionTwoFull%} 
+{% endblock %}
+
+{% block sectionTwoContent %}
+{% endblock %}
+
+{% block sectionTwoRightHandColumn %}
+{% endblock %}
+
+{% block sectionTwoThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionTwoThirdCol2 %}
+ {% endblock %}
+
+{% block sectionTwoThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionThreeTop %}
+{% endblock %} 
+
+{% block sectionThreeFull%}
+{% endblock %}
+
+{% block sectionThreeContent %}
+{% endblock %}
+
+{% block sectionThreeRightHandColumn %}
+{% endblock %}
+
+{% block sectionThreeThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionThreeThirdCol2 %}
+ {% endblock %}
+
+{% block sectionThreeThirdCol3 %}
+ {% endblock %}
+
+
+{% block sectionFourTop %}
+{% endblock %} 
+
+{% block sectionFourFull%}
+
+{% endblock %}
+
+{% block sectionFourContent %}
+{% endblock %}
+
+{% block sectionFourRightHandColumn %}
+{% endblock %}
+
+{% block sectionFourThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionFourThirdCol2 %}
+ {% endblock %}
+
+{% block sectionFourThirdCol3 %}
+ {% endblock %}
+
+
+
+{% block sectionFiveTop %}
+{% endblock %} 
+
+{% block sectionFiveFull%}
+{% endblock %}
+
+{% block sectionFiveContent %}
+{% endblock %}
+
+{% block sectionFiveRightHandColumn %}
+{% endblock %}
+
+{% block sectionFiveThirdCol1 %}
+ {% endblock %}
+
+ {% block sectionFiveThirdCol2 %}
+
+ {% endblock %}
+
+{% block sectionFiveThirdCol3 %}
+ {% endblock %}
+
+  {% block footer_nav %}
+ {% endblock %}
+
+  {% block reusablecontent_footer %}
+    {% include "includes/footer-styleguide.html" %}
+ {% endblock %}

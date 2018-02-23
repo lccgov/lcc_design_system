@@ -1,0 +1,84 @@
+
+//style example
+.example {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid darken($panel-color,5%);
+  padding: 60px 15px 15px;
+  margin:30px 0;
+
+  @media (min-width: 641px) {
+      padding:60px 30px 30px;
+  }
+
+  &:before {
+    content: "EXAMPLE";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 10px 15px;
+    font-family: $font-secondary, sans-serif;
+    border: 1px solid darken($panel-color,5%);
+    font-weight: 700;
+    font-size: 12px;
+    background: $panel-color;
+    color: $secondary-font-color;
+
+    @media (min-width: 641px) {
+        font-size: 14px;
+    }
+  }
+
+  .highlight {
+    font-style: normal;
+    color: #0076c0;
+  }
+
+  .list-bullet {
+    margin-bottom: 20px;
+  }
+}
+
+.example-grid p {
+  width: 100%;
+  background: url("/public/images/examples/grid.png") 0 0 repeat;
+  margin-bottom: 0;
+  height: 30px;
+  overflow: hidden;
+  text-indent: -999em;
+
+  @media (min-width: 641px) {
+      height: 60px;
+  }
+}
+
+//code example
+.exampleCode{
+  padding-top:15px;
+}
+
+@media (max-width: 990px) {
+  .example-images{
+    img{
+      margin:15px 0 15px 0;
+    }
+  }
+}
+
+.code-reveal{
+      margin: 45px 0 0;
+
+  a{
+    border-bottom:1px solid rgba($base-link-color,0.5);
+    display:inline-block;
+  }
+}
+
+.code-snippet{
+  position:relative;
+  .clipboard{
+    position:absolute;
+    right:15px;
+    top:60px;
+  }
+}

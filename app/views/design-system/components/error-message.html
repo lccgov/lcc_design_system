@@ -1,0 +1,114 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "error-message" %} <!-- Page id var for side nav --> 
+{% set page_title = "Error message" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead"></p>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="highlight-errors-in-forms">Highlight errors in forms</h2>
+    <p>For each error:</p>
+    <ul class="list list-bullet">
+        <li>write a message that helps the user to understand why the error occurred and what to do about it</li>
+        <li>put the message in the <code class="code">&lt;label&gt;</code> or <code class="code">&lt;legend&gt;</code> for the question,
+        after the question text</li>
+    </ul>
+</div>
+<div class="example">
+    <div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+        <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+            Message to alert the user to a problem goes here
+        </h2>
+        <p>Optional description of the errors and how to correct them </p>
+        <ul class="error-summary-list">
+            <li><a href="#full-name">Descriptive link to full name question with an error</a></li>
+            <li><a href="#email-address">Descriptive link to email address question with an error</a></li>
+        </ul>
+    </div>
+    <h1 class="heading-large">Personal details</h1>
+    <form>
+        <div class="form-group form-group-error">
+            <fieldset>
+                <legend id="personal-details" class="sr-only">Personal details</legend>
+                    <label class="form-label" for="full-name">
+                        Full name
+                        <span class="form-hint">
+                        As shown on your birth certificate or passport
+                        </span>
+                    </label>
+                    <span class="error-message">Error message about full name goes here</span>
+                    <input class="form-control form-control-error" id="full-name" type="text" name="full-name">
+                </div>
+                <div class="form-group form-group-error">
+                    <label class="form-label" for="email-address">
+                        Email address
+                    </label>
+                    <span class="error-message">Error message about email address goes here</span>
+                    <input class="form-control form-control-error" id="email-address" type="text" name="email-address">
+                </div>
+            </fieldset>
+        <div class="form-group">
+            <button class="btn btn-primary btn-arrow">Continue</button>
+        </div>
+    </form>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for error message</span></h3>
+    <pre>
+        <code id="snippet-error-message" class="line-numbers language-markup">
+            &lt;div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+                &lt;h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+                    Message to alert the user to a problem goes here
+                &lt;/h2>
+                &lt;p>Optional description of the errors and how to correct them &lt;/p>
+                &lt;ul class="error-summary-list">
+                    &lt;li>&lt;a href="#full-name">Descriptive link to full name question with an error&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#email-address">Descriptive link to email address question with an error&lt;/a>&lt;/li>
+                &lt;/ul>
+            &lt;/div>
+            &lt;h1 class="heading-large">Personal details&lt;/h1>
+            &lt;form>
+                &lt;div class="form-group form-group-error">
+                    &lt;fieldset>
+                        &lt;legend id="personal-details" class="sr-only">Personal details&lt;/legend>
+                            &lt;label class="form-label" for="full-name">
+                                Full name
+                                &lt;span class="form-hint">
+                                As shown on your birth certificate or passport
+                                &lt;/span>
+                            &lt;/label>
+                            &lt;span class="error-message">Error message about full name goes here&lt;/span>
+                            &lt;input class="form-control form-control-error" id="full-name" type="text" name="full-name">
+                        &lt;/div>
+                        &lt;div class="form-group form-group-error">
+                            &lt;label class="form-label" for="email-address">
+                                Email address
+                            &lt;/label>
+                            &lt;span class="error-message">Error message about email address goes here&lt;/span>
+                            &lt;input class="form-control form-control-error" id="email-address" type="text" name="email-address">
+                        &lt;/div>
+                    &lt;/fieldset>
+                &lt;div class="form-group">
+                    &lt;button class="btn btn-primary btn-arrow">Continue&lt;/button>
+                &lt;/div>
+            &lt;/form>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-error-message">
+        Copy <span class="sr-only">HTML snippet for error message"</span>
+    </button>
+</div>
+
+{% endblock %}
