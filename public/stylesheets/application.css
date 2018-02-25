@@ -28368,7 +28368,7 @@ pre {
   .design-system-landing-page-menu ul li {
     margin: 0; }
     .design-system-landing-page-menu ul li a {
-      border-left: 1px solid #eceff1;
+      border-left: 3px solid #eceff1;
       padding: 0 15px;
       margin-bottom: 15px;
       display: inline-block; }
