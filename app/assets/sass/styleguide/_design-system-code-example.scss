@@ -11,6 +11,10 @@
       padding:60px 30px 30px;
   }
 
+  &.top{
+    margin-top:0;
+  }
+
   &:before {
     content: "EXAMPLE";
     position: absolute;
