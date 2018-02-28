@@ -1,0 +1,35 @@
+.layout-example{
+    .layout-example-item{
+        padding:10px;
+        background:$lighter-blue;
+        border:2px solid white;
+        text-align:center;
+        color:$dark-grey;
+        font-size:16px;
+        &.layout-example-item-content{
+            text-align:left;
+        }
+        span{
+            display:block;
+            margin-bottom:15px;
+            word-wrap: break-word;
+            &:last-of-type{
+                margin:0;
+            }
+            h1{
+                margin:0;
+            }
+        }
+    }
+    &.layout-page-example{
+        .layout-example-item{
+            padding:15px;
+            &.left{
+                text-align:left;
+            }
+        }
+    }
+    .layout-example-main{
+        border:10px solid black;
+    }
+}
