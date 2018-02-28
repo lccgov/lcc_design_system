@@ -13794,3 +13794,6 @@ aside.col-md-4 {
 
 html {
   background-color: #007299; }
+
+.mega-promo .mega-promo__item a .mega-promo__img-wrapper .mega-promo__img {
+  top: -1px; }

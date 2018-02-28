@@ -14,33 +14,217 @@
 {% block sectionOneRightContent %}
 <div class="page-header-section">
     <h1>{{ page_title }}</h1>
-    <p class="lead"></p>
+    <p class="lead">A promo is a snippet of content which links to a full piece of content elsewhere on LEEDS.GOV.UK or external websites.</p>
 </div>
 
 <div class="contents-box">
     <h2 class="heading-contents">Contents</h2>
     <ul class="list list-contents">
-        <li><a href="#breadcrumb-overview">Overview</a></li>
-        <li><a href="#sharepoint">SharePoint guidance</a></li>
+        <li><a href="#promo-sizes">Promo sizes</a></li>
+        <li><a href="#promo-colour">Promo colour</a></li>
+        <li><a href="#promo-accessibility">Promo accessibility</a></li>
     </ul>
 </div>
 
 <div class="text">
-
+    <h2 id="promo-sizes" class="top">Promo sizes</h2>
+    <p>The default width of a promo is 100%.</p>
+    <p>You can change the width by adding a class to <code>mega-promo__item</code>. For example, adding a class of <code>half</code> will change the width 50%.</p>
+    <h3>Promo width classes</h3>
+    <div class="table-responsive">
+        <table>
+            <caption class="sr-only">Promo width classes</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Class</th>
+                    <th class="numeric" scope="col">Width</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>featured</td>
+                    <td class="numeric">100%</td>
+                </tr>
+                <tr>
+                    <td>two-thirds</td>
+                    <td class="numeric">66.66%</td>
+                </tr>
+                <tr>
+                    <td>half</td>
+                    <td class="numeric">50%</td>
+                </tr>
+                <tr>
+                    <td>third</td>
+                    <td class="numeric">33.33%</td>
+                </tr>
+                <tr>
+                    <td>quarter</td>
+                    <td class="numeric">25%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 <div class="example">
-
+    <div class="mega-promo">
+        <div class="mega-promo__item featured">
+            <a href="#">
+                <div class="mega-promo__img-wrapper">
+                    <div class="mega-promo__img" style="background-image: url(/public/images/placeholder-image-16-9.svg)"></div>
+                </div>
+                <div class="mega-promo__content">
+                    <h3 class="mega-promo__header">This is the title for a featured promo</h3>
+                    <p class="mega-promo__secondary">This is the description for the promo. You need to add a class of <code>featured</code> to make it full width.</p>
+                </div>
+                <span class="mega-promo__highlight">Highlight text</span>
+            </a>
+        </div>
+        <div class="mega-promo__item half">
+            <a href="#">
+                <div class="mega-promo__img-wrapper">
+                    <div class="mega-promo__img" style="background-image: url(/public/images/placeholder-image-16-9.svg)"></div>
+                </div>
+                <div class="mega-promo__content">
+                    <h3 class="mega-promo__header">This is a half promo</h3>
+                    <p class="mega-promo__secondary">This is the description for the promo</p>
+                </div>
+                <span class="mega-promo__highlight">Highlight text</span>
+            </a>
+        </div>
+        <div class="mega-promo__item quarter">
+            <a href="#">
+                <div class="mega-promo__img-wrapper">
+                    <div class="mega-promo__img" style="background-image: url(/public/images/placeholder-image-16-9.svg)"></div>
+                </div>
+                <div class="mega-promo__content">
+                    <h3 class="mega-promo__header">This is a quarter promo</h3>
+                    <p class="mega-promo__secondary">This is the description for the promo</p>
+                </div>
+                <span class="mega-promo__highlight">Highlight text</span>
+            </a>
+        </div>
+        <div class="mega-promo__item quarter">
+            <a href="#">
+                <div class="mega-promo__img-wrapper">
+                    <div class="mega-promo__img" style="background-image: url(/public/images/placeholder-image-16-9.svg)"></div>
+                </div>
+                <div class="mega-promo__content">
+                    <h3 class="mega-promo__header">This is a quarter promo</h3>
+                    <p class="mega-promo__secondary">This is the description for the promo</p>
+                </div>
+                <span class="mega-promo__highlight">Highlight text</span>
+            </a>
+        </div>
+        <div class="mega-promo__item two-thirds">
+            <a href="#">
+                <div class="mega-promo__img-wrapper">
+                    <div class="mega-promo__img" style="background-image: url(/public/images/placeholder-image-16-9.svg)"></div>
+                </div>
+                <div class="mega-promo__content">
+                    <h3 class="mega-promo__header">This is a two-thirds promo</h3>
+                    <p class="mega-promo__secondary">This is the description for the promo</p>
+                </div>
+                <span class="mega-promo__highlight">Highlight text</span>
+            </a>
+        </div>
+        <div class="mega-promo__item third">
+            <a href="#">
+                <div class="mega-promo__img-wrapper">
+                    <div class="mega-promo__img" style="background-image: url(/public/images/placeholder-image-16-9.svg)"></div>
+                </div>
+                <div class="mega-promo__content">
+                    <h3 class="mega-promo__header">This is a third promo</h3>
+                    <p class="mega-promo__secondary">This is the description for the promo</p>
+                </div>
+                <span class="mega-promo__highlight">Highlight text</span>
+            </a>
+        </div>
+    </div>
 </div>
 <div class="code-snippet">
-    <h3 id="snippet-breadcrumb" class="heading-mark-up">HTML Snippet <span class="sr-only">for breadcrumb</span></h3>
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for Featured promo</span></h3>
     <pre>
-        <code class="line-numbers language-markup">
-
+        <code id="snippet-promo-featured" class="line-numbers language-markup">
+             &lt;div class="mega-promo">
+                 &lt;div class="mega-promo__item featured">
+                     &lt;a href="#">
+                         &lt;div class="mega-promo__img-wrapper">
+                             &lt;div class="mega-promo__img" style="background-image: url(/public/images/placeholder-image-16-9.svg)"> &lt;/div>
+                         &lt;/div>
+                         &lt;div class="mega-promo__content">
+                             &lt;h3 class="mega-promo__header">This is the title for a featured promo &lt;/h3>
+                             &lt;p class="mega-promo__secondary">This is the description for the promo. You need to add a class of  &lt;code>featured&lt;/code> to make it full width. &lt;/p>
+                         &lt;/div>
+                         &lt;span class="mega-promo__highlight">Highlight text &lt;/span>
+                     &lt;/a>
+                 &lt;/div>
+                 &lt;div class="mega-promo__item half">
+                     &lt;a href="#">
+                         &lt;div class="mega-promo__img-wrapper">
+                             &lt;div class="mega-promo__img" style="background-image: url(/public/images/placeholder-image-16-9.svg)"> &lt;/div>
+                         &lt;/div>
+                         &lt;div class="mega-promo__content">
+                             &lt;h3 class="mega-promo__header">This is a half promo &lt;/h3>
+                             &lt;p class="mega-promo__secondary">This is the description for the promo &lt;/p>
+                         &lt;/div>
+                         &lt;span class="mega-promo__highlight">Highlight text &lt;/span>
+                     &lt;/a>
+                 &lt;/div>
+                 &lt;div class="mega-promo__item quarter">
+                     &lt;a href="#">
+                         &lt;div class="mega-promo__img-wrapper">
+                             &lt;div class="mega-promo__img" style="background-image: url(/public/images/placeholder-image-16-9.svg)"> &lt;/div>
+                         &lt;/div>
+                         &lt;div class="mega-promo__content">
+                             &lt;h3 class="mega-promo__header">This is a quarter promo &lt;/h3>
+                             &lt;p class="mega-promo__secondary">This is the description for the promo &lt;/p>
+                         &lt;/div>
+                         &lt;span class="mega-promo__highlight">Highlight text &lt;/span>
+                     &lt;/a>
+                 &lt;/div>
+                 &lt;div class="mega-promo__item quarter">
+                     &lt;a href="#">
+                         &lt;div class="mega-promo__img-wrapper">
+                             &lt;div class="mega-promo__img" style="background-image: url(/public/images/placeholder-image-16-9.svg)"> &lt;/div>
+                         &lt;/div>
+                         &lt;div class="mega-promo__content">
+                             &lt;h3 class="mega-promo__header">This is a quarter promo &lt;/h3>
+                             &lt;p class="mega-promo__secondary">This is the description for the promo &lt;/p>
+                         &lt;/div>
+                         &lt;span class="mega-promo__highlight">Highlight text &lt;/span>
+                     &lt;/a>
+                 &lt;/div>
+                 &lt;div class="mega-promo__item two-thirds">
+                     &lt;a href="#">
+                         &lt;div class="mega-promo__img-wrapper">
+                             &lt;div class="mega-promo__img" style="background-image: url(/public/images/placeholder-image-16-9.svg)"> &lt;/div>
+                         &lt;/div>
+                         &lt;div class="mega-promo__content">
+                             &lt;h3 class="mega-promo__header">This is a two-thirds promo &lt;/h3>
+                             &lt;p class="mega-promo__secondary">This is the description for the promo &lt;/p>
+                         &lt;/div>
+                         &lt;span class="mega-promo__highlight">Highlight text &lt;/span>
+                     &lt;/a>
+                 &lt;/div>
+                 &lt;div class="mega-promo__item third">
+                     &lt;a href="#">
+                         &lt;div class="mega-promo__img-wrapper">
+                             &lt;div class="mega-promo__img" style="background-image: url(/public/images/placeholder-image-16-9.svg)"> &lt;/div>
+                         &lt;/div>
+                         &lt;div class="mega-promo__content">
+                             &lt;h3 class="mega-promo__header">This is a third promo &lt;/h3>
+                             &lt;p class="mega-promo__secondary">This is the description for the promo &lt;/p>
+                         &lt;/div>
+                         &lt;span class="mega-promo__highlight">Highlight text &lt;/span>
+                     &lt;/a>
+                 &lt;/div>
+             &lt;/div>
         </code>
     </pre>
-    <button class="clipboard" data-clipboard-target="#snippet-headings">
-        Copy <span class="sr-only">HTML snippet for breadcrumb"</span>
+    <button class="clipboard" data-clipboard-target="#snippet-promo-featured">
+        Copy <span class="sr-only">HTML snippet for Featured promo</span>
     </button>
 </div>
+
 
 {% endblock %}

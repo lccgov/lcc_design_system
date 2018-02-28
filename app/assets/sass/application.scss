@@ -222,3 +222,8 @@ $input-border-color:$grey;
 html {
     background-color: $blue;
 }
+
+//fix for alignment issue with promo placeholder image svg - DO NOT USE ON LIVE.
+.mega-promo .mega-promo__item a .mega-promo__img-wrapper .mega-promo__img {
+    top: -1px;
+}
