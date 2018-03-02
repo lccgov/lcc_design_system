@@ -51,35 +51,40 @@
         </div>
     </form>
 </div>
-<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for date input</span></h3>
-<pre>
-    <code class="line-numbers language-markup">
-        &lt;form>
-            &lt;div class="form-group">
-                &lt;fieldset>
-                    &lt;legend>
-                        &lt;span class="form-label-bold">What is your date of birth?&lt;/span>
-                        &lt;span class="form-hint">For example, 31 3 1980&lt;/span>
-                    &lt;/legend>
-                    &lt;div class="form-date">
-                        &lt;div class="form-group form-group-day">
-                            &lt;label class="form-label" for="dob-day">Day&lt;/label>
-                            &lt;input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for date input</span></h3>
+    <pre>
+        <code id="snippet-date-input" class="line-numbers language-markup">
+            &lt;form>
+                &lt;div class="form-group">
+                    &lt;fieldset>
+                        &lt;legend>
+                            &lt;span class="form-label-bold">What is your date of birth?&lt;/span>
+                            &lt;span class="form-hint">For example, 31 3 1980&lt;/span>
+                        &lt;/legend>
+                        &lt;div class="form-date">
+                            &lt;div class="form-group form-group-day">
+                                &lt;label class="form-label" for="dob-day">Day&lt;/label>
+                                &lt;input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                            &lt;/div>
+                            &lt;div class="form-group form-group-month">
+                                &lt;label class="form-label" for="dob-month">Month&lt;/label>
+                                &lt;input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                            &lt;/div>
+                            &lt;div class="form-group form-group-year">
+                                &lt;label class="form-label" for="dob-year">Year&lt;/label>
+                                &lt;input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                            &lt;/div>
                         &lt;/div>
-                        &lt;div class="form-group form-group-month">
-                            &lt;label class="form-label" for="dob-month">Month&lt;/label>
-                            &lt;input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
-                        &lt;/div>
-                        &lt;div class="form-group form-group-year">
-                            &lt;label class="form-label" for="dob-year">Year&lt;/label>
-                            &lt;input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
-                        &lt;/div>
-                    &lt;/div>
-                &lt;/fieldset>
-            &lt;/div>
-        &lt;/form>
-    </code>
-</pre>
+                    &lt;/fieldset>
+                &lt;/div>
+            &lt;/form>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-date-input">
+        Copy <span class="sr-only">HTML snippet for date input</span>
+    </button>
+</div>
 
 <div class="text">
     <h2 id="error-handling" class="heading-large">Error handling</h2>
@@ -168,87 +173,92 @@
     </div>
 </form>
 </div>
-<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for date input error handling</span></h3>
-<pre>
-    <code class="line-numbers language-markup">
-        &lt;form>
-            &lt;div class="form-group form-group-error">
-                &lt;fieldset>
-                    &lt;legend>
-                        &lt;span class="form-label-bold">What is your date of birth?&lt;/span>
-                        &lt;span class="form-hint">For example, 31 3 1980&lt;/span>
-                    &lt;/legend>
-                    &lt;span class="error-message">Error message goes here&lt;/span>
-                    &lt;div class="form-date">
-                        &lt;div class="form-group form-group-day">
-                            &lt;label class="form-label" for="dob-day">Day&lt;/label>
-                            &lt;input class="form-control form-control-error" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for date input error handling</span></h3>
+    <pre>
+        <code id="snippet-date-input-error-handling" class="line-numbers language-markup">
+            &lt;form>
+                &lt;div class="form-group form-group-error">
+                    &lt;fieldset>
+                        &lt;legend>
+                            &lt;span class="form-label-bold">What is your date of birth?&lt;/span>
+                            &lt;span class="form-hint">For example, 31 3 1980&lt;/span>
+                        &lt;/legend>
+                        &lt;span class="error-message">Error message goes here&lt;/span>
+                        &lt;div class="form-date">
+                            &lt;div class="form-group form-group-day">
+                                &lt;label class="form-label" for="dob-day">Day&lt;/label>
+                                &lt;input class="form-control form-control-error" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                            &lt;/div>
+                            &lt;div class="form-group form-group-month">
+                                &lt;label class="form-label" for="dob-month">Month&lt;/label>
+                                &lt;input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                            &lt;/div>
+                            &lt;div class="form-group form-group-year">
+                                &lt;label class="form-label" for="dob-year">Year&lt;/label>
+                                &lt;input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                            &lt;/div>
                         &lt;/div>
-                        &lt;div class="form-group form-group-month">
-                            &lt;label class="form-label" for="dob-month">Month&lt;/label>
-                            &lt;input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
-                        &lt;/div>
-                        &lt;div class="form-group form-group-year">
-                            &lt;label class="form-label" for="dob-year">Year&lt;/label>
-                            &lt;input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
-                        &lt;/div>
-                    &lt;/div>
-                &lt;/fieldset>
-            &lt;/div>
-        &lt;/form>
+                    &lt;/fieldset>
+                &lt;/div>
+            &lt;/form>
 
-        &lt;form>
-            &lt;div class="form-group form-group-error">
-                &lt;fieldset>
-                    &lt;legend>
-                        &lt;span class="form-label-bold">What is your date of birth?&lt;/span>
-                        &lt;span class="form-hint">For example, 31 3 1980&lt;/span>
-                    &lt;/legend>
-                    &lt;span class="error-message">Error message goes here&lt;/span>
-                    &lt;div class="form-date">
-                        &lt;div class="form-group form-group-day">
-                            &lt;label class="form-label" for="dob-day">Day&lt;/label>
-                            &lt;input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+            &lt;form>
+                &lt;div class="form-group form-group-error">
+                    &lt;fieldset>
+                        &lt;legend>
+                            &lt;span class="form-label-bold">What is your date of birth?&lt;/span>
+                            &lt;span class="form-hint">For example, 31 3 1980&lt;/span>
+                        &lt;/legend>
+                        &lt;span class="error-message">Error message goes here&lt;/span>
+                        &lt;div class="form-date">
+                            &lt;div class="form-group form-group-day">
+                                &lt;label class="form-label" for="dob-day">Day&lt;/label>
+                                &lt;input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                            &lt;/div>
+                            &lt;div class="form-group form-group-month">
+                                &lt;label class="form-label" for="dob-month">Month&lt;/label>
+                                &lt;input class="form-control form-control-error" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                            &lt;/div>
+                            &lt;div class="form-group form-group-year">
+                                &lt;label class="form-label" for="dob-year">Year&lt;/label>
+                                &lt;input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                            &lt;/div>
                         &lt;/div>
-                        &lt;div class="form-group form-group-month">
-                            &lt;label class="form-label" for="dob-month">Month&lt;/label>
-                            &lt;input class="form-control form-control-error" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
-                        &lt;/div>
-                        &lt;div class="form-group form-group-year">
-                            &lt;label class="form-label" for="dob-year">Year&lt;/label>
-                            &lt;input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
-                        &lt;/div>
-                    &lt;/div>
-                &lt;/fieldset>
-            &lt;/div>
-        &lt;/form>
+                    &lt;/fieldset>
+                &lt;/div>
+            &lt;/form>
 
-        &lt;form>
-            &lt;div class="form-group form-group-error">
-                &lt;fieldset>
-                    &lt;legend>
-                        &lt;span class="form-label-bold">What is your date of birth?&lt;/span>
-                        &lt;span class="form-hint">For example, 31 3 1980&lt;/span>
-                    &lt;/legend>
-                    &lt;span class="error-message">Error message goes here&lt;/span>
-                    &lt;div class="form-date">
-                        &lt;div class="form-group form-group-day">
-                            &lt;label class="form-label" for="dob-day">Day&lt;/label>
-                            &lt;input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+            &lt;form>
+                &lt;div class="form-group form-group-error">
+                    &lt;fieldset>
+                        &lt;legend>
+                            &lt;span class="form-label-bold">What is your date of birth?&lt;/span>
+                            &lt;span class="form-hint">For example, 31 3 1980&lt;/span>
+                        &lt;/legend>
+                        &lt;span class="error-message">Error message goes here&lt;/span>
+                        &lt;div class="form-date">
+                            &lt;div class="form-group form-group-day">
+                                &lt;label class="form-label" for="dob-day">Day&lt;/label>
+                                &lt;input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                            &lt;/div>
+                            &lt;div class="form-group form-group-month">
+                                &lt;label class="form-label" for="dob-month">Month&lt;/label>
+                                &lt;input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                            &lt;/div>
+                            &lt;div class="form-group form-group-year">
+                                &lt;label class="form-label" for="dob-year">Year&lt;/label>
+                                &lt;input class="form-control form-control-error" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                            &lt;/div>
                         &lt;/div>
-                        &lt;div class="form-group form-group-month">
-                            &lt;label class="form-label" for="dob-month">Month&lt;/label>
-                            &lt;input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
-                        &lt;/div>
-                        &lt;div class="form-group form-group-year">
-                            &lt;label class="form-label" for="dob-year">Year&lt;/label>
-                            &lt;input class="form-control form-control-error" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
-                        &lt;/div>
-                    &lt;/div>
-                &lt;/fieldset>
-            &lt;/div>
-        &lt;/form>
-    </code>
-</pre>
+                    &lt;/fieldset>
+                &lt;/div>
+            &lt;/form>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-date-input-error-handling">
+        Copy <span class="sr-only">HTML snippet for date input error handling</span>
+    </button>
+</div>
 
 {% endblock %}

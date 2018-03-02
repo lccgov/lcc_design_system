@@ -17,14 +17,6 @@
     <p class="lead">Accordion allows organising the content into logical, titled sections in a space-saving way.</p>
 </div>
 
-<div class="contents-box">
-    <h2 class="heading-contents">Contents</h2>
-    <ul class="list list-contents">
-        <li><a href="#accordion">Accordion example</a></li>
-        <li><a href="#sharepoint">SharePoint guidance</a></li>
-    </ul>
-</div>
-
 <div id="accordion" class="text">
     <p class="top">The number of panels should be small, for example: less than 10.</p>
 </div>
@@ -69,45 +61,46 @@
         </div>
     </div>
 </div>
-<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for accordion</span></h3>
-<pre>
-    <code class="line-numbers language-markup">
-        &lt;div class="accordion"
-            data-aria-accordion
-            data-multi
-            data-default="none">
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for accordion</span></h3>
+    <pre>
+        <code id="snippet-accordion" class="line-numbers language-markup">
+            &lt;div class="accordion"
+                data-aria-accordion
+                data-multi
+                data-default="none">
 
-            &lt;h3 class="accordion__heading">
-                Heading 1
-            &lt;/h3>
-            &lt;div class="accordion__panel">
-                &lt;p>
-                    Here is the first panel of content.
-                &lt;/p>
-            &lt;/div>
+                &lt;h3 class="accordion__heading">
+                    Heading 1
+                &lt;/h3>
+                &lt;div class="accordion__panel">
+                    &lt;p>
+                        Here is the first panel of content.
+                    &lt;/p>
+                &lt;/div>
 
-            &lt;h3 class="accordion__heading">
-                Heading 2
-            &lt;/h3>
-            &lt;div class="accordion__panel">
-                &lt;p>
-                    Here is the second panel of content.
-                &lt;/p>
-            &lt;/div>
+                &lt;h3 class="accordion__heading">
+                    Heading 2
+                &lt;/h3>
+                &lt;div class="accordion__panel">
+                    &lt;p>
+                        Here is the second panel of content.
+                    &lt;/p>
+                &lt;/div>
 
-            &lt;h3 class="accordion__heading">
-                Heading 3
-            &lt;/h3>
-            &lt;div class="accordion__panel">
-                &lt;p>
-                    Here is the third panel of content.
-                &lt;/p>
+                &lt;h3 class="accordion__heading">
+                    Heading 3
+                &lt;/h3>
+                &lt;div class="accordion__panel">
+                    &lt;p>
+                        Here is the third panel of content.
+                    &lt;/p>
+                &lt;/div>
             &lt;/div>
-        &lt;/div>
-    </code>
-</pre>
-<div class="text">
-        <h2 class="heading-large" id="sharepoint">SharePoint guidance</h2>
-        <p>Sharepoint instructions to go here...</p>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-accordion">
+        Copy <span class="sr-only">HTML snippet for accordion</span>
+    </button>
 </div>
 {% endblock %}

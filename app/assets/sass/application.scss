@@ -164,7 +164,7 @@ $input-border-color:$grey;
 //$back-top-hover-background:grey;
 
 //phase banner
-//$phase-banner-stage-background:#007299 !default;
+$phase-banner-stage-background:$blue;
 //$phase-banner-stage-color:white !default;
 
 @import 'bootstrap.3.3';
@@ -269,4 +269,131 @@ html {
 .btn.btn[rel=external]:after {
     font-size: 14px;
     opacity:0.8;
+}
+
+.panel p + .btn {
+    margin-top: 10px !important;
+}
+
+.panel blockquote:before {
+    opacity: 0.2;
+}
+
+.img-border{
+    border:1px solid $border-color;
+    padding: 0;
+    margin: 5px 0 20px;
+}
+
+//search-group
+.search-group{
+    @media (min-width: 641px) {
+        width:50% !important;
+    }
+    &.postcode-lookup{
+        max-width:20em !important;
+        margin-bottom:15px;
+        @media (min-width: 641px) {
+            width:20em !important;
+            margin-bottom:20px;
+        }
+    }
+    .form-control{
+        width:100% !important;
+        @include border-radius(4px 0 0 4px !important);
+    }
+    .btn{
+        height:45px;
+        background:$primary-button-background-color;
+        color:$primary-button-color;
+        border:1px solid $primary-button-background-color;
+        border-bottom-color:darken($primary-button-background-color,15%);
+        margin:0;
+        padding: 10px 15px;
+        font-size:16px;
+        box-shadow:none !important;
+        &:hover{
+            background:lighten($primary-button-background-color,5%);
+        }
+    }
+}
+
+.search-group-link{
+    display:block;
+    margin:5px 0 0 !important;
+    font-size:16px;
+    line-height:1.6;
+    @media (min-width: 641px) {
+        font-size:19px;
+    }
+}
+
+.form-label-bold{
+    font-weight:bold;
+}
+
+.form-label-large{
+    font-size:19px;
+    font-weight:bold;
+    @media (min-width: 641px) {
+        font-size:24px;
+    }
+}
+
+//remove when npm updated FET
+$breadcrumb-background:transparent !default;
+
+.breadcrumb {
+    padding: 0;
+    margin: 10px 0 0;
+    font-size: 16px;
+    background:$breadcrumb-background;
+
+    @media (max-width: 767px) {
+        padding: 0;
+        font-size: 14px;
+    }
+
+    ul,
+    ol{
+        padding:0;
+        list-style:none;
+        display:inline;
+        li{
+            display:inline;
+            a{
+            position:relative;
+            margin-right:16px;
+
+
+                &:after {
+                    position:absolute;
+                    display:inline-block;
+                    content: "/";
+                    font-size: 16px;
+                    padding: 0 8px;
+                    text-decoration:none !important;
+                }
+            }
+        }
+    }
+
+    img {
+    display: none !important;
+}
+
+}
+
+//SP override
+.breadcrumb ul:first-child{
+  margin-left:0;
+}
+
+//example only
+.panel-search{
+    .search-group{
+        @media (max-width: 990px) {
+            width:100% !important;
+        }
+    }
 }

@@ -61,9 +61,11 @@
   padding-top:15px;
 }
 
-@media (max-width: 990px) {
-  .example-images{
-    img{
+
+.example-images{
+  img{   
+    width:100%;
+    @media (max-width: 990px) {
       margin:15px 0 15px 0;
     }
   }
@@ -83,6 +85,6 @@
   .clipboard{
     position:absolute;
     right:15px;
-    top:60px;
+    top:55px;
   }
 }

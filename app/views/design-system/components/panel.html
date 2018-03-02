@@ -14,32 +14,247 @@
 {% block sectionOneRightContent %}
 <div class="page-header-section">
     <h1>{{ page_title }}</h1>
-    <p class="lead"></p>
+    <p class="lead">Use a panel to highlight content.</p>
 </div>
 
 <div class="contents-box">
     <h2 class="heading-contents">Contents</h2>
     <ul class="list list-contents">
-        <li><a href="#breadcrumb-overview">Overview</a></li>
-        <li><a href="#sharepoint">SharePoint guidance</a></li>
+        <li><a href="#panel">Panel</a></li>
+        <li><a href="#panel-border">Panel border</a></li>
+        <li><a href="#panel-with-image">Panel with an image</a></li>
+        <li><a href="#panel-blockquote">Panel blockquote</a></li>
+        <li><a href="#panel-blockquote-with-image">Panel blockquote with an image</a></li>
+        <li><a href="#panel-event">Panel event</a></li>
     </ul>
 </div>
 
-<div class="text">
-
-</div>
+<h2 class="top" id="panel">Panel</h2>
 <div class="example">
-
+    <div class="panel">
+        <h3>Panel header</h3>
+        <p>This is the body copy within a panel. This is a <a href="#">link</a> within the panel.</p>
+    </div>
 </div>
 <div class="code-snippet">
-    <h3 id="snippet-breadcrumb" class="heading-mark-up">HTML Snippet <span class="sr-only">for breadcrumb</span></h3>
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for panel</span></h3>
     <pre>
-        <code class="line-numbers language-markup">
-
+        <code id="snippet-panel" class="line-numbers language-markup">
+            &lt;div class="panel">
+                &lt;h3>Panel header&lt;/h3>
+                &lt;p>This is the body copy within a panel. This is a &lt;a href="#">link&lt;/a> within the panel.&lt;/p>
+            &lt;/div>
         </code>
     </pre>
-    <button class="clipboard" data-clipboard-target="#snippet-headings">
-        Copy <span class="sr-only">HTML snippet for breadcrumb"</span>
+    <button class="clipboard" data-clipboard-target="#snippet-panel">
+        Copy <span class="sr-only">HTML snippet for panel</span>
+    </button>
+</div>
+<h2 id="panel-border">Panel border</h2>
+<div class="example">
+    <div class="text">
+        <div class="panel panel-border">
+            <h2>Organisations that offer debt advice</h2>
+            <ul class="list list-bullet">
+                <li><a href="#" rel="external">Citizens Advice <span class="sr-only">External link</span></a> provides free, independent and confidential advice on debt and money problems</li>
+                <li><a href="#" rel="external">Debt Advice Foundation <span class="sr-only">External link</span></a> offer free, confidential support and advice about debt</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for panel border</span></h3>
+    <pre>
+        <code id="snippet-panel-border" class="line-numbers language-markup">
+            &lt;div class="text">
+                &lt;div class="panel panel-border">
+                    &lt;h2>Organisations that offer debt advice&lt;/h2>
+                    &lt;ul class="list list-bullet">
+                        &lt;li>&lt;a href="#" rel="external">Citizens Advice &lt;span class="sr-only">External link&lt;/span>&lt;/a> provides free, independent and confidential advice on debt and money problems&lt;/li>
+                        &lt;li>&lt;a href="#" rel="external">Debt Advice Foundation &lt;span class="sr-only">External link&lt;/span>&lt;/a> offer free, confidential support and advice about debt&lt;/li>
+                    &lt;/ul>
+                &lt;/div>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-panel-border">
+        Copy <span class="sr-only">HTML snippet for panel border</span>
+    </button>
+</div>
+
+<h2 id="panel-with-image">Panel with an image</h2>
+<div class="example">
+    <div class="panel img">
+        <div class="img-container right col-md-6" style="background-image: url('/public/images/placeholder-image-16-9-picture.svg');">
+        </div>
+        <div class="col-md-6 content">
+            <h2>Panel with an image</h2>
+            <p>This is the body copy for a panel with an image.</p>
+            <a href="#">Panel link</a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="panel img">
+        <div class="img-container col-md-6" style="background-image: url('/public/images/placeholder-image-16-9-picture.svg');">
+        </div>
+        <div class="col-md-6 col-md-offset-6 content">
+            <h2>Image to the left</h2>
+            <p>This is the body copy for a panel with an image.</p>
+            <a href="#">Panel link</a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for panel</span></h3>
+    <pre>
+        <code id="snippet-panel-with-image" class="line-numbers language-markup">
+            &lt;div class="panel img">
+                &lt;div class="img-container right col-md-6" style="background-image: url('/public/images/placeholder-image-16-9-picture.svg');">
+                &lt;/div>
+                &lt;div class="col-md-6 content">
+                    &lt;h2>Panel with an image&lt;/h2>
+                    &lt;p>This is the body copy for a panel with an image.&lt;/p>
+                    &lt;a href="#">Panel link&lt;/a>
+                &lt;/div>
+                &lt;div class="clearfix">&lt;/div>
+            &lt;/div>
+            &lt;div class="panel img">
+                &lt;div class="img-container col-md-6" style="background-image: url('/public/images/placeholder-image-16-9-picture.svg');">
+                &lt;/div>
+                &lt;div class="col-md-6 col-md-offset-6 content">
+                    &lt;h2>Image to the left&lt;/h2>
+                    &lt;p>This is the body copy for a panel with an image.&lt;/p>
+                    &lt;a href="#">Panel link&lt;/a>
+                &lt;/div>
+                &lt;div class="clearfix">&lt;/div>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-panel-with-image">
+        Copy <span class="sr-only">HTML snippet for panel with image</span>
+    </button>
+</div>
+
+<h2 id="panel-blockquote">Panel blockquote</h2>
+<div class="example">
+    <div class="panel">
+        <blockquote>
+            There is no such thing as a typical foster carer - everybody has something to bring in terms of experience and knowledge.
+            <footer>Larry David</footer>
+        </blockquote>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for panel</span></h3>
+    <pre>
+        <code id="snippet-panel-blockquote" class="line-numbers language-markup">
+            &lt;div class="panel">
+                &lt;blockquote>
+                    There is no such thing as a typical foster carer - everybody has something to bring in terms of experience and knowledge.
+                    &lt;footer>Larry David&lt;/footer>
+                &lt;/blockquote>
+                &lt;div class="clearfix">&lt;/div>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-panel-blockquote">
+        Copy <span class="sr-only">HTML snippet for panel blockquote</span>
+    </button>
+</div>
+
+<h2 id="panel-blockquote-with-image">Panel blockquote with an image</h2>
+<div class="example">
+    <div class="panel img">
+        <div class="img-container right col-md-6" style="background-image: url('/public/images/placeholder-image-16-9-picture.svg');">
+        </div>
+        <div class="col-md-6 content">
+            <blockquote>
+                There is no such thing as a typical foster carer - everybody has something to bring in terms of experience and knowledge.
+            </blockquote>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for panel</span></h3>
+    <pre>
+        <code id="snippet-panel-blockquote-with-image" class="line-numbers language-markup">
+            &lt;div class="panel img">
+                &lt;div class="img-container right col-md-6" style="background-image: url('/public/images/placeholder-image-16-9-picture.svg');">
+                &lt;/div>
+                &lt;div class="col-md-6 content">
+                    &lt;blockquote>
+                        There is no such thing as a typical foster carer - everybody has something to bring in terms of experience and knowledge.
+                    &lt;/blockquote>
+                &lt;/div>
+                &lt;div class="clearfix">&lt;/div>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-panel-blockquote-with-image">
+        Copy <span class="sr-only">HTML snippet for panel with an image</span>
+    </button>
+</div>
+
+<h2 id="panel-event">Panel event</h2>
+<div class="example">
+    <div class="panel img panel-event">
+        <div class="img-container col-sm-6 col-md-3" style="background-image: url('/public/images/placeholder-image-16-9-picture.svg');">
+        </div>
+        <div class="col-sm-6 col-sm-offset-6 col-md-offset-3 col-md-3 panel-event-date">
+            <div class="panel-event-date-wrapper">
+                <p aria-hidden="true" class="panel-event-date-details">
+                    <span>WED</span>
+                    <span class="big-number">6</span>
+                    <span>DEC 2017</span>
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-md-offset-6 content panel-event-content">
+            <h3 class="panel-event-title">Fostering children with complex needs / disabilities</h3>
+            <p class="panel-event-description">Free on-site parking</p>
+            <div class="panel-event-info">
+                <p class="panel-event-info-location"><strong>Location</strong> <a href="https://www.google.co.uk/maps/place/Village+Hotel+Leeds+North/@53.834195,-1.589756,15z/data=!4m5!3m4!1s0x0:0xf7d7911c75845ff6!8m2!3d53.834195!4d-1.589756">Village Hotel North, 186 Otley Rd, Headingley, Leeds LS16 5PR <span class="sr-only">Get directions. External link.</span></a></p>
+                <p class="panel-event-info-time"><strong>Time</strong> 6pm to 8:30pm</p>
+                <p class="panel-event-info-date"><strong>Date</strong> Wednesday 6th December 2017</p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for panel</span></h3>
+    <pre>
+        <code id="snippet-panel-event" class="line-numbers language-markup">
+            &lt;div class="panel img panel-event">
+                &lt;div class="img-container col-sm-6 col-md-3" style="background-image: url('/public/images/placeholder-image-16-9-picture.svg');">
+                &lt;/div>
+                &lt;div class="col-sm-6 col-sm-offset-6 col-md-offset-3 col-md-3 panel-event-date">
+                    &lt;div class="panel-event-date-wrapper">
+                        &lt;p aria-hidden="true" class="panel-event-date-details">
+                            &lt;span>WED&lt;/span>
+                            &lt;span class="big-number">6&lt;/span>
+                            &lt;span>DEC 2017&lt;/span>
+                        &lt;/p>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="col-sm-12 col-md-6 col-md-offset-6 content panel-event-content">
+                    &lt;h3 class="panel-event-title">Fostering children with complex needs / disabilities&lt;/h3>
+                    &lt;p class="panel-event-description">Free on-site parking&lt;/p>
+                    &lt;div class="panel-event-info">
+                        &lt;p class="panel-event-info-location">&lt;strong>Location&lt;/strong> &lt;a href="https://www.google.co.uk/maps/place/Village+Hotel+Leeds+North/@53.834195,-1.589756,15z/data=!4m5!3m4!1s0x0:0xf7d7911c75845ff6!8m2!3d53.834195!4d-1.589756">Village Hotel North, 186 Otley Rd, Headingley, Leeds LS16 5PR &lt;span class="sr-only">Get directions. External link.&lt;/span>&lt;/a>&lt;/p>
+                        &lt;p class="panel-event-info-time">&lt;strong>Time&lt;/strong> 6pm to 8:30pm&lt;/p>
+                        &lt;p class="panel-event-info-date">&lt;strong>Date&lt;/strong> Wednesday 6th December 2017&lt;/p>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="clearfix">&lt;/div>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-panel-event">
+        Copy <span class="sr-only">HTML snippet for panel event</span>
     </button>
 </div>
 

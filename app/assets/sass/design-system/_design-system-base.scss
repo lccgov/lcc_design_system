@@ -2,7 +2,7 @@
 .design-system,
 .design-system footer.main,
 .design-system footer.main .footerGlobal{
-    background:white !important;
+    background:$light-grey !important;
 }
 .design-system{
     footer.main {
@@ -19,7 +19,6 @@
             margin:0;
         }
     }
-
     .hero.section-brand{
         height:100%;
         padding:3rem 0;
@@ -103,15 +102,6 @@
         position:relative;
         padding:0;
         font-weight:400;
-    }
-    .header-logo a {
-        background-image: url(../images/logo-lcc-digital.svg);
-        width: 190px;
-        height:22px;
-        @media (max-width: 990px) {
-            width:130px;
-            height:15px;
-        }
     }
     .container-fluid{
         max-width: 100% !important;
@@ -241,7 +231,7 @@
         border-left:1px solid $border-color;
         padding:0 50px 100px;
     }
-    .link-back{
+    .link-back-guide{
         margin:30px 0 0;
         @media (min-width: 768px){
             display:none;
@@ -328,7 +318,7 @@
   }
   //nav
   .main-nav {
-      background:$lighter-grey;
+      background:$light-grey;
       @media (max-width: 990px){
           position: relative;
           left: 0;

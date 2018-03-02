@@ -34,12 +34,17 @@
 <div class="example">
     <a class="btn btn-primary btn-arrow" href="#">Start now</a>
 </div>
-<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for primary button</span></h3>
-<pre>
-    <code class="line-numbers language-markup">
-        &lt;a class="btn btn-primary btn-arrow" href="#">Start now&lt;/a>
-    </code>
-</pre>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for primary button</span></h3>
+    <pre>
+        <code id="snippet-primary-button" class="line-numbers language-markup">
+            &lt;a class="btn btn-primary btn-arrow" href="#">Start now&lt;/a>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-primary-button">
+        Copy <span class="sr-only">HTML snippet for primary button</span>
+    </button>
+</div>
 
 <div class="text">
     <h2 class="heading-large" id="buttons-alignment">Button alignment</h2>  
@@ -48,40 +53,49 @@
   
 <div class="example">
     <div class="form-group">
-        <label class="form-label" for="full-name-f1">Full name</label>
-        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+        <label class="form-label" for="full-name">Full name</label>
+        <input class="form-control" id="full-name" type="text" name="full-name">
     </div>
     <div class="form-group">
         <button class="btn btn-primary" href="#">Save and continue</button>
     </div>
 </div>
-<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for button alignment</span></h3>
-<pre>
-    <code class="line-numbers language-markup">
-        &lt;div class="form-group">
-            &lt;label class="form-label" for="full-name-f1">Full name&lt;/label>
-            &lt;input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
-        &lt;/div>
-        &lt;div class="form-group">
-            &lt;button class="btn btn-primary" href="#">Save and continue&lt;/button>
-        &lt;/div>
-    </code>
-</pre>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for button alignment</span></h3>
+    <pre>
+        <code id="snippet-button-alignment" class="line-numbers language-markup">
+            &lt;div class="form-group">
+                &lt;label class="form-label" for="full-name">Full name&lt;/label>
+                &lt;input class="form-control" id="full-name" type="text" name="full-name">
+            &lt;/div>
+            &lt;div class="form-group">
+                &lt;button class="btn btn-primary" href="#">Save and continue&lt;/button>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-button-alignment">
+        Copy <span class="sr-only">HTML snippet for button alignment</span>
+    </button>
+</div>
 
 <div class="text">
     <h2 class="heading-large" id="buttons-external">Button with external link</h2>  
-    <p class="text">For accessibility, hyperlinks to external websites need to include <code>rel="external"</code> and <code>&lt;span class="sr-only">External link&lt;/span></code>.</p>   
+    <p class="text">For accessibility, <a rel="external" href="https://moz.com/learn/seo/external-link">external links<span class="sr-only"> external link</span></a> should include <code>rel="external"</code> and <code>&lt;span class="sr-only">External link&lt;/span></code>.</p>   
 </div>
   
 <div class="example">
-    <a rel="external" class="btn btn-primary btn-arrow" href="#">Start now <span class="sr-only">External link</span></a>
+    <a rel="external" class="btn btn-primary btn-arrow" href="#">Search for a property band <span class="sr-only">External link</span></a>
 </div>
-<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for button with external link</span></h3>
-<pre>
-    <code class="line-numbers language-markup">
-        &lt;a rel="external" class="btn btn-primary btn-arrow" href="#">Start now &lt;span class="sr-only">External link&lt;/span>&lt;/a>
-    </code>
-</pre>
-
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for button with external link</span></h3>
+    <pre>
+        <code id="snippet-button-external" class="line-numbers language-markup">
+            &lt;a rel="external" class="btn btn-primary btn-arrow" href="#">Search for a property band &lt;span class="sr-only">External link&lt;/span>&lt;/a>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-button-external">
+        Copy <span class="sr-only">HTML snippet for button with external link</span>
+    </button>
+</div>
 
 {% endblock %}

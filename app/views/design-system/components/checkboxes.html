@@ -52,32 +52,37 @@
         </div>
     </form>
 </div>
-<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for checkboxes</span></h3>
-<pre>
-    <code class="line-numbers language-markup">
-        &lt;h1 class="heading-medium">What bins do you currently have?&lt;/h1>
-        &lt;p>Select all that apply&lt;/p>
-        &lt;form>
-            &lt;div class="form-group">
-                &lt;fieldset>
-                    &lt;legend class="sr-only">What bins do you currently have?&lt;/legend>
-                    &lt;label class="block-label" for="waste-type-1" data-target="waste-type-1">
-                        &lt;input type="checkbox" id="waste-type-1" name="waste-types" value="Black bin (General waste)" aria-controls="waste-type-1" aria-expanded="false">
-                        Black bin (General waste)
-                    &lt;/label>
-                    &lt;label class="block-label" for="waste-type-2" data-target="waste-type-2">
-                        &lt;input type="checkbox" id="waste-type-2" name="waste-types" value="Brown bin (Garden waste)" aria-controls="waste-type-2" aria-expanded="false">
-                        Brown bin (Garden waste)
-                    &lt;/label>
-                    &lt;label class="block-label" for="waste-type-3" data-target="waste-type-3">
-                        &lt;input type="checkbox" id="waste-type-3" name="waste-types" value="Green bin (Recycling)" aria-controls="waste-type-3" aria-expanded="false">
-                        Green bin (Recycling)
-                    &lt;/label>
-                &lt;/fieldset>
-            &lt;/div>
-        &lt;/form>
-    </code>
-</pre>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for checkboxes</span></h3>
+    <pre>
+        <code id="snippet-checkboxes" class="line-numbers language-markup">
+            &lt;h1 class="heading-medium">What bins do you currently have?&lt;/h1>
+            &lt;p>Select all that apply&lt;/p>
+            &lt;form>
+                &lt;div class="form-group">
+                    &lt;fieldset>
+                        &lt;legend class="sr-only">What bins do you currently have?&lt;/legend>
+                        &lt;label class="block-label" for="waste-type-1" data-target="waste-type-1">
+                            &lt;input type="checkbox" id="waste-type-1" name="waste-types" value="Black bin (General waste)" aria-controls="waste-type-1" aria-expanded="false">
+                            Black bin (General waste)
+                        &lt;/label>
+                        &lt;label class="block-label" for="waste-type-2" data-target="waste-type-2">
+                            &lt;input type="checkbox" id="waste-type-2" name="waste-types" value="Brown bin (Garden waste)" aria-controls="waste-type-2" aria-expanded="false">
+                            Brown bin (Garden waste)
+                        &lt;/label>
+                        &lt;label class="block-label" for="waste-type-3" data-target="waste-type-3">
+                            &lt;input type="checkbox" id="waste-type-3" name="waste-types" value="Green bin (Recycling)" aria-controls="waste-type-3" aria-expanded="false">
+                            Green bin (Recycling)
+                        &lt;/label>
+                    &lt;/fieldset>
+                &lt;/div>
+            &lt;/form>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-checkboxes">
+        Copy <span class="sr-only">HTML snippet for checkboxes</span>
+    </button>
+</div>
 
 <div class="text">
     <h2 class="heading-large" id="checkboxes-conditionally-revealing-content">Conditionally revealing content</h2>
@@ -131,56 +136,60 @@
         </div>
     </form>
 </div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for conditionally revealing content</span></h3>
+    <pre>
+        <code id="snippet-conditionally-revealing-content" class="line-numbers language-markup">
+            &lt;h1 class="heading-medium">How do you travel to work?&lt;/h1>
+            &lt;p>Select all options that are relevant to you.&lt;/p>
 
-<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for conditionally revealing content</span></h3>
-<pre>
-    <code class="line-numbers language-markup">
-        &lt;h1 class="heading-medium">How do you travel to work?&lt;/h1>
-        &lt;p>Select all options that are relevant to you.&lt;/p>
-
-        &lt;form>
-            &lt;div class="form-group">
-                &lt;fieldset>
-
-                &lt;legend class="sr-only">How do you travel to work?&lt;/legend>
-
+            &lt;form>
                 &lt;div class="form-group">
-                    &lt;label class="block-label" for="car" data-target="car">
-                        &lt;input type="checkbox" id="car" name="work travel" value="Car" aria-controls="car" aria-expanded="false">
-                        Car
-                    &lt;/label>
-                    &lt;label class="block-label" for="train" data-target="train">
-                        &lt;input type="checkbox" id="train" name="work travel" value="Irish" aria-controls="train" aria-expanded="false">
-                        Train
-                    &lt;/label>
-                    &lt;label class="block-label" for="bus" data-target="bus">
-                        &lt;input type="checkbox" id="bus" name="work travel" value="Bus" aria-controls="bus" aria-expanded="false">
-                        Bus
-                    &lt;/label>
-                    &lt;label class="block-label" for="walking" data-target="walking">
-                        &lt;input type="checkbox" id="walking" name="work travel" value="I walk" aria-controls="walking" aria-expanded="false">
-                        I walk
-                    &lt;/label>
-                    &lt;label class="block-label" for="other" data-target="other">
-                        &lt;input type="checkbox" id="other" name="work travel" value="Other" aria-controls="other" aria-expanded="false">
-                        Other
-                    &lt;/label>
-                    &lt;div class="panel panel-border-narrow js-hidden" id="example-other-transport">
-                        &lt;label class="form-label" for="other-transport">Tell us how&lt;/label>
-                        &lt;input class="form-control" type="text" id="other-transport" name="other-transport">
+                    &lt;fieldset>
+
+                    &lt;legend class="sr-only">How do you travel to work?&lt;/legend>
+
+                    &lt;div class="form-group">
+                        &lt;label class="block-label" for="car" data-target="car">
+                            &lt;input type="checkbox" id="car" name="work travel" value="Car" aria-controls="car" aria-expanded="false">
+                            Car
+                        &lt;/label>
+                        &lt;label class="block-label" for="train" data-target="train">
+                            &lt;input type="checkbox" id="train" name="work travel" value="Irish" aria-controls="train" aria-expanded="false">
+                            Train
+                        &lt;/label>
+                        &lt;label class="block-label" for="bus" data-target="bus">
+                            &lt;input type="checkbox" id="bus" name="work travel" value="Bus" aria-controls="bus" aria-expanded="false">
+                            Bus
+                        &lt;/label>
+                        &lt;label class="block-label" for="walking" data-target="walking">
+                            &lt;input type="checkbox" id="walking" name="work travel" value="I walk" aria-controls="walking" aria-expanded="false">
+                            I walk
+                        &lt;/label>
+                        &lt;label class="block-label" for="other" data-target="other">
+                            &lt;input type="checkbox" id="other" name="work travel" value="Other" aria-controls="other" aria-expanded="false">
+                            Other
+                        &lt;/label>
+                        &lt;div class="panel panel-border-narrow js-hidden" id="example-other-transport">
+                            &lt;label class="form-label" for="other-transport">Tell us how&lt;/label>
+                            &lt;input class="form-control" type="text" id="other-transport" name="other-transport">
+                        &lt;/div>
                     &lt;/div>
-                &lt;/div>
-                &lt;div class="form-group">
-                    &lt;button type="submit" id="register-button" class="btn btn-primary">
-                    Continue to payment
-                    &lt;/button>
-                &lt;/div>
+                    &lt;div class="form-group">
+                        &lt;button type="submit" id="register-button" class="btn btn-primary">
+                        Continue to payment
+                        &lt;/button>
+                    &lt;/div>
 
-                &lt;/fieldset>
-            &lt;/div>
-        &lt;/form>
-    </code>
-</pre>
+                    &lt;/fieldset>
+                &lt;/div>
+            &lt;/form>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-conditionally-revealing-content">
+        Copy <span class="sr-only">HTML snippet for conditionally revealing content</span>
+    </button>
+</div>
 
 <div class="text">
     <h2 class="heading-large" id="error-handling">Error handling</h2>
@@ -214,33 +223,37 @@
         </div>
     </form>
 </div>
-
-<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for conditionally revealing content</span></h3>
-<pre>
-    <code class="line-numbers language-markup">
-        &lt;h1 class="heading-medium">What bins do you currently have?&lt;/h1>
-        &lt;p>Select all that apply&lt;/p>
-        &lt;form>
-            &lt;div class="form-group form-group-error">
-                &lt;fieldset>
-                    &lt;legend class="sr-only">What bins do you currently have?&lt;/legend>
-                    &lt;span class="error-message">Choose an answer&lt;/span>
-                    &lt;label class="block-label" for="waste-type-1-error" data-target="waste-type-1-error">
-                        &lt;input type="checkbox" id="waste-type-1-error" name="waste-types-error" value="Black bin (General waste)" aria-controls="waste-type-1-error" aria-expanded="false">
-                        Black bin (General waste)
-                    &lt;/label>
-                    &lt;label class="block-label" for="waste-type-2-error" data-target="waste-type-2-error">
-                        &lt;input type="checkbox" id="waste-type-2-error" name="waste-types-error" value="Brown bin (Garden waste)" aria-controls="waste-type-2-error" aria-expanded="false">
-                        Brown bin (Garden waste)
-                    &lt;/label>
-                    &lt;label class="block-label" for="waste-type-3-error" data-target="waste-type-3-error">
-                        &lt;input type="checkbox" id="waste-type-3-error" name="waste-types-error" value="Green bin (Recycling)" aria-controls="waste-type-3-error" aria-expanded="false">
-                        Green bin (Recycling)
-                    &lt;/label>
-                &lt;/fieldset>
-            &lt;/div>
-        &lt;/form>
-    </code>
-</pre>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for error handling</span></h3>
+    <pre>
+        <code id="snippet-error-handling" class="line-numbers language-markup">
+            &lt;h1 class="heading-medium">What bins do you currently have?&lt;/h1>
+            &lt;p>Select all that apply&lt;/p>
+            &lt;form>
+                &lt;div class="form-group form-group-error">
+                    &lt;fieldset>
+                        &lt;legend class="sr-only">What bins do you currently have?&lt;/legend>
+                        &lt;span class="error-message">Choose an answer&lt;/span>
+                        &lt;label class="block-label" for="waste-type-1-error" data-target="waste-type-1-error">
+                            &lt;input type="checkbox" id="waste-type-1-error" name="waste-types-error" value="Black bin (General waste)" aria-controls="waste-type-1-error" aria-expanded="false">
+                            Black bin (General waste)
+                        &lt;/label>
+                        &lt;label class="block-label" for="waste-type-2-error" data-target="waste-type-2-error">
+                            &lt;input type="checkbox" id="waste-type-2-error" name="waste-types-error" value="Brown bin (Garden waste)" aria-controls="waste-type-2-error" aria-expanded="false">
+                            Brown bin (Garden waste)
+                        &lt;/label>
+                        &lt;label class="block-label" for="waste-type-3-error" data-target="waste-type-3-error">
+                            &lt;input type="checkbox" id="waste-type-3-error" name="waste-types-error" value="Green bin (Recycling)" aria-controls="waste-type-3-error" aria-expanded="false">
+                            Green bin (Recycling)
+                        &lt;/label>
+                    &lt;/fieldset>
+                &lt;/div>
+            &lt;/form>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-error-handling">
+        Copy <span class="sr-only">HTML snippet for error handling</span>
+    </button>
+</div>
 
 {% endblock %}

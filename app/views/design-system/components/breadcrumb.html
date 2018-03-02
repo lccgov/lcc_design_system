@@ -17,30 +17,31 @@
     <p class="lead">The user needs to know their location in the website's hierarchical structure in order to possibly browse back to a higher level in the hierarchy.</p>
 </div>
 
-<div class="contents-box">
-    <h2 class="heading-contents">Contents</h2>
-    <ul class="list list-contents">
-        <li><a href="#breadcrumb-overview">Overview</a></li>
-        <li><a href="#sharepoint">SharePoint guidance</a></li>
-    </ul>
-</div>
-
-<div class="text">
-
-</div>
 <div class="example">
-
+    <div class="breadcrumb" aria-label="breadcrumb">
+        <ol>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Level 2</a></li>
+            <li aria-current="page">Current page</li>
+        </ol>
+    </div>
 </div>
-<h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for breadcrumb</span></h3>
-<pre>
-    <code class="line-numbers language-markup">
-
-    </code>
-</pre>
-
-<div class="text">
-    <h2 class="heading-large" id="sharepoint">SharePoint guidance</h2>
-    <p>Sharepoint instructions to go here...</p>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for breadcrumb</span></h3>
+    <pre>
+        <code id="snippet-breadcrumb" class="line-numbers language-markup">
+            &lt;div class="breadcrumb" aria-label="breadcrumb">
+                &lt;ol>
+                    &lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
+                    &lt;li>&lt;a href="#">Level 2&lt;/a>&lt;/li>
+                    &lt;li aria-current="page">Current page&lt;/li>
+                &lt;/ol>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-breadcrumb">
+        Copy <span class="sr-only">HTML snippet for breadcrumb</span>
+    </button>
 </div>
 
 {% endblock %}
