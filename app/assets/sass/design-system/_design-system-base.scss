@@ -392,3 +392,65 @@
           }
       }
   }
+
+  
+//styling for design system examples...
+
+//fix for alignment issue with promo placeholder image svg - DO NOT USE ON LIVE.
+.mega-promo .mega-promo__item a .mega-promo__img-wrapper .mega-promo__img {
+    top: -1px;
+}
+
+.example{
+    .mega-promo{
+        .mega-promo__item{
+            @media (max-width: 1170px) {
+                &.half,
+                &.two-thirds,
+                &.quarter,
+                &.third{
+                    width:100% !important;
+                }
+            }
+            &.featured{
+                @media (max-width: 1340px) {
+                    a{
+                        padding-bottom: 50px;
+                        .mega-promo__img-wrapper{
+                            width:100%; 
+                            padding-bottom: 56.25%;
+                            .mega-promo__img{
+                                padding-bottom: 56.25%;
+                            }
+                        }
+                    }
+                    .mega-promo__content{
+                        width:100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.design-system{
+    footer.main.design-system-footer,
+    footer.main.design-system-footer .footerGlobal{
+        background:$blue !important;
+        p{
+            color:white !important;
+        }
+    }
+}
+
+.stick{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    &.main-nav{
+        z-index:2;
+    }
+    &.design-system-menu{
+        top:30px;
+    }
+}

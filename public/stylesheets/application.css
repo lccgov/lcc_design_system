@@ -12186,6 +12186,40 @@ pre {
       .main-nav .container-fluid ul li a {
         font-size: 14px; } }
 
+.mega-promo .mega-promo__item a .mega-promo__img-wrapper .mega-promo__img {
+  top: -1px; }
+
+@media (max-width: 1170px) {
+  .example .mega-promo .mega-promo__item.half, .example .mega-promo .mega-promo__item.two-thirds, .example .mega-promo .mega-promo__item.quarter, .example .mega-promo .mega-promo__item.third {
+    width: 100% !important; } }
+
+@media (max-width: 1340px) {
+  .example .mega-promo .mega-promo__item.featured a {
+    padding-bottom: 50px; }
+    .example .mega-promo .mega-promo__item.featured a .mega-promo__img-wrapper {
+      width: 100%;
+      padding-bottom: 56.25%; }
+      .example .mega-promo .mega-promo__item.featured a .mega-promo__img-wrapper .mega-promo__img {
+        padding-bottom: 56.25%; }
+  .example .mega-promo .mega-promo__item.featured .mega-promo__content {
+    width: 100%; } }
+
+.design-system footer.main.design-system-footer,
+.design-system footer.main.design-system-footer .footerGlobal {
+  background: #007299 !important; }
+  .design-system footer.main.design-system-footer p,
+  .design-system footer.main.design-system-footer .footerGlobal p {
+    color: white !important; }
+
+.stick {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0; }
+  .stick.main-nav {
+    z-index: 2; }
+  .stick.design-system-menu {
+    top: 30px; }
+
 .example {
   position: relative;
   overflow: hidden;
@@ -13773,24 +13807,6 @@ aside.col-md-4 {
 
 html {
   background-color: #007299; }
-
-.mega-promo .mega-promo__item a .mega-promo__img-wrapper .mega-promo__img {
-  top: -1px; }
-
-@media (max-width: 1170px) {
-  .example .mega-promo .mega-promo__item.half, .example .mega-promo .mega-promo__item.two-thirds, .example .mega-promo .mega-promo__item.quarter, .example .mega-promo .mega-promo__item.third {
-    width: 100% !important; } }
-
-@media (max-width: 1340px) {
-  .example .mega-promo .mega-promo__item.featured a {
-    padding-bottom: 50px; }
-    .example .mega-promo .mega-promo__item.featured a .mega-promo__img-wrapper {
-      width: 100%;
-      padding-bottom: 56.25%; }
-      .example .mega-promo .mega-promo__item.featured a .mega-promo__img-wrapper .mega-promo__img {
-        padding-bottom: 56.25%; }
-  .example .mega-promo .mega-promo__item.featured .mega-promo__content {
-    width: 100%; } }
 
 .btn.btn-arrow:after {
   font-size: 30px; }

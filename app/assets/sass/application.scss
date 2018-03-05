@@ -223,44 +223,6 @@ html {
     background-color: $blue;
 }
 
-//promo styling for design system example
-//fix for alignment issue with promo placeholder image svg - DO NOT USE ON LIVE.
-.mega-promo .mega-promo__item a .mega-promo__img-wrapper .mega-promo__img {
-    top: -1px;
-}
-
-.example{
-    .mega-promo{
-        .mega-promo__item{
-            @media (max-width: 1170px) {
-                &.half,
-                &.two-thirds,
-                &.quarter,
-                &.third{
-                    width:100% !important;
-                }
-            }
-            &.featured{
-                @media (max-width: 1340px) {
-                    a{
-                        padding-bottom: 50px;
-                        .mega-promo__img-wrapper{
-                            width:100%; 
-                            padding-bottom: 56.25%;
-                            .mega-promo__img{
-                                padding-bottom: 56.25%;
-                            }
-                        }
-                    }
-                    .mega-promo__content{
-                        width:100%;
-                    }
-                }
-            }
-        }
-    }
-}
-
 //ADD TO FET
 //button amends
 .btn.btn-arrow:after {
