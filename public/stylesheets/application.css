@@ -13921,7 +13921,7 @@ html {
 
 .form-group-link {
   margin-top: 15px;
-  display: block; }
+  display: inline-block; }
 
 .form-label-large {
   margin-bottom: 10px; }

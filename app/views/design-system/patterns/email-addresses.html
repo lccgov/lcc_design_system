@@ -15,7 +15,6 @@
 {% block sectionOneRightContent %}
 <div class="page-header-section">
     <h1><span>{{ section_name }}</span> {{ page_title }}</h1>
-    <p class="lead"></p>
 </div>
 
 <!-- Page content goes here -->
@@ -23,25 +22,72 @@
 <div class="contents-box">
     <h2 class="heading-contents">Contents</h2>
     <ul class="list list-contents">
-        <li><a href="#"></a></li>
+        <li><a href="#email-example">Example</a></li>
+        <li><a href="#email-field-long-enough">Make the field long enough</a></li>
+        <li><a href="#email-tell-users">Tell users why you want the email address</a></li>
+        <li><a href="#email-help">Help users to enter a valid email address</a></li>
     </ul>
 </div>
+<div class="text">
+    <p>When asking users for their email address, you should:</p>
+    <ul class="list list-bullet">
+        <li>make the field long enough</li>
+        <li>make it clear why you’re asking</li>
+        <li>help users to enter a valid email address</li>
+    </ul>
+    <p>You may also need to check that users have access to the email account they give you.</p>
+</div>
 
-<div class="example">
-
+<div id="email-example" class="example">
+    <div class="form-group">
+        <label class="form-label form-label-bold form-label-large" for="email-address">Email address <span class="form-hint">So we can send you a receipt</span></label>
+        <input id="email-address" name="email-address" type="email" class="form-control">
+    </div>
 </div>
 
 <div class="code-snippet">
-    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for </span></h3>
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for email example</span></h3>
     <pre>
-        <code id="snippet-" class="line-numbers language-markup">
-            &lt;
+        <code id="snippet-email-example" class="line-numbers language-markup">
+            &lt;div class="form-group">
+                &lt;label class="form-label form-label-bold form-label-large" for="email-address">Email address &lt;span class="form-hint">So we can send you a receipt&lt;/span>&lt;/label>
+                &lt;input id="email-address" name="email-address" type="email" class="form-control">
+            &lt;/div>
         </code>
     </pre>
-    <button class="clipboard" data-clipboard-target="#snippet-">
+    <button class="clipboard" data-clipboard-target="#snippet-email-example">
         Copy <span class="sr-only">HTML snippet for </span>
     </button>
 </div>
+
+<h2 id="email-field-long-enough">Make the field long enough</h2>
+<div class="text">
+    <p>A good rule of thumb is 30 characters.</p>
+</div>
+
+<h2 id="email-tell-users">Tell users why you want the email address</h2>
+<div class="text">
+    <p>Make it clear what the email address will be used for so that:
+        <ul class="list list-bullet">
+            <li>users feel confident that you’re not going to abuse it</li>
+            <li>users with multiple email addresses can choose which one to give you</li>
+        </ul>
+    </p>
+</div>
+
+<h2 id="email-help">Help users to enter a valid email address</h2>
+<div class="text">
+    <p>Help your users to enter a valid email address by:</p>
+    <ul class="list list-bullet">
+        <li>checking that what they’ve entered is in the format of an email address</li>
+        <li>allowing users to paste the email address</li>
+        <li>using the <code>type=“email”</code> attribute so that devices display the correct keyboard</li>
+    </ul>
+    <p>You can also check for common misspellings of popular email providers (for example ‘homtail.com’ instead of ‘hotmail.com’). Warn users if you detect one, but allow them to proceed in case it’s a genuine email address.</p>
+</div>
+
+
+    
 
 
 {% endblock %}
