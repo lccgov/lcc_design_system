@@ -5,6 +5,17 @@
     background:$light-grey !important;
 }
 .design-system{
+    .text{
+        ul{
+            @include list();
+            @include list-bullet();
+            li{
+                &:last-child{
+                    margin:0;
+                }
+            }
+        }
+    }
     footer.main {
         border-top:1px solid $light-grey;
         .footerGlobal {
