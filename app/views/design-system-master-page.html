@@ -31,7 +31,7 @@
         <!-- Application CSS -->
         <link href="{{ asset_path }}stylesheets/application.css" rel="stylesheet">
     </head>
-    <body id="top">
+    <body id="top" data-spy="scroll" data-target=".design-system-contents-menu" data-offset="50">
     
         <div id="skiplink-container">
             <div>
@@ -123,6 +123,12 @@
         <script>
             $( document ).ready(function() {
             var clipboard = new Clipboard('.clipboard');
+            });
+        </script>
+        <script>
+            $('#toggle-design-system-menu').click(function() {
+                $('#design-system-menu').toggleClass('active');
+                $('#design-system-content').toggleClass('active');
             });
         </script>
         <!-- build:footerScript -->

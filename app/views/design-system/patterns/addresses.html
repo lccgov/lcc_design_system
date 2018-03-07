@@ -15,67 +15,125 @@
 {% block sectionOneRightContent %}
 <div class="page-header-section">
     <h1><span>{{ section_name }}</span> {{ page_title }}</h1>
-    <p class="lead"></p>
 </div>
 
 <!-- Page content goes here -->
-
 <div class="contents-box">
     <h2 class="heading-contents">Contents</h2>
     <ul class="list list-contents">
-        <li><a href="#"></a></li>
+        <li><a href="#address-lookup">Address lookup</a></li>
+        <li><a href="#address-lookup-step-one">Step one</a></li>
+        <li><a href="#address-lookup-step-two">Step two</a></li>
     </ul>
 </div>
 
+<div class="text">
+    <h2 id="address-lookup" class="top">Using an address lookup</h2>
+    <p>An address lookup (sometimes called a ‘postcode lookup’) lets users specify a UK address by entering their postcode (and optionally their street name or number) and selecting their address from a list.</p>
+</div>
+
+<h3 id="address-lookup-step-one">Step one</h3>
 <div class="example">
     <div class="col-md-8">
         <h1 class="heading-large">What is your address?</h1>
         <form>
-            <fieldset>
-                <legend class="sr-only">What is your address?</legend>
-                <label class="form-label form-label-bold" for="search-group-example">Enter a postcode <span class="form-hint">For example LS6 2SB</span></label>
-                <div class="input-group search-group postcode-lookup" role="search">
-                    <input id="search-group-example" type="text" class="form-control">
-                    <span class="input-group-btn">
-                        <button class="btn" type="button">Find</button>
-                    </span>
-                </div>
-                <a class="search-group-link" target="_blank" id="postcode-finder-link" rel="external" href="http://www.royalmail.com/find-a-postcode">Find a postcode on Royal Mail's postcode finder</a>
-            </fieldset>
+            <div class="form-group">
+                <label class="form-label form-label-bold form-label-large" for="postcode">Enter your postcode</label>
+                <input data-val="true" data-val-required="Please enter a valid Leeds postcode e.g. LS6 2SB" id="postcode" name="postcode" type="text" class="form-control">
+            </div>
+            <button class="btn btn-primary" type="button">Find address</button>
         </form>
     </div>
 </div>
-
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for address lookup step one</span></h3>
+    <pre>
+        <code id="snippet-address-lookup-step-one" class="line-numbers language-markup">
+            &lt;h1 class="heading-large">What is your address?&lt;/h1>
+            &lt;form>
+                &lt;div class="form-group">
+                    &lt;label class="form-label form-label-bold form-label-large" for="postcode">Enter your postcode&lt;/label>
+                    &lt;input data-val="true" data-val-required="Please enter a valid Leeds postcode e.g. LS6 2SB" id="postcode" name="postcode" type="text" class="form-control">
+                &lt;/div>
+                &lt;button class="btn btn-primary" type="button">Find address&lt;/button>
+            &lt;/form>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-address-lookup-step-one">
+        Copy <span class="sr-only">HTML snippet for </span>
+    </button>
+</div>
+<h3 id="address-lookup-step-two">Step two</h3>
 <div class="example">
     <div class="col-md-8">
         <h1 class="heading-large">What is your address?</h1>
-        <form class="panel">
-            <fieldset>
-                <legend class="sr-only">What is your address?</legend>
-                <label class="form-label form-label-large" for="search-group-panel-example">Enter a postcode <span class="form-hint">For example LS6 2SB</span></label>
-                <div class="input-group search-group postcode-lookup" role="search">
-                    <input id="search-group-panel-example" type="text" class="form-control">
-                    <span class="input-group-btn">
-                        <button class="btn" type="button">Find</button>
-                    </span>
-                </div>
-                <a class="search-group-link" target="_blank" id="postcode-finder-link" rel="external" href="http://www.royalmail.com/find-a-postcode">Find a postcode on Royal Mail's postcode finder</a>
-            </fieldset>
+        <form>
+            <div class="form-group postcode-completed">
+                <input data-val="true" data-val-required="Please enter a valid Leeds postcode e.g. LS6 2SB" id="Postcode" name="Postcode" type="hidden" value="LS6 2SB">
+                <label class="form-label form-label-bold form-label-large" for="Postcode">Postcode</label>
+                <p>LS6 2SB</p>
+                <a href="#">Change</a>
+            </div>
+            <div class="form-group">
+                <label class="form-label form-label-bold form-label-large" for="select-address">Select your address</label>
+                <select class="form-control" id="select-address" name="select-address">
+                    <option>3 addresses have been found</option>
+                    <option>1 Rawling Way, Leeds LS6 2SB</option>
+                    <option>2 Rawling Way, Leeds LS6 2SB</option>
+                    <option>3 Rawling Way, Leeds LS6 2SB</option>
+                </select>
+                <a class="form-group-link" href="#">I can't find my address on the list</a>
+            </div>
+            <button class="btn btn-primary" type="button">Continue</button>
         </form>
     </div>
 </div>
 
 <div class="code-snippet">
-    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for </span></h3>
-    <pre>
-        <code id="snippet-" class="line-numbers language-markup">
-            &lt;
-        </code>
-    </pre>
-    <button class="clipboard" data-clipboard-target="#snippet-">
-        Copy <span class="sr-only">HTML snippet for </span>
-    </button>
-</div>
+        <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for address lookup step two</span></h3>
+        <pre>
+            <code id="snippet-address-lookup-step-two" class="line-numbers language-markup">
+                &lt;h1 class="heading-large">What is your address?&lt;/h1>
+                &lt;form>
+                    &lt;div class="form-group postcode-completed">
+                        &lt;input data-val="true" data-val-required="Please enter a valid Leeds postcode e.g. LS6 2SB" id="Postcode" name="Postcode" type="hidden" value="LS6 2SB">
+                        &lt;label class="form-label form-label-bold form-label-large" for="Postcode">Postcode&lt;/label>
+                        &lt;p>LS6 2SB&lt;/p>
+                        &lt;a href="#">Change&lt;/a>
+                    &lt;/div>
+                    &lt;div class="form-group">
+                        &lt;label class="form-label form-label-bold form-label-large" for="select-address">Select your address&lt;/label>
+                        &lt;select class="form-control" id="select-address" name="select-address">
+                            &lt;option>3 addresses have been found&lt;/option>
+                            &lt;option>1 Rawling Way, Leeds LS6 2SB&lt;/option>
+                            &lt;option>2 Rawling Way, Leeds LS6 2SB&lt;/option>
+                            &lt;option>3 Rawling Way, Leeds LS6 2SB&lt;/option>
+                        &lt;/select>
+                        &lt;a class="form-group-link" href="#">I can't find my address on the list&lt;/a>
+                    &lt;/div>
+                    &lt;button class="btn btn-primary" type="button">Continue&lt;/button>
+                &lt;/form>
+            </code>
+        </pre>
+        <button class="clipboard" data-clipboard-target="#snippet-address-lookup-step-two">
+            Copy <span class="sr-only">HTML snippet for </span>
+        </button>
+    </div>
+
+<!--<h1 class="heading-large">What is your address?</h1>
+<form>
+    <fieldset>
+        <legend class="sr-only">What is your address?</legend>
+        <label class="form-label form-label-bold" for="search-group-example">Enter a postcode <span class="form-hint">For example LS6 2SB</span></label>
+        <div class="input-group search-group postcode-lookup" role="search">
+            <input id="search-group-example" type="text" class="form-control">
+            <span class="input-group-btn">
+                <button class="btn" type="button">Find</button>
+            </span>
+        </div>
+        <a class="search-group-link" target="_blank" id="postcode-finder-link" rel="external" href="http://www.royalmail.com/find-a-postcode">Find a postcode on Royal Mail's postcode finder</a>
+    </fieldset>
+</form>-->
 
 
 {% endblock %}

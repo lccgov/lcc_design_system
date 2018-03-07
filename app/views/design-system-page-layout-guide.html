@@ -10,11 +10,12 @@
 <section id="main" class="sectionOne">
     <div class="container-fluid">
         <div class="row">
-                <div class="col-sm-8 col-md-9 col-lg-10 design-system-content">
+                <div id="design-system-content" class="col-sm-8 col-md-9 col-lg-10 design-system-content">
+                    <!-- <a id="toggle-design-system-menu" href="#">Close</a>-->
                     <a href="/design-system/{{ section_id }}" class="link-back link-back-guide">Back to {{ section_id }}</a>
                     {% block sectionOneRightContent %}{% endblock %}
                 </div>
-                <aside class="col-sm-4 col-md-3 col-lg-2 design-system-menu stick">
+                <aside id="design-system-menu" class="col-sm-4 col-md-3 col-lg-2 design-system-menu stick">
                     {% block sectionLeftHandColumn %}{% endblock %}
                 </aside>
            </div>

@@ -61,35 +61,45 @@ $panel-color:$lighter-blue;
 $panel-color-secondary:$light-grey;
 //$panel-alt-background-color:#003F55;
 //$panel-alt-color:white;
+
 //global used on all partials to get a uniform spacing between elements
 //$base-margin-bottom:1.875em ;
+
 //headerTop
 //$search-link-background:#F3F3F4 ;
 //$search-link:#333 ;
+
 // mainNav.scss
 $main-nav-background:lighten($brand-color,3%);
 //$main-nav-link:#fff ;
+
 //footer.scss
 //$footer-font-color:#fff ;
 //$footer-nav-selected-link:#133E8D ;
+
 //sectionSubsite.scss - socialamedia.scss
 //$section-Background:#efefef ;
+
 //socialamedia.scss
 //$social-link-color:#337ab7 ;
+
 //sideNavigation.scss
 //$side-nav-active-background:#133E8D ;
+
 //carousel.scss
 //$carousel-active-background:#000 ;
 //$carousel-indicators-active-background:#ccc ;
 //$carousel-caption-background: rgba(0,0,0,0.6) ;
 //$carousel-caption-font-color:#fff ;
+
 //blocklinks.scss
 //$block-link-back:#f6f6f6 ;
 //$block-link-back-hover:#3380A4 ;
 //$promo-group-border:1px solid #fff ; 
-//$promo-group-background:#EDF2F5 ; 
+//$promo-group-background:$panel-color-secondary ; 
 //$promo-group-li-background:#EDF2F5 ;
 //$promo-group-link-color:#216486 ;
+
 //promolist webpart
 //$link-font-color:#fff;
 //$span-info-color:#133E8D;
@@ -102,6 +112,7 @@ $main-nav-background:lighten($brand-color,3%);
 //$contentFontColor:#333;
 //$content-arrow-color:#133E8D;
 //$content-border-color:#ddd;
+
 //section backgrounds
 $sectionHeader-background-color:$brand-color;
 $sectionOne-background-color:#fff;
@@ -109,22 +120,28 @@ $sectionTwo-background-color:#fff;
 $sectionThree-background-color:#fff;
 $sectionFour-background-color:#fff;
 $sectionFive-background-color:#fff;
+
 //iconlinks
 //$iconLinkIconColor:#FFC82E;
+
 //heroBanner
 //$heroFontBackground:rgba(0, 0, 0, 0.5); 
 //$heroFontcolor:#fff; 
+
 //news
 //$news-button-background: #3498DB ;
 $news-pod-back:#ffffff;
 $news-pod-border-color:#ddd;
+
 //accordion
 $accordion-color:$base-link-color;
 $accordion-border-color:$border-color;
+
 //Block quote
 // $blockquoteBorderColor:#bbcada ;
 // $blockquoteQuoteColor:#333;
 // $blockquoteQuoteFooterColor:#000;
+
 //highlighted box in content assets
 //$highlighted-background-color:#333 !default;
 //$highlighted-font-color:#fff !default;
@@ -223,139 +240,47 @@ html {
     background-color: $blue;
 }
 
-//ADD TO FET
-//button amends
-.btn.btn-arrow:after {
-    font-size: 30px;
-}
-.btn.btn[rel=external]:after {
-    font-size: 14px;
-    opacity:0.8;
+//add to frontend toolkit
+.service-title{
+    position:relative;
+    padding:0;
+    font-weight:400;
+    width:100%;
 }
 
-.panel p + .btn {
-    margin-top: 10px !important;
-}
-
-.panel blockquote:before {
-    opacity: 0.2;
-}
-
-.img-border{
-    border:1px solid $border-color;
-    padding: 0;
-    margin: 5px 0 20px;
-}
-
-//search-group
-.search-group{
-    @media (min-width: 641px) {
-        width:50% !important;
+.postcode-completed{
+    p,
+    a{
+        float:left;
+        padding:0;
+        line-height:1;
     }
-    &.postcode-lookup{
-        max-width:20em !important;
-        margin-bottom:15px;
-        @media (min-width: 641px) {
-            width:20em !important;
-            margin-bottom:20px;
-        }
+    label{
+        display:block;
     }
-    .form-control{
-        width:100% !important;
-        @include border-radius(4px 0 0 4px !important);
+    p{
+        margin:0 15px 0 0;
     }
-    .btn{
-        height:45px;
-        background:$primary-button-background-color;
-        color:$primary-button-color;
-        border:1px solid $primary-button-background-color;
-        border-bottom-color:darken($primary-button-background-color,15%);
+    a{
         margin:0;
-        padding: 10px 15px;
-        font-size:16px;
-        box-shadow:none !important;
-        &:hover{
-            background:lighten($primary-button-background-color,5%);
+    }
+    @media (max-width: 340px) {
+        label{
+            display:block;
+            margin:0 0 10px 0;
+            float:none;
+        }
+        p{
+            margin:0 10px 0 0;
         }
     }
 }
 
-.search-group-link{
+.form-group-link{
+    margin-top:15px;
     display:block;
-    margin:5px 0 0 !important;
-    font-size:16px;
-    line-height:1.6;
-    @media (min-width: 641px) {
-        font-size:19px;
-    }
-}
-
-.form-label-bold{
-    font-weight:bold;
 }
 
 .form-label-large{
-    font-size:19px;
-    font-weight:bold;
-    @media (min-width: 641px) {
-        font-size:24px;
-    }
-}
-
-//remove when npm updated FET
-$breadcrumb-background:transparent !default;
-
-.breadcrumb {
-    padding: 0;
-    margin: 10px 0 0;
-    font-size: 16px;
-    background:$breadcrumb-background;
-
-    @media (max-width: 767px) {
-        padding: 0;
-        font-size: 14px;
-    }
-
-    ul,
-    ol{
-        padding:0;
-        list-style:none;
-        display:inline;
-        li{
-            display:inline;
-            a{
-            position:relative;
-            margin-right:16px;
-
-
-                &:after {
-                    position:absolute;
-                    display:inline-block;
-                    content: "/";
-                    font-size: 16px;
-                    padding: 0 8px;
-                    text-decoration:none !important;
-                }
-            }
-        }
-    }
-
-    img {
-    display: none !important;
-}
-
-}
-
-//SP override
-.breadcrumb ul:first-child{
-  margin-left:0;
-}
-
-//example only
-.panel-search{
-    .search-group{
-        @media (max-width: 990px) {
-            width:100% !important;
-        }
-    }
+    margin-bottom:10px;
 }

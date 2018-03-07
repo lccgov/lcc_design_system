@@ -96,13 +96,6 @@
             height:45px;
         }
     }
-
-    .service-title{
-        text-align:right;
-        position:relative;
-        padding:0;
-        font-weight:400;
-    }
     .container-fluid{
         max-width: 100% !important;
     }
@@ -448,9 +441,46 @@
     position: sticky;
     top: 0;
     &.main-nav{
-        z-index:2;
+        z-index:3;
     }
     &.design-system-menu{
         top:30px;
     }
+    &.design-system-contents-menu{
+        top:90px;
+    }
+}
+
+#toggle-design-system-menu{
+    position:absolute;
+    left:0;
+    z-index:10;
+}
+
+.active{
+    &#design-system-menu{
+        width:0%;
+    }
+    &#design-system-content{
+        width:100%;
+    }
+}
+
+.sectionOne {
+    position:relative;
+}
+
+//example only
+.panel-search{
+    .search-group{
+        @media (max-width: 990px) {
+            width:100% !important;
+        }
+    }
+}
+
+
+
+.footer-bsl-logo {
+    background: url(https://www.leeds.gov.uk/_catalogs/masterpage/public/images/logo-bsl.svg) no-repeat !important;
 }

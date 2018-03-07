@@ -5928,7 +5928,7 @@ p.sharepoint,
 .text-block {
   margin: 0 0 30px;
   border: 0;
-  border-left: 1px solid #e5f1f5;
+  border-left: 2px solid #e5f1f5;
   padding: 0 15px; }
   @media (min-width: 641px) {
     .text-block {
@@ -6453,21 +6453,19 @@ h2 + h3 {
     content: ""; }
   .btn-arrow:after,
   .btn[rel=external]:after {
-    display: block;
-    font-family: FontAwesome;
     content: "\f105";
+    font-family: FontAwesome;
+    display: block;
     position: absolute;
     right: 0px;
     height: auto;
     background: transparent;
     padding: 0;
     top: 50%;
-    font-size: 22px;
-    content: "\f105";
-    padding: 0;
     text-align: center;
     line-height: 0;
-    width: 36px; }
+    width: 36px;
+    font-size: 30px; }
   @media (max-width: 767px) {
     .btn-arrow,
     .btn[rel=external] {
@@ -6477,7 +6475,9 @@ h2 + h3 {
   margin: 0 0 20px; }
   .btn[rel=external]:after {
     content: "\f08e";
-    width: 41px; }
+    width: 41px;
+    font-size: 14px;
+    opacity: 0.8; }
 
 .btn.bottom {
   margin-bottom: 0 !important; }
@@ -6675,6 +6675,16 @@ textarea.form-control,
   @media (min-width: 641px) {
     .form-label {
       font-size: 21px; } }
+
+.form-label-bold {
+  font-weight: bold; }
+
+.form-label-large {
+  font-size: 19px;
+  font-weight: bold; }
+  @media (min-width: 641px) {
+    .form-label-large {
+      font-size: 24px; } }
 
 .label-small .block-label {
   padding: 8px 15px 8px 38px;
@@ -6985,6 +6995,47 @@ h1 .form-progress {
       color: #d32f2f;
       font-weight: bold; }
 
+@media (min-width: 641px) {
+  .search-group {
+    width: 50% !important; } }
+
+.search-group.postcode-lookup {
+  max-width: 20em !important;
+  margin-bottom: 15px; }
+  @media (min-width: 641px) {
+    .search-group.postcode-lookup {
+      width: 20em !important;
+      margin-bottom: 20px; } }
+
+.search-group .form-control, .search-group .col-md-8 #SearchBox, .col-md-8 .search-group #SearchBox {
+  width: 100% !important;
+  -webkit-border-radius: 4px 0 0 4px !important;
+  -moz-border-radius: 4px 0 0 4px !important;
+  -ms-border-radius: 4px 0 0 4px !important;
+  border-radius: 4px 0 0 4px !important; }
+
+.search-group .btn {
+  height: 45px;
+  background: #2e7d32;
+  color: #FFFFFF;
+  border: 1px solid #2e7d32;
+  border-bottom-color: #19451c;
+  margin: 0;
+  padding: 10px 15px;
+  font-size: 16px;
+  box-shadow: none !important; }
+  .search-group .btn:hover {
+    background: #359039; }
+
+.search-group-link {
+  display: block;
+  margin: 5px 0 0 !important;
+  font-size: 16px;
+  line-height: 1.6; }
+  @media (min-width: 641px) {
+    .search-group-link {
+      font-size: 19px; } }
+
 a:focus,
 input[type=submit]:focus,
 .btn:focus,
@@ -7057,6 +7108,11 @@ a.skip:focus, a.skip:active {
         width: 100%;
         float: none;
         padding: 5px 0 10px; } }
+
+.img-border {
+  border: 1px solid #eceff1;
+  padding: 0;
+  margin: 5px 0 20px; }
 
 table {
   border-collapse: collapse;
@@ -7246,7 +7302,7 @@ p + .panel {
     position: absolute;
     top: 0;
     left: -10px;
-    opacity: 0.5;
+    opacity: 0.2;
     font-size: 25px; }
     @media (min-width: 641px) {
       .panel blockquote:before {
@@ -7413,6 +7469,17 @@ p + .panel {
 
 .panel .btn {
   margin-bottom: 0; }
+
+.panel p + .btn {
+  margin-top: 10px !important; }
+
+.panel .text-block,
+.panel .text-highlight {
+  border-color: #9bc9d9; }
+
+.panel.alt .text-block,
+.panel.alt .text-highlight {
+  border-color: #00394d; }
 
 hr.ms-rteElement-spacer {
   -ms-name: "spacer";
@@ -8408,27 +8475,29 @@ footer.main {
     .breadcrumb {
       padding: 0;
       font-size: 14px; } }
-  .breadcrumb ul {
-    padding: 0; }
-    .breadcrumb ul li a {
-      position: relative;
-      margin-right: 16px; }
-      .breadcrumb ul li a:after {
-        position: absolute;
-        display: inline-block;
-        content: "/";
-        font-size: 16px;
-        padding: 0 8px;
-        text-decoration: none !important; }
-  .breadcrumb img {
-    display: none !important; }
-  .breadcrumb ul {
+  .breadcrumb ul,
+  .breadcrumb ol {
+    padding: 0;
     list-style: none;
     display: inline; }
-    .breadcrumb ul li {
+    .breadcrumb ul li,
+    .breadcrumb ol li {
       display: inline; }
+      .breadcrumb ul li a,
+      .breadcrumb ol li a {
+        position: relative;
+        margin-right: 16px; }
+        .breadcrumb ul li a:after,
+        .breadcrumb ol li a:after {
+          position: absolute;
+          display: inline-block;
+          content: "/";
+          font-size: 16px;
+          padding: 0 8px;
+          text-decoration: none !important; }
+  .breadcrumb img {
+    display: none !important; }
 
-/*could be coded better*/
 .breadcrumb ul:first-child {
   margin-left: 0; }
 
@@ -9349,7 +9418,7 @@ table.styledTable td,
     display: inline-block;
     margin: 0;
     font-size: 21px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1em;
     padding: 10px 0; }
     @media (max-width: 641px) {
@@ -9404,7 +9473,8 @@ table.styledTable td,
         width: 100%;
         display: inline-block;
         background: white;
-        padding: 10px 0; }
+        padding: 10px 0;
+        font-weight: bold; }
         @media (max-width: 1100px) {
           .atoz ul li a {
             padding: 15px 0; } }
@@ -9415,7 +9485,7 @@ table.styledTable td,
         background: #007299;
         color: white; }
       .atoz ul li.inactive {
-        color: #9DA5B2;
+        color: #90a4ae;
         display: inline-block;
         border: 1px solid white;
         background: #F6F7FA;
@@ -9844,14 +9914,10 @@ table.styledTable td,
           top: 0px;
           right: 0px;
           color: #90a4ae; }
-          @media (max-width: 767px) {
-            .groupPromo ul li a h3:after {
-              top: 20px;
-              right: 20px; } }
           @media (max-width: 600px) {
             .groupPromo ul li a h3:after {
               top: 50%;
-              right: 15px;
+              right: 0;
               margin-top: -10px;
               font-size: 16px; } }
       .groupPromo ul li a p {
@@ -11457,7 +11523,7 @@ div a .ms-ref-name {
     margin-bottom: 15px;
     padding-bottom: 10px;
     font-size: 24px;
-    border-bottom: 5px solid #F6F7FA; }
+    border-bottom: 5px solid #eceff1; }
     @media (max-width: 641px) {
       .sideNav h2,
       .sideNav h3,
@@ -11529,7 +11595,7 @@ div a .ms-ref-name {
       .sub-section-nav .sub-section {
         width: 100%; } }
     .sub-section-nav .sub-section .sub-section-heading {
-      border-bottom: 5px solid #F6F7FA;
+      border-bottom: 5px solid #eceff1;
       margin: 0 0 15px;
       padding-bottom: 10px;
       font-size: 24px; }
@@ -11585,7 +11651,7 @@ div a .ms-ref-name {
       .sub-section-nav.panels .sub-section {
         width: calc(100%); } }
     .sub-section-nav.panels .sub-section a .sub-section-heading {
-      border-bottom: 5px solid #F6F7FA;
+      border-bottom: 5px solid #eceff1;
       margin: 0 0 15px;
       padding-bottom: 10px;
       font-size: 24px;
@@ -11612,7 +11678,7 @@ div a .ms-ref-name {
   margin-bottom: 20px; }
 
 .sub-section-heading {
-  border-bottom: 5px solid #F6F7FA;
+  border-bottom: 5px solid #eceff1;
   margin: 30px 0 15px;
   padding-bottom: 10px;
   font-size: 24px; }
@@ -11938,12 +12004,6 @@ pre {
     .design-system .sectionHeader .container-fluid .header-wrapper {
       height: 45px; } }
 
-.design-system .service-title {
-  text-align: right;
-  position: relative;
-  padding: 0;
-  font-weight: 400; }
-
 .design-system .container-fluid {
   max-width: 100% !important; }
 
@@ -12216,9 +12276,32 @@ pre {
   position: sticky;
   top: 0; }
   .stick.main-nav {
-    z-index: 2; }
+    z-index: 3; }
   .stick.design-system-menu {
     top: 30px; }
+  .stick.design-system-contents-menu {
+    top: 90px; }
+
+#toggle-design-system-menu {
+  position: absolute;
+  left: 0;
+  z-index: 10; }
+
+.active#design-system-menu {
+  width: 0%; }
+
+.active#design-system-content {
+  width: 100%; }
+
+.sectionOne {
+  position: relative; }
+
+@media (max-width: 990px) {
+  .panel-search .search-group {
+    width: 100% !important; } }
+
+.footer-bsl-logo {
+  background: url(https://www.leeds.gov.uk/_catalogs/masterpage/public/images/logo-bsl.svg) no-repeat !important; }
 
 .example {
   position: relative;
@@ -13259,7 +13342,6 @@ aside.col-md-4 {
       height: auto;
       background: transparent;
       padding: 0 0 0 15px;
-      font-size: inherit;
       text-align: center;
       line-height: 0;
       width: auto; }
@@ -13808,110 +13890,38 @@ aside.col-md-4 {
 html {
   background-color: #007299; }
 
-.btn.btn-arrow:after {
-  font-size: 30px; }
-
-.btn.btn[rel=external]:after {
-  font-size: 14px;
-  opacity: 0.8; }
-
-.panel p + .btn {
-  margin-top: 10px !important; }
-
-.panel blockquote:before {
-  opacity: 0.2; }
-
-.img-border {
-  border: 1px solid #eceff1;
+.service-title {
+  position: relative;
   padding: 0;
-  margin: 5px 0 20px; }
+  font-weight: 400;
+  width: 100%; }
 
-@media (min-width: 641px) {
-  .search-group {
-    width: 50% !important; } }
+.postcode-completed p,
+.postcode-completed a {
+  float: left;
+  padding: 0;
+  line-height: 1; }
 
-.search-group.postcode-lookup {
-  max-width: 20em !important;
-  margin-bottom: 15px; }
-  @media (min-width: 641px) {
-    .search-group.postcode-lookup {
-      width: 20em !important;
-      margin-bottom: 20px; } }
+.postcode-completed label {
+  display: block; }
 
-.search-group .form-control, .search-group .col-md-8 #SearchBox, .col-md-8 .search-group #SearchBox {
-  width: 100% !important;
-  -webkit-border-radius: 4px 0 0 4px !important;
-  -moz-border-radius: 4px 0 0 4px !important;
-  -ms-border-radius: 4px 0 0 4px !important;
-  border-radius: 4px 0 0 4px !important; }
+.postcode-completed p {
+  margin: 0 15px 0 0; }
 
-.search-group .btn {
-  height: 45px;
-  background: #2e7d32;
-  color: #FFFFFF;
-  border: 1px solid #2e7d32;
-  border-bottom-color: #19451c;
-  margin: 0;
-  padding: 10px 15px;
-  font-size: 16px;
-  box-shadow: none !important; }
-  .search-group .btn:hover {
-    background: #359039; }
+.postcode-completed a {
+  margin: 0; }
 
-.search-group-link {
-  display: block;
-  margin: 5px 0 0 !important;
-  font-size: 16px;
-  line-height: 1.6; }
-  @media (min-width: 641px) {
-    .search-group-link {
-      font-size: 19px; } }
+@media (max-width: 340px) {
+  .postcode-completed label {
+    display: block;
+    margin: 0 0 10px 0;
+    float: none; }
+  .postcode-completed p {
+    margin: 0 10px 0 0; } }
 
-.form-label-bold {
-  font-weight: bold; }
+.form-group-link {
+  margin-top: 15px;
+  display: block; }
 
 .form-label-large {
-  font-size: 19px;
-  font-weight: bold; }
-  @media (min-width: 641px) {
-    .form-label-large {
-      font-size: 24px; } }
-
-.breadcrumb {
-  padding: 0;
-  margin: 10px 0 0;
-  font-size: 16px;
-  background: transparent; }
-  @media (max-width: 767px) {
-    .breadcrumb {
-      padding: 0;
-      font-size: 14px; } }
-  .breadcrumb ul,
-  .breadcrumb ol {
-    padding: 0;
-    list-style: none;
-    display: inline; }
-    .breadcrumb ul li,
-    .breadcrumb ol li {
-      display: inline; }
-      .breadcrumb ul li a,
-      .breadcrumb ol li a {
-        position: relative;
-        margin-right: 16px; }
-        .breadcrumb ul li a:after,
-        .breadcrumb ol li a:after {
-          position: absolute;
-          display: inline-block;
-          content: "/";
-          font-size: 16px;
-          padding: 0 8px;
-          text-decoration: none !important; }
-  .breadcrumb img {
-    display: none !important; }
-
-.breadcrumb ul:first-child {
-  margin-left: 0; }
-
-@media (max-width: 990px) {
-  .panel-search .search-group {
-    width: 100% !important; } }
+  margin-bottom: 10px; }
