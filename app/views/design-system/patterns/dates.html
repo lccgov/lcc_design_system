@@ -15,7 +15,6 @@
 {% block sectionOneRightContent %}
 <div class="page-header-section">
     <h1><span>{{ section_name }}</span> {{ page_title }}</h1>
-    <p class="lead"></p>
 </div>
 
 <!-- Page content goes here -->
@@ -23,25 +22,69 @@
 <div class="contents-box">
     <h2 class="heading-contents">Contents</h2>
     <ul class="list list-contents">
-        <li><a href="#"></a></li>
+        <li><a href="#memorable-dates">Asking for memorable dates</a></li>
+        <li><a href="#documents-and-cards">Asking for dates from documents and cards</a></li>
+        <li><a href="#approximate-dates">Asking for approximate dates</a></li>
+        <li><a href="#relative-dates">Asking for relative dates</a></li>
     </ul>
 </div>
 
+<div class="text">
+    <p>The way you should ask users for dates depends on the types of date you’re asking for, for example:</p>
+    <ul class="list list-bullet">
+        <li>memorable dates (for example, date of birth or marriage)</li>
+        <li>dates from documents or cards (for example, a passport or credit card)</li>
+        <li>approximate dates (like ‘June 1983’)</li>
+        <li>relative dates (like ‘4 days from today’)</li>
+    </ul>
+</div>
+<h2 id="memorable-dates">Asking for memorable dates</h2>
+<p class="text">To ask for memorable dates, like dates of birth, use text fields for users to complete.</p>
 <div class="example">
-
+    <form>
+        <div class="form-group">
+            <fieldset>
+                <legend>
+                    <span class="form-label-bold">What is your date of birth?</span>
+                    <span class="form-hint">For example, 31 3 1980</span>
+                </legend>
+                <div class="form-date">
+                    <div class="form-group form-group-day">
+                        <label class="form-label" for="dob-day">Day</label>
+                        <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                    </div>
+                    <div class="form-group form-group-month">
+                        <label class="form-label" for="dob-month">Month</label>
+                        <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                    </div>
+                    <div class="form-group form-group-year">
+                        <label class="form-label" for="dob-year">Year</label>
+                        <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </form>
 </div>
-
-<div class="code-snippet">
-    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for </span></h3>
-    <pre>
-        <code id="snippet-" class="line-numbers language-markup">
-            &lt;
-        </code>
-    </pre>
-    <button class="clipboard" data-clipboard-target="#snippet-">
-        Copy <span class="sr-only">HTML snippet for </span>
-    </button>
+<div class="text">
+    <p>Use 3 fields as it’ll be easier for you to validate each part rather than trying to review a single field.</p>
+    <p>Don’t automatically tab users between fields because this can clash with normal keyboard controls and confuse people.</p>
+    <p>Calendar controls (visual calendars which can be used to select dates) aren’t particularly useful for known dates and some users struggle to select date boxes.</p>
+    <p>Get the <a href="/design-system/components/date-input#date-input">code for date input</a>.</p>
+    <h3>Triggering the iPhone numeric keyboard</h3>
+    <p>To trigger the numeric keyboard on iPhones, add a pattern attribute to the input element like this: <code>pattern="[0-9]*"</code></p>
 </div>
+<h2 id="documents-and-cards">Asking for dates from documents and cards</h2>
+<p class="text">If you ask for a date exactly as it’s shown on a passport, credit card or similar item, make the fields match the format of the original. This will make it easier for users to copy it across accurately.</p>
+<h2 id="approximate-dates">Asking for approximate dates</h2>
+<p class="text">If you don’t need an exact date and you’re asking for one that users might struggle to remember (for example ‘the date your benefits began’), make sure you allow them to enter an approximate date, like ‘June 1983’.</p>
 
-
+<h2 id="relative-dates">Asking for relative dates</h2>
+<div class="text">
+    <p>You may need to ask for dates that are relative to today’s date or another date - this is common if a user is booking an appointment.</p>
+    <p>To do this you should let users enter or select relative dates like ‘tomorrow’ or ‘4 days later’. If the day of the week is important, show this as well.</p>
+</div>
+<div class="example">
+    <p>An <a href="http://www.webaxe.org/accessible-date-pickers/" rel="external">accessible calendar control</a> pattern needs developing.</p>
+</div>
 {% endblock %}
