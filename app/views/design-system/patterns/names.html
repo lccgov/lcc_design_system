@@ -15,7 +15,6 @@
 {% block sectionOneRightContent %}
 <div class="page-header-section">
     <h1><span>{{ section_name }}</span> {{ page_title }}</h1>
-    <p class="lead"></p>
 </div>
 
 <!-- Page content goes here -->
@@ -23,25 +22,58 @@
 <div class="contents-box">
     <h2 class="heading-contents">Contents</h2>
     <ul class="list list-contents">
-        <li><a href="#"></a></li>
+        <li><a href="#name-example">Single name field example</a></li>
+        <li><a href="#multiple-name-fields">Multiple name fields</a></li>
+        <li><a href="#labelling-name-fields">Labelling name fields</a></li>
+        <li><a href="#avoid-asking-for-peoples-title">Avoid asking for people’s title</a></li>
     </ul>
 </div>
-
+<h2 id="name-example" class="sr-only">Use a single name field where possible</h2>
+<p class="text top">Use a single name field because it can accommodate the broadest range of name types and requires less effort for users to understand.</p>
 <div class="example">
-
+    <div class="form-group">
+        <label class="form-label" for="full-name">Full name</label>
+        <input class="form-control" id="full-name" type="text" name="full-name">
+    </div>
 </div>
-
 <div class="code-snippet">
-    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for </span></h3>
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for full namel</span></h3>
     <pre>
-        <code id="snippet-" class="line-numbers language-markup">
-            &lt;
+        <code id="snippet-full-name" class="line-numbers language-markup">
+            &lt;div class="form-group">
+                &lt;label class="form-label" for="full-name">Full name&lt;/label>
+                &lt;input class="form-control" id="full-name" type="text" name="full-name">
+            &lt;/div>
         </code>
     </pre>
-    <button class="clipboard" data-clipboard-target="#snippet-">
-        Copy <span class="sr-only">HTML snippet for </span>
+    <button class="clipboard" data-clipboard-target="#snippet-full-name">
+        Copy <span class="sr-only">HTML snippet for full name</span>
     </button>
 </div>
-
-
+<h3 id="multiple-name-fields">The problem with multiple name fields</h3>
+<div class="text">
+    <p>Multiple name fields mean there’s more risk that:</p>
+    <ul class="list list-bullet bottom">
+        <li>a person’s name won’t fit the format you’ve chosen</li>
+        <li>users will enter their names in the wrong order</li>
+        <li>users will try to enter their full name in the first field</li>
+    </ul>
+</div>
+<h2 id="labelling-name-fields">Labelling name fields</h2>
+<div class="text">
+    <p>For single name fields, use ‘Your full name’.</p>
+    <p>For multiple name fields, use:</p>
+    <ul class="list list-bullet bottom">
+        <li>‘First name’</li>
+        <li>‘Last name’</li>
+    </ul>
+</div>
+<h2 id="avoid-asking-for-peoples-title">Avoid asking for people’s title</h2>
+<div class="text">
+    <p>You shouldn’t ask users for their title.</p>
+    <p>It’s extra work for users and you’re forcing them to potentially reveal their gender and marital status, which they may not want to do.</p>
+    <p>There are ways to address people in correspondence without using title, for example by using their name.</p>
+    <p>If you have to use a title field, make it an optional free-text field and not a drop-down list. Predicting the range of titles your users will have is impossible, and you’ll always end up upsetting someone.</p>
+    <p>Remember to deal with the name data sensibly in any resulting correspondence.</p>
+</div>
 {% endblock %}

@@ -1,8 +1,7 @@
-
 .design-system,
 .design-system footer.main,
 .design-system footer.main .footerGlobal{
-    background:$light-grey !important;
+    background:$blue !important;
 }
 .design-system{
     .text{
@@ -22,9 +21,6 @@
             .logo-footer img{
                 margin-bottom:20px;
             }
-        }
-        p{
-            color:$dark-grey;
         }
         .copyright{
             margin:0;
@@ -120,6 +116,7 @@
             @include sr-only();
         }
         .list-contents{
+            margin-bottom:5px;
             @media (min-width: 641px){
                 padding-bottom:25px;
                 margin:0;
@@ -127,10 +124,15 @@
             li{
                 margin:0;
                 a{
-                    border-left:3px solid $border-color;
+                    border-left:3px solid darken($border-color,5%);
                     padding:0 15px;
                     margin-bottom:15px;
                     display:inline-block;
+                }
+                &:last-child{
+                    a{
+                        margin:0;
+                    }
                 }
             }
         }
@@ -139,15 +141,16 @@
         margin-top:0;
     }
     pre[class*="language-"]{
-        border:1px solid darken($panel-color,5%);
+        border:1px solid $border-color;
     }
     .heading-mark-up{
-        background:$panel-color;
+        background:white;
+        border:1px solid $border-color;
         padding:10px 15px;
         margin:30px 0 -1px;
-        font-size:19px;
-        color:$secondary-font-color;
-        border:1px solid darken($panel-color,5%);
+        font-size:16px;
+        color:$dark-grey;
+
     }
     .page-header-section{
         @include text();
@@ -161,8 +164,8 @@
                 display:block;
                 font-size: 16px;
                 color:$dark-grey;
-                text-transform:uppercase;
-                margin-bottom:10px;
+                margin-bottom: 5px;
+                font-weight: 600;
                 @media (min-width: 641px){
                     font-size: 19px;
                 }
@@ -188,7 +191,6 @@
         padding-left:20px;
         font-size:14px;
         color:$dark-grey;
-        text-transform:uppercase;
     }
     h2 + ul{
         margin-top:0;
@@ -207,7 +209,7 @@
                     color:$base-link-color;
                     padding:15px;
                     padding:10px 15px;
-                    background:$lighter-grey;
+                    background:white;
                 }
                 &:visited{
                     color:$base-link-color;
@@ -229,10 +231,11 @@
 }
 
 .design-system-content{
+    background:$lighter-grey;
+    border-left:1px solid $border-color;
     padding:0 15px 100px;
     @media (min-width: 768px){
         float:right;
-        border-left:1px solid $border-color;
         padding:0 50px 100px;
     }
     .link-back-guide{
@@ -244,6 +247,7 @@
 }
 
 .design-system-menu{
+    background:white;
     @media (min-width: 768px){
         float:left;
         padding-right:0;
@@ -323,7 +327,8 @@
   }
   //nav
   .main-nav {
-      background:$light-grey;
+      background:white;
+      border-bottom:1px solid $border-color;
       @media (max-width: 990px){
           position: relative;
           left: 0;
@@ -347,11 +352,8 @@
                   }
                   &.active{
                       a{
-                          border-bottom:5px solid $base-link-color;
-                          font-weight:bold;
-                          @media (max-width: 641px){
-                            border-bottom:3px solid $base-link-color;
-                            }
+                          color:$base-link-color;
+                          border-bottom-color:$base-link-color;
                       }
                   }
                   a{
@@ -363,18 +365,15 @@
                       border-bottom:5px solid transparent;
                       border-top:5px solid transparent;
                       @media (max-width: 641px){
-                          border-bottom:3px solid transparent;
-                          border-top:3px solid transparent; 
                           padding:7px;
+                          border-bottom-width:3px;
+                            border-top-width:3px;
                       }
                       &:hover{
-                          background:none;
-                          text-decoration:none;
-                          color:$base-link-color;
-                          border-bottom:5px solid $base-link-color;
-                          @media (max-width: 641px){
-                              border-bottom:3px solid $base-link-color;
-                          }
+                        background:transparent;
+                        text-decoration:none;
+                        color:$base-link-color;
+                        border-bottom-color:$base-link-color;
                       }
                       @media (max-width: 990px){
                           width:auto;
@@ -382,7 +381,7 @@
                           padding:10px;
                           text-decoration:none;
                           &:hover{
-                              background:transparent;
+                            background:transparent;
                           }
                       }
                       @media (max-width: 500px){
