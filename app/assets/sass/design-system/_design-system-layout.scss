@@ -1,10 +1,10 @@
 .layout-example{
     .layout-example-item{
         padding:10px;
-        background:$dark-grey;
+        background:$light-grey;
         border:2px solid white;
         text-align:center;
-        color:white;
+        color:$dark-grey;
         font-size:16px;
         &.layout-example-item-content{
             text-align:left;

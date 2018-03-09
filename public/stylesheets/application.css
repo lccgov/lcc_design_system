@@ -12830,10 +12830,10 @@ pre {
 
 .layout-example .layout-example-item {
   padding: 10px;
-  background: #455a64;
+  background: #eceff1;
   border: 2px solid white;
   text-align: center;
-  color: white;
+  color: #455a64;
   font-size: 16px; }
   .layout-example .layout-example-item.layout-example-item-content {
     text-align: left; }
