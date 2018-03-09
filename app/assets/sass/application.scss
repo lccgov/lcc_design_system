@@ -15,7 +15,7 @@ $light-black:#37474f;
 $dark-grey:#455a64;
 $grey:#90a4ae;
 $light-grey:#eceff1;
-$lighter-grey:#f5f5f6;
+$lighter-grey:#f6f7fa;
 $white:#FFFFFF;
 $green:#2e7d32;
 $dark-green:#005005;
@@ -191,7 +191,7 @@ $phase-banner-stage-background:$blue;
 @import 'base';
 @import 'brand-colors';
 @import '2010-typography-overrides';
-//@import 'accordion';
+@import 'accordion';
 @import 'accordion-aria';
 @import 'a-to-z';
 //@import 'block-links'; //subsite only
@@ -248,56 +248,6 @@ html {
     width:100%;
 }
 
-.postcode-completed{
-    p,
-    a{
-        float:left;
-        padding:0;
-        line-height:1;
-    }
-    label{
-        display:block;
-    }
-    p{
-        margin:0 15px 0 0;
-    }
-    a{
-        margin:0;
-    }
-    @media (max-width: 340px) {
-        label{
-            display:block;
-            margin:0 0 10px 0;
-            float:none;
-        }
-        p{
-            margin:0 10px 0 0;
-        }
-    }
-}
-
-.form-group-link{
-    margin-top:15px;
-    display:inline-block;
-}
-
-.form-label-large{
-    margin-bottom:10px;
-}
-
-.masterhead-lcc{
-    padding:7px 0;
-    a.navbar-brand{
-        width:80px;
-        height:24px;
-        background-size:100% 100%;
-    }
-}
-
 .btn{
     margin:10px 0 20px;
-}
-
-.link-back {
-    margin: 10px 0 0;
 }

@@ -29,8 +29,27 @@
     .hero.section-brand{
         height:100%;
         padding:3rem 0;
+        background-image: url(/public/images/hero-bk.png);
+        background-position: top -25px right -100px;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 50% 100%;
         background-color:$blue;
         color:white;
+        @media (min-width: 641px){
+            background-position: top -100px right -100px;
+            background-size: 50%;
+        }
+        @media (min-width: 1400px){
+            background-position: top -300px right -100px;
+        }
+        @media (min-width: 1600px){
+            background-position: top -350px right -100px;
+        }
+        @media (max-width: 640px){
+            background-position: top -25px right -250px;
+            background-size: 100%;
+        }
         @media (min-width: 990px) {
             padding:6rem 0;
         }
@@ -39,12 +58,15 @@
                 font-size:3rem;
                 color:white;
                 margin:0;
-                line-height:1;
+                line-height:1.2;
                 margin-bottom:0.75rem;
                 @media (min-width: 641px) {
-                    font-size:5rem;
+                    font-size:4rem;
                 }
                 @media (min-width: 768px) {
+                    font-size: 4rem;
+                }
+                @media (min-width: 1200px) {
                     font-size: 6rem;
                 }
                 span{
@@ -54,15 +76,24 @@
             p{
                 font-size:16px;
                 margin:0;
-                line-height:1.4;
+                line-height:1.6;
                 @media (min-width: 768px) {
+                    font-size: 19px;
+                }
+                @media (max-width: 767px) {
+                    max-width:22em;
+                }
+                @media (max-width: 641px) {
+                    max-width:17em;
+                }
+                @media (min-width: 1200px) {
                     font-size: 24px;
                 }
             }
         }
     }
     
-    .groupPromo.three {
+    .groupPromo.home {
         ul{
             margin:15px 0 0;
             @media (min-width: 991px) {
@@ -494,4 +525,10 @@
 
 .footer-bsl-logo {
     background: url(https://www.leeds.gov.uk/_catalogs/masterpage/public/images/logo-bsl.svg) no-repeat !important;
+}
+
+.landing-page{
+    .container-fluid{
+        max-width:1400px !important;
+    }
 }

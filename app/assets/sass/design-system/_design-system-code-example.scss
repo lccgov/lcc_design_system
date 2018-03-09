@@ -82,9 +82,12 @@
 .code-snippet{
   position:relative;
   .clipboard{
+    @include btn();
+    @include btn-color($primary-button-background-color,$primary-button-color);
     position:absolute;
     right:15px;
     top:55px;
+    padding:10px;
   }
 }
 

@@ -1,0 +1,28 @@
+{% extends "design-system-page-layout-landing.html" %}
+
+{% set section_id = "templates" %} <!-- Section id var for main nav --> 
+{% set page_title = "Templates" %} <!-- Page title var for page header (H1) and page title -->       
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+{% endblock %}
+
+{% block sectionOneFull %}
+
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">Page templates for Leeds City Council services and third party systems.</p>
+</div>
+
+<!-- Page content goes here -->
+<div class="design-system-landing-page-menu">
+
+</div>
+
+{% endblock %}
