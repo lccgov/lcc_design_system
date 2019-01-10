@@ -1,0 +1,42 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "example" %} <!-- Page id var for side nav --> 
+{% set page_title = "Example" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">Use example boxes to showcase how content should be laid out.</p>
+</div>
+
+<div class="example">
+    <span class="example-title">Example</span>
+    <div class="example">
+        <span class="example-title">Example</span>
+        <p>This is an example box. You can put any content in here.</p>    
+    </div>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for example box</span></h3>
+    <pre>
+        <code id="snippet-example" class="line-numbers language-markup">
+            &lt;div class="example">
+                &lt;span class="example-title">Example&lt;/span>
+                &lt;p>This is an example box. You can put any content here.&lt;/p>              
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-example">
+        Copy <span class="sr-only">HTML snippet for breadcrumb</span>
+    </button>
+</div>
+
+{% endblock %}

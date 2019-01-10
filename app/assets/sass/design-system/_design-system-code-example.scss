@@ -1,46 +1,4 @@
-
 //style example
-.example {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid $border-color;
-  padding: 60px 15px 15px;
-  margin:30px 0;
-  background:white;
-  @media (min-width: 641px) {
-      padding:60px 30px 30px;
-  }
-
-  &.top{
-    margin-top:0;
-  }
-
-  &:before {
-    content: "EXAMPLE";
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    padding: 10px 15px;
-    font-family: $font-secondary, sans-serif;;
-    font-weight: 700;
-    font-size: 12px;
-    background: white;
-    color: $dark-grey;
-    border:1px solid $border-color;
-    @media (min-width: 641px) {
-        font-size: 14px;
-    }
-  }
-
-  .highlight {
-    font-style: normal;
-    color: #0076c0;
-  }
-
-  .list-bullet {
-    margin-bottom: 20px;
-  }
-}
 
 .example-grid p {
   width: 100%;
