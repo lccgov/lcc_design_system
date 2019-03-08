@@ -1,0 +1,135 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "prototypes" %} <!-- Section id var for main nav --> 
+{% set page_id = "decisiontree" %} <!-- Page id var for side nav --> 
+{% set page_title = "Decision tree" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">This is a prototype and cannot be used on the leeds.gov.uk.</p>
+</div>
+
+<div class="text">
+    <ol class="list list-number">
+        <li>Add "prototype/decision-tree.js" underneath scripts in footer</li>
+        <li>Add HTML snippets to script editor</li>
+        <li>Add JavaScript snippets underneath javascript includes</li>
+    </ol>
+</div>
+
+<div class="example">
+    <span class="example-title">Example</span>
+    
+    <h2>Getting rid of unwanted items</h2>
+    <div class="lcc-tree-container"></div>
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for decision tree</span></h3>
+
+    <pre class="language-markup"><code id="snippet-decision-tree" class="line-numbers language-markup"><span style="color: #007700">&lt;h2&gt;</span>Getting rid of unwanted items<span style="color: #007700">&lt;/h2&gt;</span>
+<span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;lcc-tree-container&quot;</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
+</code></pre>
+
+    <button class="clipboard" data-clipboard-target="#snippet-decision-tree">
+        Copy <span class="sr-only">HTML snippet for decision tree</span>
+    </button>
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">JavaScript Snippet <span class="sr-only">for decision tree</span></h3>
+
+    <pre class="language-markup"><code id="snippet-decision-tree-js" class="line-numbers language-markup"><span style="color: #666666">&lt;</span>script type<span style="color: #666666">=</span><span style="color: #BA2121">&quot;text/javascript&quot;</span><span style="color: #666666">&gt;</span>
+        <span style="color: #008000; font-weight: bold">var</span> bookacollection <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;&lt;h3&gt;Book a collection&lt;/h3&gt;&lt;p&gt;If you are unable to get rid of your items in the above ways and you are prepared to wait for up to 3 weeks, we offer a limited service to remove items from homes. This will be chargeable at a subsidised rate of £20.00.&lt;/p&gt;&lt;p&gt;You can find out more information about this service on our &lt;a href=&quot;/residents/bins-and-recycling/book-an-unwanted-items-collection&quot;&gt;Book a collection page&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;If a collection is not made on your appointment date then please leave the item(s) outside for a further 48 hours. Please ensure that your item/s are left in the exact location given during your booking, and that you have followed the rules for collection.&lt;/p&gt;&#39;</span>
+                            
+        <span style="color: #008000; font-weight: bold">var</span> data <span style="color: #666666">=</span> {
+            message<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;&lt;h3&gt;Is your item classed as garden waste?&lt;/h3&gt;&#39;</span>,
+            decisions<span style="color: #666666">:</span> [
+                    {
+                        answer<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;Yes&#39;</span>,
+                        message<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;&lt;h3&gt;Garden Waste&lt;/h3&gt;&lt;p&gt;If you are requiring a garden waste collection and do not have access to a brown bin, please visit our &lt;a href=&quot;#&quot;&gt;Garden waste page&lt;/a&gt;. This page contains guidance on booking a collection and the terms and conditions of collections.&lt;/p&gt;&#39;</span>                
+                    },
+                    {
+                        answer<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;No&#39;</span>,
+                        message<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;&lt;h3&gt;Are you able to donate your item to charity?&lt;/h3&gt;&#39;</span>,
+                        decisions<span style="color: #666666">:</span> [                
+                            {
+                                answer<span style="color: #666666">:</span> <span style="color: #BA2121">&quot;I&#39;m not sure&quot;</span>,
+                                message<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;&lt;h3&gt;Donating to charity&lt;/h3&gt;&lt;p&gt;Items such as sofas, chairs and beds must carry fire safety labels. All electrical items should be free from rust, be reasonably clean, have intact seals and ideally be in full working order.&lt;/p&gt;&lt;p&gt;You can read more about donating to these charities in our \&#39;Pass It On\&#39; leaflet (PDF 1.5MB).&lt;/p&gt;&lt;p&gt;Most of the following organisations will collect re-usable items from your home for free:&lt;/p&gt;&lt;h4&gt;&lt;a href=&quot;#&quot;&gt;Emmaus Leeds&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Accept furniture, electricals, white goods, bric a brac, clothes, bedding and more. Telephone 0113 248 4288.&lt;/p&gt;&lt;h4&gt;&lt;a href=&quot;#&quot;&gt;Leeds and Moortown Furniture Store&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Accept sofas, beds, bedroom storage, tables, chairs and other living room furniture. In addition they take bedding, curtains, towels, pans and mirrors. They do not collect electrical appliances or white goods. Telephone 0113 273 9727.&lt;/p&gt;&lt;h3&gt;Still need to book a collection?&lt;/h3&gt;&#39;</span>,
+                                decisions<span style="color: #666666">:</span> [                
+                                    {
+                                        answer<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;Yes&#39;</span>,
+                                        message<span style="color: #666666">:</span> bookacollection                       
+                                    }
+                                ]                      
+                            },
+                            {
+                                answer<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;No&#39;</span>,
+                                message<span style="color: #666666">:</span> bookacollection
+                            }
+                        ]
+                    }            
+                ]
+        };
+    
+        jQuery(<span style="color: #008000">document</span>).ready(<span style="color: #008000; font-weight: bold">function</span>() {
+            jQuery(<span style="color: #BA2121">&#39;.lcc-tree-container&#39;</span>).decisionTree({data<span style="color: #666666">:</span> data});
+        });
+<span style="color: #666666">&lt;</span><span>/script&gt;</span>
+    </code></pre>
+
+    <button class="clipboard" data-clipboard-target="#snippet-decision-tree-js">
+        Copy <span class="sr-only">JavaScript snippet for decision tree</span>
+    </button>
+</div>
+
+{% endblock %}
+
+{% block additional_page_scripts %}
+<script type="text/javascript">
+    var bookacollection = '<h3>Book a collection</h3><p>If you are unable to get rid of your items in the above ways and you are prepared to wait for up to 3 weeks, we offer a limited service to remove items from homes. This will be chargeable at a subsidised rate of £20.00.</p><p>You can find out more information about this service on our <a href="/residents/bins-and-recycling/book-an-unwanted-items-collection">Book a collection page</a>.</p><p>If a collection is not made on your appointment date then please leave the item(s) outside for a further 48 hours. Please ensure that your item/s are left in the exact location given during your booking, and that you have followed the rules for collection.</p>'
+                        
+    var data = {
+        message: '<h3>Is your item classed as garden waste?</h3>',
+        decisions: [
+                {
+                    answer: 'Yes',
+                    message: '<h3>Garden Waste</h3><p>If you are requiring a garden waste collection and do not have access to a brown bin, please visit our <a href="#">Garden waste page</a>. This page contains guidance on booking a collection and the terms and conditions of collections.</p>'                
+                },
+                {
+                    answer: 'No',
+                    message: '<h3>Are you able to donate your item to charity?</h3>',
+                    decisions: [                
+                        {
+                            answer: "I'm not sure",
+                            message: '<h3>Donating to charity</h3><p>Items such as sofas, chairs and beds must carry fire safety labels. All electrical items should be free from rust, be reasonably clean, have intact seals and ideally be in full working order.</p><p>You can read more about donating to these charities in our \'Pass It On\' leaflet (PDF 1.5MB).</p><p>Most of the following organisations will collect re-usable items from your home for free:</p><h4><a href="#">Emmaus Leeds</a></h4><p>Accept furniture, electricals, white goods, bric a brac, clothes, bedding and more. Telephone 0113 248 4288.</p><h4><a href="#">Leeds and Moortown Furniture Store</a></h4><p>Accept sofas, beds, bedroom storage, tables, chairs and other living room furniture. In addition they take bedding, curtains, towels, pans and mirrors. They do not collect electrical appliances or white goods. Telephone 0113 273 9727.</p><h3>Still need to book a collection?</h3>',
+                            decisions: [                
+                                {
+                                    answer: 'Yes',
+                                    message: bookacollection                       
+                                }
+                            ]                      
+                        },
+                        {
+                            answer: 'No',
+                            message: bookacollection
+                        }
+                    ]
+                }            
+            ]
+    };
+
+    jQuery(document).ready(function() {
+        jQuery('.lcc-tree-container').decisionTree({data: data});
+    });
+</script>
+
+{% endblock %}

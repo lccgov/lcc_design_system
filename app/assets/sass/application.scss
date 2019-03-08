@@ -237,6 +237,8 @@ $phase-banner-stage-background:$blue;
 
 @import 'component_example';
 
+@import 'prototypes/decision-tree';
+
 //site background
 html {
     background-color: $blue;
@@ -253,3 +255,4 @@ html {
 .btn{
     margin:10px 0 20px;
 }
+

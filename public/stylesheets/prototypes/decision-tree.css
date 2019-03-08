@@ -1,0 +1,23 @@
+.lcc-tree {
+  background: #E5F1F5;
+  display: flex; }
+
+.lcc-tree-card {
+  display: none;
+  width: 100%;
+  padding: 20px; }
+  @media (min-width: 641px) {
+    .lcc-tree-card {
+      padding: 30px; } }
+
+.lcc-tree-card-content h1:first-child, .lcc-tree-card-content h2:first-child, .lcc-tree-card-content h3:first-child, .lcc-tree-card-content h4:first-child, .lcc-tree-card-content h5:first-child {
+  margin-top: 0; }
+
+.lcc-tree-card-actions {
+  display: flex;
+  margin-bottom: -15px; }
+  .lcc-tree-card-actions .btn {
+    margin: 0 15px 15px 0; }
+
+.lcc-tree-controls {
+  margin-top: 15px; }
