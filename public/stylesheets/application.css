@@ -9277,12 +9277,12 @@ table.styledTable td,
       float: none;
       padding: 0; } }
 
-#ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField ul,
-#ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField ul,
-#ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField ul,
-#ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField ul,
-#ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField ul,
-.accordion .accordion-drawer .content-block ul {
+#ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+#ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+#ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+#ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+#ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+.accordion .accordion-drawer .content-block ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) {
   padding: 0;
   margin-top: 0;
   margin-bottom: 15px;
@@ -9305,27 +9305,27 @@ table.styledTable td,
   list-style-type: disc;
   padding-left: 20px; }
   @media (min-width: 641px) {
-    #ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField ul,
-    #ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField ul,
-    #ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField ul,
-    #ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField ul,
-    #ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField ul,
-    .accordion .accordion-drawer .content-block ul {
+    #ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+    #ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+    #ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+    #ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+    #ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+    .accordion .accordion-drawer .content-block ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) {
       margin-bottom: 17px; } }
-  #ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField ul li,
-  #ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField ul li,
-  #ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField ul li,
-  #ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField ul li,
-  #ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField ul li,
-  .accordion .accordion-drawer .content-block ul li {
+  #ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li,
+  #ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li,
+  #ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li,
+  #ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li,
+  #ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li,
+  .accordion .accordion-drawer .content-block ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li {
     margin-bottom: 7px; }
 
-#ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField ol,
-#ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField ol,
-#ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField ol,
-#ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField ol,
-#ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField ol,
-.accordion .accordion-drawer .content-block ol {
+#ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+#ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+#ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+#ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+#ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+.accordion .accordion-drawer .content-block ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) {
   padding: 0;
   margin-top: 0;
   margin-bottom: 15px;
@@ -9348,56 +9348,63 @@ table.styledTable td,
   list-style-type: decimal;
   padding-left: 20px; }
   @media (min-width: 641px) {
-    #ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField ol,
-    #ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField ol,
-    #ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField ol,
-    #ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField ol,
-    #ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField ol,
-    .accordion .accordion-drawer .content-block ol {
+    #ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+    #ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+    #ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+    #ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+    #ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+    .accordion .accordion-drawer .content-block ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) {
       margin-bottom: 17px; } }
-  #ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField ol li,
-  #ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField ol li,
-  #ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField ol li,
-  #ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField ol li,
-  #ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField ol li,
-  .accordion .accordion-drawer .content-block ol li {
+  #ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li,
+  #ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li,
+  #ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li,
+  #ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li,
+  #ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li,
+  .accordion .accordion-drawer .content-block ol:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li {
     margin-bottom: 7px; }
 
 #ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField ul.accordion,
 #ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField ol.list-step,
-#ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField .docList ul,
 #ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField ul.accordion,
 #ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField ol.list-step,
-#ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField .docList ul,
 #ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField ul.accordion,
 #ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField ol.list-step,
-#ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField .docList ul,
 #ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField ul.accordion,
 #ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField ol.list-step,
-#ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField .docList ul,
 #ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField ul.accordion,
 #ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField ol.list-step,
-#ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField .docList ul,
 .accordion .accordion-drawer .content-block ul.accordion,
-.accordion .accordion-drawer .content-block ol.list-step,
-.accordion .accordion-drawer .content-block .docList ul {
+.accordion .accordion-drawer .content-block ol.list-step {
   list-style-type: none; }
+
+#ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField .docList ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+#ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField .docList ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+#ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField .docList ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+#ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField .docList ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+#ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField .docList ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step),
+.accordion .accordion-drawer .content-block .docList ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) {
+  list-style-type: none;
+  padding-left: 0; }
+  #ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField .docList ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li,
+  #ctl00_PlaceHolderMain_ctl02__ControlWrapper_RichHtmlField .docList ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li,
+  #ctl00_PlaceHolderMain_ctl03__ControlWrapper_RichHtmlField .docList ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li,
+  #ctl00_PlaceHolderMain_ctl04__ControlWrapper_RichHtmlField .docList ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li,
+  #ctl00_PlaceHolderMain_ctl05__ControlWrapper_RichHtmlField .docList ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li,
+  .accordion .accordion-drawer .content-block .docList ul:not(.accordion):not(.list):not(.list-bullet):not(.list-number):not(.list-step) li {
+    margin-bottom: 0; }
 
 ul.accordion {
   list-style: none;
   padding: 0px;
   margin: 30px 0;
   border-top: 1px solid #eceff1; }
-  ul.accordion li {
+  ul.accordion > li {
     border-color: #eceff1;
     border-bottom: 1px solid #eceff1;
     border-left: 5px solid transparent !important; }
-    ul.accordion li:hover {
+    ul.accordion > li:hover {
       border-left: 5px solid #007299 !important; }
-    ul.accordion li ul li,
-    ul.accordion li ul li:hover {
-      border: 0 !important; }
-    ul.accordion li a.header {
+    ul.accordion > li a.header {
       display: block;
       position: relative;
       border: none !important;
@@ -9407,17 +9414,17 @@ ul.accordion {
       font-size: 19px;
       color: #007299; }
       @media (max-width: 641px) {
-        ul.accordion li a.header {
+        ul.accordion > li a.header {
           padding: 15px 15px 15px 35px;
           font-size: 16px; } }
-      ul.accordion li a.header:hover {
+      ul.accordion > li a.header:hover {
         background: rgba(0, 0, 0, 0.05);
         color: #007299; }
-      ul.accordion li a.header:focus {
+      ul.accordion > li a.header:focus {
         color: #263238 !important; }
-        ul.accordion li a.header:focus:after {
+        ul.accordion > li a.header:focus:after {
           color: #263238 !important; }
-      ul.accordion li a.header:after {
+      ul.accordion > li a.header:after {
         font-family: FontAwesome;
         font-size: 19px;
         content: "\f067";
@@ -9429,21 +9436,21 @@ ul.accordion {
         color: #007299;
         font-weight: 400; }
         @media (max-width: 641px) {
-          ul.accordion li a.header:after {
+          ul.accordion > li a.header:after {
             font-size: 16px;
             left: 10px;
             top: 16px; } }
-      ul.accordion li a.header.active:after {
+      ul.accordion > li a.header.active:after {
         content: "\f068"; }
-      ul.accordion li a.header:visited {
+      ul.accordion > li a.header:visited {
         color: #007299; }
-    ul.accordion li div {
-      padding: 0 !important; }
-    ul.accordion li div.content-block {
-      padding: 15px 20px 5px 60px !important; }
+    ul.accordion > li div.content-block {
+      padding: 15px 20px 5px 60px; }
       @media (max-width: 641px) {
-        ul.accordion li div.content-block {
-          padding: 10px 10px 5px 35px !important; } }
+        ul.accordion > li div.content-block {
+          padding: 10px 10px 5px 35px; } }
+      ul.accordion > li div.content-block div {
+        display: block !important; }
   ul.accordion .list a {
     text-decoration: none; }
 
@@ -9453,9 +9460,6 @@ ul.accordion div.text-block {
 ul.accordion div.text-highlight {
   padding: 20px !important; }
 
-ul.accordion li div.content-block div:last-of-type {
-  padding-bottom: 30px !important; }
-
 ul.accordion li div.content-block div + .btn {
   margin-right: 20px; }
 
@@ -9464,12 +9468,14 @@ ul.accordion div.text-highlight {
 
 .accordion {
   list-style: none;
-  margin: 0 0 -1px;
+  margin: 30px 0;
   padding: 0;
   border-bottom: 1px solid #eceff1; }
 
 .accordion > li {
   margin: 0; }
+  .accordion > li:last-of-type {
+    border-bottom: 0; }
 
 /**
  * Add zero-width space. needed to ensure Safari + VO respect list semantics.
@@ -9505,7 +9511,8 @@ ul.accordion div.text-highlight {
   z-index: 2;
   font-size: 16px;
   padding-left: 2.500em;
-  border-left: 5px solid transparent; }
+  border-left: 5px solid transparent;
+  margin-left: 0; }
   @media (min-width: 641px) {
     .js .accordion__trigger {
       font-size: 19px;
@@ -9584,11 +9591,8 @@ ul.accordion div.text-highlight {
 .js .accordion__panel > :last-child {
   margin-bottom: 0; }
 
-.js .accordion__panel[aria-hidden="true"] {
-  border-bottom: 1px solid #eceff1; }
-
 .js .accordion__panel[aria-hidden="false"] {
-  max-height: 100vh;
+  max-height: fit-content;
   overflow: auto;
   padding: 1.5em .5em;
   visibility: visible;
