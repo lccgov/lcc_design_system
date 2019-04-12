@@ -9571,7 +9571,6 @@ ul.accordion div.text-highlight {
     content: "\f068"; }
 
 .js .accordion__panel {
-  max-width: 35em;
   background-color: inherit;
   max-height: 0vh;
   overflow: hidden;
