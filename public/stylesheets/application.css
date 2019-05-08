@@ -12377,6 +12377,11 @@ pre {
       color: #007299; }
     .design-system-side-nav ul li a p {
       display: none; }
+    .design-system-side-nav ul li a span {
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      color: #455a64; }
   .design-system-side-nav ul li.active a {
     border-left: 5px solid #007299;
     font-weight: bold;

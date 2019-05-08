@@ -248,6 +248,12 @@
                 p{
                     display:none;
                 }
+                span {
+                    display: block;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color:$dark-grey;
+                }
             }
             &.active{
                 a{

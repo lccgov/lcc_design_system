@@ -1,0 +1,73 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "hiddentext" %} <!-- Page id var for side nav --> 
+{% set page_title = "Hidden Text" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">Use this to make your page easier to scan, only showing contextual information when required.</p>
+</div>
+<div class="example">
+    <span class="example-title">Example</span>
+    <div class="hidden-text">
+        <a class="text-link reveal collapsed" role="button" data-toggle="collapse" href="#hidden-text-example" aria-expanded="false" aria-controls="hidden-text-example">
+        If you study as a full-time student elsewhere
+        </a>
+        <div class="collapse" id="hidden-text-example">
+            <div class="panel panel-border">
+                <div role="note" aria-label="Information" class="text-highlight">
+                    <p>You cannot apply online.</p>
+                </div>
+                <p>Instead you'll need to provide us with a Council tax Student Certificate from your admissions/student services department.</p>
+                <p>You can hand this in to a <a href="#">One Stop Centre</a> or post it to:</p>
+                <div class="text-block">
+                    <p>Leeds City Council 
+                    <br>P.O. Box 60 
+                    <br>Leeds 
+                    <br>LS2 8JR</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for hidden text</span></h3>
+    <pre>
+        <code id="snippet-hiddentext" class="line-numbers language-markup">
+            &lt;div class="hidden-text">
+                &lt;a class="text-link reveal collapsed" role="button" data-toggle="collapse" href="#hidden-text-example" aria-expanded="false" aria-controls="hidden-text-example">
+                If you study as a full-time student elsewhere
+                &lt;/a>
+                &lt;div class="collapse" id="hidden-text-example">
+                    &lt;div class="panel panel-border">
+                        &lt;div role="note" aria-label="Information" class="text-highlight">
+                            &lt;p>You cannot apply online.&lt;/p>
+                        &lt;/div>
+                        &lt;p>Instead you'll need to provide us with a Council tax Student Certificate from your admissions/student services department.&lt;/p>
+                        &lt;p>You can hand this in to a &lt;a href="#">One Stop Centre&lt;/a> or post it to:&lt;/p>
+                        &lt;div class="text-block">
+                            &lt;p>Leeds City Council 
+                            &lt;br>P.O. Box 60 
+                            &lt;br>Leeds 
+                            &lt;br>LS2 8JR&lt;/p>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-hiddentext">
+        Copy <span class="sr-only">HTML snippet for hidden text</span>
+    </button>
+</div>
+{% endblock %}
