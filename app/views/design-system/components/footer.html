@@ -14,110 +14,161 @@
 {% block sectionOneRightContent %}
 <div class="page-header-section">
     <h1>{{ page_title }}</h1>
-    <p class="lead"></p>
 </div>
 
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#full-footer">Full footer</a></li>
+        <li><a href="#condensed-footer">Condensed footer</a></li>
+    </ul>
+</div>
+
+<h2 id="full-footer">Full footer</h2>
 <div class="example">
     <span class="example-title">Example</span>
-    <footer class="design-system-footer main">
+    <footer class="main">
         <section class="footerGlobal">
             <div class="container-fluid">
-                <div class="col-lg-12">
-                    <nav>
-                        <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="#">Accessibility</a></li>
-                            <li><a href="#">Privacy Notice</a></li>
-                            <li><a href="#">Terms and Conditions</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Newsroom</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-sm-6 text-right">
-                    <a href="#" class="footer-bsl-logo"><span class="sr-only">British Sign Language (BSL)</span></a>
-                    <div class="socialBookmarks">
-                        <h3 class="sr-only">Connect with us on:</h3>
-                        <ul>
-                            <li>
-                                <a href="#" class="facebook">
-                                    <span>Our Facebook page (External link)</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="twitter">
-                                    <span>Our Twitter page (External link)</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="youtube">
-                                    <span>Our YouTube page (External link)</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="clear">
-                        </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Accessibility</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Terms and conditions</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a rel="external" href="#">Newsroom</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
-                <div class="col-sm-6 logo-footer">
-                    <img src="/public/images/lcc-logo-white-01.svg" alt="Leeds City Council logo" />
-                    <p>Copyright © Leeds City Council 2018</p>
+                <div class="row">
+                    <div class="col-sm-6 logo-footer">
+                        <img src="/public/images/lcc-logo-white-01.svg" alt="Leeds City Council logo" />
+                        <p>Copyright © Leeds City Council 2019</p>
+                        <p>Official local authority website for Leeds providing information on local services.</p>
+                    </div>
+                    <div class="col-sm-6 text-right">                        
+                        <div class="socialBookmarks">
+                            <h3 class="sr-only">Connect with us on:</h3>
+                            <ul>
+                                <li class="bsl-container"><a href="#" class="footer-bsl-logo"><span class="sr-only">British Sign Language (BSL)</span></a></li>
+                                <li><a href="#" class="facebook"><span>Our Facebook page (External link)</span></a></li>
+                                <li><a href="#" class="twitter"><span>Our Twitter page (External link)</span></a></li>
+                                <li><a href="#" class="youtube"><span>Our YouTube page (External link)</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </section>
     </footer>
 </div>
+
 <div class="code-snippet">
     <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for phase banner</span></h3>
     <pre>
-        <code id="snippet-phase-banner" class="line-numbers language-markup">
-            &lt;div class="container-fluid">
-                &lt;div class="col-lg-12">
-                    &lt;nav>
-                        &lt;ul>
-                            &lt;li>&lt;a href="/">Home&lt;/a>&lt;/li>
-                            &lt;li>&lt;a href="#">Accessibility&lt;/a>&lt;/li>
-                            &lt;li>&lt;a href="#">Privacy Notice&lt;/a>&lt;/li>
-                            &lt;li>&lt;a href="#">Terms and Conditions&lt;/a>&lt;/li>
-                            &lt;li>&lt;a href="#">Contact Us&lt;/a>&lt;/li>
-                            &lt;li>&lt;a href="#">Newsroom&lt;/a>&lt;/li>
-                        &lt;/ul>
-                    &lt;/nav>
-                &lt;/div>
-                &lt;div class="col-sm-6 text-right">
-                    &lt;a href="#" class="footer-bsl-logo">&lt;span class="sr-only">British Sign Language (BSL)&lt;/span>&lt;/a>
-                    &lt;div class="socialBookmarks">
-                        &lt;h3 class="sr-only">Connect with us on:&lt;/h3>
-                        &lt;ul>
-                            &lt;li>
-                                &lt;a href="#" class="facebook">
-                                    &lt;span>Our Facebook page (External link)&lt;/span>
-                                &lt;/a>
-                            &lt;/li>
-                            &lt;li>
-                                &lt;a href="#" class="twitter">
-                                    &lt;span>Our Twitter page (External link)&lt;/span>
-                                &lt;/a>
-                            &lt;/li>
-                            &lt;li>
-                                &lt;a href="#" class="youtube">
-                                    &lt;span>Our YouTube page (External link)&lt;/span>
-                                &lt;/a>
-                            &lt;/li>
-                        &lt;/ul>
-                        &lt;div class="clear">
+        <code id="footer-example" class="line-numbers language-markup">
+            &lt;footer class="main">
+                &lt;section class="footerGlobal">
+                    &lt;div class="container-fluid">
+                        &lt;div class="row">
+                            &lt;div class="col-lg-12">
+                                &lt;nav>
+                                    &lt;ul>
+                                        &lt;li>&lt;a href="#">Accessibility&lt;/a>&lt;/li>
+                                        &lt;li>&lt;a href="#">Privacy&lt;/a>&lt;/li>
+                                        &lt;li>&lt;a href="#">Terms and conditions&lt;/a>&lt;/li>
+                                        &lt;li>&lt;a href="#">Contact us&lt;/a>&lt;/li>
+                                        &lt;li>&lt;a rel="external" href="#">Newsroom&lt;/a>&lt;/li>
+                                    &lt;/ul>
+                                &lt;/nav>
+                            &lt;/div>                    
+                        &lt;/div>
+                        &lt;div class="row">
+                            &lt;div class="col-sm-6 logo-footer">
+                                &lt;img src="/public/images/lcc-logo-white-01.svg" alt="Leeds City Council logo" />
+                                &lt;p>Copyright © Leeds City Council 2019&lt;/p>
+                                &lt;p>Official local authority website for Leeds providing information on local services.&lt;/p>
+                            &lt;/div>
+                            &lt;div class="col-sm-6 text-right">                        
+                                &lt;div class="socialBookmarks">
+                                    &lt;h3 class="sr-only">Connect with us on:&lt;/h3>
+                                    &lt;ul>
+                                        &lt;li class="bsl-container">
+                                            &lt;a href="#" class="footer-bsl-logo">&lt;span class="sr-only">British Sign Language (BSL)&lt;/span>&lt;/a>
+                                        &lt;/li>
+                                        &lt;li>
+                                            &lt;a href="#" class="facebook">
+                                                &lt;span>Our Facebook page (External link)&lt;/span>
+                                            &lt;/a>
+                                        &lt;/li>
+                                        &lt;li>
+                                            &lt;a href="#" class="twitter">
+                                                &lt;span>Our Twitter page (External link)&lt;/span>
+                                            &lt;/a>
+                                        &lt;/li>
+                                        &lt;li>
+                                            &lt;a href="#" class="youtube">
+                                                &lt;span>Our YouTube page (External link)&lt;/span>
+                                            &lt;/a>
+                                        &lt;/li>
+                                    &lt;/ul>
+                                &lt;/div>
+                            &lt;/div>                    
                         &lt;/div>
                     &lt;/div>
-                &lt;/div>
-                &lt;div class="col-sm-6 logo-footer">
-                    &lt;img src="/public/images/lcc-logo-white-01.svg" alt="Leeds City Council logo" />
-                    &lt;p>Copyright © Leeds City Council 2018&lt;/p>
-                &lt;/div>
-            &lt;/div>
+                &lt;/section>
+            &lt;/footer>
         </code>
     </pre>
-    <button class="clipboard" data-clipboard-target="#snippet-phase-banner">
+    <button class="clipboard" data-clipboard-target="#footer-example">
         Copy <span class="sr-only">HTML snippet for phase banner</span>
+    </button>
+</div>
+
+<h2 id="condensed-footer">Condensed footer</h2>
+
+<div class="example">
+    <span class="example-title">Example</span>
+    <footer class="design-system-footer main">
+        <section class="footerGlobal">
+            <div class="container-fluid">                
+                <div class="row">
+                    <div class="col-sm-12 logo-footer">
+                        <img src="/public/images/lcc-logo-white-01.svg" alt="Leeds City Council logo" />
+                        <p>Copyright © Leeds City Council 2019</p>
+                        <p>Official local authority website for Leeds providing information on local services.</p>
+                    </div>     
+                </div>
+            </div>
+        </section>
+    </footer>
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for second footer</span></h3>
+    <pre>
+        <code id="second-footer" class="line-numbers language-markup">
+            &lt;footer class="main">
+                &lt;section class="footerGlobal">
+                    &lt;div class="container-fluid">               
+                        &lt;div class="row">
+                            &lt;div class="col-sm-12 logo-footer">
+                                &lt;img src="/public/images/lcc-logo-white-01.svg" alt="Leeds City Council logo" />
+                                &lt;p>Copyright © Leeds City Council 2019&lt;/p>
+                                &lt;p>Official local authority website for Leeds providing information on local services.&lt;/p>
+                            &lt;/div>                                      
+                        &lt;/div>
+                    &lt;/div>                    
+                &lt;/section>
+            &lt;/footer>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#second-footer">
+        Copy <span class="sr-only">HTML snippet for second footer example</span>
     </button>
 </div>
 
