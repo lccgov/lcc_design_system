@@ -1,0 +1,58 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "prototypes" %} <!-- Section id var for main nav --> 
+{% set page_id = "details-summary" %} <!-- Page id var for side nav --> 
+{% set page_title = "Details and summary" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">This is a prototype and cannot be used on the leeds.gov.uk.</p>
+</div>
+
+<div class="example">
+    <span class="example-title">Example</span>
+    <details>
+        <summary><span>If you study as a full-time student elsewhere</span></summary>
+        <div class="panel panel-border">
+            <div role="note" aria-label="Information" class="text-highlight">
+                <p>You cannot apply online.</p>
+            </div>
+            <p>Instead you'll need to provide us with a Council tax Student Certificate from your admissions/student services department.</p>
+            <p>You can hand this in to a <a href="#">One Stop Centre</a> or post it to:</p>
+            <div class="text-block">
+                <p>Leeds City Council 
+                <br>P.O. Box 60 
+                <br>Leeds 
+                <br>LS2 8JR</p>
+            </div>
+        </div>
+    </details>        
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for details and summary</span></h3>
+<pre class="language-markup">
+<code id="snippet-details-summary" class="line-numbers language-markup">&lt;details>
+    &lt;summary>&lt;!-- Title here-->&lt;/summary>
+    &lt;div class="panel panel-border">        
+        &lt;!-- Dropdown contents here -->
+    &lt;/div>
+&lt;/details></code>
+</pre>
+    <button class="clipboard" data-clipboard-target="#snippet-details-summary">
+        Copy <span class="sr-only">HTML snippet for details and summary</span>
+    </button>
+</div>
+
+{% endblock %}
+
+{% block additional_page_scripts %}
+{% endblock %}

@@ -14010,6 +14010,47 @@ aside.col-md-4 {
 .lcc-tree-controls {
   margin-top: 15px; }
 
+details {
+  margin: .25em 0 1em; }
+  details summary {
+    padding: 3px 0;
+    margin: 0;
+    color: #007299; }
+    details summary span {
+      border-bottom: 1px solid rgba(0, 114, 153, 0.3);
+      padding-left: 15px;
+      position: relative;
+      cursor: pointer; }
+      details summary span:before {
+        font-family: FontAwesome;
+        content: "\f0da";
+        position: absolute;
+        left: 0;
+        color: #007299;
+        top: 5px;
+        font-size: 14px; }
+    details summary::-webkit-details-marker {
+      display: none; }
+    details summary:focus {
+      outline: none; }
+      details summary:focus span {
+        background: #FFBF47;
+        outline: 4px solid #FFBF47;
+        color: #212224;
+        border-bottom: 1px solid transparent; }
+  details[open] summary span:before {
+    content: "\f0d7"; }
+  details .panel * {
+    margin: 15px 0 0;
+    max-width: 35em; }
+  details .panel *:first-child {
+    margin-top: 0 !important; }
+  details .panel *:last-child {
+    margin-bottom: 0 !important; }
+
+summary:before {
+  display: none; }
+
 html {
   background-color: #007299; }
 
