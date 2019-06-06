@@ -28,7 +28,7 @@
 <div class="example">
     <span class="example-title">Example</span>
     
-    <h2>Getting rid of unwanted items</h2>
+    <h2>Direct a user to the relevent Council Tax form</h2>
     <div class="lcc-tree-container"></div>
 </div>
 
@@ -95,34 +95,91 @@
 
 {% block additional_page_scripts %}
 <script type="text/javascript">
-    var bookacollection = '<h3>Book a collection</h3><p>If you are unable to get rid of your items in the above ways and you are prepared to wait for up to 3 weeks, we offer a limited service to remove items from homes. This will be chargeable at a subsidised rate of £20.00.</p><p>You can find out more information about this service on our <a href="/residents/bins-and-recycling/book-an-unwanted-items-collection">Book a collection page</a>.</p><p>If a collection is not made on your appointment date then please leave the item(s) outside for a further 48 hours. Please ensure that your item/s are left in the exact location given during your booking, and that you have followed the rules for collection.</p>'
-                        
     var data = {
-        message: '<h3>Is your item classed as garden waste?</h3>',
+        message: '<h3>Do you want to tell us about a change?</h3>',
         decisions: [
                 {
                     answer: 'Yes',
-                    message: '<h3>Garden Waste</h3><p>If you are requiring a garden waste collection and do not have access to a brown bin, please visit our <a href="#">Garden waste page</a>. This page contains guidance on booking a collection and the terms and conditions of collections.</p>'                
-                },
-                {
-                    answer: 'No',
-                    message: '<h3>Are you able to donate your item to charity?</h3>',
+                    message: '<h3>Do you want to tell us about a move?</h3>',
                     decisions: [                
                         {
-                            answer: "I'm not sure",
-                            message: '<h3>Donating to charity</h3><p>Items such as sofas, chairs and beds must carry fire safety labels. All electrical items should be free from rust, be reasonably clean, have intact seals and ideally be in full working order.</p><p>You can read more about donating to these charities in our \'Pass It On\' leaflet (PDF 1.5MB).</p><p>Most of the following organisations will collect re-usable items from your home for free:</p><h4><a href="#">Emmaus Leeds</a></h4><p>Accept furniture, electricals, white goods, bric a brac, clothes, bedding and more. Telephone 0113 248 4288.</p><h4><a href="#">Leeds and Moortown Furniture Store</a></h4><p>Accept sofas, beds, bedroom storage, tables, chairs and other living room furniture. In addition they take bedding, curtains, towels, pans and mirrors. They do not collect electrical appliances or white goods. Telephone 0113 273 9727.</p><h3>Still need to book a collection?</h3>',
+                            answer: "Yes",
+                            message: '<h3>Are you a student?</h3>',     
                             decisions: [                
                                 {
-                                    answer: 'Yes',
-                                    message: bookacollection                       
+                                    answer: "Yes",
+                                    message: '<h3>Council tax for students</h3><p>Link and content regarding student council tax to be confirmed.</p>',                     
+                                },
+                                {
+                                    answer: 'No',
+                                    message: '<h3>Where are you moving?</h3>',
+                                    decisions: [                
+                                        {
+                                            answer: "Out of Leeds",
+                                            message: '<h3>Are you moving out of a propery that will remain occupied?</h3>',  
+                                            decisions: [                
+                                                {
+                                                    answer: "Yes",
+                                                    message: '<h3>Moving out of a property that will remain occupied</h3><p>You will need to call our Council Tax Service to notify them you are moving (phone number here).</p><p>Make sure you are removed from any tenancy agreement as you may still be liable.</p><p>You will need to notify your new council that you are moving.</p>',                     
+                                                },
+                                                {
+                                                    answer: 'No',
+                                                    message: '<h3>Are you currently a home owner or renter?</h3>',
+                                                    decisions: [    
+                                                        {
+                                                            answer: 'Homeowner',
+                                                            message: '<h3>Homeowners moving out of Leeds</h3><p>You will be charged up until the date the sale completes.</p><p>You will need to notify your new council that you are moving.</p><p><a class="btn btn-primary" href="#" rel="external">Change of address form link</a></p>',
+                                                        },        
+                                                        {
+                                                            answer: "Renter",
+                                                            message: '<h3>Are you currently on a rolling tenancy?</h3>', 
+                                                            decisions: [                
+                                                                {
+                                                                    answer: "Yes",
+                                                                    message: '<h3>Moving out of Leeds, empty property, currently renting, is on a rolling tenancy</h3><p>If you are on a rolling tenancy you will be charged until you move.</p><p>You will need to notify your new council that you are moving.</p><p><a class="btn btn-primary" href="#" rel="external">Change of address form link</a></p>',                     
+                                                                },
+                                                                {
+                                                                    answer: 'No',
+                                                                    message: '<h3>Moving out of Leeds, empty property, currently renting, is not a rolling tenancy</h3><p>If you move out before your tenancy ends you will still be liable.</p><p>You will need to notify your new council that you are moving.</p><p><a class="btn btn-primary" href="#" rel="external">Change of address form link</a></p>',
+                                                                }
+                                                            ]                     
+                                                        }                                                        
+                                                    ] 
+                                                }
+                                            ]                   
+                                        },
+                                        {
+                                            answer: 'Within Leeds',
+                                            message: '<h3>Within Leeds branch to go here</h3>'
+                                        },
+                                        {
+                                            answer: 'Into Leeds',
+                                            message: '<h3>What will be your new status?</h3>',
+                                            decisions: [                
+                                                {
+                                                    answer: "Renter",
+                                                    message: '<h3>Moving into Leeds and renting</h3><p>You will be charged from when your tenancy starts.</p><p><a class="btn btn-primary" href="#" rel="external">Change of address form link</a></p>'                                                                      
+                                                },
+                                                {
+                                                    answer: 'Homeowner',
+                                                    message: '<h3>Moving into Leeds and will be a homeowner</h3><p>You will be charged from your completion date.</p><p>If your property is a new build you will need to check that this has been banded.<p><a href="#">Check your bands property</a></p><p><a class="btn btn-primary" href="#" rel="external">Change of address form link</a></p>',
+                                                }
+                                            ] 
+                                        }
+                                    ]
                                 }
-                            ]                      
+                            ]                   
                         },
                         {
                             answer: 'No',
-                            message: bookacollection
+                            message: '<h3>You do not want to tell us about a move</h3><p>Content to be confirmed</p>'
                         }
-                    ]
+                    ]            
+                },
+                {
+                    answer: 'No',
+                    message: '<h3>You do not want to tell us about a change</h3><p>Content to be confirmed</p>'
+                    
                 }            
             ]
     };
