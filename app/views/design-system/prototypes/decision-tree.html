@@ -17,14 +17,6 @@
     <p class="lead">This is a prototype and cannot be used on the leeds.gov.uk.</p>
 </div>
 
-<div class="text">
-    <ol class="list list-number">
-        <li>Add "prototype/decision-tree.js" underneath scripts in footer</li>
-        <li>Add HTML snippets to script editor</li>
-        <li>Add JavaScript snippets underneath javascript includes</li>
-    </ol>
-</div>
-
 <div class="example">
     <span class="example-title">Example</span>
     
@@ -41,53 +33,6 @@
 
     <button class="clipboard" data-clipboard-target="#snippet-decision-tree">
         Copy <span class="sr-only">HTML snippet for decision tree</span>
-    </button>
-</div>
-
-<div class="code-snippet">
-    <h3 class="heading-mark-up">JavaScript Snippet <span class="sr-only">for decision tree</span></h3>
-
-    <pre class="language-markup"><code id="snippet-decision-tree-js" class="line-numbers language-markup"><span style="color: #666666">&lt;</span>script type<span style="color: #666666">=</span><span style="color: #BA2121">&quot;text/javascript&quot;</span><span style="color: #666666">&gt;</span>
-        <span style="color: #008000; font-weight: bold">var</span> bookacollection <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;&lt;h3&gt;Book a collection&lt;/h3&gt;&lt;p&gt;If you are unable to get rid of your items in the above ways and you are prepared to wait for up to 3 weeks, we offer a limited service to remove items from homes. This will be chargeable at a subsidised rate of £20.00.&lt;/p&gt;&lt;p&gt;You can find out more information about this service on our &lt;a href=&quot;/residents/bins-and-recycling/book-an-unwanted-items-collection&quot;&gt;Book a collection page&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;If a collection is not made on your appointment date then please leave the item(s) outside for a further 48 hours. Please ensure that your item/s are left in the exact location given during your booking, and that you have followed the rules for collection.&lt;/p&gt;&#39;</span>
-                            
-        <span style="color: #008000; font-weight: bold">var</span> data <span style="color: #666666">=</span> {
-            message<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;&lt;h3&gt;Is your item classed as garden waste?&lt;/h3&gt;&#39;</span>,
-            decisions<span style="color: #666666">:</span> [
-                    {
-                        answer<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;Yes&#39;</span>,
-                        message<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;&lt;h3&gt;Garden Waste&lt;/h3&gt;&lt;p&gt;If you are requiring a garden waste collection and do not have access to a brown bin, please visit our &lt;a href=&quot;#&quot;&gt;Garden waste page&lt;/a&gt;. This page contains guidance on booking a collection and the terms and conditions of collections.&lt;/p&gt;&#39;</span>                
-                    },
-                    {
-                        answer<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;No&#39;</span>,
-                        message<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;&lt;h3&gt;Are you able to donate your item to charity?&lt;/h3&gt;&#39;</span>,
-                        decisions<span style="color: #666666">:</span> [                
-                            {
-                                answer<span style="color: #666666">:</span> <span style="color: #BA2121">&quot;I&#39;m not sure&quot;</span>,
-                                message<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;&lt;h3&gt;Donating to charity&lt;/h3&gt;&lt;p&gt;Items such as sofas, chairs and beds must carry fire safety labels. All electrical items should be free from rust, be reasonably clean, have intact seals and ideally be in full working order.&lt;/p&gt;&lt;p&gt;You can read more about donating to these charities in our \&#39;Pass It On\&#39; leaflet (PDF 1.5MB).&lt;/p&gt;&lt;p&gt;Most of the following organisations will collect re-usable items from your home for free:&lt;/p&gt;&lt;h4&gt;&lt;a href=&quot;#&quot;&gt;Emmaus Leeds&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Accept furniture, electricals, white goods, bric a brac, clothes, bedding and more. Telephone 0113 248 4288.&lt;/p&gt;&lt;h4&gt;&lt;a href=&quot;#&quot;&gt;Leeds and Moortown Furniture Store&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;Accept sofas, beds, bedroom storage, tables, chairs and other living room furniture. In addition they take bedding, curtains, towels, pans and mirrors. They do not collect electrical appliances or white goods. Telephone 0113 273 9727.&lt;/p&gt;&lt;h3&gt;Still need to book a collection?&lt;/h3&gt;&#39;</span>,
-                                decisions<span style="color: #666666">:</span> [                
-                                    {
-                                        answer<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;Yes&#39;</span>,
-                                        message<span style="color: #666666">:</span> bookacollection                       
-                                    }
-                                ]                      
-                            },
-                            {
-                                answer<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;No&#39;</span>,
-                                message<span style="color: #666666">:</span> bookacollection
-                            }
-                        ]
-                    }            
-                ]
-        };
-    
-        jQuery(<span style="color: #008000">document</span>).ready(<span style="color: #008000; font-weight: bold">function</span>() {
-            jQuery(<span style="color: #BA2121">&#39;.lcc-tree-container&#39;</span>).decisionTree({data<span style="color: #666666">:</span> data});
-        });
-<span style="color: #666666">&lt;</span><span>/script&gt;</span>
-    </code></pre>
-
-    <button class="clipboard" data-clipboard-target="#snippet-decision-tree-js">
-        Copy <span class="sr-only">JavaScript snippet for decision tree</span>
     </button>
 </div>
 
@@ -112,61 +57,112 @@
                                 },
                                 {
                                     answer: 'No',
-                                    message: '<h3>Where are you moving?</h3>',
-                                    decisions: [                
-                                        {
-                                            answer: "Out of Leeds",
-                                            message: '<h3>Are you moving out of a propery that will remain occupied?</h3>',  
-                                            decisions: [                
-                                                {
-                                                    answer: "Yes",
-                                                    message: '<h3>Moving out of a property that will remain occupied</h3><p>You will need to call our Council Tax Service to notify them you are moving (phone number here).</p><p>Make sure you are removed from any tenancy agreement as you may still be liable.</p><p>You will need to notify your new council that you are moving.</p>',                     
-                                                },
-                                                {
-                                                    answer: 'No',
-                                                    message: '<h3>Are you currently a home owner or renter?</h3>',
-                                                    decisions: [    
-                                                        {
-                                                            answer: 'Homeowner',
-                                                            message: '<h3>Homeowners moving out of Leeds</h3><p>You will be charged up until the date the sale completes.</p><p>You will need to notify your new council that you are moving.</p><p><a class="btn btn-primary" href="#" rel="external">Change of address form link</a></p>',
-                                                        },        
-                                                        {
-                                                            answer: "Renter",
-                                                            message: '<h3>Are you currently on a rolling tenancy?</h3>', 
-                                                            decisions: [                
-                                                                {
-                                                                    answer: "Yes",
-                                                                    message: '<h3>Moving out of Leeds, empty property, currently renting, is on a rolling tenancy</h3><p>If you are on a rolling tenancy you will be charged until you move.</p><p>You will need to notify your new council that you are moving.</p><p><a class="btn btn-primary" href="#" rel="external">Change of address form link</a></p>',                     
-                                                                },
-                                                                {
-                                                                    answer: 'No',
-                                                                    message: '<h3>Moving out of Leeds, empty property, currently renting, is not a rolling tenancy</h3><p>If you move out before your tenancy ends you will still be liable.</p><p>You will need to notify your new council that you are moving.</p><p><a class="btn btn-primary" href="#" rel="external">Change of address form link</a></p>',
-                                                                }
-                                                            ]                     
-                                                        }                                                        
-                                                    ] 
-                                                }
-                                            ]                   
-                                        },
-                                        {
-                                            answer: 'Within Leeds',
-                                            message: '<h3>Within Leeds branch to go here</h3>'
-                                        },
-                                        {
-                                            answer: 'Into Leeds',
-                                            message: '<h3>What will be your new status?</h3>',
-                                            decisions: [                
-                                                {
-                                                    answer: "Renter",
-                                                    message: '<h3>Moving into Leeds and renting</h3><p>You will be charged from when your tenancy starts.</p><p><a class="btn btn-primary" href="#" rel="external">Change of address form link</a></p>'                                                                      
-                                                },
-                                                {
-                                                    answer: 'Homeowner',
-                                                    message: '<h3>Moving into Leeds and will be a homeowner</h3><p>You will be charged from your completion date.</p><p>If your property is a new build you will need to check that this has been banded.<p><a href="#">Check your bands property</a></p><p><a class="btn btn-primary" href="#" rel="external">Change of address form link</a></p>',
-                                                }
-                                            ] 
-                                        }
-                                    ]
+									message: '<h3>Do you recieve benefits?</h3>',
+									decisions: [
+										{
+											answer: 'Yes',
+											message: '<h3>Council tax for people with benefits</h3><p>Content regarding council tax for people with benefits to be confirmed.</p>'
+										},
+										{
+											answer: "No",
+											message: '<h3>Where are you moving?</h3>',
+											decisions: [                
+												{
+													answer: "Out of Leeds",
+													message: '<h3>Are you moving out of a propery that will remain occupied?</h3>',  
+													decisions: [                
+														{
+															answer: "Yes",
+															message: '<h3>Moving out of a property that will remain occupied</h3><p>You will need to call our Council Tax Service to notify them you are moving (phone number to be confirmed).</p><p>Make sure you are removed from any tenancy agreement as you may still be liable.</p><p>You will need to notify your new council that you are moving.</p>',                     
+														},
+														{
+															answer: 'No',
+															message: '<h3>Are you currently a homeowner or renter?</h3>',
+															decisions: [    
+																{
+																	answer: 'Homeowner',
+																	message: '<h3>Homeowner moving out of Leeds</h3><p>You will be charged up until the date the sale completes.</p><p>You will need to notify your new council that you are moving.</p><p><a class="btn btn-primary" href="#" rel="external">Change of address form</a></p>',
+																},        
+																{
+																	answer: "Renter",
+																	message: '<h3>Are you currently on a rolling tenancy?</h3>', 
+																	decisions: [                
+																		{
+																			answer: "Yes",
+																			message: '<h3>Moving out of Leeds and still on a rolling tenancy</h3><p>If you are on a rolling tenancy you will be charged until you move.</p><p>You will need to notify your new council that you are moving.</p><p><a class="btn btn-primary" href="#" rel="external">Change of address form</a></p>',                     
+																		},
+																		{
+																			answer: 'No',
+																			message: '<h3>Moving out of Leeds and not on a rolling tenancy</h3><p>If you move out before your tenancy ends you will still be liable.</p><p>You will need to notify your new council that you are moving.</p><p><a class="btn btn-primary" href="#" rel="external">Change of address form</a></p>',
+																		}
+																	]                     
+																}                                                        
+															] 
+														}
+													]                   
+												},
+												{
+													answer: 'Within Leeds',
+													message: '<h3>Moving within Leeds</h3><p>You will get a closing bill for the address you are moving out of and an opening bill for your new address.</p><h3>Are you moving out of a property that will remain occupied?</h3>',
+													decisions: [
+														{
+															answer: 'Yes',
+															message: '<h3>Moving out of a property that will remain occupied</h3><p>You will need to call our Council Tax service to notify them you are moving.</p><p>Make sure you are removed from any tenancy agreement as you may still be liable (number to be confirmed).</p>',
+														},
+														{
+															answer: 'No',
+															message: '<h3>Are you moving into a property occupied by an existing bill payer?</h3>',
+															decisions: [
+																{
+																	answer: 'Yes',
+																	message: '<h3>Moving into a property occupied by an existing bill payer</h3><p>You will need to call our Council Tax service to notify them you are moving.</p><p>Make sure you are removed from any tenancy agreement as you may still be liable (number to be confirmed).</p>',
+																},
+																{
+																	answer: 'No',
+																	message: '<h3>Recently built properties</h3><p>If you are moving into a property that has recently been built you may need to check that this has been banded.</p> <a href="#" rel="external">Check your property band</a> <h3>Are you moving from a property you rented or owned?</h3>',
+																	decisions: [
+																		{
+																			answer: 'Rented',
+																			message: '<h3>Moving from a rented property</h3><p><a class="btn btn-primary" href="#" rel="external">Change of address form</a>'
+																		},
+																		{
+																			answer: 'Owned',
+																			message: '<h3>Have you sold the property you are leaving?</h3>',
+																			decisions: [
+																				{
+																					answer: 'Yes',
+																					message: '<h3>Sold the property you are leaving</h3><p><a rel="external" class="btn btn-primary" href="#">Change of address form</a>'
+																				},
+																				{
+																					answer: 'No',
+																					message: '<h3>Empty properties</h3><p>Content for empty property overview and phone number to call to be confirmed.</p>',
+																				}
+																			]
+																		}
+																	]
+																}
+															]
+														}
+
+													]
+												},
+												{
+													answer: 'Into Leeds',
+													message: '<h3>Will you be renting or owning your home in Leeds?</h3>',
+													decisions: [                
+														{
+															answer: "Renting",
+															message: '<h3>Moving into Leeds and renting</h3><p>You will be charged from when your tenancy starts.</p><p><a class="btn btn-primary" href="#" rel="external">Change of address form</a></p>'                                                                      
+														},
+														{
+															answer: 'Homeowner',
+															message: '<h3>Moving into Leeds and will be a homeowner</h3><p>You will be charged from your completion date.</p><p>If your property is a new build you will need to check that this has been banded.<p><a href="#" rel="external">Check your bands property</a></p><p><a class="btn btn-primary" href="#" rel="external">Change of address form</a></p>',
+														}
+													] 
+												}
+											]
+										}
+									]
                                 }
                             ]                   
                         },
