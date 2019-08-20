@@ -8053,10 +8053,11 @@ ul.menu {
   padding-left: 5px !important;
   min-height: 40px !important;
   line-height: 2em;
-  background: #F3F3F4 !important;
+  background: #FFFFFF !important;
   border: 1px solid #F3F3F4 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
+  color: #263238;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
