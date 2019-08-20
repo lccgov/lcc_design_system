@@ -6688,7 +6688,7 @@ input.form-control, .col-md-8 input#SearchBox, textarea.form-control, .col-md-8 
 
 .form-label {
   display: block;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 19px; }
   @media (min-width: 641px) {
     .form-label {
@@ -6817,7 +6817,8 @@ form legend {
       width: 65px; } }
   .form-date .form-group label {
     display: block;
-    padding-bottom: 2px; }
+    padding-bottom: 2px;
+    font-weight: 400; }
   .form-date .form-group input {
     width: 100% !important; }
 
