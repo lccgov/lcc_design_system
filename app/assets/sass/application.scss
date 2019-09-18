@@ -200,6 +200,7 @@ $phase-banner-stage-background:$blue;
 //@import 'content-assets'; //subsite only
 //@import 'content-link'; //subsite only
 @import 'description-list';
+@import 'details';
 @import 'doc-list';
 @import 'events-search-results';
 //@import 'events-webparts';
@@ -238,6 +239,7 @@ $phase-banner-stage-background:$blue;
 @import 'component_example';
 
 @import 'prototypes/decision-tree';
+@import 'prototypes/details';
 
 //site background
 html {
