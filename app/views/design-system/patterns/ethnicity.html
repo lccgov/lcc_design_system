@@ -1,0 +1,364 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "patterns" %} <!-- Section id var for main nav --> 
+{% set section_name = "Ask users for..." %} <!-- Section id var for main nav --> 
+{% set page_id = "ethnicity" %} <!-- Page id var for side nav --> 
+{% set page_title = "Ethnicity" %} <!-- Page title var for page header (H1) and page title -->  
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1><span>{{ section_name }}</span> {{ page_title }}</h1>
+</div>
+
+<!-- Page content goes here -->
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#answers-example">Answers example</a></li>
+        <li><a href="#error-handling">Error handling</a></li>
+    </ul>
+</div>
+
+<div id="answers-example" class="text">
+    <p id="example">Here’s an example of how to ask about ethnicity:</p>
+</div>
+
+<div class="example">
+    <span class="example-title">Example</span>
+
+    <h1 class="heading-large">What is your ethnicity?</h1>
+    <form>
+
+        <div class="form-group">
+            <span class="error-message">Choose an answer</span>
+
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="Asian or Asian British" aria-controls="radio-1" aria-expanded="false">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Asian or Asian British <span class="form-hint">Includes any Asian background, for example, Bangladeshi, Chinese, Indian, Pakistani</span></label>
+
+                <div class="panel panel-border-narrow js-hidden">
+                    <span class="error-message">Choose an answer</span>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-1" name="level1" value="Bangladeshi" aria-controls="radio-1" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Bangladeshi</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-2" name="level1" value="Chinese" aria-controls="radio-2" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-2">Chinese</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-3" name="level1" value="Indian" aria-controls="radio-3" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-3">Indian</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-4" name="level1" value="Pakistani" aria-controls="radio-4" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-4">Pakistani</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-4" name="level1" value="Another Asian background" aria-controls="radio-5" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-5">Another Asian background</label>
+                        <div class="panel panel-border-narrow js-hidden">
+                            <label class="form-label" for="another-asian-background">Your Asian background (optional)</label>
+                            <input class="form-control" name="another-asian-background" type="text" id="another-asian-background">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="Black, African, Black British or Caribbean" aria-controls="radio-1" aria-expanded="false">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Black, African, Black British or Caribbean <span class="form-hint">Includes any Black background</span></label>
+                
+                <div class="panel panel-border-narrow js-hidden">
+                    <div class="option--sub">
+                        <input type="radio" id="radio-1" name="level1" value="African" aria-controls="radio-1" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">African</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-2" name="level1" value="Caribbean" aria-controls="radio-2" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-2">Caribbean</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-3" name="level1" value="Another Black background" aria-controls="radio-3" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-3">Another Black background</label>
+                        <div class="panel panel-border-narrow js-hidden">
+                            <label class="form-label" for="another-black-background">Your Black background (optional)</label>
+                            <input class="form-control" name="another-black-background" type="text" id="another-black-background">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="Mixed or multiple ethnic groups" aria-controls="radio-1" aria-expanded="false">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Mixed or multiple ethnic groups <span class="form-hint">Includes any Mixed background</span></label>
+                
+                <div class="panel panel-border-narrow js-hidden">
+                    <div class="option--sub">
+                        <input type="radio" id="radio-1" name="level1" value="Asian and White" aria-controls="radio-1" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Asian and White</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-2" name="level1" value="Black African and White" aria-controls="radio-2" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-2">Black African and White</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-2" name="level1" value="Black Caribbean and White" aria-controls="radio-2" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-2">Black Caribbean and White</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-3" name="level1" value="Another Mixed background" aria-controls="radio-3" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-3">Another Mixed background</label>
+                        <div class="panel panel-border-narrow js-hidden">
+                            <label class="form-label" for="another-mixed-background">Your Mixed background (optional)</label>
+                            <input class="form-control" name="another-mixed-background" type="text" id="another-mixed-background">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="White" aria-controls="radio-1" aria-expanded="false">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">White <span class="form-hint">Includes any White background</span></label>
+                
+                <div class="panel panel-border-narrow js-hidden">
+                    <div class="option--sub">
+                        <input type="radio" id="radio-1" name="level1" value="British, English, Northern Irish, Scottish, or Welsh" aria-controls="radio-1" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">British, English, Northern Irish, Scottish, or Welsh</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-2" name="level1" value="Irish" aria-controls="radio-2" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-2">Irish</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-2" name="level1" value="Irish Traveller or Gypsy" aria-controls="radio-2" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-2">Irish Traveller or Gypsy</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-3" name="level1" value="Another White background" aria-controls="radio-3" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-3">Another White background</label>
+                        <div class="panel panel-border-narrow js-hidden">
+                            <label class="form-label" for="another-white-background">Your White background (optional)</label>
+                            <input class="form-control" name="another-white-background" type="text" id="another-white-background">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="Another ethnic group" aria-controls="radio-1" aria-expanded="false">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Another ethnic group <span class="form-hint">Includes any other ethnic group, for example, Arab</span></label>
+                
+                <div class="panel panel-border-narrow js-hidden">
+                    <div class="option--sub">
+                        <input type="radio" id="radio-1" name="level1" value="Arab" aria-controls="radio-1" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Arab</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-3" name="level1" value="Another ethnic background" aria-controls="radio-3" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-3">Another ethnic background</label>
+                        <div class="panel panel-border-narrow js-hidden">
+                            <label class="form-label" for="another-ethnic-background">Your ethnic background (optional)</label>
+                            <input class="form-control" name="another-ethnic-background" type="text" id="another-ethnic-background">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </form>
+    
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for manual address</span></h3>
+    <pre>
+        <code id="snippet-manual-address" class="line-numbers language-markup">
+            
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-address-lookup-step-one">
+        Copy <span class="sr-only">HTML snippet for </span>
+    </button>
+</div>
+
+
+<div id="error-handling" class="text">
+    <h2 class="heading-large">Error handling</h2>
+    <ul class="list list-bullet">
+        <li>add a class of <code>form-group-error</code> to <code>&lt;div class="form-group"></code></li>
+        <li>the error message <code>&lt;span class="error-message">Choose an answer&lt;/span></code> goes beneath the <code>&lt;legend></code></li>
+        <li>add a class of <code>panel-border-error</code> to <code>&lt;div class="panel"></code> for nested errors</li>
+        <li>the error message <code>&lt;span class="error-message">Choose an answer&lt;/span></code> goes beneath the <code>&lt;div class="panel"></code></li>
+    </ul>
+</div>
+
+<div class="example">
+    <span class="example-title">Example</span>
+
+    <h1 class="heading-large">What is your ethnicity?</h1>
+    <form>
+
+        <div class="form-group form-group-error">
+            <span class="error-message">Choose an answer</span>
+
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="Asian or Asian British" aria-controls="radio-1" aria-expanded="false">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Asian or Asian British <span class="form-hint">Includes any Asian background, for example, Bangladeshi, Chinese, Indian, Pakistani</span></label>
+
+                <div class="panel panel-border-narrow panel-border-error js-hidden">
+                    <span class="error-message">Choose an answer</span>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-1" name="level1" value="Bangladeshi" aria-controls="radio-1" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Bangladeshi</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-2" name="level1" value="Chinese" aria-controls="radio-2" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-2">Chinese</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-3" name="level1" value="Indian" aria-controls="radio-3" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-3">Indian</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-4" name="level1" value="Pakistani" aria-controls="radio-4" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-4">Pakistani</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-4" name="level1" value="Another Asian background" aria-controls="radio-5" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-5">Another Asian background</label>
+                        <div class="panel panel-border-narrow js-hidden">
+                            <label class="form-label" for="another-asian-background">Your Asian background (optional)</label>
+                            <input class="form-control" name="another-asian-background" type="text" id="another-asian-background">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="Black, African, Black British or Caribbean" aria-controls="radio-1" aria-expanded="false">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Black, African, Black British or Caribbean <span class="form-hint">Includes any Black background</span></label>
+                
+                <div class="panel panel-border-narrow js-hidden">
+                    <div class="option--sub">
+                        <input type="radio" id="radio-1" name="level1" value="African" aria-controls="radio-1" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">African</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-2" name="level1" value="Caribbean" aria-controls="radio-2" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-2">Caribbean</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-3" name="level1" value="Another Black background" aria-controls="radio-3" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-3">Another Black background</label>
+                        <div class="panel panel-border-narrow js-hidden">
+                            <label class="form-label" for="another-black-background">Your Black background (optional)</label>
+                            <input class="form-control" name="another-black-background" type="text" id="another-black-background">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="Mixed or multiple ethnic groups" aria-controls="radio-1" aria-expanded="false">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Mixed or multiple ethnic groups <span class="form-hint">Includes any Mixed background</span></label>
+                
+                <div class="panel panel-border-narrow js-hidden">
+                    <div class="option--sub">
+                        <input type="radio" id="radio-1" name="level1" value="Asian and White" aria-controls="radio-1" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Asian and White</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-2" name="level1" value="Black African and White" aria-controls="radio-2" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-2">Black African and White</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-2" name="level1" value="Black Caribbean and White" aria-controls="radio-2" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-2">Black Caribbean and White</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-3" name="level1" value="Another Mixed background" aria-controls="radio-3" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-3">Another Mixed background</label>
+                        <div class="panel panel-border-narrow js-hidden">
+                            <label class="form-label" for="another-mixed-background">Your Mixed background (optional)</label>
+                            <input class="form-control" name="another-mixed-background" type="text" id="another-mixed-background">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="White" aria-controls="radio-1" aria-expanded="false">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">White <span class="form-hint">Includes any White background</span></label>
+                
+                <div class="panel panel-border-narrow js-hidden">
+                    <div class="option--sub">
+                        <input type="radio" id="radio-1" name="level1" value="British, English, Northern Irish, Scottish, or Welsh" aria-controls="radio-1" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">British, English, Northern Irish, Scottish, or Welsh</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-2" name="level1" value="Irish" aria-controls="radio-2" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-2">Irish</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-2" name="level1" value="Irish Traveller or Gypsy" aria-controls="radio-2" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-2">Irish Traveller or Gypsy</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-3" name="level1" value="Another White background" aria-controls="radio-3" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-3">Another White background</label>
+                        <div class="panel panel-border-narrow js-hidden">
+                            <label class="form-label" for="another-white-background">Your White background (optional)</label>
+                            <input class="form-control" name="another-white-background" type="text" id="another-white-background">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="Another ethnic group" aria-controls="radio-1" aria-expanded="false">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Another ethnic group <span class="form-hint">Includes any other ethnic group, for example, Arab</span></label>
+                
+                <div class="panel panel-border-narrow js-hidden">
+                    <div class="option--sub">
+                        <input type="radio" id="radio-1" name="level1" value="Arab" aria-controls="radio-1" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Arab</label>
+                    </div>
+                    <div class="option--sub">
+                        <input type="radio" id="radio-3" name="level1" value="Another ethnic background" aria-controls="radio-3" aria-expanded="false">
+                        <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-3">Another ethnic background</label>
+                        <div class="panel panel-border-narrow js-hidden">
+                            <label class="form-label" for="another-ethnic-background">Your ethnic background (optional)</label>
+                            <input class="form-control" name="another-ethnic-background" type="text" id="another-ethnic-background">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </form>
+    
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for manual address</span></h3>
+    <pre>
+        <code id="snippet-manual-address" class="line-numbers language-markup">
+            
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-address-lookup-step-one">
+        Copy <span class="sr-only">HTML snippet for </span>
+    </button>
+</div>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+@mixin sr-only() { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+
+form {
+    &.address {
+        .mobileEnabled { margin-bottom:0;
+            @media only screen and (min-width: 980px) {
+                @include sr-only();
+            }
+        }
+        input {
+            &.form-control {width:70%;}
+            &[type="text"] {width:90% !important;}
+        }
+        .form-date .form-group {
+            margin-top:0;
+        }
+    }
+    &.disabledInput {
+        .form-group {margin-bottom:0; margin-top:0; margin-right:0;}
+        input { padding:0 !important;
+            &[disabled] {border:0 !important;}
+        }
+    }
+}
+
+.address {
+    &__group {
+        @media only screen and (min-width: 980px) {float:left; width:calc(100% / 3); }
+        @media only screen and (min-width: 1340px) {width:calc(100% / 4); }
+        &--full { width:100%;
+            @media only screen and (min-width: 1340px) {width:calc(100% / 4); }
+        }
+    }
+    &__headings { display:none;
+        @media only screen and (min-width: 980px) {display:block;}
+        h3 {
+            @media only screen and (min-width: 980px) {float:left; width:calc(100% / 3); }
+            @media only screen and (min-width: 1340px) {width:calc(100% / 4); }
+        }
+    }
+}

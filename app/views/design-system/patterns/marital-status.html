@@ -1,0 +1,77 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "patterns" %} <!-- Section id var for main nav --> 
+{% set section_name = "Ask users for..." %} <!-- Section id var for main nav --> 
+{% set page_id = "marital-status" %} <!-- Page id var for side nav --> 
+{% set page_title = "Marital Status" %} <!-- Page title var for page header (H1) and page title -->  
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1><span>{{ section_name }}</span> {{ page_title }}</h1>
+</div>
+
+<!-- Page content goes here -->
+<div id="answers-example" class="text">
+    <p id="example">Here’s an example of how to ask about marital status:</p>
+</div>
+
+<div class="example">
+    <span class="example-title">Example</span>
+
+    <h1 class="heading-large">What is your marital status?</h1>
+    <form>
+
+        <div class="form-group">
+            <span class="error-message">Choose an answer</span>
+
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="Single" aria-controls="radio-1" aria-expanded="false">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Single</label>
+            </div>
+
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="Married" aria-controls="radio-1" aria-expanded="false">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Married </label>
+            </div>
+
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="Widowed" aria-controls="radio-1" aria-expanded="false">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Widowed</label>
+            </div>
+    
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="Separated" aria-controls="radio-1" aria-expanded="false">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Separated</label>
+            </div>
+    
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="Divorced" aria-controls="radio-1" aria-expanded="false">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Divorced</label>
+            </div>
+
+
+        </div>
+
+    </form>
+    
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for manual address</span></h3>
+    <pre>
+        <code id="snippet-manual-address" class="line-numbers language-markup">
+            
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-address-lookup-step-one">
+        Copy <span class="sr-only">HTML snippet for </span>
+    </button>
+</div>
+
+{% endblock %}
