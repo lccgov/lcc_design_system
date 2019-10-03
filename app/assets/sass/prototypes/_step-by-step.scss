@@ -1,0 +1,226 @@
+.stepped-list {
+  padding-left: 0 !important;
+  margin-left: 0;
+  counter-reset: steps;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 0;
+    height: 100%;
+    border-left: solid 2px #b1b4b6;
+    background: #fff;
+    left: 0;
+    margin-left: 14px;
+    top: 0;    
+    margin-top: 15px;
+    height: calc(100% - 15px);
+    @media (min-width: 641px) {
+      border-width: 3px;
+      margin-left: 18px;
+    }
+  }
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: 6;
+        bottom: 0;
+        left: 8px;
+        width: 14px;
+        height: 0;
+        border-bottom: solid 2px #b1b4b6;
+        @media (min-width: 641px) {
+            border-width: 3px;
+            left: 11px;
+            width: 16px;
+        }
+    }
+    [open] > summary::before {
+        counter-increment: steps;
+        content: counter(steps, decimal); 
+    }
+  
+}
+
+.stepped-list__list-item {
+  position: relative;     
+  list-style: none;
+  margin-bottom: 0 !important;
+  &:last-child {
+    .stepped-list__title {
+      border-bottom: 2px solid #eeeeee;
+    }
+  }
+}
+
+.stepped-list__details-summary {
+  padding-left: 45px;
+  cursor: pointer;
+  position: relative;
+  @media (min-width: 641px) { 
+    padding-left: 60px;
+  }
+  &::-webkit-details-marker {
+      display: none;
+  }
+  &:before {
+    counter-increment: steps;
+    content: counter(steps, decimal); 
+    position: absolute;
+    left: 0px;
+    z-index: 1000;
+    border: 2px solid #b1b4b6;
+    border-radius: 50%;
+    background: white;
+    top: 15px;
+    height: 30px;
+    width: 30px;
+    text-align: center;   
+    font-weight: 600;
+    line-height: 25px;
+    font-size: 16px;
+    @media (min-width: 641px) {
+        border-width: 3px;
+        height: 40px;
+        width: 40px;
+        line-height: 0;   
+        font-size: 19px;
+        padding: 17px 0;
+    }
+  }  
+  &:hover {
+    color: #007299;
+    .stepped-list__title-span {
+      color: #007299;
+    }
+  }
+  &:focus {
+    outline:none; 
+    .stepped-list__title-span {
+        background: #FFBF47;
+        &:after {
+          color: #263238;
+          text-decoration: underline;
+        }
+     }
+    &:hover {
+      .stepped-list__title-span {
+          color: #263238;
+      }
+    }
+  }  
+}
+
+.stepped-list__title {
+  display: block !important;
+  padding: 15px 0 !important;
+  margin: 0 !important;
+  border-top: 2px solid #eeeeee;
+  font-size: 19px;
+  @media (min-width: 641px) {
+    padding: 30px 0;
+    font-size: 24px;
+  }
+  &:hover {
+    .stepped-list__title-span {
+      &:after {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.stepped-list__title-span {
+  display: block;
+  &:after {
+    content: "Show";
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    color: #007299;
+    margin-top:10px;
+  }
+}
+
+.stepped-list__details[open] {
+  .stepped-list__title-span {
+    &:after {
+      content: "Hide";
+    }    
+  }
+  .stepped-list__title {
+      border-bottom: 0 !important;
+   }
+}
+
+.stepped-list__list-item:last-child {
+  .stepped-list__details-content {
+    border-bottom: 2px solid #eeeeee;
+  }
+}
+
+.stepped-list__details-content {
+  margin-left: 45px;
+  @media (min-width: 641px) { 
+    margin-left: 60px;
+  }
+  > :first-child {
+    margin-top: 0;
+  }
+}
+
+.stepped-list-small {
+  .stepped-list__title-span {
+    font-size: 18px;
+    &:after {
+        margin-top: 5px;
+    }
+  }
+  p, li, a {
+    font-size: 16px;
+  }
+  &:before {
+      margin-left: 12px;
+      @media (min-width: 641px) { 
+        border-width: 2px;
+      }
+  }
+  &:after {
+      left: 6px;
+      @media (min-width: 641px) { 
+        border-width: 2px;
+      }
+  }
+    .stepped-list__title {
+        padding: 15px 0 !important;
+        @media (min-width: 641px) { 
+            padding: 15px 0 !important;   
+        }
+    }
+    .stepped-list__details-summary {
+        @media (min-width: 641px) { 
+            padding-left: 45px;
+        }
+        &:before {      
+            top: 15px;
+            height: 25px;
+            width: 25px;
+            text-align: center;
+            font-weight: 600;
+            line-height: 0;
+            font-size: 14px;
+            @media (min-width: 641px) { 
+                top: 15px;
+                border-width: 2px;                
+                line-height: 0;
+                padding: 10px 0px;
+            }
+        }
+    }
+    .stepped-list__details-content {
+        @media (min-width: 641px) { 
+            margin-left: 45px;
+        }
+    }
+}
