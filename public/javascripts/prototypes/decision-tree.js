@@ -127,153 +127,209 @@
 })( jQuery );
 
 // Council tax - Changes to circumstances
+
 var data = {
-    message: '<h3>Do you want to tell us about a change?</h3>',
+    message: '<h3>What type of a change do you want to tell us about?</h3>',
     decisions: [
         {
-            answer: 'Yes',
-            message: '<h3>Do you want to tell us about a move?</h3>',
+            answer: 'Address',
+            message: '<h3>Are you a student?</h3>',
             decisions: [                
                 {
-                    answer: "Yes",
-                    message: '<h3>Are you a student?</h3>',     
+                    answer: 'Yes',
+                    message: '<h3>Changes to your student status</h3><p>Tell us about <a href="/council-tax/discounts-and-exemptions/students">changes to your student status</a>.</p>',                                
+                },
+                {
+                    answer: 'No',
+                    message: '<h3>Do you recieve benefits?</h3>',   
                     decisions: [                
                         {
-                            answer: "Yes",
-                            message: '<h3>Council tax for students</h3><p>Visit our <a href="/council-tax/discounts-and-exemptions/students">Student discounts and exemptions</a> page to apply for student discount or to let us know about a change to your student status.</p>',                     
+                            answer: 'Yes',
+                            message: '<h3>Changes to your benefits</h3><p>Tell us about <a href="/residents/council-tax-and-benefits/changes-in-circumstances">changes to your benefits</a>.</p>',                    
                         },
                         {
                             answer: 'No',
-                            message: '<h3>Do you recieve benefits?</h3>',
-                            decisions: [
+                            message: '<h3>Are you paying council tax for the first time?</h3>',     
+                            decisions: [                
                                 {
                                     answer: 'Yes',
-                                    message: '<h3>Council tax for people with benefits</h3><p>If you receive Housing Benefit, Council Tax Support or Free School meals you must tell us about any changes in your family\'s circumstances by visiting the <a href="/residents/council-tax-and-benefits/changes-in-circumstances">Council Tax Benefits Changes in Circumstances</a> page.</p>'
-                                },
-                                {
-                                    answer: "No",
-                                    message: '<h3>Where are you moving?</h3>',
+                                    message: '<h3>Will you be renting or owning your new home in Leeds?</h3>',                    
                                     decisions: [                
                                         {
-                                            answer: "Out of Leeds",
-                                            message: '<h3>Are you moving out of a propery that will remain occupied?</h3>',  
+                                            answer: 'Rent',
+                                            message: '<h3>Renting your home in Leeds</h3><p>You will need to pay council tax from when your tenancy starts.</p><p><a target="_blank" rel="external" href="https://youraccount.leeds.gov.uk/publicaccesslive/selfservice/services/changeofaddress/form.htm?_flowId=services%2Fchangeofaddress%2Fform&_flowExecutionKey=e1s1">Tell us about a change of address <span class="sr-only">(External link opens in a new window)</span></a>',
+                                        },
+                                        {
+                                            answer: 'Own',
+                                            message: '<h3>Owning your home in Leeds</h3><p>You will need to pay council tax from your completion date.</p><details class="details"><summary>New Build Properties</summary><div class="details__container"><p>If your property is a new build check that it has been banded before completing the change of address form.</p><p>If it hasn\'t been banded call our Council Tax service to tell us you are moving.</p><div class="text-block"><p>0113 222 4404 <br><span class="font-xsmall">(Monday to Friday 9am to 5pm)</span></p></div></div></details><ul class="list list-nav"><li><a target="_blank" rel="external" href="https://youraccount.leeds.gov.uk/publicaccesslive/selfservice/services/changeofaddress/form.htm?_flowId=services%2Fchangeofaddress%2Fform&_flowExecutionKey=e1s1">Tell us about a change of address <span class="sr-only">(External link opens in a new window)</span></a></li><li><a href="/council-tax/bands-and-charges">Check your property band</a></li></ul>',           
+                                        },
+                                    ]
+                                },
+                                {
+                                    answer: 'No',
+                                    message: '<h3>Where are you moving?</h3>',   
+                                    decisions: [                
+                                        {
+                                            answer: 'Into Leeds',
+                                            message: '<h3>Will you be renting or owning your new home in Leeds?</h3>',                    
                                             decisions: [                
                                                 {
-                                                    answer: "Yes",
-                                                    message: '<h3>Moving out of a property that will remain occupied</h3><p>You will need to call our Council Tax Service to notify them you are moving (phone number to be confirmed).</p><p>Make sure you are removed from any tenancy agreement as you may still be liable.</p><p>You will need to notify your new council that you are moving.</p>',                     
+                                                    answer: 'Rent',
+                                                    message: '<h3>Renting your home in Leeds</h3><p>You will need to pay council tax from when your tenancy starts.</p><p><a target="_blank" rel="external" href="https://youraccount.leeds.gov.uk/publicaccesslive/selfservice/services/changeofaddress/form.htm?_flowId=services%2Fchangeofaddress%2Fform&_flowExecutionKey=e1s1">Tell us about a change of address <span class="sr-only">(External link opens in a new window)</span></a>',
+                                                },
+                                                {
+                                                    answer: 'Own',
+                                                    message: '<h3>Owning your home in Leeds</h3><p>You will need to pay council tax from your completion date.</p><details class="details"><summary>New Build Properties</summary><div class="details__container"><p>If your property is a new build check that it has been banded before completing the change of address form.</p><p>If it hasn\'t been banded call our Council Tax service to tell us you are moving.</p><div class="text-block"><p>0113 222 4404 <br><span class="font-xsmall">(Monday to Friday 9am to 5pm)</span></p></div></div></details><ul class="list list-nav"><li><a target="_blank" rel="external" href="https://youraccount.leeds.gov.uk/publicaccesslive/selfservice/services/changeofaddress/form.htm?_flowId=services%2Fchangeofaddress%2Fform&_flowExecutionKey=e1s1">Tell us about a change of address <span class="sr-only">(External link opens in a new window)</span></a></li><li><a href="/council-tax/bands-and-charges">Check your property band</a></li></ul>',           
+                                                },
+                                            ]
+                                        },
+                                        {
+                                            answer: 'Out of Leeds',
+                                            message: '<h3>Tell us about the property you are leaving. Will anyone that you have been living with be staying there?</h3><p>For example housemates, family or friends.</p>',           
+                                            decisions: [                
+                                                {
+                                                    answer: 'Yes',
+                                                    message: '<h3>Leaving a property that will remain occupied</h3><p>We need to talk to you about this change. Call our Council Tax service to tell us you are moving.</p> <div class="text-block"><p>0113 222 4404 <br><span class="font-xsmall">(Monday to Friday, 9am to 5pm)</span></p></div>',
                                                 },
                                                 {
                                                     answer: 'No',
-                                                    message: '<h3>Are you currently a homeowner or renter?</h3>',
-                                                    decisions: [    
+                                                    message: '<h3>Are you moving from a property you owned or rented?</h3>',     
+                                                    decisions: [                
                                                         {
-                                                            answer: 'Homeowner',
-                                                            message: '<h3>Homeowner moving out of Leeds</h3><p>You will be charged up until the date the sale completes.</p><p>You will need to notify your new council that you are moving.</p><p><h3>Have you sold the property you are leaving?</h3>',
-                                                                decisions: [
-                                                                    {
-                                                                        answer: 'Yes',
-                                                                        message: '<h3>Sold the property you are leaving</h3><p><a rel="external" class="btn btn-primary" href="#">Change of address form</a>'
-                                                                    },
-                                                                    {
-                                                                        answer: 'No',
-                                                                        message: '<h3>Empty properties</h3><p>You will need to notify us if your property becomes empty by visiting <a href="/council-tax/discounts-and-exemptions/empty-properties">Empty properties</a>.</p>',
-                                                                    }
-                                                                ]
-                                                        },        
+                                                            answer: 'Rented',
+                                                            message: '<h3>Moving from a property you rented</h3><p>If you move before your tenancy ends you will still need to pay council tax until either your tenancy ends or a new tennant moves in.</p><p>If you are on a rolling tenancy you will need to pay council tax until you move.</p><a rel="external" href="https://youraccount.leeds.gov.uk/publicaccesslive/selfservice/services/changeofaddress/coastart.htm">Tell us about a change of address <span class="sr-only">(External link opens in a new window)</span></a>',
+                                                        },
                                                         {
-                                                            answer: "Renter",
-                                                            message: '<h3>Are you currently on a rolling tenancy?</h3>', 
+                                                            answer: 'Owned',
+                                                            message: '<h3>Have you sold the property you are leaving?</h3>',       
                                                             decisions: [                
                                                                 {
-                                                                    answer: "Yes",
-                                                                    message: '<h3>Moving out of Leeds and still on a rolling tenancy</h3><p>If you are on a rolling tenancy you will be charged until you move.</p><p>You will need to notify your new council that you are moving.</p><p><a class="btn btn-primary" href="#" rel="external">Change of address form</a></p>',                     
+                                                                    answer: 'Sold',
+                                                                    message: '<h3>Sold property you are leaving</h3><p>You will need to pay council tax until your completion date.</p><p>You will need to notify your new council that you are moving.</p><a rel="external" href="https://youraccount.leeds.gov.uk/publicaccesslive/selfservice/services/changeofaddress/coastart.htm">Tell us about a change of address <span class="sr-only">(External link opens in a new window)</span></a>',
                                                                 },
                                                                 {
-                                                                    answer: 'No',
-                                                                    message: '<h3>Moving out of Leeds and not on a rolling tenancy</h3><p>If you move out before your tenancy ends you will still be liable.</p><p>You will need to notify your new council that you are moving.</p><p><a class="btn btn-primary" href="#" rel="external">Change of address form</a></p>',
-                                                                }
-                                                            ]                     
-                                                        }                                                        
-                                                    ] 
-                                                }
-                                            ]                   
+                                                                    answer: 'Letting',
+                                                                    message: '<h3>Letting the property you are leaving</h3><p>You will need to pay the council tax until your tenant moves in.</p><a rel="external" href="https://youraccount.leeds.gov.uk/publicaccesslive/selfservice/services/changeofaddress/coastart.htm">Tell us about a change of address <span class="sr-only">(External link opens in a new window)</span></a>',           
+                                                                },
+                                                                {
+                                                                    answer: 'Unoccupied',
+                                                                    message: '<h3>Leaving a propery unoccupied</h3><p>If you are leaving a property that you own and nobody else is moving in you will still need to pay council tax for it.</p><p>In some cases <a href="/council-tax/discounts-and-exemptions">exceptions may apply</a>.</p> We need to talk to you about this change. Call our Council Tax service to tell us you are moving.</p> <div class="text-block"><p>0113 222 4404 <br><span class="font-xsmall">(Monday to Friday, 9am to 5pm)</span></div>',           
+                                                                },
+                                                            ]      
+                                                        },
+                                                    ]      
+                                                },
+                                            ]
                                         },
                                         {
                                             answer: 'Within Leeds',
-                                            message: '<h3>Moving within Leeds</h3><p>You will get a closing bill for the address you are moving out of and an opening bill for your new address.</p><h3>Are you moving out of a property that will remain occupied?</h3>',
-                                            decisions: [
+                                            message: '<h3>Moving within Leeds</h3><p>You may recieve a closing bill for the address you are moving out of and an opening bill for your new address.</p><h3>Tell us about the property you are leaving. Will anyone that you have been living with be staying there?</h3><p>For example housemates, family or friends.</p>',           
+                                            decisions: [                
                                                 {
                                                     answer: 'Yes',
-                                                    message: '<h3>Moving out of a property that will remain occupied</h3><p>You will need to call our Council Tax service to notify them you are moving.</p><p>Make sure you are removed from any tenancy agreement as you may still be liable (number to be confirmed).</p>',
+                                                    message: '<h3>Leaving a property occupied</h3><p>We need to talk to you about this change. Call our Council Tax service to tell us you are moving.</p><div class="text-block"><p>0113 222 4404<br> <span class="font-xsmall">(Monday to Friday, 9am to 5pm)</span></p></div>',
                                                 },
                                                 {
                                                     answer: 'No',
-                                                    message: '<h3>Are you moving into a property occupied by an existing bill payer?</h3>',
+                                                    message: '<h3>Tell us about the property you are moving in to. Will you be living with someone who is already paying council tax for the address?</h3>',
                                                     decisions: [
                                                         {
                                                             answer: 'Yes',
-                                                            message: '<h3>Moving into a property occupied by an existing bill payer</h3><p>You will need to call our Council Tax service to notify them you are moving.</p><p>Make sure you are removed from any tenancy agreement as you may still be liable (number to be confirmed).</p>',
+                                                            message: '<h3>Moving in with somebody who already pays council tax</h3><p>We need to talk to you about this change. Call our Council Tax service to tell us you are moving.</p><div class="text-block"><p>0113 222 4404<br> <span class="font-xsmall">(Monday to Friday, 9am to 5pm)</span></p></div>',
                                                         },
                                                         {
                                                             answer: 'No',
-                                                            message: '<h3>Recently built properties</h3><p>If you are moving into a property that has recently been built you may need to check that this has been banded.</p> <a href="https://www.leeds.gov.uk/council-tax/bands-and-charges" rel="external">Check your property band</a> <h3>Are you moving from a property you rented or owned?</h3>',
+                                                            message: '<h3>Are you moving from a property you rented or owned?</h3>',
                                                             decisions: [
-                                                                {
-                                                                    answer: 'Rented',
-                                                                    message: '<h3>Moving from a rented property</h3><p><a class="btn btn-primary" href="#" rel="external">Change of address form</a>'
-                                                                },
                                                                 {
                                                                     answer: 'Owned',
                                                                     message: '<h3>Have you sold the property you are leaving?</h3>',
                                                                     decisions: [
                                                                         {
-                                                                            answer: 'Yes',
-                                                                            message: '<h3>Sold the property you are leaving</h3><p><a rel="external" class="btn btn-primary" href="#">Change of address form</a>'
+                                                                            answer: 'Sold',
+                                                                            message: '<h3>Will you be renting or owning your new home in Leeds?</h3>',
+                                                                            decisions: [
+                                                                                {
+                                                                                    answer: 'Rent',
+                                                                                    message: '<h3>Moving into a rented property</h3><p>You will need to pay council tax from when your tenancy starts.</p><a href="https://youraccount.leeds.gov.uk/publicaccesslive/selfservice/services/changeofaddress/coastart.htm" rel="external">Tell us about a change of address <span class="sr-only">(External link)</span></a>',
+                                                                                },
+                                                                                {
+                                                                                    answer: 'Own',
+                                                                                    message: '<h3>Moving into a property you own</h3><p>You will need to pay council tax from your completion date</p><details class="details"><summary>New Build Properties</summary><div class="details__container"><p>If your property is a new build check that it has been banded before completing the change of address form.</p><p>If it hasn\'t been banded call our Council Tax service to tell us you are moving.</p><div class="text-block"><p>0113 222 4404 <br><span class="font-xsmall">(Monday to Friday, 9am to 5pm)</span></p></div></div></details><ul class="list list-nav"><li><a href="https://youraccount.leeds.gov.uk/publicaccesslive/selfservice/services/changeofaddress/coastart.htm" rel="external">Tell us about a change of address <span class="sr-only">(External link)</span></a></li><li><a href="/council-tax/bands-and-charges">Check your property band</a></li></ul>',
+                                                                                },
+                                                                            ]
                                                                         },
                                                                         {
-                                                                            answer: 'No',
-                                                                            message: '<h3>Empty properties</h3><p>You will need to notify if your property becomes empty by visiting <a href="/council-tax/discounts-and-exemptions/empty-properties">Empty properties</a>.</p>',
-                                                                        }
+                                                                            answer: 'Letting',
+                                                                            message: '<p>You will need to pay council tax until your tenant moves in.</p><h3>Will you be renting or owning your new home in Leeds?</h3>',
+                                                                            decisions: [
+                                                                                {
+                                                                                    answer: 'Rent',
+                                                                                    message: '<h3>Moving into a rented property</h3><p>You will need to pay council tax from when your tenancy starts.</p><a href="https://youraccount.leeds.gov.uk/publicaccesslive/selfservice/services/changeofaddress/coastart.htm" rel="external">Tell us about a change of address <span class="sr-only">(External link)</span></a>',
+                                                                                },
+                                                                                {
+                                                                                    answer: 'Own',
+                                                                                    message: '<h3>Moving into a property you own</h3><p>You will need to pay council tax from your completion date</p><details class="details"><summary>New Build Properties</summary><div class="details__container"><p>If your property is a new build check that it has been banded before completing the change of address form.</p><p>If it hasn\'t been banded call our Council Tax service to tell us you are moving.</p><div class="text-block"><p>0113 222 4404 <br><span class="font-xsmall">(Monday to Friday, 9am to 5pm)</span></p></div></div></details><ul class="list list-nav"><li><a href="https://youraccount.leeds.gov.uk/publicaccesslive/selfservice/services/changeofaddress/coastart.htm" rel="external">Tell us about a change of address <span class="sr-only">(External link)</span></a></li><li><a href="/council-tax/bands-and-charges">Check your property band</a></li></ul>',
+                                                                                },
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            answer: 'Unoccupied',
+                                                                            message: '<h3>Leaving a property unoccupied</h3><p>If you are leaving a property that you own and nobody else is moving in you will still need to pay council tax for it.</p><p>In some cases <a href="/council-tax/discounts-and-exemptions">exceptions may apply</a>.</p><p>We need to talk to you about this change. Call our Council Tax service to tell us you are moving.</p><div class="text-block"><p>0113 222 4404<br> <span class="font-xsmall">(Monday to Friday, 9am to 5pm)</span></p></div>',
+                                                                        },
                                                                     ]
-                                                                }
+                                                                },
+                                                                {
+                                                                    answer: 'Rented',
+                                                                    message: '<h3>Will you be renting or owning your new home in Leeds?</h3>',
+                                                                    decisions: [
+                                                                        {
+                                                                            answer: 'Rent',
+                                                                            message: '<h3>Moving into a rented property</h3><p>You will need to pay council tax from when your tenancy starts.</p><a href="https://youraccount.leeds.gov.uk/publicaccesslive/selfservice/services/changeofaddress/coastart.htm" rel="external">Tell us about a change of address <span class="sr-only">(External link)</span></a>',
+                                                                        },
+                                                                        {
+                                                                            answer: 'Own',
+                                                                            message: '<h3>Moving into a property you own</h3><p>You will need to pay council tax from your completion date</p><details class="details"><summary>New Build Properties</summary><div class="details__container"><p>If your property is a new build check that it has been banded before completing the change of address form.</p><p>If it hasn\'t been banded call our Council Tax service to tell us you are moving.</p><div class="text-block"><p>0113 222 4404 <br><span class="font-xsmall">(Monday to Friday, 9am to 5pm)</span></p></div></div></details><ul class="list list-nav"><li><a href="https://youraccount.leeds.gov.uk/publicaccesslive/selfservice/services/changeofaddress/coastart.htm" rel="external">Tell us about a change of address <span class="sr-only">(External link)</span></a></li><li><a href="/council-tax/bands-and-charges">Check your property band</a></li></ul>',
+                                                                        },
+                                                                    ]
+                                                                },
                                                             ]
-                                                        }
+                                                        },
                                                     ]
-                                                }
-
-                                            ]
-                                        },
-                                        {
-                                            answer: 'Into Leeds',
-                                            message: '<h3>Will you be renting or owning your home in Leeds?</h3>',
-                                            decisions: [                
-                                                {
-                                                    answer: "Renting",
-                                                    message: '<h3>Moving into Leeds and renting</h3><p>You will be charged from when your tenancy starts.</p><p><a class="btn btn-primary" href="#" rel="external">Change of address form</a></p>'                                                                      
                                                 },
-                                                {
-                                                    answer: 'Homeowner',
-                                                    message: '<h3>Moving into Leeds and will be a homeowner</h3><p>You will be charged from your completion date.</p><p>If your property is a new build you will need to check that this has been banded.<p><a href="https://www.leeds.gov.uk/council-tax/bands-and-charges" rel="external">Check your bands property</a></p><p><a class="btn btn-primary" href="#" rel="external">Change of address form</a></p>',
-                                                }
-                                            ] 
+                                            ]
                                         }
-                                    ]
+                                    ]         
                                 }
-                            ]
+                            ]      
                         }
-                    ]                   
-                },
-                {
-                    answer: 'No',
-                    message: '<h3>Report a different change</h3><p>Visit our <a href="/council-tax/report-a-change">Report a change</a> page to amend a direct debit, tell us about a change of name or circumstance or report any other changes.</p>'
+                    ]        
                 }
             ]            
         },
         {
-            answer: 'No',
-            message: '<h3>Report a different change</h3><p>Visit our <a href="/council-tax/report-a-change">Report a change</a> page to amend a direct debit, tell us about a change of name or circumstance or report any other changes.</p>'
-            
-        }            
+            answer: 'Name',
+            message: '<h3>Change of name</h3><p>Tell us about <a href="/council-tax/report-a-change/change-of-name">changes to your name</a>.</p>',           
+        },
+        {
+            answer: 'Circumstances',
+            message: '<h3>Change of circumstances</h3>',
+            decisions: [
+                {
+                    answer: 'Student',
+                    message: '<h3>Changes to your student status</h3><p>Tell us about <a href="/council-tax/discounts-and-exemptions/students">changes to your student status</a>.</p>',                                
+                },
+                {
+                    answer: 'Benefits',
+                    message: '<h3>Changes to your benefits</h3><p>Tell us about <a href="/residents/council-tax-and-benefits/changes-in-circumstances">changes to your benefits</a>.</p>',                    
+                },
+                {
+                    answer: 'Other',
+                    message: '<h3>Tell us about a change</h3><p>If you wish to discuss anything else relating to a change in circumstances, for example if someone has died and left a property unoccupied, please call us.</p><div class="text-block"><p>0113 222 4404<br> <span class="font-xsmall">(Monday to Friday, 9am to 5pm)</span></p></div>',
+                }     
+                
+            ] 
+        }
     ]
 };
 

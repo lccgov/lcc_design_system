@@ -14225,6 +14225,9 @@ aside.col-md-4 {
 .lcc-tree {
   background: #E5F1F5;
   display: flex; }
+  .lcc-tree .text-block,
+  .lcc-tree .text-highlight {
+    border-color: #9bc9d9; }
 
 .lcc-tree-card {
   display: none;
