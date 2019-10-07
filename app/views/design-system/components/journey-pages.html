@@ -1,0 +1,120 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "journey-pages" %} <!-- Page id var for side nav --> 
+{% set page_title = "Journey pages" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+</div>
+
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#level1">Journey List</a></li>
+        <li><a href="#level2">Next / Prev</a></li>
+    </ul>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="level1">Journey List</h2>
+</div>
+
+
+<div class="example">
+    <span class="example-title">Example</span>
+    <aside class="part-navigation__container" role="complementary">
+        <nav class="part-navigation" role="navigation" aria-label="Pages in this guide"> 
+            <ol>
+                <li>Report a repair</li>
+                <li><a href="#">Emergency repairs</a></li>
+                <li><a href="#">Your appointment</a></li>
+            </ol>
+        </nav>
+    </aside>
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for Journey List</span></h3>
+    <pre>
+        <code id="snippet-hiddentext" class="line-numbers language-markup">
+            &lt;aside class="part-navigation__container" role="complementary">
+                &lt;nav class="part-navigation" role="navigation" aria-label="Pages in this guide"> 
+                    &lt;ol>
+                        &lt;li>Report a repair&lt;/li>
+                        &lt;li>&lt;a href="#">Emergency repairs&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">Your appointment&lt;/a>&lt;/li>
+                    &lt;/ol>
+                &lt;/nav>
+            &lt;/aside>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-hiddentext">
+        Copy <span class="sr-only">HTML snippet for Journey List</span>
+    </button>
+</div>
+
+<div class="text">
+    <h2 class="heading-large" id="level2">Next / Previous</h2>
+</div>
+
+
+<div class="example">
+    <span class="example-title">Example</span>
+    <nav class="pagination-nav" role="navigation" aria-label="Pagination">
+        <ul>
+            <li class="pagination-nav__previous-page">
+                <a href="#" rel="prev">
+                    <span class="pagination-nav__part-title">Previous</span>
+                    <span class="pagination-nav__label">Report a repair</span>
+                </a>
+            </li>
+            <li class="pagination-nav__next-page">
+                <a href="#" rel="next"> 
+                    <span class="pagination-nav__part-title">Next</span>
+                    <span class="pagination-nav__label">Your appointment</span>
+                </a>
+            </li>
+            <div style="clear: both;"></div>
+        </ul>
+    </nav>
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for Next / Previous</span></h3>
+    <pre>
+        <code id="snippet-hiddentext" class="line-numbers language-markup">
+            &lt;nav class="pagination-nav" role="navigation" aria-label="Pagination">
+                &lt;ul>
+                    &lt;li class="pagination-nav__previous-page">
+                        &lt;a href="#" rel="prev">
+                            &lt;span class="pagination-nav__part-title">Previous&lt;/span>
+                            &lt;span class="pagination-nav__label">Report a repair&lt;/span>
+                        &lt;/a>
+                    &lt;/li>
+                    &lt;li class="pagination-nav__next-page">
+                        &lt;a href="#" rel="next"> 
+                            &lt;span class="pagination-nav__part-title">Next&lt;/span>
+                            &lt;span class="pagination-nav__label">Your appointment&lt;/span>
+                        &lt;/a>
+                    &lt;/li>
+                    &lt;div style="clear: both;">&lt;/div>
+                &lt;/ul>
+            &lt;/nav>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-hiddentext">
+        Copy <span class="sr-only">HTML snippet for Next / Previous</span>
+    </button>
+</div>
+
+
+{% endblock %}
