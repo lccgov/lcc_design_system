@@ -1,6 +1,10 @@
 .lcc-tree {
     background: #E5F1F5;
     display: flex;
+    .text-block, 
+    .text-highlight {
+        border-color: #9bc9d9;
+    }
 }
 
 .lcc-tree-card {
