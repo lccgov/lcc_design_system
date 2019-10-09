@@ -24,8 +24,6 @@
 
 <div class="example">
     <span class="example-title">Example</span>
-
-    <!-- <h1 class="heading-large">What is your religion?</h1> -->
     <form>
 
         <div class="form-group">
@@ -71,7 +69,45 @@
     <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for manual address</span></h3>
     <pre>
         <code id="snippet-manual-address" class="line-numbers language-markup">
-            
+            &lt;form>
+
+                &lt;div class="form-group">
+                    &lt;label class="form-label" for="select-box">What is your religion?&lt;/label>
+                    &lt;select class="form-control" id="select-box" name="select-box">
+                        &lt;option value="" selected="selected" disabled="disabled">-- select one --&lt;/option>
+                        &lt;option value="African Traditional &amp; Diasporic">African Traditional &amp; Diasporic&lt;/option>
+                        &lt;option value="Agnostic">Agnostic&lt;/option>
+                        &lt;option value="Atheist">Atheist&lt;/option>
+                        &lt;option value="Baha'i">Baha'i&lt;/option>
+                        &lt;option value="Buddhism">Buddhism&lt;/option>
+                        &lt;option value="Cao Dai">Cao Dai&lt;/option>
+                        &lt;option value="Chinese traditional religion">Chinese traditional religion&lt;/option>
+                        &lt;option value="Christianity">Christianity&lt;/option>
+                        &lt;option value="Hinduism">Hinduism&lt;/option>
+                        &lt;option value="Islam">Islam&lt;/option>
+                        &lt;option value="Jainism">Jainism&lt;/option>
+                        &lt;option value="Juche">Juche&lt;/option>
+                        &lt;option value="Judaism">Judaism&lt;/option>
+                        &lt;option value="Neo-Paganism">Neo-Paganism&lt;/option>
+                        &lt;option value="Nonreligious">Nonreligious&lt;/option>
+                        &lt;option value="Rastafarianism">Rastafarianism&lt;/option>
+                        &lt;option value="Secular">Secular&lt;/option>
+                        &lt;option value="Shinto">Shinto&lt;/option>
+                        &lt;option value="Sikhism">Sikhism&lt;/option>
+                        &lt;option value="Spiritism">Spiritism&lt;/option>
+                        &lt;option value="Tenrikyo">Tenrikyo&lt;/option>
+                        &lt;option value="Unitarian-Universalism">Unitarian-Universalism&lt;/option>
+                        &lt;option value="Zoroastrianism">Zoroastrianism&lt;/option>
+                        &lt;option value="primal-indigenous">primal-indigenous&lt;/option>
+                        &lt;option value="Other">Other&lt;/option>
+                    &lt;/select>
+                    &lt;div class="panel panel-border-narrow js-hidden" id="other-religion">
+                        &lt;label class="form-label" for="other-religion">Other &lt;/label>
+                        &lt;input class="form-control" name="other-religion" type="text" id="other-religion">
+                    &lt;/div>
+                &lt;/div>
+        
+            &lt;/form>
         </code>
     </pre>
     <button class="clipboard" data-clipboard-target="#snippet-address-lookup-step-one">

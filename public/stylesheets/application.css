@@ -6785,6 +6785,8 @@ input[type=submit], button {
 .block-label.active + .panel {
   display: block;
   visibility: visible; }
+  .block-label.active + .panel .form-group + .form-group {
+    margin-top: 20px; }
 
 .block-label:hover {
   border-color: #90a4ae; }
