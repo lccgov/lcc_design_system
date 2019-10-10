@@ -21,38 +21,30 @@ $('.reveal-code').click(function(){
 //     $('input:radio[name='+$(this).attr('name')+']').parent().removeClass('active');
 //         $(this).parent().addClass('active');
 // });
-if($('.form-group--radio').length > 0) {
-    $('.form-group--radio > input').on('click', function() {
-        $('.form-group--radio').removeClass('display');
-        $(this).parent().addClass('display');
-    });
 
-    $('.option--sub > input').on('click', function() {
-        $('.option--sub').removeClass('display');
-        $(this).parent().addClass('display');
-    });
+// if($('.form-group--radio').length > 0) {
+//     $('.form-group--radio > input').on('click', function() {
+//         $('.form-group--radio').removeClass('display');
+//         $(this).parent().addClass('display');
+//     });
 
-} else {
-    $('input:radio').click(function() {
-        $('input:radio[name='+$(this).attr('name')+']').parent().removeClass('active');
-            $(this).parent().addClass('active');
-    });
-}
+//     $('.option--sub > input').on('click', function() {
+//         $('.option--sub').removeClass('display');
+//         $(this).parent().addClass('display');
+//     });
 
-//Religion other
-$('.form-control').on('change', function() {
-    if( $(this).val() == 'Other' ) {
-        $(this).parent().addClass('active');
-    } else {
-        $(this).parent().removeClass('active');
-    }
-});
+// } else {
+//     $('input:radio').click(function() {
+//         $('input:radio[name='+$(this).attr('name')+']').parent().removeClass('active');
+//             $(this).parent().addClass('active');
+//     });
+// }
 
 
 
 //input block label
 $('input:checkbox').click(function() {
-    $(this).parent().toggleClass('active');
+    	$(this).parent().toggleClass('active');
 });
 
 //sticky-nav
