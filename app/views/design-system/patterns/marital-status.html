@@ -32,28 +32,32 @@
             <span class="error-message">Choose an answer</span>
 
             <div class="form-group--radio">
-                <input type="radio" id="radio-1" name="level0" value="Single" aria-controls="radio-1" aria-expanded="false">
+                <input type="radio" id="radio-1" name="level0" value="Single" aria-controls="radio-1">
                 <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Single</label>
             </div>
 
             <div class="form-group--radio">
-                <input type="radio" id="radio-1" name="level0" value="Married" aria-controls="radio-1" aria-expanded="false">
+                <input type="radio" id="radio-1" name="level0" value="Married" aria-controls="radio-1">
                 <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Married </label>
             </div>
 
             <div class="form-group--radio">
-                <input type="radio" id="radio-1" name="level0" value="Widowed" aria-controls="radio-1" aria-expanded="false">
+                <input type="radio" id="radio-1" name="level0" value="Widowed" aria-controls="radio-1">
                 <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Widowed</label>
             </div>
     
             <div class="form-group--radio">
-                <input type="radio" id="radio-1" name="level0" value="Separated" aria-controls="radio-1" aria-expanded="false">
+                <input type="radio" id="radio-1" name="level0" value="Separated" aria-controls="radio-1">
                 <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Separated</label>
             </div>
     
             <div class="form-group--radio">
-                <input type="radio" id="radio-1" name="level0" value="Divorced" aria-controls="radio-1" aria-expanded="false">
+                <input type="radio" id="radio-1" name="level0" value="Divorced" aria-controls="radio-1">
                 <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Divorced</label>
+            </div>
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="I prefer not to say" aria-controls="radio-1">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">I prefer not to say</label>
             </div>
 
 
@@ -68,44 +72,50 @@
         <code id="snippet-marital-status" class="line-numbers language-markup">
             &lt;h1 class="heading-large">What is your marital status?&lt;/h1>
             &lt;form>
-
                 &lt;div class="form-group">
                     &lt;span class="error-message">Choose an answer&lt;/span>
-
                     &lt;div class="form-group--radio">
-                        &lt;input type="radio" id="radio-1" name="level0" value="Single" aria-controls="radio-1" aria-expanded="false">
+                        &lt;input type="radio" id="radio-1" name="level0" value="Single" aria-controls="radio-1">
                         &lt;label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Single&lt;/label>
                     &lt;/div>
-
                     &lt;div class="form-group--radio">
-                        &lt;input type="radio" id="radio-1" name="level0" value="Married" aria-controls="radio-1" aria-expanded="false">
+                        &lt;input type="radio" id="radio-1" name="level0" value="Married" aria-controls="radio-1">
                         &lt;label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Married &lt;/label>
                     &lt;/div>
-
                     &lt;div class="form-group--radio">
-                        &lt;input type="radio" id="radio-1" name="level0" value="Widowed" aria-controls="radio-1" aria-expanded="false">
+                        &lt;input type="radio" id="radio-1" name="level0" value="Widowed" aria-controls="radio-1">
                         &lt;label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Widowed&lt;/label>
                     &lt;/div>
-            
                     &lt;div class="form-group--radio">
-                        &lt;input type="radio" id="radio-1" name="level0" value="Separated" aria-controls="radio-1" aria-expanded="false">
+                        &lt;input type="radio" id="radio-1" name="level0" value="Separated" aria-controls="radio-1">
                         &lt;label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Separated&lt;/label>
                     &lt;/div>
-            
                     &lt;div class="form-group--radio">
-                        &lt;input type="radio" id="radio-1" name="level0" value="Divorced" aria-controls="radio-1" aria-expanded="false">
+                        &lt;input type="radio" id="radio-1" name="level0" value="Divorced" aria-controls="radio-1">
                         &lt;label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Divorced&lt;/label>
                     &lt;/div>
-
-
+                    &lt;div class="form-group--radio">
+                        &lt;input type="radio" id="radio-1" name="level0" value="I prefer not to say" aria-controls="radio-1">
+                        &lt;label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">I prefer not to say&lt;/label>
+                    &lt;/div>
                 &lt;/div>
-
             &lt;/form>
         </code>
     </pre>
     <button class="clipboard" data-clipboard-target="#snippet-marital-status">
         Copy <span class="sr-only">HTML snippet for marital status</span>
     </button>
+
+    <div id="error-handling" class="text">
+        <h2 class="heading-large">Error handling</h2>
+        <ul class="list list-bullet">
+            <li>add a class of <code>form-group-error</code> to <code>&lt;div class="form-group"></code></li>
+            <li>the error message <code>&lt;span class="error-message">Choose an answer&lt;/span></code> goes beneath the <code>&lt;legend></code></li>
+            <li>add a class of <code>panel-border-error</code> to <code>&lt;div class="panel"></code> for nested errors</li>
+            <li>the error message <code>&lt;span class="error-message">Choose an answer&lt;/span></code> goes beneath the <code>&lt;div class="panel"></code></li>
+        </ul>
+    </div>
+
 </div>
 
 {% endblock %}

@@ -3,7 +3,7 @@
 {% set section_id = "patterns" %} <!-- Section id var for main nav --> 
 {% set section_name = "Ask users for..." %} <!-- Section id var for main nav --> 
 {% set page_id = "religion" %} <!-- Page id var for side nav --> 
-{% set page_title = "Religion" %} <!-- Page title var for page header (H1) and page title -->  
+{% set page_title = "Religion or Belief" %} <!-- Page title var for page header (H1) and page title -->  
 
 {% block sectionOneTop %}{% endblock %}
 
@@ -19,100 +19,74 @@
 
 <!-- Page content goes here -->
 <div id="answers-example" class="text">
-    <p id="example">Here’s an example of how to ask about marital status:</p>
+    <p id="example">Here’s an example of how to ask about Religion or Belief:</p>
 </div>
 
 <div class="example">
     <span class="example-title">Example</span>
     <form>
-
         <div class="form-group">
-            <label class="form-label" for="select-box">What is your religion?</label>
+            <span class="error-message">Choose an answer</span>
+            <label class="form-label" for="select-box">Please indicate which best describes your religion or belief</label>
             <select class="form-control" id="select-box" name="select-box">
                 <option value="" selected="selected" disabled="disabled">-- select one --</option>
-                <option value="African Traditional &amp; Diasporic">African Traditional &amp; Diasporic</option>
-                <option value="Agnostic">Agnostic</option>
-                <option value="Atheist">Atheist</option>
-                <option value="Baha'i">Baha'i</option>
-                <option value="Buddhism">Buddhism</option>
-                <option value="Cao Dai">Cao Dai</option>
-                <option value="Chinese traditional religion">Chinese traditional religion</option>
-                <option value="Christianity">Christianity</option>
-                <option value="Hinduism">Hinduism</option>
-                <option value="Islam">Islam</option>
-                <option value="Jainism">Jainism</option>
-                <option value="Juche">Juche</option>
-                <option value="Judaism">Judaism</option>
-                <option value="Neo-Paganism">Neo-Paganism</option>
-                <option value="Nonreligious">Nonreligious</option>
-                <option value="Rastafarianism">Rastafarianism</option>
-                <option value="Secular">Secular</option>
-                <option value="Shinto">Shinto</option>
-                <option value="Sikhism">Sikhism</option>
-                <option value="Spiritism">Spiritism</option>
-                <option value="Tenrikyo">Tenrikyo</option>
-                <option value="Unitarian-Universalism">Unitarian-Universalism</option>
-                <option value="Zoroastrianism">Zoroastrianism</option>
-                <option value="primal-indigenous">primal-indigenous</option>
-                <option value="Other">Other</option>
+                <option value="Buddhist">Buddhist</option>
+                <option value="Christian">Christian</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Jewish">Jewish</option>
+                <option value="Muslim">Muslim</option>
+                <option value="Sikh">Sikh</option>
+                <option value="No religion">No religion</option>
+                <option value="No belief">No belief</option>
+                <option value="I prefer not to say">I prefer not to say</option>
+                <option value="Other">Other - please write below</option>
             </select>
             <div class="panel panel-border-narrow js-hidden" id="other-religion">
                 <label class="form-label" for="other-religion">Other </label>
                 <input class="form-control" name="other-religion" type="text" id="other-religion">
             </div>
         </div>
-
     </form>
     
 </div>
 <div class="code-snippet">
-    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for manual address</span></h3>
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for Religion or Belief</span></h3>
     <pre>
-        <code id="snippet-manual-address" class="line-numbers language-markup">
+        <code id="snippet-religion" class="line-numbers language-markup">
             &lt;form>
-
                 &lt;div class="form-group">
                     &lt;label class="form-label" for="select-box">What is your religion?&lt;/label>
                     &lt;select class="form-control" id="select-box" name="select-box">
                         &lt;option value="" selected="selected" disabled="disabled">-- select one --&lt;/option>
-                        &lt;option value="African Traditional &amp; Diasporic">African Traditional &amp; Diasporic&lt;/option>
-                        &lt;option value="Agnostic">Agnostic&lt;/option>
-                        &lt;option value="Atheist">Atheist&lt;/option>
-                        &lt;option value="Baha'i">Baha'i&lt;/option>
-                        &lt;option value="Buddhism">Buddhism&lt;/option>
-                        &lt;option value="Cao Dai">Cao Dai&lt;/option>
-                        &lt;option value="Chinese traditional religion">Chinese traditional religion&lt;/option>
-                        &lt;option value="Christianity">Christianity&lt;/option>
-                        &lt;option value="Hinduism">Hinduism&lt;/option>
-                        &lt;option value="Islam">Islam&lt;/option>
-                        &lt;option value="Jainism">Jainism&lt;/option>
-                        &lt;option value="Juche">Juche&lt;/option>
-                        &lt;option value="Judaism">Judaism&lt;/option>
-                        &lt;option value="Neo-Paganism">Neo-Paganism&lt;/option>
-                        &lt;option value="Nonreligious">Nonreligious&lt;/option>
-                        &lt;option value="Rastafarianism">Rastafarianism&lt;/option>
-                        &lt;option value="Secular">Secular&lt;/option>
-                        &lt;option value="Shinto">Shinto&lt;/option>
-                        &lt;option value="Sikhism">Sikhism&lt;/option>
-                        &lt;option value="Spiritism">Spiritism&lt;/option>
-                        &lt;option value="Tenrikyo">Tenrikyo&lt;/option>
-                        &lt;option value="Unitarian-Universalism">Unitarian-Universalism&lt;/option>
-                        &lt;option value="Zoroastrianism">Zoroastrianism&lt;/option>
-                        &lt;option value="primal-indigenous">primal-indigenous&lt;/option>
-                        &lt;option value="Other">Other&lt;/option>
+                        &lt;option value="Buddhist">Buddhist&lt;/option>
+                        &lt;option value="Christian">Christian&lt;/option>
+                        &lt;option value="Hindu">Hindu&lt;/option>
+                        &lt;option value="Jewish">Jewish&lt;/option>
+                        &lt;option value="Muslim">Muslim&lt;/option>
+                        &lt;option value="Sikh">Sikh&lt;/option>
+                        &lt;option value="No religion">No religion&lt;/option>
+                        &lt;option value="No belief">No belief&lt;/option>
+                        &lt;option value="Other">Other - please write below&lt;/option>
                     &lt;/select>
                     &lt;div class="panel panel-border-narrow js-hidden" id="other-religion">
                         &lt;label class="form-label" for="other-religion">Other &lt;/label>
                         &lt;input class="form-control" name="other-religion" type="text" id="other-religion">
                     &lt;/div>
                 &lt;/div>
-        
             &lt;/form>
         </code>
     </pre>
-    <button class="clipboard" data-clipboard-target="#snippet-address-lookup-step-one">
-        Copy <span class="sr-only">HTML snippet for </span>
+    <button class="clipboard" data-clipboard-target="#snippet-religion">
+        Copy <span class="sr-only">HTML snippet for Religion or Belief</span>
     </button>
+
+    <div id="error-handling" class="text">
+        <h2 class="heading-large">Error handling</h2>
+        <ul class="list list-bullet">
+            <li>add a class of <code>form-group-error</code> to <code>&lt;div class="form-group"></code></li>
+            <li>the error message <code>&lt;span class="error-message">Choose an answer&lt;/span></code> goes beneath the <code>&lt;legend></code></li>
+        </ul>
+    </div>
 </div>
 
 {% endblock %}

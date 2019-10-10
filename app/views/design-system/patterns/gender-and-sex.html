@@ -2,8 +2,8 @@
 
 {% set section_id = "patterns" %} <!-- Section id var for main nav --> 
 {% set section_name = "Ask users for..." %} <!-- Section id var for main nav --> 
-{% set page_id = "gender-and-sex" %} <!-- Page id var for side nav --> 
-{% set page_title = "Gender and sex" %} <!-- Page title var for page header (H1) and page title -->  
+{% set page_id = "gender-and-sex-v2" %} <!-- Page id var for side nav --> 
+{% set page_title = "Gender and Sex" %} <!-- Page title var for page header (H1) and page title -->  
 
 {% block sectionOneTop %}{% endblock %}
 
@@ -23,7 +23,8 @@
 <div class="contents-box">
     <h2 class="heading-contents">Contents</h2>
     <ul class="list list-contents">
-        <li><a href="#example">Example of how to ask about gender</a></li>
+        <li><a href="#example">Example of how to ask about gender and sex</a></li>
+        <li><a href="#sab">Example of how to ask about sex assigned at birth</a></li>
         <li><a href="#avoid-using-pronouns">Avoid using pronouns</a></li>
         <li><a href="#dont-use-titles-to-guess-gender">Don’t use titles to guess gender</a></li>
     </ul>
@@ -39,32 +40,145 @@
     <h1 class="heading-large">What is your gender?</h1>
     <form>
         <div class="form-group">
-            <fieldset>
-                <legend class="sr-only">What is your gender?</legend>
-                <label class="block-label" for="radio-1" data-target="radio-1">
-                    <input type="radio" id="radio-1" name="radio-group" value="Female" aria-controls="radio-1" aria-expanded="false">
-                    Female
-                </label>
-                <label class="block-label" for="radio-2" data-target="radio-2">
-                    <input type="radio" id="radio-2" name="radio-group" value="Male" aria-controls="radio-2" aria-expanded="false">
-                    Male
-                </label>
-                <label class="block-label" for="radio-3" data-target="radio-3">
-                    <input type="radio" id="radio-3" name="radio-group" value="Unspecified" aria-controls="radio-3" aria-expanded="false">
-                    Unspecified
-                </label>
-            </fieldset>
+            <span class="error-message">Choose an answer</span>
+
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="Female (including Trans Female)" aria-controls="radio-1">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Female (including Trans Female)</label>
+            </div>
+
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="Male (including Trans Male)" aria-controls="radio-1">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Male (including Trans Male)</label>
+            </div>
+
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="Other" aria-controls="radio-1">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Other - please write below</label>
+
+                <div class="panel panel-border-narrow js-hidden" id="other-gender">
+                    <label class="form-label" for="other-gender">Other </label>
+                    <input class="form-control" name="other-gender" type="text" id="other-gender">
+                </div>
+            </div>
+            
+            <div class="form-group--radio">
+                <input type="radio" id="radio-1" name="level0" value="I prefer not to say" aria-controls="radio-1">
+                <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">I prefer not to say</label>
+            </div>
         </div>
     </form>
 </div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for Gender and sex</span></h3>
+    <pre>
+        <code id="snippet-gender-sex" class="line-numbers language-markup">
+            &lt;h1 class="heading-large">What is your gender?&lt;/h1>
+            &lt;form>
+                &lt;div class="form-group">
+                    &lt;span class="error-message">Choose an answer&lt;/span>
+
+                    &lt;div class="form-group--radio">
+                        &lt;input type="radio" id="radio-1" name="level0" value="Female (including Trans Female)" aria-controls="radio-1">
+                        &lt;label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Female (including Trans Female)&lt;/label>
+                    &lt;/div>
+
+                    &lt;div class="form-group--radio">
+                        &lt;input type="radio" id="radio-1" name="level0" value="Male (including Trans Male)" aria-controls="radio-1">
+                        &lt;label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Male (including Trans Male)&lt;/label>
+                    &lt;/div>
+
+                    &lt;div class="form-group--radio">
+                        &lt;input type="radio" id="radio-1" name="level0" value="Other" aria-controls="radio-1">
+                        &lt;label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Other - please write below&lt;/label>
+
+                        &lt;div class="panel panel-border-narrow js-hidden" id="other-gender">
+                            &lt;label class="form-label" for="other-gender">Other &lt;/label>
+                            &lt;input class="form-control" name="other-gender" type="text" id="other-gender">
+                        &lt;/div>
+                    &lt;/div>
+                    
+                    &lt;div class="form-group--radio">
+                        &lt;input type="radio" id="radio-1" name="level0" value="I prefer not to say" aria-controls="radio-1">
+                        &lt;label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">I prefer not to say&lt;/label>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/form>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-gender-sex">
+        Copy <span class="sr-only">HTML snippet for Gender and Sex</span>
+    </button>
+</div>
+
 <div class="text">
     <p>If you have to ask about gender, you should:</p>
     <ul class="list list-bullet">
-        <li>list the fields in alphabetical order: ‘Female’, ‘Male’, ‘Unspecified’</li>
+        <li>list the fields in alphabetical order</li>
         <li>do research to test that this works for your users</li>
     </ul>
-    <p>Get the <a href="http://localhost:3003/design-system/components/radio-buttons">code for radio buttons</a></p>
 </div>
+
+<div id="sab" class="example">
+    <div class="sab">
+        <span class="example-title">Example</span>
+        <h1 class="heading-large">Is your gender the same as the sex you were assigned at birth?</h1>
+        <form>
+            <div class="form-group">
+                <span class="error-message">Choose an answer</span>
+
+                <div class="form-group--radio">
+                    <input type="radio" id="radio-1" name="level0" value="Yes" aria-controls="radio-1">
+                    <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Yes</label>
+                </div>
+
+                <div class="form-group--radio">
+                    <input type="radio" id="radio-1" name="level0" value="No" aria-controls="radio-1">
+                    <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">No</label>
+                </div>
+                
+                <div class="form-group--radio">
+                    <input type="radio" id="radio-1" name="level0" value="I prefer not to say" aria-controls="radio-1">
+                    <label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">I prefer not to say</label>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for Sex at birth</span></h3>
+    <pre>
+        <code id="snippet-sab" class="line-numbers language-markup">
+            &lt;h1 class="heading-large">Is your gender the same as the sex you were assigned at birth?&lt;/h1>
+            &lt;form>
+                &lt;div class="form-group">
+                    &lt;span class="error-message">Choose an answer&lt;/span>
+
+                    &lt;div class="form-group--radio">
+                        &lt;input type="radio" id="radio-1" name="level0" value="Yes" aria-controls="radio-1">
+                        &lt;label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">Yes&lt;/label>
+                    &lt;/div>
+
+                    &lt;div class="form-group--radio">
+                        &lt;input type="radio" id="radio-1" name="level0" value="No" aria-controls="radio-1">
+                        &lt;label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">No&lt;/label>
+                    &lt;/div>
+                    
+                    &lt;div class="form-group--radio">
+                        &lt;input type="radio" id="radio-1" name="level0" value="I prefer not to say" aria-controls="radio-1">
+                        &lt;label class="form-label form-label-bold form-label-large form-label-radio" for="radio-1">I prefer not to say&lt;/label>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/form>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-sab">
+        Copy <span class="sr-only">HTML snippet for Sex at birth</span>
+    </button>
+</div>
+
 <h2 id="avoid-using-pronouns">Avoid using pronouns</h2>
 <div class="text">
     <p>You should address the user as ‘you’ where possible and avoid using gendered pronouns like ‘he’ and ‘she’.</p>
