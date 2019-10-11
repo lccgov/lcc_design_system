@@ -35,6 +35,17 @@ if($('.form-group--radio').length > 0) {
     });
 }
 
+// Select - other
+if( $('.form-control').length > 0 ) {
+    $('select').on('change', function() {
+        $(this).parent().removeClass('active');
+        var value = this.value;
+        if( value == 'Other' ) {
+            $(this).parent().addClass('active');
+        }
+    });
+}
+
 
 
 //input block label
