@@ -226,7 +226,7 @@
 
         <!--edit/remove-->
         <div class="address__group address__group--full">
-            <a class="form-group-link address--edit" type="button">Edit</a> / <a class="form-group-link address--remove" type="button">Remove</a>
+            <a href="#" class="form-group-link address--edit" type="button">Edit</a> / <a href="#" class="form-group-link address--remove" type="button">Remove</a>
         </div>
     </form>
 
@@ -289,7 +289,7 @@
 
         <!--edit/remove-->
         <div class="address__group address__group--full">
-            <a class="form-group-link address--edit" type="button">Edit</a> / <a class="form-group-link address--remove" type="button">Remove</a>
+            <a href="#" class="form-group-link address--edit" type="button">Edit</a> / <a href="#" class="form-group-link address--remove" type="button">Remove</a>
         </div>
     </form>
 
@@ -304,26 +304,143 @@
         <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for address lookup step two</span></h3>
         <pre>
             <code id="snippet-address-lookup-step-two" class="line-numbers language-markup">
-                &lt;h1 class="heading-large">What is your address?&lt;/h1>
-                &lt;form>
-                    &lt;div class="form-group postcode-completed">
-                        &lt;input data-val="true" data-val-required="Please enter a valid Leeds postcode e.g. LS6 2SB" id="Postcode" name="Postcode" type="hidden" value="LS6 2SB">
-                        &lt;label class="form-label form-label-bold form-label-large" for="Postcode">Postcode&lt;/label>
-                        &lt;p>LS6 2SB&lt;/p>
-                        &lt;a href="#">Change&lt;/a>
+                &lt;div>
+                    &lt;h1 class="heading-large">Previous jobs&lt;/h1>
+
+                    &lt;div class="address__headings">            
+                        &lt;h3>Job&lt;/h3>            
+                        &lt;h3>Date from&lt;/h3>            
+                        &lt;h3>Date to&lt;/h3>
                     &lt;/div>
-                    &lt;div class="form-group">
-                        &lt;label class="form-label form-label-bold form-label-large" for="select-address">Select your address&lt;/label>
-                        &lt;select class="form-control" id="select-address" name="select-address">
-                            &lt;option>3 addresses have been found&lt;/option>
-                            &lt;option>1 Rawling Way, Leeds LS6 2SB&lt;/option>
-                            &lt;option>2 Rawling Way, Leeds LS6 2SB&lt;/option>
-                            &lt;option>3 Rawling Way, Leeds LS6 2SB&lt;/option>
-                        &lt;/select>
-                        &lt;a class="form-group-link" href="#">I can't find my address on the list&lt;/a>
-                    &lt;/div>
-                    &lt;button class="btn btn-primary" type="button">Continue&lt;/button>
-                &lt;/form>
+
+                    &lt;form class="address disabledInput">
+                        
+                        &lt;!--Job title-->
+                        &lt;div class="address__group">
+                        &lt;h3 class="mobileEnabled">Jobs&lt;/h3>
+                        &lt;fieldset class="disabled">
+                            &lt;div class="form-group">
+                                &lt;label class="form-label form-label-bold sr-only" for="job-title">Job Title&lt;/label>
+                                &lt;input disabled data-val="true" data-val-required="Please enter a job title" id="job-title" name="job-title" type="text" class="form-control" value="Front end developer">
+                            &lt;/div>
+                        &lt;/fieldset>
+                        &lt;/div>
+
+                        &lt;!--date from-->
+                        &lt;div class="address__group">
+                        &lt;h3 class="mobileEnabled">Date from&lt;/h3>
+                        &lt;fieldset class="disabled">
+                            &lt;div class="form-date">
+                                &lt;div class="form-group form-group-day">
+                                    &lt;label class="form-label sr-only" for="df-day">Day&lt;/label>
+                                    &lt;input class="form-control" id="df-day" name="df-day" type="number" placeholder="D" pattern="[0-9]*" min="0" max="31" value="01" disabled>
+                                &lt;/div>
+                                &lt;div class="form-group form-group-month">
+                                    &lt;label class="form-label sr-only" for="df-month">Month&lt;/label>
+                                    &lt;input class="form-control" id="df-month" name="df-month" type="number" placeholder="M" pattern="[0-9]*" min="0" max="12" value="01" disabled>
+                                &lt;/div>
+                                &lt;div class="form-group form-group-year">
+                                    &lt;label class="form-label sr-only" for="df-year">Year&lt;/label>
+                                    &lt;input class="form-control" id="df-year" name="df-year" type="number" placeholder="Y" pattern="[0-9]*" min="0" max="2016" value="2020" disabled>
+                                &lt;/div>
+                            &lt;/div>
+                        &lt;/fieldset>
+                        &lt;/div>
+
+                        &lt;!--date to-->
+                        &lt;div class="address__group">
+                        &lt;h3 class="mobileEnabled">Date to&lt;/h3>
+                        &lt;fieldset class="disabled">
+                            &lt;div class="form-date">
+                                &lt;div class="form-group form-group-day">
+                                    &lt;label class="form-label sr-only" for="dt-day">Day&lt;/label>
+                                    &lt;input class="form-control" id="dt-day" name="dt-day" type="number" placeholder="D" pattern="[0-9]*" min="0" max="31" value="01" disabled>
+                                &lt;/div>
+                                &lt;div class="form-group form-group-month">
+                                    &lt;label class="form-label sr-only" for="dt-month">Month&lt;/label>
+                                    &lt;input class="form-control" id="dt-month" name="dt-month" type="number" placeholder="M" pattern="[0-9]*" min="0" max="12" value="01" disabled>
+                                &lt;/div>
+                                &lt;div class="form-group form-group-year">
+                                    &lt;label class="form-label sr-only" for="dt-year">Year&lt;/label>
+                                    &lt;input class="form-control" id="dt-year" name="dt-year" type="number" placeholder="Y" pattern="[0-9]*" min="0" max="2016" value="2021" disabled>
+                                &lt;/div>
+                            &lt;/div>
+                        &lt;/fieldset>
+                        &lt;/div>
+
+                        &lt;!--edit/remove-->
+                        &lt;div class="address__group address__group--full">
+                            &lt;a href="#" class="form-group-link address--edit" type="button">Edit&lt;/a> / &lt;a href="#" class="form-group-link address--remove" type="button">Remove&lt;/a>
+                        &lt;/div>
+                    &lt;/form>
+
+                    &lt;hr/>
+
+                    &lt;form class="address disabledInput">
+                        
+                        &lt;!--Job title-->
+                        &lt;div class="address__group">
+                        &lt;h3 class="mobileEnabled">Jobs&lt;/h3>
+                        &lt;fieldset class="disabled">
+                            &lt;div class="form-group">
+                                &lt;label class="form-label form-label-bold sr-only" for="job-title">Job Title&lt;/label>
+                                &lt;input disabled data-val="true" data-val-required="Please enter a job title" id="job-title" name="job-title" type="text" class="form-control" value="Front end developer">
+                            &lt;/div>
+                        &lt;/fieldset>
+                        &lt;/div>
+
+                        &lt;!--date from-->
+                        &lt;div class="address__group">
+                        &lt;h3 class="mobileEnabled">Date from&lt;/h3>
+                        &lt;fieldset class="disabled">
+                            &lt;div class="form-date">
+                                &lt;div class="form-group form-group-day">
+                                    &lt;label class="form-label sr-only" for="df-day">Day&lt;/label>
+                                    &lt;input class="form-control" id="df-day" name="df-day" type="number" placeholder="D" pattern="[0-9]*" min="0" max="31" value="01" disabled>
+                                &lt;/div>
+                                &lt;div class="form-group form-group-month">
+                                    &lt;label class="form-label sr-only" for="df-month">Month&lt;/label>
+                                    &lt;input class="form-control" id="df-month" name="df-month" type="number" placeholder="M" pattern="[0-9]*" min="0" max="12" value="01" disabled>
+                                &lt;/div>
+                                &lt;div class="form-group form-group-year">
+                                    &lt;label class="form-label sr-only" for="df-year">Year&lt;/label>
+                                    &lt;input class="form-control" id="df-year" name="df-year" type="number" placeholder="Y" pattern="[0-9]*" min="0" max="2016" value="2020" disabled>
+                                &lt;/div>
+                            &lt;/div>
+                        &lt;/fieldset>
+                        &lt;/div>
+
+                        &lt;!--date to-->
+                        &lt;div class="address__group">
+                        &lt;h3 class="mobileEnabled">Date to&lt;/h3>
+                        &lt;fieldset class="disabled">
+                            &lt;div class="form-date">
+                                &lt;div class="form-group form-group-day">
+                                    &lt;label class="form-label sr-only" for="dt-day">Day&lt;/label>
+                                    &lt;input class="form-control" id="dt-day" name="dt-day" type="number" placeholder="D" pattern="[0-9]*" min="0" max="31" value="01" disabled>
+                                &lt;/div>
+                                &lt;div class="form-group form-group-month">
+                                    &lt;label class="form-label sr-only" for="dt-month">Month&lt;/label>
+                                    &lt;input class="form-control" id="dt-month" name="dt-month" type="number" placeholder="M" pattern="[0-9]*" min="0" max="12" value="01" disabled>
+                                &lt;/div>
+                                &lt;div class="form-group form-group-year">
+                                    &lt;label class="form-label sr-only" for="dt-year">Year&lt;/label>
+                                    &lt;input class="form-control" id="dt-year" name="dt-year" type="number" placeholder="Y" pattern="[0-9]*" min="0" max="2016" value="2021" disabled>
+                                &lt;/div>
+                            &lt;/div>
+                        &lt;/fieldset>
+                        &lt;/div>
+
+                        &lt;!--edit/remove-->
+                        &lt;div class="address__group address__group--full">
+                            &lt;a href="#" class="form-group-link address--edit" type="button">Edit&lt;/a> / &lt;a href="#" class="form-group-link address--remove" type="button">Remove&lt;/a>
+                        &lt;/div>
+                    &lt;/form>
+
+                    &lt;hr/>
+
+                &lt;button class="btn btn-primary" type="button">Continue&lt;/button>
+            &lt;/div>
             </code>
         </pre>
         <button class="clipboard" data-clipboard-target="#snippet-address-lookup-step-two">
