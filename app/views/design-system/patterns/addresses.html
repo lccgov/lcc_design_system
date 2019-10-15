@@ -24,6 +24,8 @@
         <li><a href="#address-lookup">Address lookup</a></li>
         <li><a href="#address-lookup-step-one">Step one</a></li>
         <li><a href="#address-lookup-step-two">Step two</a></li>
+        <li><a href="#address-manual-input">Manual input</a></li>
+        <li><a href="#address-listing">Address Listing</a></li>
     </ul>
 </div>
 
@@ -92,50 +94,526 @@
 </div>
 
 <div class="code-snippet">
-        <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for address lookup step two</span></h3>
-        <pre>
-            <code id="snippet-address-lookup-step-two" class="line-numbers language-markup">
-                &lt;h1 class="heading-large">What is your address?&lt;/h1>
-                &lt;form>
-                    &lt;div class="form-group postcode-completed">
-                        &lt;input data-val="true" data-val-required="Please enter a valid Leeds postcode e.g. LS6 2SB" id="Postcode" name="Postcode" type="hidden" value="LS6 2SB">
-                        &lt;label class="form-label form-label-bold form-label-large" for="Postcode">Postcode&lt;/label>
-                        &lt;p>LS6 2SB&lt;/p>
-                        &lt;a href="#">Change&lt;/a>
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for address lookup step two</span></h3>
+    <pre>
+        <code id="snippet-address-lookup-step-two" class="line-numbers language-markup">
+            &lt;h1 class="heading-large">What is your address?&lt;/h1>
+            &lt;form>
+                &lt;div class="form-group postcode-completed">
+                    &lt;input data-val="true" data-val-required="Please enter a valid Leeds postcode e.g. LS6 2SB" id="Postcode" name="Postcode" type="hidden" value="LS6 2SB">
+                    &lt;label class="form-label form-label-bold form-label-large" for="Postcode">Postcode&lt;/label>
+                    &lt;p>LS6 2SB&lt;/p>
+                    &lt;a href="#">Change&lt;/a>
+                &lt;/div>
+                &lt;div class="form-group">
+                    &lt;label class="form-label form-label-bold form-label-large" for="select-address">Select your address&lt;/label>
+                    &lt;select class="form-control" id="select-address" name="select-address">
+                        &lt;option>3 addresses have been found&lt;/option>
+                        &lt;option>1 Rawling Way, Leeds LS6 2SB&lt;/option>
+                        &lt;option>2 Rawling Way, Leeds LS6 2SB&lt;/option>
+                        &lt;option>3 Rawling Way, Leeds LS6 2SB&lt;/option>
+                    &lt;/select>
+                    &lt;a class="form-group-link" href="#">I can't find my address on the list&lt;/a>
+                &lt;/div>
+                &lt;button class="btn btn-primary" type="button">Continue&lt;/button>
+            &lt;/form>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-address-lookup-step-two">
+        Copy <span class="sr-only">HTML snippet for </span>
+    </button>
+</div>
+
+<div class="text">
+    <h3 id="address-manual-input">Manual input</h3>
+    <p>Manual address input. This is used for date specific questions. e.g. moving in and out of address.</p>
+</div>
+
+<div class="example">
+    <span class="example-title">Example</span>
+    <div class="col-md-8">
+        <h1 class="heading-large">Address Details</h1>
+        <form>
+            <fieldset>
+                <div class="form-group">
+                    <label class="form-label form-label-bold" for="address-line-1">Address Line 1</label>
+                    <input data-val="true" data-val-required="Please Enter an address line 1" id="address-line-1" name="address-line-1" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="form-label form-label-bold" for="address-line-2">Address Line 2</label>
+                    <input data-val="true" id="address-line-2" name="address-line-2" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="form-label form-label-bold" for="town-or-city">Town or City</label>
+                    <input data-val="true" data-val-required="Please enter a Town or City" id="town-or-city" name="town-or-city" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="form-label form-label-bold" for="postcode">Enter your postcode</label>
+                    <input data-val="true" data-val-required="Please enter a valid Leeds postcode e.g. LS6 2SB" id="postcode" name="postcode" type="text" class="form-control">
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <fieldset>
+                    <legend>
+                        <span class="form-label-bold">Date moved in</span>
+                        <span class="form-hint">For example, 31 3 1980</span>
+                    </legend>
+                    <div class="form-date">
+                        <div class="form-group form-group-day">
+                            <label class="form-label" for="dmi-day">Day</label>
+                            <input class="form-control" id="dmi-day" name="dmi-day" type="number" pattern="[0-9]*" min="0" max="31">
+                        </div>
+                        <div class="form-group form-group-month">
+                            <label class="form-label" for="dmi-month">Month</label>
+                            <input class="form-control" id="dmi-month" name="dmi-month" type="number" pattern="[0-9]*" min="0" max="12">
+                        </div>
+                        <div class="form-group form-group-year">
+                            <label class="form-label" for="dmi-year">Year</label>
+                            <input class="form-control" id="dmi-year" name="dmi-year" type="number" pattern="[0-9]*" min="0" max="2019">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <fieldset>
+                    <legend>
+                        <span class="form-label-bold">Date moved out</span>
+                        <span class="form-hint">For example, 31 3 1980</span>
+                    </legend>
+                    <div class="form-date">
+                        <div class="form-group form-group-day">
+                            <label class="form-label" for="dmo-day">Day</label>
+                            <input class="form-control" id="dmo-day" name="dmo-day" type="number" pattern="[0-9]*" min="0" max="31">
+                        </div>
+                        <div class="form-group form-group-month">
+                            <label class="form-label" for="dmo-month">Month</label>
+                            <input class="form-control" id="dmo-month" name="dmo-month" type="number" pattern="[0-9]*" min="0" max="12">
+                        </div>
+                        <div class="form-group form-group-year">
+                            <label class="form-label" for="dmo-year">Year</label>
+                            <input class="form-control" id="dmo-year" name="dmo-year" type="number" pattern="[0-9]*" min="0" max="2019">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <button class="btn btn-primary" type="button">Add Address</button>
+        </form>
+    </div>
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for manual input</span></h3>
+    <pre>
+        <code id="snippet-address-manual-input" class="line-numbers language-markup">
+            &lt;h1 class="heading-large">Address Details&lt;/h1>
+            &lt;form>
+                &lt;fieldset>
+                    &lt;div class="form-group">
+                        &lt;label class="form-label form-label-bold" for="address-line-1">Address Line 1&lt;/label>
+                        &lt;input data-val="true" data-val-required="Please Enter an address line 1" id="address-line-1" name="address-line-1" type="text" class="form-control">
                     &lt;/div>
                     &lt;div class="form-group">
-                        &lt;label class="form-label form-label-bold form-label-large" for="select-address">Select your address&lt;/label>
-                        &lt;select class="form-control" id="select-address" name="select-address">
-                            &lt;option>3 addresses have been found&lt;/option>
-                            &lt;option>1 Rawling Way, Leeds LS6 2SB&lt;/option>
-                            &lt;option>2 Rawling Way, Leeds LS6 2SB&lt;/option>
-                            &lt;option>3 Rawling Way, Leeds LS6 2SB&lt;/option>
-                        &lt;/select>
-                        &lt;a class="form-group-link" href="#">I can't find my address on the list&lt;/a>
+                        &lt;label class="form-label form-label-bold" for="address-line-2">Address Line 2&lt;/label>
+                        &lt;input data-val="true" id="address-line-2" name="address-line-2" type="text" class="form-control">
                     &lt;/div>
-                    &lt;button class="btn btn-primary" type="button">Continue&lt;/button>
-                &lt;/form>
-            </code>
-        </pre>
-        <button class="clipboard" data-clipboard-target="#snippet-address-lookup-step-two">
-            Copy <span class="sr-only">HTML snippet for </span>
-        </button>
-    </div>
+                    &lt;div class="form-group">
+                        &lt;label class="form-label form-label-bold" for="town-or-city">Town or City&lt;/label>
+                        &lt;input data-val="true" data-val-required="Please enter a Town or City" id="town-or-city" name="town-or-city" type="text" class="form-control">
+                    &lt;/div>
+                    &lt;div class="form-group">
+                        &lt;label class="form-label form-label-bold" for="postcode">Enter your postcode&lt;/label>
+                        &lt;input data-val="true" data-val-required="Please enter a valid Leeds postcode e.g. LS6 2SB" id="postcode" name="postcode" type="text" class="form-control">
+                    &lt;/div>
+                &lt;/fieldset>
 
-<!--<h1 class="heading-large">What is your address?</h1>
-<form>
-    <fieldset>
-        <legend class="sr-only">What is your address?</legend>
-        <label class="form-label form-label-bold" for="search-group-example">Enter a postcode <span class="form-hint">For example LS6 2SB</span></label>
-        <div class="input-group search-group postcode-lookup" role="search">
-            <input id="search-group-example" type="text" class="form-control">
-            <span class="input-group-btn">
-                <button class="btn" type="button">Find</button>
-            </span>
+                &lt;div class="form-group">
+                    &lt;fieldset>
+                        &lt;legend>
+                            &lt;span class="form-label-bold">Date moved in&lt;/span>
+                            &lt;span class="form-hint">For example, 31 3 1980&lt;/span>
+                        &lt;/legend>
+                        &lt;div class="form-date">
+                            &lt;div class="form-group form-group-day">
+                                &lt;label class="form-label" for="dmi-day">Day&lt;/label>
+                                &lt;input class="form-control" id="dmi-day" name="dmi-day" type="number" pattern="[0-9]*" min="0" max="31">
+                            &lt;/div>
+                            &lt;div class="form-group form-group-month">
+                                &lt;label class="form-label" for="dmi-month">Month&lt;/label>
+                                &lt;input class="form-control" id="dmi-month" name="dmi-month" type="number" pattern="[0-9]*" min="0" max="12">
+                            &lt;/div>
+                            &lt;div class="form-group form-group-year">
+                                &lt;label class="form-label" for="dmi-year">Year&lt;/label>
+                                &lt;input class="form-control" id="dmi-year" name="dmi-year" type="number" pattern="[0-9]*" min="0" max="2019">
+                            &lt;/div>
+                        &lt;/div>
+                    &lt;/fieldset>
+                &lt;/div>
+
+                &lt;div class="form-group">
+                    &lt;fieldset>
+                        &lt;legend>
+                            &lt;span class="form-label-bold">Date moved out&lt;/span>
+                            &lt;span class="form-hint">For example, 31 3 1980&lt;/span>
+                        &lt;/legend>
+                        &lt;div class="form-date">
+                            &lt;div class="form-group form-group-day">
+                                &lt;label class="form-label" for="dmo-day">Day&lt;/label>
+                                &lt;input class="form-control" id="dmo-day" name="dmo-day" type="number" pattern="[0-9]*" min="0" max="31">
+                            &lt;/div>
+                            &lt;div class="form-group form-group-month">
+                                &lt;label class="form-label" for="dmo-month">Month&lt;/label>
+                                &lt;input class="form-control" id="dmo-month" name="dmo-month" type="number" pattern="[0-9]*" min="0" max="12">
+                            &lt;/div>
+                            &lt;div class="form-group form-group-year">
+                                &lt;label class="form-label" for="dmo-year">Year&lt;/label>
+                                &lt;input class="form-control" id="dmo-year" name="dmo-year" type="number" pattern="[0-9]*" min="0" max="2019">
+                            &lt;/div>
+                        &lt;/div>
+                    &lt;/fieldset>
+                &lt;/div>
+
+                &lt;button class="btn btn-primary" type="button">Add Address&lt;/button>
+            &lt;/form>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-address-manual-input">
+        Copy <span class="sr-only">HTML snippet for manual input</span>
+    </button>
+</div>
+
+<div class="text">
+    <h3 id="address-listing">Address listing</h3>
+</div>
+
+<div class="example">
+    <span class="example-title">Example</span>
+    <div class="col-md-8">
+        <h1 class="heading-large">Previous addresses</h1>
+
+        <div class="address__headings">            
+            <h3>Address</h3>            
+            <h3>Date moved in</h3>            
+            <h3>Date moved out</h3>
         </div>
-        <a class="search-group-link" target="_blank" id="postcode-finder-link" rel="external" href="http://www.royalmail.com/find-a-postcode">Find a postcode on Royal Mail's postcode finder</a>
-    </fieldset>
-</form>-->
+    
+        <form class="address disabledInput">
+            
+            <!--address-->
+            <div class="address__group">
+            <h3 class="mobileEnabled">Address</h3>
+            <fieldset class="disabled">
+                <div class="form-group">
+                    <label class="form-label form-label-bold sr-only" for="address-line-1">Address Line 1</label>
+                    <input disabled data-val="true" data-val-required="Please Enter an address line 1" id="address-line-1" name="address-line-1" type="text" class="form-control" placeholder="Address Line 1" value="1 Rawling Way">
+                </div>
+                <div class="form-group">
+                    <label class="form-label form-label-bold sr-only" for="address-line-2">Address Line 2</label>
+                    <input disabled data-val="true" id="address-line-2" name="address-line-2" type="text" class="form-control" value="Headingley" placeholder="Address Line 2">
+                </div>
+                <div class="form-group">
+                    <label class="form-label form-label-bold sr-only" for="town-or-city">Town or City</label>
+                    <input disabled data-val="true" data-val-required="Please enter a Town or City" id="town-or-city" name="town-or-city" type="text" class="form-control" placeholder="Leeds" value="Leeds">
+                </div>
+                <div class="form-group">
+                    <label class="form-label form-label-bold sr-only" for="postcode">Enter your postcode</label>
+                    <input disabled data-val="true" data-val-required="Please enter a valid Leeds postcode e.g. LS6 2SB" id="postcode" name="postcode" type="text" class="form-control" placeholder="Post code" value="LS6 2SB">
+                </div>
+            </fieldset>
+            </div>
+    
+            <!--date moved in-->
+            <div class="address__group">
+            <h3 class="mobileEnabled">Date moved in</h3>
+            <fieldset class="disabled">
+                <div class="form-date">
+                    <div class="form-group form-group-day">
+                        <label class="form-label sr-only" for="dmi-day">Day</label>
+                        <input class="form-control" id="dmi-day" name="dmi-day" type="number" placeholder="D" pattern="[0-9]*" min="0" max="31" value="01" disabled>
+                    </div>
+                    <div class="form-group form-group-month">
+                        <label class="form-label sr-only" for="dmi-month">Month</label>
+                        <input class="form-control" id="dmi-month" name="dmi-month" type="number" placeholder="M" pattern="[0-9]*" min="0" max="12" value="01" disabled>
+                    </div>
+                    <div class="form-group form-group-year">
+                        <label class="form-label sr-only" for="dmi-year">Year</label>
+                        <input class="form-control" id="dmi-year" name="dmi-year" type="number" placeholder="Y" pattern="[0-9]*" min="0" max="2016" value="2020" disabled>
+                    </div>
+                </div>
+            </fieldset>
+            </div>
+    
+            <!--date moved out-->
+            <div class="address__group">
+            <h3 class="mobileEnabled">Date moved out</h3>
+            <fieldset class="disabled">
+                <div class="form-date">
+                    <div class="form-group form-group-day">
+                        <label class="form-label sr-only" for="dmo-day">Day</label>
+                        <input class="form-control" id="dmo-day" name="dmo-day" type="number" placeholder="D" pattern="[0-9]*" min="0" max="31" value="01" disabled>
+                    </div>
+                    <div class="form-group form-group-month">
+                        <label class="form-label sr-only" for="dmo-month">Month</label>
+                        <input class="form-control" id="dmo-month" name="dmo-month" type="number" placeholder="M" pattern="[0-9]*" min="0" max="12" value="01" disabled>
+                    </div>
+                    <div class="form-group form-group-year">
+                        <label class="form-label sr-only" for="dmo-year">Year</label>
+                        <input class="form-control" id="dmo-year" name="dmo-year" type="number" placeholder="Y" pattern="[0-9]*" min="0" max="2016" value="2021" disabled>
+                    </div>
+                </div>
+            </fieldset>
+            </div>
+    
+            <!--edit/remove-->
+            <div class="address__group address__group--full">
+                <a href="#" class="form-group-link address--edit" type="button">Edit</a> / <a href="#" class="form-group-link address--remove" type="button">Remove</a>
+            </div>
+        </form>
+    
+        <hr/>
+    
+        <form class="address disabledInput">
+            
+            <!--address-->
+            <div class="address__group">
+            <h3 class="mobileEnabled">Address</h3>
+            <fieldset class="disabled">
+                <div class="form-group">
+                    <label class="form-label form-label-bold sr-only" for="address-line-1">Address Line 1</label>
+                    <input disabled data-val="true" data-val-required="Please Enter an address line 1" id="address-line-1" name="address-line-1" type="text" class="form-control" placeholder="Address Line 1" value="1 Rawling Way">
+                </div>
+                <div class="form-group">
+                    <label class="form-label form-label-bold sr-only" for="address-line-2">Address Line 2</label>
+                    <input disabled data-val="true" id="address-line-2" name="address-line-2" type="text" class="form-control" value="Headingley" placeholder="Address Line 2">
+                </div>
+                <div class="form-group">
+                    <label class="form-label form-label-bold sr-only" for="town-or-city">Town or City</label>
+                    <input disabled data-val="true" data-val-required="Please enter a Town or City" id="town-or-city" name="town-or-city" type="text" class="form-control" placeholder="Leeds" value="Leeds">
+                </div>
+                <div class="form-group">
+                    <label class="form-label form-label-bold sr-only" for="postcode">Enter your postcode</label>
+                    <input disabled data-val="true" data-val-required="Please enter a valid Leeds postcode e.g. LS6 2SB" id="postcode" name="postcode" type="text" class="form-control" placeholder="LS6 2SB" value="LS6 2SB">
+                </div>
+            </fieldset>
+            </div>
+    
+            <!--date moved in-->
+            <div class="address__group">
+            <h3 class="mobileEnabled">Date moved in</h3>
+            <fieldset class="disabled">
+                <div class="form-date">
+                    <div class="form-group form-group-day">
+                        <label class="form-label sr-only" for="dmi-day">Day</label>
+                        <input class="form-control" id="dmi-day" name="dmi-day" type="number" pattern="[0-9]*" min="0" max="31" value="01" disabled>
+                    </div>
+                    <div class="form-group form-group-month">
+                        <label class="form-label sr-only" for="dmi-month">Month</label>
+                        <input class="form-control" id="dmi-month" name="dmi-month" type="number" pattern="[0-9]*" min="0" max="12" value="01" disabled>
+                    </div>
+                    <div class="form-group form-group-year">
+                        <label class="form-label sr-only" for="dmi-year">Year</label>
+                        <input class="form-control" id="dmi-year" name="dmi-year" type="number" pattern="[0-9]*" min="0" max="2016" value="2020" disabled>
+                    </div>
+                </div>
+            </fieldset>
+            </div>
+    
+            <!--date moved out-->
+            <div class="address__group">
+            <h3 class="mobileEnabled">Date moved out</h3>
+            <fieldset class="disabled">
+                <div class="form-date">
+                    <div class="form-group form-group-day">
+                        <label class="form-label sr-only" for="dmo-day">Day</label>
+                        <input class="form-control" id="dmo-day" name="dmo-day" type="number" pattern="[0-9]*" min="0" max="31" value="01" disabled>
+                    </div>
+                    <div class="form-group form-group-month">
+                        <label class="form-label sr-only" for="dmo-month">Month</label>
+                        <input class="form-control" id="dmo-month" name="dmo-month" type="number" pattern="[0-9]*" min="0" max="12" value="01" disabled>
+                    </div>
+                    <div class="form-group form-group-year">
+                        <label class="form-label sr-only" for="dmo-year">Year</label>
+                        <input class="form-control" id="dmo-year" name="dmo-year" type="number" pattern="[0-9]*" min="0" max="2016" value="2021" disabled>
+                    </div>
+                </div>
+            </fieldset>
+            </div>
+    
+            <!--edit/remove-->
+            <div class="address__group address__group--full">
+                <a href="#" class="form-group-link address--edit" type="button">Edit</a> / <a href="#" class="form-group-link address--remove" type="button">Remove</a>
+            </div>
+        </form>
+    
+        <hr/>
+    
+        <button class="btn btn-primary" type="button">Continue</button>
+    </div>
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for address listing</span></h3>
+    <pre>
+        <code id="snippet-address-listing" class="line-numbers language-markup">
+            &lt;h1 class="heading-large">Previous addresses&lt;/h1>
+
+            &lt;div class="address__headings">            
+                &lt;h3>Address&lt;/h3>            
+                &lt;h3>Date moved in&lt;/h3>            
+                &lt;h3>Date moved out&lt;/h3>
+            &lt;/div>
+
+            &lt;form class="address disabledInput">
+                
+                &lt;div class="address__group">
+                &lt;h3 class="mobileEnabled">Address&lt;/h3>
+                &lt;fieldset class="disabled">
+                    &lt;div class="form-group">
+                        &lt;label class="form-label form-label-bold sr-only" for="address-line-1">Address Line 1&lt;/label>
+                        &lt;input disabled data-val="true" data-val-required="Please Enter an address line 1" id="address-line-1" name="address-line-1" type="text" class="form-control" placeholder="Address Line 1" value="1 Rawling Way">
+                    &lt;/div>
+                    &lt;div class="form-group">
+                        &lt;label class="form-label form-label-bold sr-only" for="address-line-2">Address Line 2&lt;/label>
+                        &lt;input disabled data-val="true" id="address-line-2" name="address-line-2" type="text" class="form-control" value="Headingley" placeholder="Address Line 2">
+                    &lt;/div>
+                    &lt;div class="form-group">
+                        &lt;label class="form-label form-label-bold sr-only" for="town-or-city">Town or City&lt;/label>
+                        &lt;input disabled data-val="true" data-val-required="Please enter a Town or City" id="town-or-city" name="town-or-city" type="text" class="form-control" placeholder="Leeds" value="Leeds">
+                    &lt;/div>
+                    &lt;div class="form-group">
+                        &lt;label class="form-label form-label-bold sr-only" for="postcode">Enter your postcode&lt;/label>
+                        &lt;input disabled data-val="true" data-val-required="Please enter a valid Leeds postcode e.g. LS6 2SB" id="postcode" name="postcode" type="text" class="form-control" placeholder="Post code" value="LS6 2SB">
+                    &lt;/div>
+                &lt;/fieldset>
+                &lt;/div>
+
+                &lt;div class="address__group">
+                &lt;h3 class="mobileEnabled">Date moved in&lt;/h3>
+                &lt;fieldset class="disabled">
+                    &lt;div class="form-date">
+                        &lt;div class="form-group form-group-day">
+                            &lt;label class="form-label sr-only" for="dmi-day">Day&lt;/label>
+                            &lt;input class="form-control" id="dmi-day" name="dmi-day" type="number" placeholder="D" pattern="[0-9]*" min="0" max="31" value="01" disabled>
+                        &lt;/div>
+                        &lt;div class="form-group form-group-month">
+                            &lt;label class="form-label sr-only" for="dmi-month">Month&lt;/label>
+                            &lt;input class="form-control" id="dmi-month" name="dmi-month" type="number" placeholder="M" pattern="[0-9]*" min="0" max="12" value="01" disabled>
+                        &lt;/div>
+                        &lt;div class="form-group form-group-year">
+                            &lt;label class="form-label sr-only" for="dmi-year">Year&lt;/label>
+                            &lt;input class="form-control" id="dmi-year" name="dmi-year" type="number" placeholder="Y" pattern="[0-9]*" min="0" max="2016" value="2020" disabled>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/fieldset>
+                &lt;/div>
+
+                &lt;div class="address__group">
+                &lt;h3 class="mobileEnabled">Date moved out&lt;/h3>
+                &lt;fieldset class="disabled">
+                    &lt;div class="form-date">
+                        &lt;div class="form-group form-group-day">
+                            &lt;label class="form-label sr-only" for="dmo-day">Day&lt;/label>
+                            &lt;input class="form-control" id="dmo-day" name="dmo-day" type="number" placeholder="D" pattern="[0-9]*" min="0" max="31" value="01" disabled>
+                        &lt;/div>
+                        &lt;div class="form-group form-group-month">
+                            &lt;label class="form-label sr-only" for="dmo-month">Month&lt;/label>
+                            &lt;input class="form-control" id="dmo-month" name="dmo-month" type="number" placeholder="M" pattern="[0-9]*" min="0" max="12" value="01" disabled>
+                        &lt;/div>
+                        &lt;div class="form-group form-group-year">
+                            &lt;label class="form-label sr-only" for="dmo-year">Year&lt;/label>
+                            &lt;input class="form-control" id="dmo-year" name="dmo-year" type="number" placeholder="Y" pattern="[0-9]*" min="0" max="2016" value="2021" disabled>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/fieldset>
+                &lt;/div>
+
+                &lt;div class="address__group address__group--full">
+                    &lt;a href="#" class="form-group-link address--edit" type="button">Edit&lt;/a> / &lt;a href="#" class="form-group-link address--remove" type="button">Remove&lt;/a>
+                &lt;/div>
+            &lt;/form>
+
+            &lt;hr/>
+
+            &lt;form class="address disabledInput">
+                
+                &lt;div class="address__group">
+                &lt;h3 class="mobileEnabled">Address&lt;/h3>
+                &lt;fieldset class="disabled">
+                    &lt;div class="form-group">
+                        &lt;label class="form-label form-label-bold sr-only" for="address-line-1">Address Line 1&lt;/label>
+                        &lt;input disabled data-val="true" data-val-required="Please Enter an address line 1" id="address-line-1" name="address-line-1" type="text" class="form-control" placeholder="Address Line 1" value="1 Rawling Way">
+                    &lt;/div>
+                    &lt;div class="form-group">
+                        &lt;label class="form-label form-label-bold sr-only" for="address-line-2">Address Line 2&lt;/label>
+                        &lt;input disabled data-val="true" id="address-line-2" name="address-line-2" type="text" class="form-control" value="Headingley" placeholder="Address Line 2">
+                    &lt;/div>
+                    &lt;div class="form-group">
+                        &lt;label class="form-label form-label-bold sr-only" for="town-or-city">Town or City&lt;/label>
+                        &lt;input disabled data-val="true" data-val-required="Please enter a Town or City" id="town-or-city" name="town-or-city" type="text" class="form-control" placeholder="Leeds" value="Leeds">
+                    &lt;/div>
+                    &lt;div class="form-group">
+                        &lt;label class="form-label form-label-bold sr-only" for="postcode">Enter your postcode&lt;/label>
+                        &lt;input disabled data-val="true" data-val-required="Please enter a valid Leeds postcode e.g. LS6 2SB" id="postcode" name="postcode" type="text" class="form-control" placeholder="LS6 2SB" value="LS6 2SB">
+                    &lt;/div>
+                &lt;/fieldset>
+                &lt;/div>
+
+                &lt;div class="address__group">
+                &lt;h3 class="mobileEnabled">Date moved in&lt;/h3>
+                &lt;fieldset class="disabled">
+                    &lt;div class="form-date">
+                        &lt;div class="form-group form-group-day">
+                            &lt;label class="form-label sr-only" for="dmi-day">Day&lt;/label>
+                            &lt;input class="form-control" id="dmi-day" name="dmi-day" type="number" pattern="[0-9]*" min="0" max="31" value="01" disabled>
+                        &lt;/div>
+                        &lt;div class="form-group form-group-month">
+                            &lt;label class="form-label sr-only" for="dmi-month">Month&lt;/label>
+                            &lt;input class="form-control" id="dmi-month" name="dmi-month" type="number" pattern="[0-9]*" min="0" max="12" value="01" disabled>
+                        &lt;/div>
+                        &lt;div class="form-group form-group-year">
+                            &lt;label class="form-label sr-only" for="dmi-year">Year&lt;/label>
+                            &lt;input class="form-control" id="dmi-year" name="dmi-year" type="number" pattern="[0-9]*" min="0" max="2016" value="2020" disabled>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/fieldset>
+                &lt;/div>
+
+                &lt;div class="address__group">
+                &lt;h3 class="mobileEnabled">Date moved out&lt;/h3>
+                &lt;fieldset class="disabled">
+                    &lt;div class="form-date">
+                        &lt;div class="form-group form-group-day">
+                            &lt;label class="form-label sr-only" for="dmo-day">Day&lt;/label>
+                            &lt;input class="form-control" id="dmo-day" name="dmo-day" type="number" pattern="[0-9]*" min="0" max="31" value="01" disabled>
+                        &lt;/div>
+                        &lt;div class="form-group form-group-month">
+                            &lt;label class="form-label sr-only" for="dmo-month">Month&lt;/label>
+                            &lt;input class="form-control" id="dmo-month" name="dmo-month" type="number" pattern="[0-9]*" min="0" max="12" value="01" disabled>
+                        &lt;/div>
+                        &lt;div class="form-group form-group-year">
+                            &lt;label class="form-label sr-only" for="dmo-year">Year&lt;/label>
+                            &lt;input class="form-control" id="dmo-year" name="dmo-year" type="number" pattern="[0-9]*" min="0" max="2016" value="2021" disabled>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/fieldset>
+                &lt;/div>
+
+                &lt;div class="address__group address__group--full">
+                    &lt;a href="#" class="form-group-link address--edit" type="button">Edit&lt;/a> / &lt;a href="#" class="form-group-link address--remove" type="button">Remove&lt;/a>
+                &lt;/div>
+            &lt;/form>
+
+            &lt;hr/>
+
+            &lt;button class="btn btn-primary" type="button">Continue&lt;/button>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-address-listing">
+        Copy <span class="sr-only">HTML snippet for address listing</span>
+    </button>
+</div>
 
 
 {% endblock %}

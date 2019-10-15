@@ -46,6 +46,23 @@ if( $('.form-control').length > 0 ) {
     });
 }
 
+if( $('.form-group-link').length > 0 ) {
+    $('.address').on('click', '.address--edit', function() {
+        $(this).removeClass('address--edit');
+        $(this).addClass('address--save');
+        $(this).closest('form').removeClass('disabledInput');
+        $(this).closest('form').find('input').removeAttr('disabled');
+        $(this).html('Save');
+    });
+    $('.address').on('click', '.address--save', function() {
+        $(this).removeClass('address--save');
+        $(this).addClass('address--edit');
+        $(this).closest('form').addClass('disabledInput');
+        $(this).closest('form').find('input').attr('disabled', 'true');
+        $(this).html('Edit');
+    });
+}
+
 
 
 //input block label
