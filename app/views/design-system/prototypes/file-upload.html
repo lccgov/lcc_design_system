@@ -1,0 +1,119 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "file-upload" %} <!-- Page id var for side nav --> 
+{% set page_title = "File upload" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <p class="lead">A control that lets the user select a file.</p>
+</div>
+
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#file-upload">File upload example</a></li>
+        <li><a href="#error-handling">Error handling</a></li>
+    </ul>
+</div>
+
+<div id="file-upload" class="example top">
+    <span class="example-title">Example</span>
+
+    <!-- <h3>Upload a file(s)</h3> -->
+    <div class="uploads">
+        <div class="form-group">
+            <input type="file" id="file-input" class="inputfile" data-multiple-caption="{count} files selected" multiple>
+            <label class="form-label form-label--file" for="file-input">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
+                    Choose a file
+                </span>
+                <span></span>
+            </label>
+            <div class="files">
+                <div class="files__toUpload">
+                    <h4>Files being uploaded</h4>
+                    <ul class="list list-bullet"></ul>
+                </div>
+                <input type="button" class="files__remove" value="Remove files"/>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="form-group">
+        <input type="file" id="file-input" class="inputfile" data-multiple-caption="{count} files selected" multiple>
+        <label class="form-label form-label--file" for="file-input">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
+                Choose a file
+            </span>
+            <span></span>
+        </label>
+        <!-- <div class="files__toUpload"></div>
+    </div> -->
+
+</div>
+<div class="text">
+    <p>We recommend using a native input using <code class="code">type="file"</code>, rather than a custom implementation.</p>
+    <p class="lead-in">This is so:</p>
+    <ul class="list list-bullet">
+      <li>the control gains focus when tabbing through the page</li>
+      <li>the control functions using a keyboard</li>
+      <li>the control functions using assistive technology</li>
+      <li>the control functions when javascript is not available</li>
+    </ul>
+    <div role="note" aria-label="Information" class="text-highlight text-highlight--grey">
+        <p>A custom implementation of this control would need to meet the criteria above.</p>
+    </div>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for file upload</span></h3>
+    <pre>
+        <code id="snippet-file-upload" class="line-numbers language-markup">
+            
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-file-upload">
+        Copy <span class="sr-only">HTML snippet for file upload"</span>
+    </button>
+</div>
+<h2 id="error-handling" class="heading-large">Error handling</h2>
+<div class="example">
+    <span class="example-title">Example</span>
+    <div class="form-group form-group-error">
+        <label class="form-label" for="file-input">
+            Upload a file
+        </label>
+        <span class="error-message">Error message goes here</span>
+        <input type="file" id="file-input">
+    </div>
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for file upload error handling</span></h3>
+    <pre>
+        <code id="snippet-file-upload-error-handling" class="line-numbers language-markup">
+            &lt;div class="form-group form-group-error">
+                &lt;label class="form-label" for="file-input">
+                    Upload a file
+                &lt;/label>
+                &lt;span class="error-message">Error message goes here&lt;/span>
+                &lt;input type="file" id="file-input">
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-file-upload-error-handling">
+        Copy <span class="sr-only">HTML snippet for file upload error handling"</span>
+    </button>
+</div>
+
+
+{% endblock %}

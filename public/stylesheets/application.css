@@ -186,7 +186,7 @@ td, th {
     page-break-after: avoid; }
   .navbar {
     display: none; }
-  .btn > .caret, .dropup > .btn > .caret {
+  .btn > .caret, .js .uploads .form-label--file span:nth-of-type(1) > .caret, .dropup > .btn > .caret, .js .uploads .form-label--file .dropup > span:nth-of-type(1) > .caret {
     border-top-color: #000 !important; }
   .label {
     border: 1px solid #000; }
@@ -2424,7 +2424,7 @@ select[multiple].input-lg, textarea.input-lg {
     padding-top: 6px;
     font-size: 12px; } }
 
-.btn {
+.btn, .js .uploads .form-label--file span:nth-of-type(1) {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
@@ -2445,21 +2445,21 @@ select[multiple].input-lg, textarea.input-lg {
   border: 1px solid transparent;
   border-radius: 4px; }
 
-.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+.btn.active.focus, .js .uploads .form-label--file span.active.focus:nth-of-type(1), .btn.active:focus, .js .uploads .form-label--file span.active:focus:nth-of-type(1), .btn.focus, .js .uploads .form-label--file span.focus:nth-of-type(1), .btn:active.focus, .js .uploads .form-label--file span:active.focus:nth-of-type(1), .btn:active:focus, .js .uploads .form-label--file span:active:focus:nth-of-type(1), .btn:focus, .js .uploads .form-label--file span:focus:nth-of-type(1) {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
-.btn.focus, .btn:focus, .btn:hover {
+.btn.focus, .js .uploads .form-label--file span.focus:nth-of-type(1), .btn:focus, .js .uploads .form-label--file span:focus:nth-of-type(1), .btn:hover, .js .uploads .form-label--file span:hover:nth-of-type(1) {
   color: #333;
   text-decoration: none; }
 
-.btn.active, .btn:active {
+.btn.active, .js .uploads .form-label--file span.active:nth-of-type(1), .btn:active, .js .uploads .form-label--file span:active:nth-of-type(1) {
   background-image: none;
   outline: 0;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
 
-.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+.btn.disabled, .js .uploads .form-label--file span.disabled:nth-of-type(1), .btn[disabled], .js .uploads .form-label--file span[disabled]:nth-of-type(1), fieldset[disabled] .btn, fieldset[disabled] .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file fieldset[disabled] span:nth-of-type(1) {
   cursor: not-allowed;
   filter: alpha(opacity=65);
   -webkit-box-shadow: none;
@@ -2505,39 +2505,39 @@ a.btn.disabled, .details summary.btn.disabled:focus, fieldset[disabled] a.btn, f
   color: #fff;
   background-color: #333; }
 
-.btn-primary {
+.btn-primary, .js .uploads .form-label--file span:nth-of-type(1) {
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4; }
 
-.btn-primary.focus, .btn-primary:focus {
+.btn-primary.focus, .js .uploads .form-label--file span.focus:nth-of-type(1), .btn-primary:focus, .js .uploads .form-label--file span:focus:nth-of-type(1) {
   color: #fff;
   background-color: #286090;
   border-color: #122b40; }
 
-.btn-primary:hover {
+.btn-primary:hover, .js .uploads .form-label--file span:hover:nth-of-type(1) {
   color: #fff;
   background-color: #286090;
   border-color: #204d74; }
 
-.btn-primary.active, .btn-primary:active, .open > .dropdown-toggle.btn-primary {
+.btn-primary.active, .js .uploads .form-label--file span.active:nth-of-type(1), .btn-primary:active, .js .uploads .form-label--file span:active:nth-of-type(1), .open > .dropdown-toggle.btn-primary, .js .uploads .form-label--file .open > span.dropdown-toggle:nth-of-type(1) {
   color: #fff;
   background-color: #286090;
   border-color: #204d74; }
 
-.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open > .dropdown-toggle.btn-primary.focus, .open > .dropdown-toggle.btn-primary:focus, .open > .dropdown-toggle.btn-primary:hover {
+.btn-primary.active.focus, .js .uploads .form-label--file span.active.focus:nth-of-type(1), .btn-primary.active:focus, .js .uploads .form-label--file span.active:focus:nth-of-type(1), .btn-primary.active:hover, .js .uploads .form-label--file span.active:hover:nth-of-type(1), .btn-primary:active.focus, .js .uploads .form-label--file span:active.focus:nth-of-type(1), .btn-primary:active:focus, .js .uploads .form-label--file span:active:focus:nth-of-type(1), .btn-primary:active:hover, .js .uploads .form-label--file span:active:hover:nth-of-type(1), .open > .dropdown-toggle.btn-primary.focus, .js .uploads .form-label--file .open > span.dropdown-toggle.focus:nth-of-type(1), .open > .dropdown-toggle.btn-primary:focus, .js .uploads .form-label--file .open > span.dropdown-toggle:focus:nth-of-type(1), .open > .dropdown-toggle.btn-primary:hover, .js .uploads .form-label--file .open > span.dropdown-toggle:hover:nth-of-type(1) {
   color: #fff;
   background-color: #204d74;
   border-color: #122b40; }
 
-.btn-primary.active, .btn-primary:active, .open > .dropdown-toggle.btn-primary {
+.btn-primary.active, .js .uploads .form-label--file span.active:nth-of-type(1), .btn-primary:active, .js .uploads .form-label--file span:active:nth-of-type(1), .open > .dropdown-toggle.btn-primary, .js .uploads .form-label--file .open > span.dropdown-toggle:nth-of-type(1) {
   background-image: none; }
 
-.btn-primary.disabled.focus, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled].focus, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover {
+.btn-primary.disabled.focus, .js .uploads .form-label--file span.disabled.focus:nth-of-type(1), .btn-primary.disabled:focus, .js .uploads .form-label--file span.disabled:focus:nth-of-type(1), .btn-primary.disabled:hover, .js .uploads .form-label--file span.disabled:hover:nth-of-type(1), .btn-primary[disabled].focus, .js .uploads .form-label--file span[disabled].focus:nth-of-type(1), .btn-primary[disabled]:focus, .js .uploads .form-label--file span[disabled]:focus:nth-of-type(1), .btn-primary[disabled]:hover, .js .uploads .form-label--file span[disabled]:hover:nth-of-type(1), fieldset[disabled] .btn-primary.focus, fieldset[disabled] .js .uploads .form-label--file span.focus:nth-of-type(1), .js .uploads .form-label--file fieldset[disabled] span.focus:nth-of-type(1), fieldset[disabled] .btn-primary:focus, fieldset[disabled] .js .uploads .form-label--file span:focus:nth-of-type(1), .js .uploads .form-label--file fieldset[disabled] span:focus:nth-of-type(1), fieldset[disabled] .btn-primary:hover, fieldset[disabled] .js .uploads .form-label--file span:hover:nth-of-type(1), .js .uploads .form-label--file fieldset[disabled] span:hover:nth-of-type(1) {
   background-color: #337ab7;
   border-color: #2e6da4; }
 
-.btn-primary .badge {
+.btn-primary .badge, .js .uploads .form-label--file span:nth-of-type(1) .badge {
   color: #337ab7;
   background-color: #fff; }
 
@@ -2707,19 +2707,19 @@ a.btn.disabled, .details summary.btn.disabled:focus, fieldset[disabled] a.btn, f
   color: #777;
   text-decoration: none; }
 
-.btn-group-lg > .btn, .btn-lg {
+.btn-group-lg > .btn, .js .uploads .form-label--file .btn-group-lg > span:nth-of-type(1), .btn-lg {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
   border-radius: 6px; }
 
-.btn-group-sm > .btn, .btn-sm {
+.btn-group-sm > .btn, .js .uploads .form-label--file .btn-group-sm > span:nth-of-type(1), .btn-sm {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px; }
 
-.btn-group-xs > .btn, .btn-xs {
+.btn-group-xs > .btn, .js .uploads .form-label--file .btn-group-xs > span:nth-of-type(1), .btn-xs {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
@@ -2907,57 +2907,57 @@ tbody.collapse.in {
   display: inline-block;
   vertical-align: middle; }
 
-.btn-group-vertical > .btn, .btn-group > .btn {
+.btn-group-vertical > .btn, .js .uploads .form-label--file .btn-group-vertical > span:nth-of-type(1), .btn-group > .btn, .js .uploads .form-label--file .btn-group > span:nth-of-type(1) {
   position: relative;
   float: left; }
 
-.btn-group-vertical > .btn.active, .btn-group-vertical > .btn:active, .btn-group-vertical > .btn:focus, .btn-group-vertical > .btn:hover, .btn-group > .btn.active, .btn-group > .btn:active, .btn-group > .btn:focus, .btn-group > .btn:hover {
+.btn-group-vertical > .btn.active, .js .uploads .form-label--file .btn-group-vertical > span.active:nth-of-type(1), .btn-group-vertical > .btn:active, .js .uploads .form-label--file .btn-group-vertical > span:active:nth-of-type(1), .btn-group-vertical > .btn:focus, .js .uploads .form-label--file .btn-group-vertical > span:focus:nth-of-type(1), .btn-group-vertical > .btn:hover, .js .uploads .form-label--file .btn-group-vertical > span:hover:nth-of-type(1), .btn-group > .btn.active, .js .uploads .form-label--file .btn-group > span.active:nth-of-type(1), .btn-group > .btn:active, .js .uploads .form-label--file .btn-group > span:active:nth-of-type(1), .btn-group > .btn:focus, .js .uploads .form-label--file .btn-group > span:focus:nth-of-type(1), .btn-group > .btn:hover, .js .uploads .form-label--file .btn-group > span:hover:nth-of-type(1) {
   z-index: 2; }
 
-.btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {
+.btn-group .btn + .btn, .btn-group .js .uploads .form-label--file span:nth-of-type(1) + .btn, .js .uploads .form-label--file .btn-group span:nth-of-type(1) + .btn, .btn-group .js .uploads .form-label--file .btn + span:nth-of-type(1), .js .uploads .form-label--file .btn-group .btn + span:nth-of-type(1), .btn-group .js .uploads .form-label--file span:nth-of-type(1) + span:nth-of-type(1), .js .uploads .form-label--file .btn-group span:nth-of-type(1) + span:nth-of-type(1), .btn-group .btn + .btn-group, .btn-group .js .uploads .form-label--file span:nth-of-type(1) + .btn-group, .js .uploads .form-label--file .btn-group span:nth-of-type(1) + .btn-group, .btn-group .btn-group + .btn, .btn-group .js .uploads .form-label--file .btn-group + span:nth-of-type(1), .js .uploads .form-label--file .btn-group .btn-group + span:nth-of-type(1), .btn-group .btn-group + .btn-group {
   margin-left: -1px; }
 
 .btn-toolbar {
   margin-left: -5px; }
 
-.btn-toolbar .btn, .btn-toolbar .btn-group, .btn-toolbar .input-group {
+.btn-toolbar .btn, .btn-toolbar .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file .btn-toolbar span:nth-of-type(1), .btn-toolbar .btn-group, .btn-toolbar .input-group {
   float: left; }
 
-.btn-toolbar > .btn, .btn-toolbar > .btn-group, .btn-toolbar > .input-group {
+.btn-toolbar > .btn, .js .uploads .form-label--file .btn-toolbar > span:nth-of-type(1), .btn-toolbar > .btn-group, .btn-toolbar > .input-group {
   margin-left: 5px; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .js .uploads .form-label--file .btn-group > span:not(:first-child):not(:last-child):not(.dropdown-toggle):nth-of-type(1) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child {
+.btn-group > .btn:first-child, .js .uploads .form-label--file .btn-group > span:first-child:nth-of-type(1) {
   margin-left: 0; }
 
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .js .uploads .form-label--file .btn-group > span:first-child:not(:last-child):not(.dropdown-toggle):nth-of-type(1) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
+.btn-group > .btn:last-child:not(:first-child), .js .uploads .form-label--file .btn-group > span:last-child:not(:first-child):nth-of-type(1), .btn-group > .dropdown-toggle:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .js .uploads .form-label--file .btn-group > .btn-group:not(:first-child):not(:last-child) > span:nth-of-type(1) {
   border-radius: 0; }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .js .uploads .form-label--file .btn-group > .btn-group:first-child:not(:last-child) > span:last-child:nth-of-type(1), .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .js .uploads .form-label--file .btn-group > .btn-group:last-child:not(:first-child) > span:first-child:nth-of-type(1) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
 .btn-group .dropdown-toggle:active, .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn-group > .btn + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle, .js .uploads .form-label--file .btn-group > span:nth-of-type(1) + .dropdown-toggle {
   padding-right: 8px;
   padding-left: 8px; }
 
@@ -2973,7 +2973,7 @@ tbody.collapse.in {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-.btn .caret {
+.btn .caret, .js .uploads .form-label--file span:nth-of-type(1) .caret {
   margin-left: 0; }
 
 .btn-lg .caret {
@@ -2983,42 +2983,42 @@ tbody.collapse.in {
 .dropup .btn-lg .caret {
   border-width: 0 5px 5px; }
 
-.btn-group-vertical > .btn, .btn-group-vertical > .btn-group, .btn-group-vertical > .btn-group > .btn {
+.btn-group-vertical > .btn, .js .uploads .form-label--file .btn-group-vertical > span:nth-of-type(1), .btn-group-vertical > .btn-group, .btn-group-vertical > .btn-group > .btn, .js .uploads .form-label--file .btn-group-vertical > .btn-group > span:nth-of-type(1) {
   display: block;
   float: none;
   width: 100%;
   max-width: 100%; }
 
-.btn-group-vertical > .btn-group > .btn {
+.btn-group-vertical > .btn-group > .btn, .js .uploads .form-label--file .btn-group-vertical > .btn-group > span:nth-of-type(1) {
   float: none; }
 
-.btn-group-vertical > .btn + .btn, .btn-group-vertical > .btn + .btn-group, .btn-group-vertical > .btn-group + .btn, .btn-group-vertical > .btn-group + .btn-group {
+.btn-group-vertical > .btn + .btn, .js .uploads .form-label--file .btn-group-vertical > span:nth-of-type(1) + .btn, .js .uploads .form-label--file .btn-group-vertical > .btn + span:nth-of-type(1), .js .uploads .form-label--file .btn-group-vertical > span:nth-of-type(1) + span:nth-of-type(1), .btn-group-vertical > .btn + .btn-group, .js .uploads .form-label--file .btn-group-vertical > span:nth-of-type(1) + .btn-group, .btn-group-vertical > .btn-group + .btn, .js .uploads .form-label--file .btn-group-vertical > .btn-group + span:nth-of-type(1), .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .js .uploads .form-label--file .btn-group-vertical > span:not(:first-child):not(:last-child):nth-of-type(1) {
   border-radius: 0; }
 
-.btn-group-vertical > .btn:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .js .uploads .form-label--file .btn-group-vertical > span:first-child:not(:last-child):nth-of-type(1) {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .js .uploads .form-label--file .btn-group-vertical > span:last-child:not(:first-child):nth-of-type(1) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .js .uploads .form-label--file .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > span:nth-of-type(1) {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .js .uploads .form-label--file .btn-group-vertical > .btn-group:first-child:not(:last-child) > span:last-child:nth-of-type(1), .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .js .uploads .form-label--file .btn-group-vertical > .btn-group:last-child:not(:first-child) > span:first-child:nth-of-type(1) {
   border-top-left-radius: 0;
   border-top-right-radius: 0; }
 
@@ -3028,18 +3028,18 @@ tbody.collapse.in {
   table-layout: fixed;
   border-collapse: separate; }
 
-.btn-group-justified > .btn, .btn-group-justified > .btn-group {
+.btn-group-justified > .btn, .js .uploads .form-label--file .btn-group-justified > span:nth-of-type(1), .btn-group-justified > .btn-group {
   display: table-cell;
   float: none;
   width: 1%; }
 
-.btn-group-justified > .btn-group .btn {
+.btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file .btn-group-justified > .btn-group span:nth-of-type(1) {
   width: 100%; }
 
 .btn-group-justified > .btn-group .dropdown-menu {
   left: auto; }
 
-[data-toggle=buttons] > .btn input[type=checkbox], [data-toggle=buttons] > .btn input[type=radio], [data-toggle=buttons] > .btn-group > .btn input[type=checkbox], [data-toggle=buttons] > .btn-group > .btn input[type=radio] {
+[data-toggle=buttons] > .btn input[type=checkbox], .js .uploads .form-label--file [data-toggle=buttons] > span:nth-of-type(1) input[type=checkbox], [data-toggle=buttons] > .btn input[type=radio], .js .uploads .form-label--file [data-toggle=buttons] > span:nth-of-type(1) input[type=radio], [data-toggle=buttons] > .btn-group > .btn input[type=checkbox], .js .uploads .form-label--file [data-toggle=buttons] > .btn-group > span:nth-of-type(1) input[type=checkbox], [data-toggle=buttons] > .btn-group > .btn input[type=radio], .js .uploads .form-label--file [data-toggle=buttons] > .btn-group > span:nth-of-type(1) input[type=radio] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none; }
@@ -3064,32 +3064,32 @@ tbody.collapse.in {
 .input-group .form-control:focus, .input-group .col-md-8 #SearchBox:focus, .col-md-8 .input-group #SearchBox:focus {
   z-index: 3; }
 
-.input-group-lg > .form-control, .col-md-8 .input-group-lg > #SearchBox, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn {
+.input-group-lg > .form-control, .col-md-8 .input-group-lg > #SearchBox, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn, .js .uploads .form-label--file .input-group-lg > .input-group-btn > span:nth-of-type(1) {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
   border-radius: 6px; }
 
-select.input-group-lg > .form-control, .col-md-8 select.input-group-lg > #SearchBox, select.input-group-lg > .input-group-addon, select.input-group-lg > .input-group-btn > .btn {
+select.input-group-lg > .form-control, .col-md-8 select.input-group-lg > #SearchBox, select.input-group-lg > .input-group-addon, select.input-group-lg > .input-group-btn > .btn, .js .uploads .form-label--file select.input-group-lg > .input-group-btn > span:nth-of-type(1) {
   height: 46px;
   line-height: 46px; }
 
-select[multiple].input-group-lg > .form-control, .col-md-8 select[multiple].input-group-lg > #SearchBox, select[multiple].input-group-lg > .input-group-addon, select[multiple].input-group-lg > .input-group-btn > .btn, textarea.input-group-lg > .form-control, .col-md-8 textarea.input-group-lg > #SearchBox, textarea.input-group-lg > .input-group-addon, textarea.input-group-lg > .input-group-btn > .btn {
+select[multiple].input-group-lg > .form-control, .col-md-8 select[multiple].input-group-lg > #SearchBox, select[multiple].input-group-lg > .input-group-addon, select[multiple].input-group-lg > .input-group-btn > .btn, .js .uploads .form-label--file select[multiple].input-group-lg > .input-group-btn > span:nth-of-type(1), textarea.input-group-lg > .form-control, .col-md-8 textarea.input-group-lg > #SearchBox, textarea.input-group-lg > .input-group-addon, textarea.input-group-lg > .input-group-btn > .btn, .js .uploads .form-label--file textarea.input-group-lg > .input-group-btn > span:nth-of-type(1) {
   height: auto; }
 
-.input-group-sm > .form-control, .col-md-8 .input-group-sm > #SearchBox, .input-group-sm > .input-group-addon, .input-group-sm > .input-group-btn > .btn {
+.input-group-sm > .form-control, .col-md-8 .input-group-sm > #SearchBox, .input-group-sm > .input-group-addon, .input-group-sm > .input-group-btn > .btn, .js .uploads .form-label--file .input-group-sm > .input-group-btn > span:nth-of-type(1) {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px; }
 
-select.input-group-sm > .form-control, .col-md-8 select.input-group-sm > #SearchBox, select.input-group-sm > .input-group-addon, select.input-group-sm > .input-group-btn > .btn {
+select.input-group-sm > .form-control, .col-md-8 select.input-group-sm > #SearchBox, select.input-group-sm > .input-group-addon, select.input-group-sm > .input-group-btn > .btn, .js .uploads .form-label--file select.input-group-sm > .input-group-btn > span:nth-of-type(1) {
   height: 30px;
   line-height: 30px; }
 
-select[multiple].input-group-sm > .form-control, .col-md-8 select[multiple].input-group-sm > #SearchBox, select[multiple].input-group-sm > .input-group-addon, select[multiple].input-group-sm > .input-group-btn > .btn, textarea.input-group-sm > .form-control, .col-md-8 textarea.input-group-sm > #SearchBox, textarea.input-group-sm > .input-group-addon, textarea.input-group-sm > .input-group-btn > .btn {
+select[multiple].input-group-sm > .form-control, .col-md-8 select[multiple].input-group-sm > #SearchBox, select[multiple].input-group-sm > .input-group-addon, select[multiple].input-group-sm > .input-group-btn > .btn, .js .uploads .form-label--file select[multiple].input-group-sm > .input-group-btn > span:nth-of-type(1), textarea.input-group-sm > .form-control, .col-md-8 textarea.input-group-sm > #SearchBox, textarea.input-group-sm > .input-group-addon, textarea.input-group-sm > .input-group-btn > .btn, .js .uploads .form-label--file textarea.input-group-sm > .input-group-btn > span:nth-of-type(1) {
   height: auto; }
 
 .input-group .form-control, .input-group .col-md-8 #SearchBox, .col-md-8 .input-group #SearchBox, .input-group-addon, .input-group-btn {
@@ -3127,14 +3127,14 @@ select[multiple].input-group-sm > .form-control, .col-md-8 select[multiple].inpu
 .input-group-addon input[type=checkbox], .input-group-addon input[type=radio] {
   margin-top: 0; }
 
-.input-group .form-control:first-child, .input-group .col-md-8 #SearchBox:first-child, .col-md-8 .input-group #SearchBox:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn-group:not(:last-child) > .btn, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+.input-group .form-control:first-child, .input-group .col-md-8 #SearchBox:first-child, .col-md-8 .input-group #SearchBox:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .js .uploads .form-label--file .input-group-btn:first-child > span:nth-of-type(1), .input-group-btn:first-child > .btn-group > .btn, .js .uploads .form-label--file .input-group-btn:first-child > .btn-group > span:nth-of-type(1), .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn-group:not(:last-child) > .btn, .js .uploads .form-label--file .input-group-btn:last-child > .btn-group:not(:last-child) > span:nth-of-type(1), .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .js .uploads .form-label--file .input-group-btn:last-child > span:not(:last-child):not(.dropdown-toggle):nth-of-type(1) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
 .input-group-addon:first-child {
   border-right: 0; }
 
-.input-group .form-control:last-child, .input-group .col-md-8 #SearchBox:last-child, .col-md-8 .input-group #SearchBox:last-child, .input-group-addon:last-child, .input-group-btn:first-child > .btn-group:not(:first-child) > .btn, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .dropdown-toggle {
+.input-group .form-control:last-child, .input-group .col-md-8 #SearchBox:last-child, .col-md-8 .input-group #SearchBox:last-child, .input-group-addon:last-child, .input-group-btn:first-child > .btn-group:not(:first-child) > .btn, .js .uploads .form-label--file .input-group-btn:first-child > .btn-group:not(:first-child) > span:nth-of-type(1), .input-group-btn:first-child > .btn:not(:first-child), .js .uploads .form-label--file .input-group-btn:first-child > span:not(:first-child):nth-of-type(1), .input-group-btn:last-child > .btn, .js .uploads .form-label--file .input-group-btn:last-child > span:nth-of-type(1), .input-group-btn:last-child > .btn-group > .btn, .js .uploads .form-label--file .input-group-btn:last-child > .btn-group > span:nth-of-type(1), .input-group-btn:last-child > .dropdown-toggle {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -3146,19 +3146,19 @@ select[multiple].input-group-sm > .form-control, .col-md-8 select[multiple].inpu
   font-size: 0;
   white-space: nowrap; }
 
-.input-group-btn > .btn {
+.input-group-btn > .btn, .js .uploads .form-label--file .input-group-btn > span:nth-of-type(1) {
   position: relative; }
 
-.input-group-btn > .btn + .btn {
+.input-group-btn > .btn + .btn, .js .uploads .form-label--file .input-group-btn > span:nth-of-type(1) + .btn, .js .uploads .form-label--file .input-group-btn > .btn + span:nth-of-type(1), .js .uploads .form-label--file .input-group-btn > span:nth-of-type(1) + span:nth-of-type(1) {
   margin-left: -1px; }
 
-.input-group-btn > .btn:active, .input-group-btn > .btn:focus, .input-group-btn > .btn:hover {
+.input-group-btn > .btn:active, .js .uploads .form-label--file .input-group-btn > span:active:nth-of-type(1), .input-group-btn > .btn:focus, .js .uploads .form-label--file .input-group-btn > span:focus:nth-of-type(1), .input-group-btn > .btn:hover, .js .uploads .form-label--file .input-group-btn > span:hover:nth-of-type(1) {
   z-index: 2; }
 
-.input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group {
+.input-group-btn:first-child > .btn, .js .uploads .form-label--file .input-group-btn:first-child > span:nth-of-type(1), .input-group-btn:first-child > .btn-group {
   margin-right: -1px; }
 
-.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+.input-group-btn:last-child > .btn, .js .uploads .form-label--file .input-group-btn:last-child > span:nth-of-type(1), .input-group-btn:last-child > .btn-group {
   z-index: 2;
   margin-left: -1px; }
 
@@ -3894,7 +3894,7 @@ a.label:focus, .details summary.label:focus, a.label:hover, .details summary.lab
 .label:empty {
   display: none; }
 
-.btn .label {
+.btn .label, .js .uploads .form-label--file span:nth-of-type(1) .label {
   position: relative;
   top: -1px; }
 
@@ -3951,11 +3951,11 @@ a.label:focus, .details summary.label:focus, a.label:hover, .details summary.lab
 .badge:empty {
   display: none; }
 
-.btn .badge {
+.btn .badge, .js .uploads .form-label--file span:nth-of-type(1) .badge {
   position: relative;
   top: -1px; }
 
-.btn-group-xs > .btn .badge, .btn-xs .badge {
+.btn-group-xs > .btn .badge, .js .uploads .form-label--file .btn-group-xs > span:nth-of-type(1) .badge, .btn-xs .badge {
   top: 0;
   padding: 1px 5px; }
 
@@ -4789,11 +4789,11 @@ button.close {
   text-align: right;
   border-top: 1px solid #e5e5e5; }
 
-.modal-footer .btn + .btn {
+.modal-footer .btn + .btn, .modal-footer .js .uploads .form-label--file span:nth-of-type(1) + .btn, .js .uploads .form-label--file .modal-footer span:nth-of-type(1) + .btn, .modal-footer .js .uploads .form-label--file .btn + span:nth-of-type(1), .js .uploads .form-label--file .modal-footer .btn + span:nth-of-type(1), .modal-footer .js .uploads .form-label--file span:nth-of-type(1) + span:nth-of-type(1), .js .uploads .form-label--file .modal-footer span:nth-of-type(1) + span:nth-of-type(1) {
   margin-bottom: 0;
   margin-left: 5px; }
 
-.modal-footer .btn-group .btn + .btn {
+.modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .js .uploads .form-label--file span:nth-of-type(1) + .btn, .js .uploads .form-label--file .modal-footer .btn-group span:nth-of-type(1) + .btn, .modal-footer .btn-group .js .uploads .form-label--file .btn + span:nth-of-type(1), .js .uploads .form-label--file .modal-footer .btn-group .btn + span:nth-of-type(1), .modal-footer .btn-group .js .uploads .form-label--file span:nth-of-type(1) + span:nth-of-type(1), .js .uploads .form-label--file .modal-footer .btn-group span:nth-of-type(1) + span:nth-of-type(1) {
   margin-left: -1px; }
 
 .modal-footer .btn-block + .btn-block {
@@ -5238,7 +5238,7 @@ button.close {
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
 
-.carousel-caption .btn {
+.carousel-caption .btn, .carousel-caption .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file .carousel-caption span:nth-of-type(1) {
   text-shadow: none; }
 
 @media screen and (min-width: 768px) {
@@ -6274,16 +6274,22 @@ ul + p {
 .text-highlight + p {
   margin-top: 0; }
 
-.btn + h2,
+.btn + h2, .js .uploads .form-label--file span:nth-of-type(1) + h2,
 .btn + h3,
+.js .uploads .form-label--file span:nth-of-type(1) + h3,
 .btn + .heading-medium,
-.btn + .heading-small {
+.js .uploads .form-label--file span:nth-of-type(1) + .heading-medium,
+.btn + .heading-small,
+.js .uploads .form-label--file span:nth-of-type(1) + .heading-small {
   margin-top: 50px; }
   @media (max-width: 641px) {
-    .btn + h2,
+    .btn + h2, .js .uploads .form-label--file span:nth-of-type(1) + h2,
     .btn + h3,
+    .js .uploads .form-label--file span:nth-of-type(1) + h3,
     .btn + .heading-medium,
-    .btn + .heading-small {
+    .js .uploads .form-label--file span:nth-of-type(1) + .heading-medium,
+    .btn + .heading-small,
+    .js .uploads .form-label--file span:nth-of-type(1) + .heading-small {
       margin-top: 30px; } }
 
 .list-nav .contact i {
@@ -6416,7 +6422,7 @@ h2 + h3 {
   clip: rect(0, 0, 0, 0);
   border: 0; }
 
-.btn,
+.btn, .js .uploads .form-label--file span:nth-of-type(1),
 .form-group input[type=button],
 .form-group input.btn.btn-primary,
 .form-group input[type=submit],
@@ -6438,7 +6444,7 @@ h2 + h3 {
   line-height: 1.3em;
   position: relative; }
   @media (max-width: 641px) {
-    .btn,
+    .btn, .js .uploads .form-label--file span:nth-of-type(1),
     .form-group input[type=button],
     .form-group input.btn.btn-primary,
     .form-group input[type=submit],
@@ -6446,13 +6452,13 @@ h2 + h3 {
       margin: 5px 0 15px;
       padding: 15px 20px;
       font-size: 16px; } }
-  .btn:after,
+  .btn:after, .js .uploads .form-label--file span:nth-of-type(1):after,
   .form-group input[type=button]:after,
   .form-group input.btn.btn-primary:after,
   .form-group input[type=submit]:after,
   .limitedrte-Style-BUTTON:after {
     display: none; }
-  .btn:focus,
+  .btn:focus, .js .uploads .form-label--file span:focus:nth-of-type(1),
   .form-group input[type=button]:focus,
   .form-group input.btn.btn-primary:focus,
   .form-group input[type=submit]:focus,
@@ -6462,10 +6468,12 @@ h2 + h3 {
     border-color: #fbc02d !important; }
 
 .btn-arrow,
-.btn[rel=external] {
+.btn[rel=external],
+.js .uploads .form-label--file span[rel=external]:nth-of-type(1) {
   padding-right: 60px; }
   .btn-arrow:before,
-  .btn[rel=external]:before {
+  .btn[rel=external]:before,
+  .js .uploads .form-label--file span:nth-of-type(1)[rel=external]:before {
     height: 100%;
     width: 36px;
     position: absolute;
@@ -6476,7 +6484,8 @@ h2 + h3 {
     display: block;
     content: ""; }
   .btn-arrow:after,
-  .btn[rel=external]:after {
+  .btn[rel=external]:after,
+  .js .uploads .form-label--file span:nth-of-type(1)[rel=external]:after {
     content: "\f105";
     font-family: FontAwesome;
     display: block;
@@ -6492,18 +6501,23 @@ h2 + h3 {
     font-size: 30px; }
   @media (max-width: 767px) {
     .btn-arrow,
-    .btn[rel=external] {
+    .btn[rel=external],
+    .js .uploads .form-label--file span[rel=external]:nth-of-type(1) {
       padding-right: 50px; } }
 
-.btn[rel=external] {
+
+.btn[rel=external],
+.js .uploads .form-label--file span[rel=external]:nth-of-type(1) {
   margin: 0 0 20px; }
-  .btn[rel=external]:after {
+  
+  .btn[rel=external]:after,
+  .js .uploads .form-label--file span:nth-of-type(1)[rel=external]:after {
     content: "\f08e";
     width: 41px;
     font-size: 14px;
     opacity: 0.8; }
 
-.btn.bottom {
+.btn.bottom, .js .uploads .form-label--file span.bottom:nth-of-type(1) {
   margin-bottom: 0 !important; }
 
 .btn-small,
@@ -6524,7 +6538,7 @@ h2 + h3 {
   .btn-default:visited {
     color: white; }
 
-.btn-primary,
+.btn-primary, .js .uploads .form-label--file span:nth-of-type(1),
 .form-group input[type=button],
 .form-group input.btn.btn-primary,
 .form-group input[type=submit],
@@ -6532,7 +6546,7 @@ h2 + h3 {
   background-color: #2e7d32;
   color: #FFFFFF;
   border-color: #2e7d32; }
-  .btn-primary:hover,
+  .btn-primary:hover, .js .uploads .form-label--file span:hover:nth-of-type(1),
   .form-group input[type=button]:hover,
   .form-group input.btn.btn-primary:hover,
   .form-group input[type=submit]:hover,
@@ -6540,7 +6554,7 @@ h2 + h3 {
     background: #359039;
     color: #FFFFFF;
     border-color: #359039; }
-  .btn-primary:active,
+  .btn-primary:active, .js .uploads .form-label--file span:active:nth-of-type(1),
   .form-group input[type=button]:active,
   .form-group input.btn.btn-primary:active,
   .form-group input[type=submit]:active,
@@ -6548,7 +6562,7 @@ h2 + h3 {
     background: #205823 !important;
     color: #FFFFFF !important;
     border-color: #205823 !important; }
-  .btn-primary:visited,
+  .btn-primary:visited, .js .uploads .form-label--file span:visited:nth-of-type(1),
   .form-group input[type=button]:visited,
   .form-group input.btn.btn-primary:visited,
   .form-group input[type=submit]:visited,
@@ -6610,7 +6624,7 @@ form {
     font-size: 16px;
     border: 0;
     padding: 10px 0 0; }
-  .form-group .btn {
+  .form-group .btn, .form-group .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file .form-group span:nth-of-type(1) {
     margin: 0; }
   .form-group .panel {
     display: inline-block;
@@ -6877,6 +6891,7 @@ form legend {
       .error-message-wrapper .error-message {
         font-size: 16px; } }
 
+
 .form-group input.btn.btn-primary {
   width: auto;
   max-width: 100%; }
@@ -7041,7 +7056,7 @@ h1 .form-progress {
   -ms-border-radius: 4px 0 0 4px !important;
   border-radius: 4px 0 0 4px !important; }
 
-.search-group .btn {
+.search-group .btn, .search-group .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file .search-group span:nth-of-type(1) {
   height: 45px;
   background: #2e7d32;
   color: #FFFFFF;
@@ -7051,7 +7066,7 @@ h1 .form-progress {
   padding: 10px 15px;
   font-size: 16px;
   box-shadow: none !important; }
-  .search-group .btn:hover {
+  .search-group .btn:hover, .search-group .js .uploads .form-label--file span:hover:nth-of-type(1), .js .uploads .form-label--file .search-group span:hover:nth-of-type(1) {
     background: #359039; }
 
 .search-group-link {
@@ -7198,8 +7213,7 @@ h1 .form-progress {
   visibility: visible; }
 
 a:focus, .details summary:focus,
-input[type=submit]:focus,
-.btn:focus,
+input[type=submit]:focus, .btn:focus, .js .uploads .form-label--file span:focus:nth-of-type(1),
 .button:focus,
 .ms-srch-sb > .ms-srch-sb-searchLink:focus,
 .main-nav ul li a.selected:focus,
@@ -7389,13 +7403,15 @@ p + .panel {
   .panel.alt h3,
   .panel.alt p,
   .panel.alt .btn,
+  .panel.alt .js .uploads .form-label--file span:nth-of-type(1),
+  .js .uploads .form-label--file .panel.alt span:nth-of-type(1),
   .panel.alt blockquote,
   .panel.alt blockquote footer,
   .panel.alt a,
   .panel.alt .details summary:focus,
   .details .panel.alt summary:focus {
     color: white; }
-  .panel.alt .btn.btn-outline {
+  .panel.alt .btn.btn-outline, .panel.alt .js .uploads .form-label--file span.btn-outline:nth-of-type(1), .js .uploads .form-label--file .panel.alt span.btn-outline:nth-of-type(1) {
     color: white !important;
     border-color: white !important; }
   .panel.alt a:hover, .panel.alt .details summary:hover:focus, .details .panel.alt summary:hover:focus {
@@ -7647,13 +7663,13 @@ p + .panel {
 
 .panel p {
   margin-bottom: 15px; }
-  .panel p + .btn {
+  .panel p + .btn, .panel .js .uploads .form-label--file p + span:nth-of-type(1), .js .uploads .form-label--file .panel p + span:nth-of-type(1) {
     margin-top: 5px !important; }
 
-.panel .btn {
+.panel .btn, .panel .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file .panel span:nth-of-type(1) {
   margin-bottom: 0; }
 
-.panel p + .btn {
+.panel p + .btn, .panel .js .uploads .form-label--file p + span:nth-of-type(1), .js .uploads .form-label--file .panel p + span:nth-of-type(1) {
   margin-top: 10px !important; }
 
 .panel .text-block,
@@ -7779,7 +7795,7 @@ div.ms-rteElement-divLeft h2, div.ms-rteElement-divLeft h3, div.ms-rteElement-di
   margin-left: 0px;
   margin-right: 0px; }
 
-div.ms-rteElement-divLeft .btn, div.ms-rteElement-divThird .btn, div.ms-rteElement-divRight50 .btn {
+div.ms-rteElement-divLeft .btn, div.ms-rteElement-divLeft .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file div.ms-rteElement-divLeft span:nth-of-type(1), div.ms-rteElement-divThird .btn, div.ms-rteElement-divThird .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file div.ms-rteElement-divThird span:nth-of-type(1), div.ms-rteElement-divRight50 .btn, div.ms-rteElement-divRight50 .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file div.ms-rteElement-divRight50 span:nth-of-type(1) {
   width: 100%; }
 
 div.ms-rteElement-divLeft img, div.ms-rteElement-divThird img, div.ms-rteElement-divRight50 img {
@@ -8950,7 +8966,7 @@ td .ui-state-hover {
     .lcc-search-box .input-group .form-control, .lcc-search-box .input-group .col-md-8 #SearchBox, .col-md-8 .lcc-search-box .input-group #SearchBox {
       height: 55px; } }
 
-.lcc-search-box .input-group .btn {
+.lcc-search-box .input-group .btn, .lcc-search-box .input-group .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file .lcc-search-box .input-group span:nth-of-type(1) {
   padding: 0;
   height: 45px;
   width: 45px;
@@ -8959,17 +8975,17 @@ td .ui-state-hover {
   background: #007299;
   border: 1px solid #007299; }
   @media (min-width: 641px) {
-    .lcc-search-box .input-group .btn {
+    .lcc-search-box .input-group .btn, .lcc-search-box .input-group .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file .lcc-search-box .input-group span:nth-of-type(1) {
       height: 55px;
       width: 55px; } }
-  .lcc-search-box .input-group .btn:hover {
+  .lcc-search-box .input-group .btn:hover, .lcc-search-box .input-group .js .uploads .form-label--file span:hover:nth-of-type(1), .js .uploads .form-label--file .lcc-search-box .input-group span:hover:nth-of-type(1) {
     background: #005f80;
     border-color: #005f80; }
-  .lcc-search-box .input-group .btn:active, .lcc-search-box .input-group .btn:focus {
+  .lcc-search-box .input-group .btn:active, .lcc-search-box .input-group .js .uploads .form-label--file span:active:nth-of-type(1), .js .uploads .form-label--file .lcc-search-box .input-group span:active:nth-of-type(1), .lcc-search-box .input-group .btn:focus, .lcc-search-box .input-group .js .uploads .form-label--file span:focus:nth-of-type(1), .js .uploads .form-label--file .lcc-search-box .input-group span:focus:nth-of-type(1) {
     box-shadow: none; }
-    .lcc-search-box .input-group .btn:active:before, .lcc-search-box .input-group .btn:focus:before {
+    .lcc-search-box .input-group .btn:active:before, .lcc-search-box .input-group .js .uploads .form-label--file span:nth-of-type(1):active:before, .js .uploads .form-label--file .lcc-search-box .input-group span:nth-of-type(1):active:before, .lcc-search-box .input-group .btn:focus:before, .lcc-search-box .input-group .js .uploads .form-label--file span:nth-of-type(1):focus:before, .js .uploads .form-label--file .lcc-search-box .input-group span:nth-of-type(1):focus:before {
       color: #263238; }
-  .lcc-search-box .input-group .btn:before {
+  .lcc-search-box .input-group .btn:before, .lcc-search-box .input-group .js .uploads .form-label--file span:nth-of-type(1):before, .js .uploads .form-label--file .lcc-search-box .input-group span:nth-of-type(1):before {
     font-family: "FontAwesome";
     font-size: 28px;
     content: "\f002";
@@ -9449,7 +9465,7 @@ ul.accordion div.text-block {
 ul.accordion div.text-highlight {
   padding: 20px !important; }
 
-ul.accordion li div.content-block div + .btn {
+ul.accordion li div.content-block div + .btn, ul.accordion li div.content-block .js .uploads .form-label--file div + span:nth-of-type(1), .js .uploads .form-label--file ul.accordion li div.content-block div + span:nth-of-type(1) {
   margin-right: 20px; }
 
 ul.accordion div.text-highlight {
@@ -10639,7 +10655,7 @@ form.disabledInput input {
                 -webkit-box-shadow: 0 0 0 4px #FFBF47;
                 -moz-box-shadow: 0 0 0 4px #FFBF47;
                 box-shadow: 0 0 0 4px #FFBF47; }
-            .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn {
+            .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn, .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search span:nth-of-type(1) {
               height: 55px;
               border: 0;
               padding: 10px 25px;
@@ -10647,24 +10663,24 @@ form.disabledInput input {
               font-size: 21px;
               margin: 0;
               color: white; }
-              .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn:hover {
+              .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn:hover, .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .js .uploads .form-label--file span:hover:nth-of-type(1), .js .uploads .form-label--file .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search span:hover:nth-of-type(1) {
                 background: #359039;
                 color: #FFFFFF; }
               @media (max-width: 766px) {
-                .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn {
+                .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn, .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search span:nth-of-type(1) {
                   width: 45px;
                   height: 45px; } }
-              .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn:after {
+              .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn:after, .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .js .uploads .form-label--file span:nth-of-type(1):after, .js .uploads .form-label--file .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search span:nth-of-type(1):after {
                 display: none; }
-              .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn i {
+              .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn i, .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .js .uploads .form-label--file span:nth-of-type(1) i, .js .uploads .form-label--file .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search span:nth-of-type(1) i {
                 font-size: 26px; }
                 @media (min-width: 767px) {
-                  .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn i {
+                  .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn i, .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .js .uploads .form-label--file span:nth-of-type(1) i, .js .uploads .form-label--file .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search span:nth-of-type(1) i {
                     display: none; } }
               @media (max-width: 766px) {
-                .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn {
+                .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn, .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search span:nth-of-type(1) {
                   padding: 5px 10px; }
-                  .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn span {
+                  .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn span, .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .js .uploads .form-label--file span:nth-of-type(1) span, .js .uploads .form-label--file .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search span:nth-of-type(1) span {
                     position: absolute;
                     width: 1px;
                     height: 1px;
@@ -10826,7 +10842,7 @@ form.disabledInput input {
   padding: 80px 15em; }
   .ie8 .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .hero-lcc__search-input {
     height: 55px; }
-  .ie8 .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn i {
+  .ie8 .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .btn i, .ie8 .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search .js .uploads .form-label--file span:nth-of-type(1) i, .js .uploads .form-label--file .ie8 .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__search-wrapper .hero-lcc__search span:nth-of-type(1) i {
     display: none; }
 
 .no-flexbox .hero-lcc-wrapper .hero-lcc .hero-lcc__content .hero-lcc__actions .hero-lcc__most-popular .hero-lcc__most-popular-item {
@@ -13324,10 +13340,10 @@ ul.accordion li div.content-block .open-data div.clear {
       #report-a-problem #report-a-problem-content form .form-group .form-control, #report-a-problem #report-a-problem-content form .form-group .col-md-8 #SearchBox, .col-md-8 #report-a-problem #report-a-problem-content form .form-group #SearchBox {
         width: 100% !important;
         max-width: 100% !important; }
-      #report-a-problem #report-a-problem-content form .form-group .btn {
+      #report-a-problem #report-a-problem-content form .form-group .btn, #report-a-problem #report-a-problem-content form .form-group .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file #report-a-problem #report-a-problem-content form .form-group span:nth-of-type(1) {
         margin-top: 15px; }
         @media (max-width: 641px) {
-          #report-a-problem #report-a-problem-content form .form-group .btn {
+          #report-a-problem #report-a-problem-content form .form-group .btn, #report-a-problem #report-a-problem-content form .form-group .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file #report-a-problem #report-a-problem-content form .form-group span:nth-of-type(1) {
             margin-top: 10px; } }
 
 #rss-content {
@@ -13748,7 +13764,7 @@ aside.col-md-4 {
 .socialBookmarks ul li a:visited, .socialBookmarks ul li .details summary:visited:focus, .details .socialBookmarks ul li summary:visited:focus {
   color: #007299; }
 
-.btn-primary,
+.btn-primary, .js .uploads .form-label--file span:nth-of-type(1),
 .form-group input[type=button],
 .form-group input.btn.btn-primary,
 .form-group input[type=submit],
@@ -13759,13 +13775,13 @@ aside.col-md-4 {
 .form-group input[type=button].btn-secondary {
   box-shadow: 0px 3px 0px #004c66; }
 
-.btn {
+.btn, .js .uploads .form-label--file span:nth-of-type(1) {
   padding: 15px 20px; }
-  .btn.btn-arrow, .btn.btn[rel=external] {
+  .btn.btn-arrow, .js .uploads .form-label--file span.btn-arrow:nth-of-type(1), .btn.btn[rel=external], .js .uploads .form-label--file span[rel=external]:nth-of-type(1) {
     padding-right: 45px; }
-    .btn.btn-arrow:before, .btn.btn[rel=external]:before {
+    .btn.btn-arrow:before, .js .uploads .form-label--file span.btn-arrow:nth-of-type(1):before, .btn.btn[rel=external]:before, .js .uploads .form-label--file span:nth-of-type(1)[rel=external]:before {
       display: none !important; }
-    .btn.btn-arrow:after, .btn.btn[rel=external]:after {
+    .btn.btn-arrow:after, .js .uploads .form-label--file span.btn-arrow:nth-of-type(1):after, .btn.btn[rel=external]:after, .js .uploads .form-label--file span:nth-of-type(1)[rel=external]:after {
       right: 20px;
       top: 50%;
       height: auto;
@@ -13774,18 +13790,18 @@ aside.col-md-4 {
       text-align: center;
       line-height: 0;
       width: auto; }
-  .btn:focus, .btn:active {
+  .btn:focus, .js .uploads .form-label--file span:focus:nth-of-type(1), .btn:active, .js .uploads .form-label--file span:active:nth-of-type(1) {
     border-color: #fbc02d !important;
     box-shadow: 0px 3px 0px #fbc02d; }
-  .btn.btn-small {
+  .btn.btn-small, .js .uploads .form-label--file span.btn-small:nth-of-type(1) {
     padding: 10px 14px; }
     @media (min-width: 641px) {
-      .btn.btn-small {
+      .btn.btn-small, .js .uploads .form-label--file span.btn-small:nth-of-type(1) {
         padding: 12px 16px; } }
-    .btn.btn-small.btn-arrow {
+    .btn.btn-small.btn-arrow, .js .uploads .form-label--file span.btn-small.btn-arrow:nth-of-type(1) {
       padding: 10px 40px 10px 14px; }
       @media (min-width: 641px) {
-        .btn.btn-small.btn-arrow {
+        .btn.btn-small.btn-arrow, .js .uploads .form-label--file span.btn-small.btn-arrow:nth-of-type(1) {
           padding: 12px 42px 12px 16px; } }
 
 .media-container {
@@ -14406,7 +14422,7 @@ aside.col-md-4 {
 .lcc-tree-card-actions {
   display: flex;
   margin-bottom: -15px; }
-  .lcc-tree-card-actions .btn {
+  .lcc-tree-card-actions .btn, .lcc-tree-card-actions .js .uploads .form-label--file span:nth-of-type(1), .js .uploads .form-label--file .lcc-tree-card-actions span:nth-of-type(1) {
     margin: 0 15px 15px 0; }
 
 .lcc-tree-controls {
@@ -14595,6 +14611,46 @@ aside.col-md-4 {
   .stepped-list-small .stepped-list__details-content {
     margin-left: 45px; } }
 
+.js .uploads .form-group input[type='file'] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px; }
+  .js .uploads .form-group input[type='file']:focus + label span:nth-of-type(1) {
+    background-color: #FFBF47 !important;
+    border-color: #fbc02d !important;
+    box-shadow: 0px 3px 0px #fbc02d;
+    color: #212224  !important; }
+  .js .uploads .form-group input[type='file']:focus + label svg * {
+    fill: #212224  !important; }
+
+.js .uploads .form-group .files {
+  display: none; }
+  .js .uploads .form-group .files.active {
+    display: block; }
+  .js .uploads .form-group .files__toUpload:not(.active) {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    white-space: nowrap;
+    width: 1px; }
+
+.js .uploads .form-label--file {
+  display: inline-block; }
+  .js .uploads .form-label--file span:nth-of-type(1) {
+    display: inline-block; }
+  .js .uploads .form-label--file span:nth-of-type(2) {
+    margin-left: 10px; }
+  .js .uploads .form-label--file svg * {
+    fill: #ffffff; }
+
 html {
   background-color: #007299; }
 
@@ -14604,5 +14660,5 @@ html {
   font-weight: 400;
   width: 100%; }
 
-.btn {
+.btn, .js .uploads .form-label--file span:nth-of-type(1) {
   margin: 10px 0 20px; }
