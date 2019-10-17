@@ -1,7 +1,7 @@
 {% extends "design-system-page-layout-guide.html" %}
 
 {% set section_id = "prototypes" %} <!-- Section id var for main nav --> 
-{% set page_id = "fileupload" %} <!-- Page id var for side nav --> 
+{% set page_id = "fileuploadwithsave" %} <!-- Page id var for side nav --> 
 {% set page_title = "File upload" %} <!-- Page title var for page header (H1) and page title -->    
 
 {% block sectionOneTop %}{% endblock %}
@@ -28,8 +28,8 @@
 <div id="file-upload" class="example top">
     <span class="example-title">Example</span>
 
-    <!-- <h3>Upload a file(s)</h3> -->
-    <div class="uploads">
+    <h3>Select file(s) to upload</h3>
+    <div class="uploads__multi">
         <div class="form-group">
             <input type="file" id="file-input" class="inputfile" data-multiple-caption="{count} files selected" multiple>
             <label class="form-label form-label--file" for="file-input">
@@ -42,9 +42,24 @@
             <div class="files">
                 <div class="files__toUpload">
                     <h4>Files being uploaded</h4>
-                    <ul class="list list-bullet"></ul>
+                    <ul class="toUpload">
+                        <li>
+                            <p>File-number-1.png</p>
+                            <a href="#">Remove</a>
+                        </li>
+                        <li>
+                            <p>File-number-1.png</p>
+                            <a href="#">Remove</a>
+                        </li>
+                    </ul>
+                    <!-- <ul class="list list-bullet">
+                        <li>File to be uploaded 1</li>
+                        <li>File to be uploaded 2</li>
+                        <li>File to be uploaded 3</li>
+                        <li>File to be uploaded 4</li>
+                    </ul> -->
                 </div>
-                <input type="button" class="files__remove" value="Remove files"/>
+                <input type="button" class="files__remove" value="Remove all files"/>
             </div>
         </div>
     </div>

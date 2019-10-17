@@ -69,43 +69,4 @@
 
     });
 
-
-    // var pullfiles=function(){ 
-    //     var fileInput = document.querySelector("#file-input"),
-    //         files = fileInput.files,
-    //         fl = files.length,
-    //         i = 0;
-    
-    //     $('.files__toUpload').empty();
-
-    //     while ( i < fl) {
-    //         // localize file var in the loop
-    //         var file = files[i];
-    //         console.log(file.name);
-    //         $('<p>'+file.name+'</p>').appendTo('.files__toUpload');
-    //         i++;
-    //     }    
-    // }
-    
-    // // set the input element onchange to call pullfiles
-    // document.querySelector("#file-input").onchange=pullfiles;
-
-    // // clear files in upload area
-    // var fileIndex = 0;
-    // $('input[type="file"]').each(function() {
-    //     fileIndex++;
-    //     $(this).wrap('<div id="fileIndex-'+fileIndex+'"></div>');
-        
-    //     $(this).after('<div class="files__toUpload"></div>');
-    //     $(this).after('<input type="button" value="Remove files" class="fileIndex-'+fileIndex+'" />');
-    // });
-
-    // $('input[value="Remove files"]').click(function() {
-    //     var clear = $(this).attr('class');
-        
-    //     $('#'+clear+' input[type="file"]').val('');
-
-    //     $('.files__toUpload').empty();
-    // });
-
 })( jQuery );
