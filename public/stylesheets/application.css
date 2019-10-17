@@ -14626,7 +14626,7 @@ aside.col-md-4 {
     box-shadow: 0px 3px 0px #fbc02d;
     color: #212224  !important; }
   .js .uploads .form-group input[type='file']:focus + label svg * {
-    fill: #212224  !important; }
+    fill: #212224 !important; }
 
 .js .uploads .form-group .files {
   display: none; }

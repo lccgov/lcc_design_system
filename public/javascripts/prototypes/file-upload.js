@@ -63,6 +63,7 @@
 
         parent.find('.form-label--file span:nth-of-type(2)').html('');
         parent.find('.files__toUpload, .files').removeClass('active');
+        $('.files__toUpload').empty();
 
     });
 
