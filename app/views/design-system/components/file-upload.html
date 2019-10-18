@@ -22,6 +22,7 @@
     <ul class="list list-contents">
         <li><a href="#file-upload">File upload example</a></li>
         <li><a href="#error-handling">Error handling</a></li>
+        <li><a href="#multi-file">Multi file upload</a></li>
     </ul>
 </div>
 
@@ -92,5 +93,85 @@
     </button>
 </div>
 
+
+<h2 id="multi-file" class="heading-large">Multi file upload</h2>
+<div class="text">
+    <p><strong>Note:</strong> The below example is for CATs forms. There is no logic behind this as it has been done by DIS. Conditional logic to be used to show the <code>.files</code> div when files are present.</p>
+</div>
+
+<div class="example top">
+    <span class="example-title">Example</span>
+
+    <h3>Select file(s) to upload</h3>
+    <div class="uploads">
+        <div class="form-group">
+            <input type="file" id="file-input-multi" multiple>
+            <label class="form-label form-label--file" for="file-input-multi">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
+                    Choose a file
+                </span>
+                <span></span>
+            </label>
+            <div class="files">
+                <div class="files__toUpload">
+                    <h4>Files being uploaded</h4>
+                    <ul class="toUpload">
+                        <li>
+                            <p>File-number-1.png</p>
+                            <a href="#">Remove</a>
+                        </li>
+                        <li>
+                            <p>File-number-1.png</p>
+                            <a href="#">Remove</a>
+                        </li>
+                    </ul>
+                </div>
+                <input type="button" value="Remove all files"/>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for file multi upload</span></h3>
+    <pre>
+        <code id="snippet-multi-file" class="line-numbers language-markup">
+            &lt;h3>Select file(s) to upload&lt;/h3>
+            &lt;div class="uploads">
+                &lt;div class="form-group">
+                    &lt;input type="file" id="file-input" multiple>
+                    &lt;label class="form-label form-label--file" for="file-input">
+                        &lt;span>
+                            &lt;svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">&lt;path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z">&lt;/path>&lt;/svg>
+                            Choose a file
+                        &lt;/span>
+                        &lt;span>&lt;/span>
+                    &lt;/label>
+                    &lt;div class="files">
+                        &lt;div class="files__toUpload">
+                            &lt;h4>Files being uploaded&lt;/h4>
+                            &lt;ul class="toUpload">
+                                &lt;li>
+                                    &lt;p>File-number-1.png&lt;/p>
+                                    &lt;a href="#">Remove&lt;/a>
+                                &lt;/li>
+                                &lt;li>
+                                    &lt;p>File-number-1.png&lt;/p>
+                                    &lt;a href="#">Remove&lt;/a>
+                                &lt;/li>
+                            &lt;/ul>
+                        &lt;/div>
+                        &lt;input type="button" value="Remove all files"/>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-multi-file">
+        Copy <span class="sr-only">HTML snippet for file upload error handling"</span>
+    </button>
+</div>
 
 {% endblock %}

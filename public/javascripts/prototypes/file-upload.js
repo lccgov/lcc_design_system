@@ -1,3 +1,5 @@
+/*
+
 (function( $ ) {
 
     var inputs = $('.inputfile'),
@@ -70,3 +72,4 @@
     });
 
 })( jQuery );
+*/

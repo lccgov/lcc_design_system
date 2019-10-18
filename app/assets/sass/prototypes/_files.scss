@@ -19,13 +19,19 @@
                         }
                     }
                 }
-                .files { display:none; //margin-top: 40px; 
-                    &.active {display:block;}
+                .files {
                     &__toUpload {
-                        &:not(.active) {border: 0; clip: rect(0, 0, 0, 0); height: 1px; overflow: hidden; padding: 0; position: absolute !important; white-space: nowrap; width: 1px;}
-                    }
-                    &__remove {//margin:30px 0 0;
-                        //&:not(.active) {border: 0; clip: rect(0, 0, 0, 0); height: 1px; overflow: hidden; padding: 0; position: absolute !important; white-space: nowrap; width: 1px;}
+                        .toUpload {margin:0 0 30px;padding:0;
+                            li {max-width:550px;overflow:hidden;
+                                &:not(:last-of-type) {margin:0 0 10px;}
+                                p {
+                                    margin: 0;
+                                    float: left;
+                                    max-width: 60%;
+                                }
+                                a {float: right; margin-left:20px;line-height: 1.6;}
+                            }
+                        }
                     }
                 }
             }
@@ -44,52 +50,45 @@
     }
 }
 
-.uploads__multi {
-    .form {
-        &-group {
-            input {
-                &[type='file'] { border: 0; clip: rect(0, 0, 0, 0); height: 1px; overflow: hidden; padding: 0; position: absolute !important; white-space: nowrap; width: 1px; 
-                    &:focus {
-                        + label {
-                            span:nth-of-type(1) {
-                                background-color: #FFBF47 !important;
-                                border-color: #fbc02d !important;
-                                box-shadow: 0px 3px 0px #fbc02d;
-                                color:#212224  !important;
-                            }
-                            svg {
-                                * {fill:#212224 !important;}
-                            }
-                        }
-                    }
-                }
-            }
-            .files {
-                &__toUpload {
-                    .toUpload {margin:0 0 30px;padding:0;
-                        li {max-width:550px;overflow:hidden;
-                            &:not(:last-of-type) {margin:0 0 10px;}
-                            p {
-                                margin: 0;
-                                float: left;
-                                max-width: 60%;
-                            }
-                            a {float: right; margin-left:20px;}
-                        }
-                    }
-                }
-            }
-        }
-        &-label {
-            &--file {display: inline-block;
-                span {
-                    &:nth-of-type(1) {@extend .btn; @extend .btn-primary; display:inline-block;}
-                    &:nth-of-type(2) {margin-left:10px;}
-                }
-                svg {
-                    * {fill:#ffffff;}
-                }
-            }
-        }
-    }
-}
+// .js {
+//     .uploads {
+//         .form {
+//             &-group {
+//                 input {
+//                     &[type='file'] { border: 0; clip: rect(0, 0, 0, 0); height: 1px; overflow: hidden; padding: 0; position: absolute !important; white-space: nowrap; width: 1px; 
+//                         &:focus {
+//                             + label {
+//                                 span:nth-of-type(1) {
+//                                     background-color: #FFBF47 !important;
+//                                     border-color: #fbc02d !important;
+//                                     box-shadow: 0px 3px 0px #fbc02d;
+//                                     color:#212224  !important;
+//                                 }
+//                                 svg {
+//                                     * {fill:#212224 !important;}
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//                 .files { display:none; //margin-top: 40px; 
+//                     &.active {display:block;}
+//                     &__toUpload {
+//                         &:not(.active) {border: 0; clip: rect(0, 0, 0, 0); height: 1px; overflow: hidden; padding: 0; position: absolute !important; white-space: nowrap; width: 1px;}
+//                     }
+//                 }
+//             }
+//             &-label {
+//                 &--file {display: inline-block;
+//                     span {
+//                         &:nth-of-type(1) {@extend .btn; @extend .btn-primary; display:inline-block;}
+//                         &:nth-of-type(2) {margin-left:10px;}
+//                     }
+//                     svg {
+//                         * {fill:#ffffff;}
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
