@@ -7140,6 +7140,8 @@ h1 .form-progress {
       border-width: 4px; }
     .form-group--radio input[type="radio"]:checked + .form-label-radio:after {
       opacity: 1; }
+  .form-group--radio:hover label, .form-group--radio:focus label {
+    cursor: pointer; }
   .form-group--radio.display > .panel {
     display: block;
     visibility: visible; }
@@ -9496,7 +9498,7 @@ ul.accordion div.text-highlight {
  */
 .js .accordion__heading {
   border-top: 1px solid #eceff1;
-  margin: -1px 0 0;
+  margin: 0;
   position: relative; }
 
 .js .accordion__trigger {
@@ -9582,15 +9584,11 @@ ul.accordion div.text-highlight {
   padding: .05em 1.25em;
   position: relative;
   visibility: hidden;
-  z-index: 1;
-  border-bottom: 1px solid #eceff1; }
+  z-index: 1; }
   .js .accordion__panel:last-of-type {
     border-bottom: 0; }
   .js .accordion__panel p {
     margin-top: 0; }
-
-.js .accordion__panel {
-  margin-top: -.1em; }
 
 .js .accordion__panel > :last-child {
   margin-bottom: 0; }
