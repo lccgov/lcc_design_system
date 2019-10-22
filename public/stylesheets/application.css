@@ -9581,7 +9581,7 @@ ul.accordion div.text-highlight {
   background-color: inherit;
   max-height: 0vh;
   overflow: hidden;
-  padding: .05em 1.25em;
+  padding: 0em 1.25em;
   position: relative;
   visibility: hidden;
   z-index: 1; }
