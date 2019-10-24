@@ -14668,41 +14668,43 @@ aside.col-md-4 {
       border: 6px solid #E5F1F5; } }
 
 .summary-list {
-  display: table;
   width: 100%;
-  table-layout: fixed;
   margin: 0;
-  position: relative; }
+  position: relative;
+  padding: 0; }
   .summary-list__row {
-    display: table-row;
-    font-weight: normal; }
+    font-weight: normal;
+    margin-bottom: 20px; }
     .summary-list__row--total {
       font-size: 21px;
       font-weight: bold;
       font-family: "Montserrat", sans-serif;
-      position: relative; }
+      position: relative;
+      padding-top: 30px;
+      margin-bottom: 0; }
       .summary-list__row--total:before {
         content: '';
         position: absolute;
         display: block;
         width: 100%;
         height: 1px;
-        background: rgba(200, 200, 200, 0.6); }
+        background: rgba(200, 200, 200, 0.6);
+        top: 0; }
       .summary-list__row--total .summary-list__key, .summary-list__row--total .summary-list__value {
         padding-bottom: 0;
-        padding-top: 30px;
         font-weight: bold; }
   .summary-list__key {
-    width: 100%;
+    width: 80%;
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-weight: normal; }
   .summary-list__value {
-    width: 20%;
-    display: table-cell;
+    width: 18%;
     text-align: right; }
   .summary-list__key, .summary-list__value {
-    padding-bottom: 20px; }
+    margin: 0 !important;
+    line-height: 1.42857143;
+    display: inline-block; }
 
 html {
   background-color: #007299; }
