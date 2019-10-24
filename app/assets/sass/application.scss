@@ -200,6 +200,7 @@ $phase-banner-stage-background:$blue;
 //@import 'carousel';
 //@import 'content-assets'; //subsite only
 //@import 'content-link'; //subsite only
+@import 'checkout';
 @import 'description-list';
 @import 'details';
 @import 'doc-list';
@@ -242,7 +243,7 @@ $phase-banner-stage-background:$blue;
 @import 'prototypes/decision-tree';
 @import 'prototypes/step-by-step';
 @import 'prototypes/files';
-@import 'prototypes/checkout';
+// @import 'prototypes/checkout';
 
 //site background
 html {
