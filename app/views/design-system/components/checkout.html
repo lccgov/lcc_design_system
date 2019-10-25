@@ -13,85 +13,83 @@
 
 {% block sectionOneRightContent %}
 <div class="page-header-section">
-        <div class="page-header-section">
-            <h1>{{ page_title }}</h1>
-            <p class="lead">This is a prototype and cannot be used on the leeds.gov.uk.</p>
-        </div>
-        <div class="contents-box">
-            <h2 class="heading-contents">Contents</h2>
-            <ul class="list list-contents">
-                <li><a href="#paymentsummary">Payment Summary</a></li>
-                <!-- <li><a href="#insidebar">Step by step list in sidebar</a></li> -->
-            </ul>
-        </div>
-    </div>
-    
-    <h2 class="heading-large" id="paymentsummary">Payment Summary</h2>
-    <div class="example">
-        <span class="example-title">Example</span>
-        <form>
-            <div class="form-group">
-                <div class="panel panel-border panel-summary">
-                    <h2>Payment summary</h2>
-                    <ul class="summary-list">
-                        <li class="summary-list__row">
-                            <span class="summary-list__key"> Item number 1 </span>
-                            <span class="summary-list__value"> £10 </span>
-                        </li>
-                        <li class="summary-list__row">
-                            <span class="summary-list__key"> Item number 2 </span>
-                            <span class="summary-list__value"> £20 </span>
-                        </li>
-                        <li class="summary-list__row">
-                            <span class="summary-list__key"> Item number 3 </span>
-                            <span class="summary-list__value"> £30 </span>
-                        </li>
-                        <li class="summary-list__row summary-list__row--total">
-                            <span class="summary-list__key"> Total </span>
-                            <span class="summary-list__value"> £60 </span>
-                        </li>
-                    </ul>
-                </li>
+    <h1>{{ page_title }}</h1>
+    <p class="lead">This is a prototype and cannot be used on the leeds.gov.uk.</p>
+</div>
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#paymentsummary">Payment Summary</a></li>
+        <!-- <li><a href="#insidebar">Step by step list in sidebar</a></li> -->
+    </ul>
+</div>
+
+<h2 class="heading-large" id="paymentsummary">Payment Summary</h2>
+<div class="example">
+    <span class="example-title">Example</span>
+    <form>
+        <div class="form-group">
+            <div class="panel panel-border panel-summary">
+                <h2>Payment summary</h2>
+                <ul class="summary-list">
+                    <li class="summary-list__row">
+                        <span class="summary-list__key"> Item number 1 </span>
+                        <span class="summary-list__value"> £10 </span>
+                    </li>
+                    <li class="summary-list__row">
+                        <span class="summary-list__key"> Item number 2 </span>
+                        <span class="summary-list__value"> £20 </span>
+                    </li>
+                    <li class="summary-list__row">
+                        <span class="summary-list__key"> Item number 3 </span>
+                        <span class="summary-list__value"> £30 </span>
+                    </li>
+                    <li class="summary-list__row summary-list__row--total">
+                        <span class="summary-list__key"> Total </span>
+                        <span class="summary-list__value"> £60 </span>
+                    </li>
+                </ul>
             </div>
-        </form>
-    </div>
-    
-    <div class="code-snippet">
-        <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">payment summary</span></h3>
-        <pre class="language-markup">
-            <code id="snippet-payment-summary" class="line-numbers language-markup">
-                &lt;form>
-                    &lt;div class="form-group">
-                        &lt;div class="panel panel-border panel-summary">
-                            &lt;h2>Payment summary&lt;/h2>
-                            &lt;ul class="summary-list">
-                                &lt;li class="summary-list__row">
-                                    &lt;span class="summary-list__key"> Item number 1 &lt;/span>
-                                    &lt;span class="summary-list__value"> £10 &lt;/span>
-                                &lt;/li>
-                                &lt;li class="summary-list__row">
-                                    &lt;span class="summary-list__key"> Item number 2 &lt;/span>
-                                    &lt;span class="summary-list__value"> £20 &lt;/span>
-                                &lt;/li>
-                                &lt;li class="summary-list__row">
-                                    &lt;span class="summary-list__key"> Item number 3 &lt;/span>
-                                    &lt;span class="summary-list__value"> £30 &lt;/span>
-                                &lt;/li>
-                                &lt;li class="summary-list__row summary-list__row--total">
-                                    &lt;span class="summary-list__key"> Total &lt;/span>
-                                    &lt;span class="summary-list__value"> £60 &lt;/span>
-                                &lt;/li>
-                            &lt;/ul>
-                        &lt;/li>
+        </div>
+    </form>
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">payment summary</span></h3>
+    <pre class="language-markup">
+        <code id="snippet-payment-summary" class="line-numbers language-markup">
+            &lt;form>
+                &lt;div class="form-group">
+                    &lt;div class="panel panel-border panel-summary">
+                        &lt;h2>Payment summary&lt;/h2>
+                        &lt;ul class="summary-list">
+                            &lt;li class="summary-list__row">
+                                &lt;span class="summary-list__key"> Item number 1 &lt;/span>
+                                &lt;span class="summary-list__value"> £10 &lt;/span>
+                            &lt;/li>
+                            &lt;li class="summary-list__row">
+                                &lt;span class="summary-list__key"> Item number 2 &lt;/span>
+                                &lt;span class="summary-list__value"> £20 &lt;/span>
+                            &lt;/li>
+                            &lt;li class="summary-list__row">
+                                &lt;span class="summary-list__key"> Item number 3 &lt;/span>
+                                &lt;span class="summary-list__value"> £30 &lt;/span>
+                            &lt;/li>
+                            &lt;li class="summary-list__row summary-list__row--total">
+                                &lt;span class="summary-list__key"> Total &lt;/span>
+                                &lt;span class="summary-list__value"> £60 &lt;/span>
+                            &lt;/li>
+                        &lt;/ul>
                     &lt;/div>
-                &lt;/form>
-            </code>
-        </pre>
+                &lt;/div>
+            &lt;/form>
+        </code>
         <button class="clipboard" data-clipboard-target="#snippet-payment-summary">
             Copy <span class="sr-only">HTML snippet for payment summary</span>
         </button>
-    </div>
+    </pre>
+</div>
+
+
 
 {% endblock %}
-
-<!--end-->
