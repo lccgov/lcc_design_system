@@ -9793,6 +9793,60 @@ form.disabledInput input {
 .no-flexbox .atoz ul li.inactive {
   width: 6.5%; }
 
+.form-group .panel-summary {
+  padding: 25px 15px;
+  max-width: 470px; }
+  @media screen and (min-width: 600px) {
+    .form-group .panel-summary {
+      padding: 30px; } }
+  .form-group .panel-summary h2 {
+    margin-bottom: 30px; }
+
+.form-group .panel-border {
+  border: 6px solid #E5F1F5; }
+  @media screen and (min-width: 600px) {
+    .form-group .panel-border {
+      border: 6px solid #E5F1F5; } }
+
+.summary-list {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  padding: 0; }
+  .summary-list__row {
+    font-weight: normal;
+    margin-bottom: 20px; }
+    .summary-list__row--total {
+      font-size: 21px;
+      font-weight: bold;
+      font-family: "Montserrat", sans-serif;
+      position: relative;
+      padding-top: 30px;
+      margin-bottom: 0; }
+      .summary-list__row--total:before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: rgba(200, 200, 200, 0.6);
+        top: 0; }
+      .summary-list__row--total .summary-list__key, .summary-list__row--total .summary-list__value {
+        padding-bottom: 0;
+        font-weight: bold; }
+  .summary-list__key {
+    width: 80%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-weight: normal; }
+  .summary-list__value {
+    width: 18%;
+    text-align: right; }
+  .summary-list__key, .summary-list__value {
+    margin: 0 !important;
+    line-height: 1.42857143;
+    display: inline-block; }
+
 .description-list {
   margin: 10px 0 30px; }
   .description-list .description-list__item {
@@ -14651,60 +14705,6 @@ aside.col-md-4 {
     margin-left: 10px; }
   .js .uploads .form-label--file svg * {
     fill: #ffffff; }
-
-.form-group .panel-summary {
-  padding: 25px 15px;
-  max-width: 470px; }
-  @media screen and (min-width: 600px) {
-    .form-group .panel-summary {
-      padding: 30px; } }
-  .form-group .panel-summary h2 {
-    margin-bottom: 30px; }
-
-.form-group .panel-border {
-  border: 6px solid #E5F1F5; }
-  @media screen and (min-width: 600px) {
-    .form-group .panel-border {
-      border: 6px solid #E5F1F5; } }
-
-.summary-list {
-  width: 100%;
-  margin: 0;
-  position: relative;
-  padding: 0; }
-  .summary-list__row {
-    font-weight: normal;
-    margin-bottom: 20px; }
-    .summary-list__row--total {
-      font-size: 21px;
-      font-weight: bold;
-      font-family: "Montserrat", sans-serif;
-      position: relative;
-      padding-top: 30px;
-      margin-bottom: 0; }
-      .summary-list__row--total:before {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 1px;
-        background: rgba(200, 200, 200, 0.6);
-        top: 0; }
-      .summary-list__row--total .summary-list__key, .summary-list__row--total .summary-list__value {
-        padding-bottom: 0;
-        font-weight: bold; }
-  .summary-list__key {
-    width: 80%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    font-weight: normal; }
-  .summary-list__value {
-    width: 18%;
-    text-align: right; }
-  .summary-list__key, .summary-list__value {
-    margin: 0 !important;
-    line-height: 1.42857143;
-    display: inline-block; }
 
 html {
   background-color: #007299; }
