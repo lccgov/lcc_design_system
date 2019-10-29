@@ -1,0 +1,175 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "prototypes" %} <!-- Section id var for main nav --> 
+{% set page_id = "checkout" %} <!-- Page id var for side nav --> 
+{% set page_title = "Checkout" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+    <!-- <p class="lead">This is a prototype and cannot be used on the leeds.gov.uk.</p> -->
+</div>
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#paymentinput">Payment input</a></li>
+        <li><a href="#paymentsummary">Payment Summary</a></li>
+        <li><a href="#onepagepayment">One page payment</a></li>
+    </ul>
+</div>
+
+<h2 class="heading-large" id="paymentinput">Payment Input</h2>
+<div class="example">
+    <span class="example-title">Example</span>
+
+    <form>
+        <h2 class="nomarg--top">Payment details</h2>
+        <div class="form-group">
+            <label class="form-label" for="name-on-card">Name on card</label>
+            <input class="form-control" id="name-on-card" type="text" name="name-on-card">
+        </div>
+        <div class="form-group form-group-card">
+            <label class="form-label" for="card-number">Card number</label>
+            <input class="form-control" id="card-number" type="text" name="card-number" aria-labelledby="acceptedcards">
+            <div id="acceptedcards" class="acceptedcards">
+                <img src="/public/images/prototypes/card-visa.jpg" alt="visa" />
+                <img src="/public/images/prototypes/card-visa.jpg" alt="visa" />
+                <img src="/public/images/prototypes/card-visa.jpg" alt="visa" />
+                <img src="/public/images/prototypes/card-visa.jpg" alt="visa" />
+            </div>
+            <p>Accepted cards</p>
+        </div>
+        <div class="form-group">
+            <div class="form-date form-date-card">
+                <p class="form-label">Expiry date (MM/YY)</p>
+                <div class="form-group form-group-month">
+                    <label class="form-label sr-only" for="exp-month">Expiry month</label>
+                    <input class="form-control" id="exp-month" name="exp-month" type="number" pattern="[0-9]*" min="0" max="12" placeholder="MM">
+                </div>
+                <span class="date__separator"> / </span>
+                <div class="form-group form-group-year">
+                    <label class="form-label sr-only" for="exp-year">Expiry year</label>
+                    <input class="form-control" id="exp-year" name="exp-year" type="number" pattern="[0-9]*" min="0" max="2030" placeholder="YY">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="security-code">Security code (CCV)</label>
+            <input class="form-control form-control--ccv" id="security-code" type="text" name="security-code" maxlength="3">
+        </div>
+    </form>
+</div>
+
+<h2 class="heading-large" id="paymentsummary">Payment Summary</h2>
+<div class="example">
+    <span class="example-title">Example</span>
+    <form>
+        <div class="form-group">
+            <div class="panel panel-border panel-summary">
+                <h2>Payment summary</h2>
+                <ul class="summary-list">
+                    <li class="summary-list__row">
+                        <span class="summary-list__key"> Item number 1 </span>
+                        <span class="summary-list__value"> £10 </span>
+                    </li>
+                    <li class="summary-list__row">
+                        <span class="summary-list__key"> Item number 2 </span>
+                        <span class="summary-list__value"> £20 </span>
+                    </li>
+                    <li class="summary-list__row">
+                        <span class="summary-list__key"> Item number 3 </span>
+                        <span class="summary-list__value"> £30 </span>
+                    </li>
+                    <li class="summary-list__row summary-list__row--total">
+                        <span class="summary-list__key"> Total </span>
+                        <span class="summary-list__value"> £60 </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</div>
+
+<h2 class="heading-large" id="onepagepayment">One page payment</h2>
+<div class="example">
+    <span class="example-title">Example</span>
+    <form>
+        <div class="payment__row">
+            <div class="payment__col">
+                <div class="form-group">
+                    <div class="panel panel-border panel-summary">
+                        <h2>Payment summary</h2>
+                        <ul class="summary-list">
+                            <li class="summary-list__row">
+                                <span class="summary-list__key"> Item number 1 </span>
+                                <span class="summary-list__value"> £10 </span>
+                            </li>
+                            <li class="summary-list__row">
+                                <span class="summary-list__key"> Item number 2 </span>
+                                <span class="summary-list__value"> £20 </span>
+                            </li>
+                            <li class="summary-list__row">
+                                <span class="summary-list__key"> Item number 3 </span>
+                                <span class="summary-list__value"> £30 </span>
+                            </li>
+                            <li class="summary-list__row summary-list__row--total">
+                                <span class="summary-list__key"> Total </span>
+                                <span class="summary-list__value"> £60 </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="payment__col">
+                <h2 class="nomarg--top">Payment details</h2>
+                <div class="form-group">
+                    <label class="form-label" for="name-on-card">Name on card</label>
+                    <input class="form-control" id="name-on-card" type="text" name="name-on-card">
+                </div>
+                <div class="form-group form-group-card">
+                    <label class="form-label" for="card-number">Card number</label>
+                    <input class="form-control" id="card-number" type="text" name="card-number" aria-labelledby="acceptedcards">
+                    <div id="acceptedcards" class="acceptedcards">
+                        <img src="/public/images/prototypes/card-visa.jpg" alt="visa" />
+                        <img src="/public/images/prototypes/card-visa.jpg" alt="visa" />
+                        <img src="/public/images/prototypes/card-visa.jpg" alt="visa" />
+                        <img src="/public/images/prototypes/card-visa.jpg" alt="visa" />
+                    </div>
+                    <p>Accepted cards</p>
+                </div>
+                <div class="form-group">
+                    <div class="form-date form-date-card">
+                        <p class="form-label">Expiry date (MM/YY)</p>
+                        <div class="form-group form-group-month">
+                            <label class="form-label sr-only" for="exp-month">Expiry month</label>
+                            <input class="form-control" id="exp-month" name="exp-month" type="number" pattern="[0-9]*" min="0" max="12" placeholder="MM">
+                        </div>
+                        <span class="date__separator"> / </span>
+                        <div class="form-group form-group-year">
+                            <label class="form-label sr-only" for="exp-year">Expiry year</label>
+                            <input class="form-control" id="exp-year" name="exp-year" type="number" pattern="[0-9]*" min="0" max="2030" placeholder="YY">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="security-code">Security code (CCV)</label>
+                    <input class="form-control form-control--ccv" id="security-code" type="text" name="security-code" maxlength="3">
+                </div>
+            </div>
+        </div>
+        <div class="payment__row">
+            <button class="btn btn-primary" type="submit">Pay now</button>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

@@ -1,19 +1,42 @@
-.form-group {
-    .panel {
-        &-summary { padding:25px 15px; max-width:470px;
-            @media screen and (min-width:600px){ padding:30px; }
-            h2 {margin-bottom:30px;}
-        }
-        &-border {
-            border: 6px solid #E5F1F5;
-            @media screen and (min-width:600px){
+.form {
+    &-group {
+        .panel {
+            &-summary { padding:25px 15px; width:100%; max-width: 100%;
+                @media screen and (min-width:600px){ padding:30px; }
+                @media screen and (min-width:1024px){ max-width:470px; }
+                h2 {margin-bottom:30px;}
+            }
+            &-border {
                 border: 6px solid #E5F1F5;
+                @media screen and (min-width:600px){
+                    border: 6px solid #E5F1F5;
+                }
+            }
+        }
+        &-card {
+            .acceptedcards { margin-top:10px; }
+            p { color:#666B76; font-size:16px; margin:10px 0 0; line-height:1.25;font-family: "Montserrat", sans-serif; }
+        }
+    }
+    &-date {
+        &-card {
+            .form {
+                &-label {margin-top:0; margin-bottom: 5px;}
+                &-group {margin-top:0;
+                    &-year,&-month {margin:0;}
+                    &-year { width: 65px; }
+                }
             }
         }
     }
+    &-control {
+        &--ccv {width:65px !important;}
+    }
 }
 
-
+.date {
+    &__separator {display: block; float: left; font-size: 40px;margin: 0 10px 0; line-height: 45px;}
+}
 
 .summary-list { width: 100%; margin:0;position:relative; padding:0;
     &__row { font-weight:normal; margin-bottom:20px;
@@ -24,7 +47,27 @@
             }
         }
     }
-    &__key {width:80%;word-wrap: break-word; overflow-wrap: break-word; font-weight:normal;}
+    &__key {width:79%;word-wrap: break-word; overflow-wrap: break-word; font-weight:normal;}
     &__value {width: 18%; text-align: right;}
     &__key,&__value {margin: 0 !important; line-height:1.42857143; display:inline-block; }
+}
+
+.nomarg {
+    &--top {margin-top:0;}
+}
+
+@media screen and (min-width:1024px) {
+    .payment {
+        &__row {max-width:1256px; 
+            &:nth-of-type(1) {display: flex; flex-direction: row-reverse;}
+            &:nth-of-type(2) {border-top:1px solid rgba(#C8C8C8, 0.6);
+                .btn {margin-top:30px;}
+            }
+        }
+        &__col {width:50%;
+            &:nth-of-type(1) {
+                .form-group { display: flex; justify-content: flex-end; align-items: baseline;}
+            }
+        }
+    }
 }
