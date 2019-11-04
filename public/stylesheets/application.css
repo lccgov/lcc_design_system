@@ -14826,3 +14826,61 @@ html {
 
 .btn, .js .uploads .form-label--file span:nth-of-type(1) {
   margin: 10px 0 20px; }
+
+.part-navigation--a ul {
+  padding: 0; }
+  .part-navigation--a ul li {
+    position: relative;
+    padding-left: 30px;
+    margin: 0 0 10px; }
+    .part-navigation--a ul li:before {
+      content: '';
+      width: 15px;
+      height: 2px;
+      background: #007299;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+    .part-navigation--a ul li.active:before {
+      background: #263238; }
+
+.part-navigation--b ul {
+  padding: 0;
+  counter-reset: section; }
+  .part-navigation--b ul li {
+    position: relative;
+    padding-left: 50px;
+    margin: 0 0 10px;
+    line-height: 2.105263157894737em; }
+    .part-navigation--b ul li:before {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      counter-increment: section;
+      content: counter(section);
+      color: #007299; }
+    .part-navigation--b ul li:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 1px solid #007299;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px; }
+    .part-navigation--b ul li.active:before {
+      color: #263238; }
+    .part-navigation--b ul li.active:after {
+      border-color: #263238; }
+
+.part-navigation--b--weighted ul li:before {
+  font-weight: 700; }
+
+.part-navigation--b--weighted ul li:after {
+  border-width: 2px; }

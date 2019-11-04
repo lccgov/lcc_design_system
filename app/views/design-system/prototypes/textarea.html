@@ -18,7 +18,8 @@
 <div class="contents-box">
     <h2 class="heading-contents">Contents</h2>
     <ul class="list list-contents">
-        <li><a href="#characterlimits">Payment input</a></li>
+        <li><a href="#characterlimits">Character limits</a></li>
+        <li><a href="#errorhandling">Error handling</a></li>
     </ul>
 </div>
 
@@ -28,13 +29,30 @@
 
     <form>
         <div class="form-group">
-            <label class="form-label form-label-bold" for="AdditionalInfo">Do you know anything about the person(s) responsible for the issue? (optional)</label>
+            <label class="form-label form-label-bold" for="AdditionalInfo">
+                Do you know anything about the person(s) responsible for the issue? (optional)
+                <span class="form-hint">500 character limit</span>
+            </label>
             <textarea class="form-control form-control--limited" cols="20" data-val="true" id="AdditionalInfo" name="AdditionalInfo" rows="5" maxlength="500" aria-describedby="label--charactersremaining"></textarea>
             <span id="label--charactersremaining" class="form-hint form-hint__remaining" aria-live="polite">You have 500 characters remaining</span>
         </div>
     </form>
 </div>
 
+<h2 class="heading-large" id="errorhandling">Error handling</h2>
+<div class="example">
+    <span class="example-title">Example</span>
 
+    <form>
+        <div class="form-group form-group-error">
+            <label class="form-label form-label-bold" for="AdditionalInfo">
+                Do you know anything about the person(s) responsible for the issue?
+                <span class="error-message">Error message goes here</span>
+            </label>
+            <textarea class="form-control form-control--limited" cols="20" data-val="true" id="AdditionalInfo" name="AdditionalInfo" rows="5" maxlength="500" aria-describedby="label--charactersremaining"></textarea>
+            <span id="label--charactersremaining" class="form-hint form-hint__remaining" aria-live="polite">You have 500 characters remaining</span>
+        </div>
+    </form>
+</div>
 
 {% endblock %}

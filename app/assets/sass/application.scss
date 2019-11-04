@@ -262,3 +262,35 @@ html {
     margin:10px 0 20px;
 }
 
+// Journey page a/b
+.part-navigation {
+    &--a {
+        ul { padding:0;
+            li {position: relative; padding-left:30px; margin:0 0 10px;
+                &:before {content:'';width:15px; height:2px; background:#007299; position: absolute;left:0;top:50%; transform:translateY(-50%);}
+                &.active {
+                    &:before {background:#263238;}
+                }
+            }
+        }
+    }
+    &--b {
+        ul { padding:0; counter-reset: section;
+            li {position: relative; padding-left:50px; margin:0 0 10px; line-height:2.105263157894737em;
+                &:before { position: absolute;left:0;top:50%; transform:translateY(-50%); width: 40px; height: 40px; text-align: center; counter-increment: section; content:counter(section); color:#007299;
+                }
+                &:after {content:''; position: absolute; left:0;top:50%; transform:translateY(-50%); border:1px solid #007299; border-radius: 50%; width:40px; height:40px; }
+                &.active {
+                    &:before {color:#263238;}
+                    &:after {border-color: #263238;}
+                }
+            }
+        }
+        &--weighted {
+            ul li {
+                &:before {font-weight:700;}
+                &:after {border-width: 2px;}
+            }
+        }
+    }
+}
