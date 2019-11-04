@@ -39,6 +39,45 @@
     </form>
 </div>
 
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for textarea character limit</span></h3>
+    <pre>
+        <code id="snippet-textarea" class="line-numbers language-markup">
+            &lt;form>
+                &lt;div class="form-group">
+                    &lt;label class="form-label form-label-bold" for="AdditionalInfo">
+                        Do you know anything about the person(s) responsible for the issue? (optional)
+                        &lt;span class="form-hint">500 character limit&lt;/span>
+                    &lt;/label>
+                    &lt;textarea class="form-control form-control--limited" cols="20" data-val="true" id="AdditionalInfo" name="AdditionalInfo" rows="5" maxlength="500" aria-describedby="label--charactersremaining">&lt;/textarea>
+                    &lt;span id="label--charactersremaining" class="form-hint form-hint__remaining" aria-live="polite">You have 500 characters remaining&lt;/span>
+                &lt;/div>
+            &lt;/form>
+        </code>
+    </pre>
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">JS Snippet <span class="sr-only">for textarea character limit</span></h3>
+    <pre>
+        <code id="snippet-textarea" class="line-numbers language-markup">
+            $('.form-control--limited').each(function() {
+                $(this).on("input", function(){
+                    var maxlength = $(this).attr("maxlength");
+                    var currentLength = $(this).val().length;
+                
+                    if( currentLength >= maxlength ){
+                        $(this).parent().find('.form-hint__remaining').html('You have 0 characters remaining');
+                    }else{
+                        var remaining = maxlength - currentLength;
+                        $(this).parent().find('.form-hint__remaining').html('You have '+remaining+' characters remaining');
+                    }
+                });
+            });
+        </code>
+    </pre>
+</div>
+
 <h2 class="heading-large" id="errorhandling">Error handling</h2>
 <div class="example">
     <span class="example-title">Example</span>
@@ -53,6 +92,24 @@
             <span id="label--charactersremaining" class="form-hint form-hint__remaining" aria-live="polite">You have 500 characters remaining</span>
         </div>
     </form>
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for textarea character limit</span></h3>
+    <pre>
+        <code id="snippet-textarea" class="line-numbers language-markup">
+            &lt;form>
+                &lt;div class="form-group form-group-error">
+                    &lt;label class="form-label form-label-bold" for="AdditionalInfo">
+                        Do you know anything about the person(s) responsible for the issue?
+                        &lt;span class="error-message">Error message goes here&lt;/span>
+                    &lt;/label>
+                    &lt;textarea class="form-control form-control--limited" cols="20" data-val="true" id="AdditionalInfo" name="AdditionalInfo" rows="5" maxlength="500" aria-describedby="label--charactersremaining">&lt;/textarea>
+                    &lt;span id="label--charactersremaining" class="form-hint form-hint__remaining" aria-live="polite">You have 500 characters remaining&lt;/span>
+                &lt;/div>
+            &lt;/form>
+        </code>
+    </pre>
 </div>
 
 {% endblock %}
