@@ -1,0 +1,212 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "patterns" %} <!-- Section id var for main nav --> 
+{% set page_id = "community" %} <!-- Page id var for side nav --> 
+{% set page_title = "Community" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+</div>
+
+<div class="text">
+    <p>Bid assets should be in alphabetical order</p>
+</div>
+
+<div class="example">
+    <span class="example-title">Example</span>
+
+    <details class="details">
+        <summary>Headingley Community Centre</summary>
+        <div class="details__container">
+            
+            <div class="description-list">
+                <div class="description-list__item">
+                    <h3>Address</h3>
+                    <div class="description-list__item-content">
+                        <p>North Lane, Headingley, Leeds, LS6 3HW</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="description-list__item">
+                    <h3>Ward</h3>
+                    <div class="description-list__item-content">
+                        <p>Headingley</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="description-list__item">
+                    <h3>Date listed</h3>
+                    <div class="description-list__item-content">
+                        <p>19/12/2014</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="description-list__item">
+                    <h3>Date of disposal notice</h3>
+                    <div class="description-list__item-content">
+                        <p>12/12/2018</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="description-list__item">
+                    <h3>End of interim moratorium</h3>
+                    <div class="description-list__item-content">
+                        <p>23/01/2018</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="description-list__item">
+                    <h3>End of full moratorium</h3>
+                    <div class="description-list__item-content">
+                        <p>12/06/2019</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="description-list__item">
+                    <h3>End of protected period</h3>
+                    <div class="description-list__item-content">
+                        <p>11/06/2020</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+        </div>
+    </details>
+
+    <details class="details">
+        <summary>The Bedford Arms</summary>
+        <div class="details__container">
+            
+            <div class="description-list">
+                <div class="description-list__item">
+                    <h3>Address</h3>
+                    <div class="description-list__item-content">
+                        <p>Bedford Drive, Cookridge, Leeds, LS16 6DN</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="description-list__item">
+                    <h3>Ward</h3>
+                    <div class="description-list__item-content">
+                        <p>Weetwood</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="description-list__item">
+                    <h3>Date listed</h3>
+                    <div class="description-list__item-content">
+                        <p>19/12/2014</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="description-list__item">
+                    <h3>Date of disposal notice</h3>
+                    <div class="description-list__item-content">
+                        <p>02/06/2015</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+        </div>
+    </details>
+
+    <details class="details">
+        <summary>The Bowling Green</summary>
+        <div class="details__container">
+            
+            <div class="description-list">
+                <div class="description-list__item">
+                    <h3>Address</h3>
+                    <div class="description-list__item-content">
+                        <p>Bondgate, Otley, LS21 3AB</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="description-list__item">
+                    <h3>Ward</h3>
+                    <div class="description-list__item-content">
+                        <p>Otley and Yeadon</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="description-list__item">
+                    <h3>Date listed</h3>
+                    <div class="description-list__item-content">
+                        <p>13/04/2015</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+        </div>
+    </details>
+
+    <details class="details">
+        <summary>Whitakers Arms</summary>
+        <div class="details__container">
+            
+            <div class="description-list">
+                <div class="description-list__item">
+                    <h3>Address</h3>
+                    <div class="description-list__item-content">
+                        <p>47 Kirkgate, Otley, LS21 3HN</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="description-list__item">
+                    <h3>Ward</h3>
+                    <div class="description-list__item-content">
+                        <p>Otley and Yeadon</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="description-list__item">
+                    <h3>Date listed</h3>
+                    <div class="description-list__item-content">
+                        <p>13/04/2015</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+        </div>
+    </details>
+
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for community</span></h3>
+    <pre>
+        <code id="snippet-" class="line-numbers language-markup">
+            &lt;details class="details">
+                &lt;summary>Whitakers Arms&lt;/summary>
+                &lt;div class="details__container">
+                    &lt;div class="description-list">
+                        &lt;div class="description-list__item">
+                            &lt;h3>Address&lt;/h3>
+                            &lt;div class="description-list__item-content">
+                                &lt;p>47 Kirkgate, Otley, LS21 3HN&lt;/p>
+                            &lt;/div>
+                            &lt;div class="clear">&lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/details>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-">
+        Copy <span class="sr-only">HTML snippet for community</span>
+    </button>
+</div>
+
+{% endblock %}
