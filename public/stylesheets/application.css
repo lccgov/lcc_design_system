@@ -12813,7 +12813,7 @@ pre {
   position: sticky;
   top: 0; }
   .stick.main-nav {
-    z-index: 3; }
+    z-index: 100; }
   .stick.design-system-menu {
     top: 30px; }
   .stick.design-system-contents-menu {
@@ -14541,7 +14541,7 @@ aside.col-md-4 {
     content: counter(steps, decimal);
     position: absolute;
     left: 0px;
-    z-index: 1000;
+    z-index: 5;
     border: 2px solid #b1b4b6;
     border-radius: 50%;
     background: white;
