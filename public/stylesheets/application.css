@@ -14650,7 +14650,7 @@ aside.col-md-4 {
   width: 25px;
   text-align: center;
   font-weight: 600;
-  line-height: 0;
+  line-height: 20px;
   font-size: 14px; }
   @media (min-width: 641px) {
     .stepped-list-small .stepped-list__details-summary:before {
