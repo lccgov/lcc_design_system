@@ -9,16 +9,16 @@
 {% block body_content %}
 <section id="main" class="sectionOne">
     <div class="container-fluid">
-        <div class="row">
-                <div id="design-system-content" class="col-sm-8 col-md-9 col-lg-10 design-system-content">
-                    <!-- <a id="toggle-design-system-menu" href="#">Close</a>-->
-                    <a href="/design-system/{{ section_id }}" class="link-back link-back-guide">Back to {{ section_id }}</a>
-                    {% block sectionOneRightContent %}{% endblock %}
-                </div>
-                <aside id="design-system-menu" class="col-sm-4 col-md-3 col-lg-2 design-system-menu">
-                    {% block sectionLeftHandColumn %}{% endblock %}
-                </aside>
-           </div>
+        <div class="row design-system-two-col-layout">
+            <aside id="design-system-menu" class="col-sm-4 col-md-3 col-lg-2 design-system-menu">
+                {% block sectionLeftHandColumn %}{% endblock %}
+            </aside>
+            <div id="design-system-content" class="col-sm-8 col-md-9 col-lg-10 design-system-content">
+                <!-- <a id="toggle-design-system-menu" href="#">Close</a>-->
+                <a href="/design-system/{{ section_id }}" class="link-back link-back-guide">Back to {{ section_id }}</a>
+                {% block sectionOneRightContent %}{% endblock %}
+            </div>            
+        </div>
     </div>         
 </section>
 {% endblock %}

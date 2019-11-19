@@ -257,12 +257,17 @@
     }
 }
 
+.design-system-two-col-layout {
+    @media (min-width: 768px){
+        display: flex;
+    } 
+}
+
 .design-system-content{
     background:$lighter-grey;
     border-left:1px solid $border-color;
     padding:0 15px 100px;
     @media (min-width: 768px){
-        float:right;
         padding:0 50px 100px;
     }
     .link-back-guide{
@@ -276,7 +281,6 @@
 .design-system-menu{
     background:white;
     @media (min-width: 768px){
-        float:left;
         padding-right:0;
     }
     .design-system-side-nav{

@@ -12631,13 +12631,16 @@ pre {
     background: #f6f7fa;
     padding: 10px 15px; }
 
+@media (min-width: 768px) {
+  .design-system-two-col-layout {
+    display: flex; } }
+
 .design-system-content {
   background: #f6f7fa;
   border-left: 1px solid #eceff1;
   padding: 0 15px 100px; }
   @media (min-width: 768px) {
     .design-system-content {
-      float: right;
       padding: 0 50px 100px; } }
   .design-system-content .link-back-guide {
     margin: 30px 0 0; }
@@ -12649,7 +12652,6 @@ pre {
   background: white; }
   @media (min-width: 768px) {
     .design-system-menu {
-      float: left;
       padding-right: 0; } }
   @media (max-width: 767px) {
     .design-system-menu .design-system-side-nav {
