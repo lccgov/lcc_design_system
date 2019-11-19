@@ -1,6 +1,6 @@
 {% extends "design-system-page-layout-guide.html" %}
 
-{% set section_id = "prototypes" %} <!-- Section id var for main nav --> 
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
 {% set page_id = "decisiontree" %} <!-- Page id var for side nav --> 
 {% set page_title = "Decision tree" %} <!-- Page title var for page header (H1) and page title -->    
 
@@ -13,18 +13,22 @@
 
 {% block sectionOneRightContent %}
 <div class="page-header-section">
+
     <h1>{{ page_title }}</h1>
-    <p class="lead">This is a prototype and cannot be used on the leeds.gov.uk.</p>
+    <p class="lead">We use decision trees to guide users to specific content related to their personal circumstances.</p>    
+
+</div>
+
+<div class="text">
+
+    <p>The web design team works with content designers, webmaster and user researchers to build decision trees.</p>
+
+    <p>Changes to content on a decision tree can only be made by webdesign@leeds.gov.uk.</p>
 </div>
 
 <div class="example">
     <span class="example-title">Example</span>
-    
-    <div class="text">
-        <h1>Tell us about a change of address</h1>
-        <p>Answer a few simple questions and we'll tell you the best way to let us know about your change of address.</p>
-    </div>
-    
+        
     <div class="lcc-tree-container lcc-council-tax-tree" role="region" aria-live="assertive"></div>
 
 </div>

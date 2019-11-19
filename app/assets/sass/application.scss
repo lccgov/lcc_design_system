@@ -239,8 +239,8 @@ $phase-banner-stage-background:$blue;
 @import 'lcc-header'; //a part of the toolkit but needs to be at end
 
 @import 'component_example';
+@import 'decision-tree';
 
-@import 'prototypes/decision-tree';
 @import 'prototypes/step-by-step';
 @import 'prototypes/files';
 @import 'prototypes/checkout';

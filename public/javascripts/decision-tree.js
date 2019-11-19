@@ -45,7 +45,7 @@
                 var decision = data.decisions[i];
                 var genId = guid();
                 var grid = $('<div></div>');
-                var answer = $('<button class="test"></button>')
+                var answer = $('<button type="button"></button>')
                     .addClass("btn btn-primary dctree-answer-" + i)
                     .append(decision.answer)
                     .on('click', function() {
