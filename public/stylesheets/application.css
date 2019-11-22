@@ -14886,3 +14886,14 @@ html {
 
 .part-navigation--b--weighted ul li:after {
   border-width: 2px; }
+
+.pre-title {
+  font-size: 22px;
+  font-family: Montserrat,sans-serif,sans-serif;
+  margin: 25px 0 0 0 !important;
+  font-weight: 700;
+  color: #455a64; }
+  @media (min-width: 768px) {
+    .pre-title {
+      font-size: 24px;
+      margin: 50px 0 0 0 !important; } }
