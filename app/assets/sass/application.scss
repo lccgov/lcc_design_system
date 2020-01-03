@@ -245,6 +245,10 @@ $phase-banner-stage-background:$blue;
 @import 'prototypes/files';
 @import 'prototypes/checkout';
 
+// Campaigns
+@import 'campaigns/default/default';
+
+
 //site background
 html {
     background-color: $blue;
@@ -305,4 +309,10 @@ html {
         font-size: 24px;
         margin: 50px 0 0 0 !important;
     }
+}
+
+
+// Design system only override
+.campaign {
+    margin-bottom: 0;
 }

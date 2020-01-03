@@ -1,0 +1,54 @@
+{% extends "design-system-page-layout-campaigns.html" %}
+
+{% set section_id = "campaigns" %} <!-- Section id var for main nav --> 
+{% set page_id = "campaign-header" %} <!-- Page id var for side nav --> 
+{% set page_title = "Campaign header" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+</div>
+
+<p>To set up the campaign header in SharePoint:</p>
+
+<ul class="list list-bullet">
+    <li>Place a <a href="full-width-banner">full width banner</a> in the first full width web part on the page</li>
+    <li>Enter details for the Page Title and Page Overview. This will automatically generate the blue background box</li>
+</ul>
+
+<div class="example">
+    
+    <span class="example-title">Example</span>
+
+    <div class="campaign-banner">
+        <picture>                
+            <source media="(max-width: 768px)" srcset="https://via.placeholder.com/768x432">
+            <source media="(max-width: 1024px)" srcset="https://via.placeholder.com/1024x400">
+            <source media="(min-width: 1025px)" srcset="https://via.placeholder.com/1600x400">
+            <img src="https://via.placeholder.com/1600x400" alt="">        
+        </picture>            
+    </div>
+
+    <div class="container-fluid" style="max-width: 1280px !important;">
+        <div class="row">
+            <div class="col-xs-12 col-sm-7 col-sm-push-1 col-md-7">
+                <div class="campaign-header">
+                    <h1 class="campaign-header-title">Campaign title</h1> 						
+                    <div class="campaign-header-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula massa at enim varius.</p>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+{% endblock %}

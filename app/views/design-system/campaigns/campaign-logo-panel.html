@@ -1,0 +1,96 @@
+{% extends "design-system-page-layout-campaigns.html" %}
+
+{% set section_id = "campaigns" %} <!-- Section id var for main nav --> 
+{% set page_id = "campaign-logos" %} <!-- Page id var for side nav --> 
+{% set page_title = "Logo panel" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+</div>
+
+<h2>Logo panel version one</h2>
+
+<div class="example">
+    
+    <span class="example-title">Example</span>
+
+    <div class="campaign-logos-background">
+        <div class="container-fluid">	
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-10 campaign-logos-container">
+                    <div class="campaign-logos">
+                        <p class="no-marg-top">This scheme is in association with:</p>
+                        <img src="https://via.placeholder.com/200x100" alt="Highways England">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>               
+
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for logo panel one</span></h3>
+    <pre>
+        <code id="snippet-logo-panel-one" class="line-numbers language-markup">
+        
+            &lt;div class="campaign-logos-background">
+                &lt;div class="container-fluid">	
+                    &lt;iv class="row">
+                        &lt;div class="col-xs-12 col-sm-10 col-sm-push-1 col-md-10 campaign-logos-container">
+                            &lt;div class="campaign-logos">
+                                &lt;p class="no-marg-top">This scheme is in association with:&lt;/p>
+                                &lt;img src="https://via.placeholder.com/200x100" alt="Alternative text">
+                            &lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>  
+    
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-logo-panel-one">
+        Copy <span class="sr-only">HTML snippet for logo panel one</span>
+    </button>
+</div>
+    
+<h2>Logo panel version two</h2>
+
+<div class="example">
+    
+    <span class="example-title">Example</span>
+
+    <div class="campaign-logos-small">
+        <p class="no-marg-top">This scheme is in association with:</p>
+        <img src="https://via.placeholder.com/200x100" alt="Highways England">
+    </div>
+
+</div>
+    
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for logo panel two</span></h3>
+    <pre>
+        <code id="snippet-logo-panel-two" class="line-numbers language-markup">
+        
+            &lt;div class="campaign-logos-small">
+                &lt;p class="no-marg-top">This scheme is in association with:&lt;/p>
+                &lt;img src="https://via.placeholder.com/200x100" alt="Alternative text">
+            &lt;/div>
+    
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-logo-panel-two">
+        Copy <span class="sr-only">HTML snippet for blockquote version two</span>
+    </button>
+</div>
+    
+
+{% endblock %}

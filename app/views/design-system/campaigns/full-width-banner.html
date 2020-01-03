@@ -1,0 +1,65 @@
+{% extends "design-system-page-layout-campaigns.html" %}
+
+{% set section_id = "campaigns" %} <!-- Section id var for main nav --> 
+{% set page_id = "fullwidthbanner" %} <!-- Page id var for side nav --> 
+{% set page_title = "Full width banner" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+</div>
+
+<p>The full width banner:</p>
+
+<ul class="list list-bullet">
+    <li>doesn't have any margin underneath it</li>
+    <li>needs images in three different sizes (768x432px, 1024x400px and 1600x400px) as the images are swapped when you reduce the browser width</li>
+    <li>should only be used in the first or last full width web part</li>
+</ul>
+
+<div class="example">
+    
+    <span class="example-title">Example</span>
+
+    <div class="campaign-banner">
+        <picture>                
+            <source media="(max-width: 768px)" srcset="https://via.placeholder.com/768x432">
+            <source media="(max-width: 1024px)" srcset="https://via.placeholder.com/1024x400">
+            <source media="(min-width: 1025px)" srcset="https://via.placeholder.com/1600x400">
+            <img src="https://via.placeholder.com/1600x400" alt="">        
+        </picture>            
+    </div>
+
+</div>
+
+<div class="code-snippet">
+  <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for full width banner</span></h3>
+    <pre>
+        <code id="snippet-full-width-banner" class="line-numbers language-markup">
+        
+            &lt;div class="campaign-banner">
+
+                &lt;picture>
+                    &lt;source media="(max-width: 768px)" srcset="https://via.placeholder.com/768x432">
+                    &lt;source media="(max-width: 1024px)" srcset="https://via.placeholder.com/1024x400">
+                    &lt;source media="(min-width: 1025px)" srcset="https://via.placeholder.com/1600x400">
+                    &lt;img src="https://via.placeholder.com/1600x400" alt="">
+                &lt;/picture>
+            
+            &lt;/div>
+
+      </code>
+  </pre>
+  <button class="clipboard" data-clipboard-target="#snippet-full-width-banner">
+      Copy <span class="sr-only">HTML snippet for full width banner</span>
+  </button>
+</div>
+
+{% endblock %}
