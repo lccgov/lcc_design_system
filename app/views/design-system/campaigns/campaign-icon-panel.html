@@ -1,0 +1,53 @@
+{% extends "design-system-page-layout-campaigns.html" %}
+
+{% set section_id = "campaigns" %} <!-- Section id var for main nav --> 
+{% set page_id = "icon-panel" %} <!-- Page id var for side nav --> 
+{% set page_title = "Icon panel" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+</div>
+
+<div class="example">
+    
+    <span class="example-title">Example</span>
+
+    <div class="panel panel-icon">
+        <img alt="" src="https://via.placeholder.com/150x150">
+        <div class="content">
+            <h2>Health and wellbeing</h2>
+            <p>Leeds City Council are commited to supporting healthy, physically active lifestyles.</p>
+            <p>Find out more about <a href="#">Health and wellbeing</a>.</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for image panel</span></h3>
+    <pre>
+        <code id="snippet-image-panel" class="line-numbers language-markup">
+            &lt;div class="panel panel-icon">
+                &lt;img alt="" src="https://via.placeholder.com/150x150">
+                &lt;div class="content">
+                    &lt;h2>Health and wellbeing&lt;/h2>
+                    &lt;p>Leeds City Council are commited to supporting healthy, physically active lifestyles.&lt;/p>
+                    &lt;p>Find out more about &lt;a href="#">Health and wellbeing&lt;/a>.&lt;/p>
+                &lt;/div>
+            &lt;/div>    
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-image-panel">
+        Copy <span class="sr-only">HTML snippet for image panel</span>
+    </button>
+</div>
+
+{% endblock %}
