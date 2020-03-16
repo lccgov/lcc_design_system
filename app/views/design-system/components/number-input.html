@@ -17,7 +17,15 @@
     <p class="lead"></p>
 </div>
 
-<h2 class="heading-large">input mode fields</h2>
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#standard-number">Standard number field</a></li>
+        <li><a href="#dob-number">D.O.B number</a></li>
+    </ul>
+</div>
+
+<h2 class="heading-large" id="standard-number">input mode fields</h2>
 <div class="example">
     <span class="example-title">Example</span>
 
@@ -29,7 +37,24 @@
     </form>
 </div>
 
-<div class="example">
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for input mode number</span></h3>
+    <pre>
+        <code id="snippet-input" class="line-numbers language-markup">
+            &lt;form>
+                &lt;div class="form-group">
+                    &lt;label class="form-label form-label-bold" for="card-number">Card number&lt;/label>
+                    &lt;input id="card-number" class="form-control" type="text" inputmode="numeric" pattern="[0-9]*" spellcheck="false" name="card-number">
+                &lt;/div>
+            &lt;/form>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-input">
+        Copy <span class="sr-only">HTML snippet for input mode</span>
+    </button>
+</div>
+
+<div class="example" id="dob-number">
     <span class="example-title">Example</span>
 
     <form>
@@ -63,10 +88,26 @@
     <pre>
         <code id="snippet-input" class="line-numbers language-markup">
             &lt;form>
-                &lt;div class="form-group">
-                    &lt;label class="form-label form-label-bold" for="card-number">Card number&lt;/label>
-                    &lt;input id="card-number" class="form-control" type="text" inputmode="numeric" pattern="[0-9]*" spellcheck="false" name="card-number">
-                &lt;/div>
+                &lt;fieldset>
+                    &lt;legend>
+                        &lt;span class="form-label-bold">What is your date of birth?&lt;/span>
+                        &lt;span class="form-hint">For example, 31 3 1980&lt;/span>
+                    &lt;/legend>
+                    &lt;div class="form-date">
+                        &lt;div class="form-group form-group-day">
+                            &lt;label class="form-label" for="dob-day">Day&lt;/label>
+                            &lt;input class="form-control" id="dob-day" name="dob-day" type="text" inputmode="numeric" pattern="[0-9]*" min="0" max="31">
+                        &lt;/div>
+                        &lt;div class="form-group form-group-month">
+                            &lt;label class="form-label" for="dob-month">Month&lt;/label>
+                            &lt;input class="form-control" id="dob-month" name="dob-month" type="text" inputmode="numeric" pattern="[0-9]*" min="0" max="12">
+                        &lt;/div>
+                        &lt;div class="form-group form-group-year">
+                            &lt;label class="form-label" for="dob-year">Year&lt;/label>
+                            &lt;input class="form-control" id="dob-year" name="dob-year" type="text" inputmode="numeric" pattern="[0-9]*" min="0" max="2016">
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/fieldset>
             &lt;/form>
         </code>
     </pre>
@@ -74,6 +115,5 @@
         Copy <span class="sr-only">HTML snippet for input mode</span>
     </button>
 </div>
-
 
 {% endblock %}
