@@ -11274,12 +11274,10 @@ form.disabledInput input {
     .part-navigation__container {
       padding-bottom: 3px;
       margin-bottom: 30px; } }
-  .part-navigation__container nav ol {
+  .part-navigation__container nav ul, .part-navigation__container nav ol {
     padding: 0; }
     @media (min-width: 768px) {
-      .part-navigation__container nav ol {
-        display: flex;
-        flex-wrap: wrap;
+      .part-navigation__container nav ul, .part-navigation__container nav ol {
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -11295,28 +11293,32 @@ form.disabledInput input {
         -ms-flex-flex-direction: row !important;
         -webkit-flex-direction: row !important;
         flex-direction: row !important; } }
-    .part-navigation__container nav ol li {
+    .part-navigation__container nav ul li, .part-navigation__container nav ol li {
       font-size: 16px;
       margin-bottom: 12px;
       list-style: decimal;
       margin-left: 1.5em;
       padding-left: 0.3em; }
       @media (min-width: 641px) {
-        .part-navigation__container nav ol li {
+        .part-navigation__container nav ul li, .part-navigation__container nav ol li {
           font-size: 19px; } }
       @media (min-width: 768px) {
-        .part-navigation__container nav ol li {
+        .part-navigation__container nav ul li, .part-navigation__container nav ol li {
           width: calc(50% - 22px);
           margin-left: 22px;
           padding-right: 20px; } }
 
-.part-navigation--a ul {
+.part-navigation__container nav.part-navigation--a ul, .part-navigation__container nav.part-navigation--a ol {
   padding: 0; }
-  .part-navigation--a ul li {
+  .part-navigation__container nav.part-navigation--a ul li, .part-navigation__container nav.part-navigation--a ol li {
     position: relative;
     padding-left: 30px;
-    margin: 0 0 10px; }
-    .part-navigation--a ul li:before {
+    margin: 0 0 10px;
+    list-style: none; }
+    @media (min-width: 768px) {
+      .part-navigation__container nav.part-navigation--a ul li, .part-navigation__container nav.part-navigation--a ol li {
+        width: 100%; } }
+    .part-navigation__container nav.part-navigation--a ul li:before, .part-navigation__container nav.part-navigation--a ol li:before {
       content: '';
       width: 15px;
       height: 2px;
@@ -11325,7 +11327,7 @@ form.disabledInput input {
       left: 0;
       top: 50%;
       transform: translateY(-50%); }
-    .part-navigation--a ul li.active:before {
+    .part-navigation__container nav.part-navigation--a ul li.active:before, .part-navigation__container nav.part-navigation--a ol li.active:before {
       background: #263238; }
 
 .phase-banner {

@@ -214,7 +214,9 @@ $phase-banner-stage-background:$blue;
 @import 'mega-promo';
 //@import 'news'; //subsites only
 @import 'open-data'; //is it leeds.gov.uk specific? - does it need re-naming- DH
-@import 'journey-page';
+@import 'journey-page/pagination';
+@import 'journey-page/part-nav';
+
 @import 'phase-banner';
 //@import 'polaroids'; //subsite only
 //@import 'promo'; //subsites only

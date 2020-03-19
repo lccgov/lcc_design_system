@@ -53,35 +53,15 @@
     </button>
 </div>
 
-
-<!-- <div class="example">
-    <span class="example-title">Example</span>
-    <aside class="part-navigation__container" role="complementary">
-        <nav class="part-navigation part-navigation--b" role="navigation" aria-label="Pages in this guide"> 
-            <ul>
-                <li class="active">Report a repair</li>
-                <li><a href="#">Emergency repairs</a></li>
-                <li><a href="#">Your appointment</a></li>
-            </ul>
-        </nav>
-    </aside>
+<div class="text">
+    <h2 class="heading-large" id="level1">Journey List</h2>    
 </div>
 
-<div class="example">
-    <span class="example-title">Example: weighted</span>
-    <aside class="part-navigation__container" role="complementary">
-        <nav class="part-navigation part-navigation--b part-navigation--b--weighted" role="navigation" aria-label="Pages in this guide"> 
-            <ul>
-                <li class="active">Report a repair</li>
-                <li><a href="#">Emergency repairs</a></li>
-                <li><a href="#">Your appointment</a></li>
-            </ul>
-        </nav>
-    </aside>
-</div> -->
-
+<!------------------- Ordered list ------------------->
+   
 <div class="text">
-    <h2 class="heading-large" id="level1">Journey List</h2>
+    <h3>Ordered list</h3>
+    <p>An ordered list should be used when the order of the items should be in a specific order.</p>
 </div>
 
 <div class="example">
@@ -98,9 +78,9 @@
 </div>
 
 <div class="code-snippet">
-    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for Journey List</span></h3>
+    <h3 class="heading-mark-up">HTML Snippet for ordered List</h3>
     <pre>
-        <code id="snippet-journeylist" class="line-numbers language-markup">
+        <code id="snippet-ol-v1" class="line-numbers language-markup">
             &lt;aside class="part-navigation__container" role="complementary">
                 &lt;nav class="part-navigation" role="navigation" aria-label="Pages in this guide"> 
                     &lt;ol>
@@ -112,13 +92,100 @@
             &lt;/aside>
         </code>
     </pre>
-    <button class="clipboard" data-clipboard-target="#snippet-journeylist">
+    <button class="clipboard" data-clipboard-target="#snippet-ol-v1">
+        Copy <span class="sr-only">HTML snippet for Journey List</span>
+    </button>
+</div>
+
+<!------------------- Unordered list ------------------->
+
+<div class="text">
+    <h3>Unordered list</h3>
+    <p>Unordered lists are used when the order of the items is not relevant.</p>
+</div>
+
+<div class="example">
+    <span class="example-title">Example</span> 
+    <aside class="part-navigation__container" role="complementary">
+        <nav class="part-navigation" role="navigation" aria-label="Pages in this guide"> 
+            <ul>
+                <li>Report a repair</li>
+                <li><a href="#">Emergency repairs</a></li>
+                <li><a href="#">Your appointment</a></li>
+            </ul>
+        </nav>
+    </aside>
+</div>
+
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet for unordered list</h3>
+    <pre>
+        <code id="snippet-ul-v1" class="line-numbers language-markup">
+            &lt;aside class="part-navigation__container" role="complementary">
+                &lt;nav class="part-navigation" role="navigation" aria-label="Pages in this guide"> 
+                    &lt;ul>
+                        &lt;li>Report a repair&lt;/li>
+                        &lt;li>&lt;a href="#">Emergency repairs&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">Your appointment&lt;/a>&lt;/li>
+                    &lt;/ul>
+                &lt;/nav>
+            &lt;/aside>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-ul-v1">
         Copy <span class="sr-only">HTML snippet for Journey List</span>
     </button>
 </div>
 
 <div class="text">
     <h2 class="heading-large" id="level3">Journey List - Split test</h2>
+</div>
+
+<!------------------- Ordered list ------------------->
+   
+<div class="text">
+    <h3>Ordered list</h3>
+    <p>An ordered list should be used when the order of the items should be in a specific order.</p>
+</div>
+
+<div class="example">
+    <span class="example-title">Example</span>
+    <aside class="part-navigation__container" role="complementary">
+        <nav class="part-navigation part-navigation--a" role="navigation" aria-label="Pages in this guide"> 
+            <ol>
+                <li class="active">Report a repair</li>
+                <li><a href="#">Emergency repairs</a></li>
+                <li><a href="#">Your appointment</a></li>
+            </ol>
+        </nav>
+    </aside>    
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for Journey List split test</span></h3>
+    <pre>
+        <code id="snippet-ol-v2" class="line-numbers language-markup">
+            &lt;aside class="part-navigation__container" role="complementary">
+                &lt;nav class="part-navigation part-navigation--a" role="navigation" aria-label="Pages in this guide"> 
+                    &lt;ol>
+                        &lt;li>Report a repair&lt;/li>
+                        &lt;li>&lt;a href="#">Emergency repairs&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">Your appointment&lt;/a>&lt;/li>
+                    &lt;/ol>
+                &lt;/nav>
+            &lt;/aside>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-ol-v2">
+        Copy <span class="sr-only">HTML snippet for Journey List</span>
+    </button>
+</div>
+
+<!------------------- Unordered list ------------------->
+<div class="text">
+    <h3>Unordered list</h3>
+    <p>Unordered lists are used when the order of the items is not relevant.</p>
 </div>
 
 <div class="example">
@@ -137,20 +204,20 @@
 <div class="code-snippet">
     <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for Journey List split test</span></h3>
     <pre>
-        <code id="snippet-journeylistsplit" class="line-numbers language-markup">
+        <code id="snippet-ul-v2" class="line-numbers language-markup">
             &lt;aside class="part-navigation__container" role="complementary">
                 &lt;nav class="part-navigation part-navigation--a" role="navigation" aria-label="Pages in this guide"> 
-                    &lt;ol>
+                    &lt;ul>
                         &lt;li>Report a repair&lt;/li>
                         &lt;li>&lt;a href="#">Emergency repairs&lt;/a>&lt;/li>
                         &lt;li>&lt;a href="#">Your appointment&lt;/a>&lt;/li>
-                    &lt;/ol>
+                    &lt;/ul>
                 &lt;/nav>
             &lt;/aside>
         </code>
     </pre>
-    <button class="clipboard" data-clipboard-target="#snippet-journeylistsplit">
-        Copy <span class="sr-only">HTML snippet for Journey List</span>
+    <button class="clipboard" data-clipboard-target="#snippet-ul-v2">
+        Copy <span class="sr-only">HTML snippet for Unordered list v2</span>
     </button>
 </div>
 
