@@ -1,0 +1,11 @@
+.alert-permanent .alertInner {padding:15px !important;}
+.alert-permanent h2 {margin:0 !important; padding:0; line-height:1em;}
+.alert-permanent h2 a {color:black;font-size:20px;display:block;}
+.alert-permanent h2 a:hover {text-decoration:none;}
+
+.panel {
+    &--alert { background:#FFBF47; color:#000; }
+    &.panel-border {
+        &--alert { border-color:#FFBF47; color:#000; }
+    }
+}
