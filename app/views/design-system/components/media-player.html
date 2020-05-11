@@ -21,6 +21,7 @@
     <ul class="list list-contents">
         <li><a href="#media-player-example">Media player example</a></li>
         <li><a href="#media-player-with-content">Media player with content</a></li>
+        <li><a href="#media-player-v2">Media player v2</a></li>
     </ul>
 </div>
 <div class="text">
@@ -104,9 +105,22 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/oapZ3AXIMzI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
-    <div class="video__container">
-        <iframe src="https://www.youtube.com/embed/oapZ3AXIMzI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for media player v2</span></h3>
+    <pre>
+        <code id="snippet-media-player-v2" class="line-numbers language-markup">
+            &lt;div class="video__wrapper">
+                &lt;div class="video__container">
+                    &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/oapZ3AXIMzI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&lt;/iframe>
+                &lt;/div>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-media-player-v2">
+        Copy <span class="sr-only">HTML snippet for media player v2"</span>
+    </button>
 </div>
 
 {% endblock %}
