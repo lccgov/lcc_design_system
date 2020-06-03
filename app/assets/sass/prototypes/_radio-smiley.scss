@@ -1,0 +1,62 @@
+.form-group-inline {
+
+    label {
+        min-height: 60px;
+        padding-left: 60px;    
+        &:focus-within {
+            background-color: red;
+        }    
+    }
+
+    .emoji-angry {
+        background: url(/public/images/radio-smiley/angry.png) no-repeat;
+    }
+    
+    .emoji-frown {
+        background: url(/public/images/radio-smiley/frown.png) no-repeat;     
+    }
+    
+    .emoji-meh {
+        background: url(/public/images/radio-smiley/meh.png) no-repeat;       
+    }
+    
+    .emoji-smile {
+        background: url(/public/images/radio-smiley/smile.png) no-repeat;      
+    }
+    
+    .emoji-laugh {
+        background: url(/public/images/radio-smiley/laugh.png) no-repeat;     
+    }
+
+    .emoji-angry, .emoji-frown, .emoji-meh, .emoji-smile, .emoji-laugh {
+        background-size: 40px 40px;
+        background-position: 10px 10px;
+    }
+
+    @media only screen and (min-width: 641px) {  
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;    
+        justify-content: space-between;
+        label {
+            width: calc(20% - 7px);
+            padding-top: 110px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-align: center;
+        }
+        .emoji-angry, .emoji-frown, .emoji-meh, .emoji-smile, .emoji-laugh {
+            background-size: 90px 90px;
+            background-position: center 10px;
+        }
+    
+    }
+
+}
+

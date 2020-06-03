@@ -14869,6 +14869,71 @@ aside.col-md-4 {
   border-color: #FFBF47;
   color: #000; }
 
+.video__wrapper {
+  max-width: 560px; }
+
+.video__container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+  .video__container iframe,
+  .video__container object,
+  .video__container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.form-group-inline label {
+  min-height: 60px;
+  padding-left: 60px; }
+  .form-group-inline label:focus-within {
+    background-color: red; }
+
+.form-group-inline .emoji-angry {
+  background: url(/public/images/radio-smiley/angry.png) no-repeat; }
+
+.form-group-inline .emoji-frown {
+  background: url(/public/images/radio-smiley/frown.png) no-repeat; }
+
+.form-group-inline .emoji-meh {
+  background: url(/public/images/radio-smiley/meh.png) no-repeat; }
+
+.form-group-inline .emoji-smile {
+  background: url(/public/images/radio-smiley/smile.png) no-repeat; }
+
+.form-group-inline .emoji-laugh {
+  background: url(/public/images/radio-smiley/laugh.png) no-repeat; }
+
+.form-group-inline .emoji-angry, .form-group-inline .emoji-frown, .form-group-inline .emoji-meh, .form-group-inline .emoji-smile, .form-group-inline .emoji-laugh {
+  background-size: 40px 40px;
+  background-position: 10px 10px; }
+
+@media only screen and (min-width: 641px) {
+  .form-group-inline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .form-group-inline label {
+      width: calc(20% - 7px);
+      padding-top: 110px;
+      padding-left: 10px;
+      padding-right: 10px;
+      text-align: center; }
+    .form-group-inline .emoji-angry, .form-group-inline .emoji-frown, .form-group-inline .emoji-meh, .form-group-inline .emoji-smile, .form-group-inline .emoji-laugh {
+      background-size: 90px 90px;
+      background-position: center 10px; } }
+
 .campaign {
   margin-bottom: -50px; }
   .campaign .campaign-margin-bottom {
