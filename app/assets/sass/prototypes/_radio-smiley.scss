@@ -1,39 +1,29 @@
 .form-group-inline {
-
     .block-label {
         min-height: 60px;
         padding-left: 60px; 
         background-color: #eceff1;   
         background-repeat: no-repeat;
         border-width: 2px;
-
         &:focus-within, &.active {
             border-color: #FFBF47;
             background-color: #ffffff;
-        }  
-            
-
-                
+        }   
         &.emoji-angry {
             background-image: url(/public/images/radio-smiley/angry.png);
-        }
-    
+        }    
         &.emoji-frown {
             background-image: url(/public/images/radio-smiley/frown.png);     
-        }
-        
+        }        
         &.emoji-meh {
             background-image: url(/public/images/radio-smiley/meh.png);       
-        }
-        
+        }        
         &.emoji-smile {
             background-image: url(/public/images/radio-smiley/smile.png);      
-        }
-        
+        }        
         &.emoji-laugh {
             background-image: url(/public/images/radio-smiley/laugh.png);     
         }
-
         &.emoji-angry, 
         &.emoji-frown, 
         &.emoji-meh, 
@@ -42,10 +32,7 @@
             background-size: 40px 40px;
             background-position: 10px 10px;
         }
-
-    }
-    
-
+    }    
     @media only screen and (min-width: 641px) {  
         display: -webkit-box;
         display: -ms-flexbox;
@@ -62,8 +49,7 @@
             padding-top: 110px;
             padding-left: 10px;
             padding-right: 10px;
-            text-align: center;
-            
+            text-align: center;            
             &.emoji-angry, 
             &.emoji-frown, 
             &.emoji-meh, 
@@ -72,9 +58,6 @@
                 background-size: 90px 90px;
                 background-position: center 10px;
             }
-        }
-    
+        }    
     }
-
 }
-
