@@ -14894,19 +14894,19 @@ aside.col-md-4 {
     background-color: red; }
 
 .form-group-inline .emoji-angry {
-  background: url(/public/images/radio-smiley/angry.png) no-repeat; }
+  background: #eceff1 url(/public/images/radio-smiley/angry.png) no-repeat; }
 
 .form-group-inline .emoji-frown {
-  background: url(/public/images/radio-smiley/frown.png) no-repeat; }
+  background: #eceff1 url(/public/images/radio-smiley/frown.png) no-repeat; }
 
 .form-group-inline .emoji-meh {
-  background: url(/public/images/radio-smiley/meh.png) no-repeat; }
+  background: #eceff1 url(/public/images/radio-smiley/meh.png) no-repeat; }
 
 .form-group-inline .emoji-smile {
-  background: url(/public/images/radio-smiley/smile.png) no-repeat; }
+  background: #eceff1 url(/public/images/radio-smiley/smile.png) no-repeat; }
 
 .form-group-inline .emoji-laugh {
-  background: url(/public/images/radio-smiley/laugh.png) no-repeat; }
+  background: #eceff1 url(/public/images/radio-smiley/laugh.png) no-repeat; }
 
 .form-group-inline .emoji-angry, .form-group-inline .emoji-frown, .form-group-inline .emoji-meh, .form-group-inline .emoji-smile, .form-group-inline .emoji-laugh {
   background-size: 40px 40px;

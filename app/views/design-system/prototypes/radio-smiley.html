@@ -16,42 +16,48 @@
     <h1>{{ page_title }}</h1>
 </div>
 
-<form>
-    <div class="form-group form-group-inline">
-        <fieldset>
-            
-            <legend class="heading-medium">Have you found this session useful?</legend>
-            
-            <div class="form-group-inline">
-                <label class="block-label emoji-angry" for="radio-1" data-target="radio-1">
-                    <input class="sr-only" type="radio" id="radio-1" name="radio-group" value="Black bin (General waste)" aria-controls="radio-1" aria-expanded="false">
-                    Not useful
-                </label>
+<div class="example">
+    <span class="example-title">Example</span>
 
-                <label class="block-label emoji-frown" for="radio-2" data-target="radio-2">
-                    <input class="sr-only" type="radio" id="radio-2" name="radio-group" value="Isle of Man or the Channel Islands" aria-controls="radio-2" aria-expanded="false">
-                    Not very useful
-                </label>
+    <form>
+        <div class="form-group form-group-inline">
+            <fieldset>
+                
+                <legend class="heading-medium">Have you found this session useful?</legend>
+                
+                <div class="form-group-inline">
+                    <label class="block-label emoji-angry" for="radio-1" data-target="radio-1">
+                        <input class="sr-only" type="radio" id="radio-1" name="radio-group" value="Black bin (General waste)" aria-controls="radio-1" aria-expanded="false">
+                        Not useful
+                    </label>
 
-                <label class="block-label emoji-meh" for="radio-3" data-target="radio-3">
-                    <input class="sr-only" type="radio" id="radio-3" name="radio-group" value="Green bin (Recycling)" aria-controls="radio-3" aria-expanded="false">
-                    Neutral
-                </label>
+                    <label class="block-label emoji-frown" for="radio-2" data-target="radio-2">
+                        <input class="sr-only" type="radio" id="radio-2" name="radio-group" value="Isle of Man or the Channel Islands" aria-controls="radio-2" aria-expanded="false">
+                        Not very useful
+                    </label>
 
-                <label class="block-label emoji-smile" for="radio-4" data-target="radio-4">
-                    <input class="sr-only" type="radio" id="radio-4" name="radio-group" value="Green bin (Recycling)" aria-controls="radio-3" aria-expanded="false">
-                    Somewhat useful
-                </label>
+                    <label class="block-label emoji-meh" for="radio-3" data-target="radio-3">
+                        <input class="sr-only" type="radio" id="radio-3" name="radio-group" value="Green bin (Recycling)" aria-controls="radio-3" aria-expanded="false">
+                        Neutral
+                    </label>
 
-                <label class="block-label emoji-laugh" for="radio-5" data-target="radio-5">
-                    <input class="sr-only" type="radio" id="radio-5" name="radio-group" value="Green bin (Recycling)" aria-controls="radio-3" aria-expanded="false">
-                    Very useful
-                </label>
+                    <label class="block-label emoji-smile" for="radio-4" data-target="radio-4">
+                        <input class="sr-only" type="radio" id="radio-4" name="radio-group" value="Green bin (Recycling)" aria-controls="radio-3" aria-expanded="false">
+                        Somewhat useful
+                    </label>
 
-            </div>
+                    <label class="block-label emoji-laugh" for="radio-5" data-target="radio-5">
+                        <input class="sr-only" type="radio" id="radio-5" name="radio-group" value="Green bin (Recycling)" aria-controls="radio-3" aria-expanded="false">
+                        Very useful
+                    </label>
 
-        </fieldset>
-    </div>
-</form>
+                </div>
+
+            </fieldset>
+        </div>
+        <button class="btn btn-primary btn-arrow" href="#">Continue</button>
+    </form>
+
+</div>
 
 {% endblock %}
