@@ -14887,30 +14887,28 @@ aside.col-md-4 {
     width: 100%;
     height: 100%; }
 
-.form-group-inline label {
+.form-group-inline .block-label {
   min-height: 60px;
-  padding-left: 60px; }
-  .form-group-inline label:focus-within {
-    background-color: red; }
-
-.form-group-inline .emoji-angry {
-  background: #eceff1 url(/public/images/radio-smiley/angry.png) no-repeat; }
-
-.form-group-inline .emoji-frown {
-  background: #eceff1 url(/public/images/radio-smiley/frown.png) no-repeat; }
-
-.form-group-inline .emoji-meh {
-  background: #eceff1 url(/public/images/radio-smiley/meh.png) no-repeat; }
-
-.form-group-inline .emoji-smile {
-  background: #eceff1 url(/public/images/radio-smiley/smile.png) no-repeat; }
-
-.form-group-inline .emoji-laugh {
-  background: #eceff1 url(/public/images/radio-smiley/laugh.png) no-repeat; }
-
-.form-group-inline .emoji-angry, .form-group-inline .emoji-frown, .form-group-inline .emoji-meh, .form-group-inline .emoji-smile, .form-group-inline .emoji-laugh {
-  background-size: 40px 40px;
-  background-position: 10px 10px; }
+  padding-left: 60px;
+  background-color: #eceff1;
+  background-repeat: no-repeat;
+  border-width: 2px; }
+  .form-group-inline .block-label:focus-within, .form-group-inline .block-label.active {
+    border-color: #FFBF47;
+    background-color: #ffffff; }
+  .form-group-inline .block-label.emoji-angry {
+    background-image: url(/public/images/radio-smiley/angry.png); }
+  .form-group-inline .block-label.emoji-frown {
+    background-image: url(/public/images/radio-smiley/frown.png); }
+  .form-group-inline .block-label.emoji-meh {
+    background-image: url(/public/images/radio-smiley/meh.png); }
+  .form-group-inline .block-label.emoji-smile {
+    background-image: url(/public/images/radio-smiley/smile.png); }
+  .form-group-inline .block-label.emoji-laugh {
+    background-image: url(/public/images/radio-smiley/laugh.png); }
+  .form-group-inline .block-label.emoji-angry, .form-group-inline .block-label.emoji-frown, .form-group-inline .block-label.emoji-meh, .form-group-inline .block-label.emoji-smile, .form-group-inline .block-label.emoji-laugh {
+    background-size: 40px 40px;
+    background-position: 10px 10px; }
 
 @media only screen and (min-width: 641px) {
   .form-group-inline {
@@ -14924,15 +14922,15 @@ aside.col-md-4 {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     justify-content: space-between; }
-    .form-group-inline label {
+    .form-group-inline .block-label {
       width: calc(20% - 7px);
       padding-top: 110px;
       padding-left: 10px;
       padding-right: 10px;
       text-align: center; }
-    .form-group-inline .emoji-angry, .form-group-inline .emoji-frown, .form-group-inline .emoji-meh, .form-group-inline .emoji-smile, .form-group-inline .emoji-laugh {
-      background-size: 90px 90px;
-      background-position: center 10px; } }
+      .form-group-inline .block-label.emoji-angry, .form-group-inline .block-label.emoji-frown, .form-group-inline .block-label.emoji-meh, .form-group-inline .block-label.emoji-smile, .form-group-inline .block-label.emoji-laugh {
+        background-size: 90px 90px;
+        background-position: center 10px; } }
 
 .campaign {
   margin-bottom: -50px; }
