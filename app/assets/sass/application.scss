@@ -228,6 +228,7 @@ $phase-banner-stage-background:$blue;
 //@import 'side-navigation'; //needs aligning with side-nav - DH & RM
 @import 'sub-section-nav';
 @import 'webchat';
+@import 'radio-smiley';
 
 //-PROJECT SPECIFIC
 @import 'design-system';//not needed for live site
@@ -248,8 +249,6 @@ $phase-banner-stage-background:$blue;
 @import 'prototypes/checkout';
 @import 'prototypes/corona';
 @import 'prototypes/embed';
-
-@import 'prototypes/radio-smiley';
 
 // Campaigns
 @import 'campaigns/default/default';
