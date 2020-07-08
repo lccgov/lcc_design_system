@@ -137,6 +137,7 @@
         <script src="{{ asset_path }}javascripts/application.js?1.1.105" type="text/javascript"></script>
         <script src="{{ asset_path }}javascripts/decision-tree.js?1.1.105" type="text/javascript"></script>
         <script src="{{ asset_path }}javascripts/prototypes/file-upload.js" type="text/javascript"></script>
+        <script src="{{ asset_path }}javascripts/prototypes/tooltips.js" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
         {% block additional_page_scripts %}{% endblock %} 
 
@@ -151,6 +152,14 @@
                 $('#design-system-content').toggleClass('active');
             });
         </script>
+        <script>
+			var selector = '[data-tooltip]';
+			var els = document.querySelectorAll(selector);
+
+			for ( var i = 0; i < els.length; i++ ) {
+				var dm = new ARIAtip( els[i] );
+			}
+		</script>
 
         
         <!-- build:footerScript -->

@@ -1,14 +1,17 @@
 {% extends "design-system-page-layout-guide.html" %}
 
-{% set section_id = "prototypes" %} <!-- Section id var for main nav --> 
-{% set page_id = "tooltips" %} <!-- Page id var for side nav --> 
-{% set page_title = "Tooltips" %} <!-- Page title var for page header (H1) and page title -->    
+{% set section_id = "prototypes" %}
+<!-- Section id var for main nav -->
+{% set page_id = "tooltips" %}
+<!-- Page id var for side nav -->
+{% set page_title = "Tooltips" %}
+<!-- Page title var for page header (H1) and page title -->
 
 {% block sectionOneTop %}{% endblock %}
 
 {% block sectionLeftHandColumn %}
-    <!-- Side nav include -->  
-    {% include "includes/design-system/design-system-side-nav.html" %}
+<!-- Side nav include -->
+{% include "includes/design-system/design-system-side-nav.html" %}
 {% endblock %}
 
 {% block sectionOneRightContent %}
@@ -23,20 +26,187 @@
 </div>
 
 <h2 class="heading-large" id="tooltips">Tooltips</h2>
-<div class="example">
+<div class="example" style="overflow: visible;">
     <span class="example-title">Example</span>
 
-    <form>
-        <div class="form-group">
-            <label class="form-label form-label-bold" for="AdditionalInfo">
-                Do you know anything about the person(s) responsible for the issue? (optional)
-                <span class="form-hint">500 character limit</span>
-            </label>
-            <textarea class="form-control form-control--limited" cols="20" data-val="true" id="AdditionalInfo" name="AdditionalInfo" rows="5" maxlength="500" aria-describedby="label--charactersremaining"></textarea>
-            <span id="label--charactersremaining" class="form-hint form-hint__remaining" aria-live="polite">You have 500 characters remaining</span>
-        </div>
-    </form>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. <span data-tooltip>
+            <a href="#!" data-tooltip-trigger>
+                Soakaways
+                <span data-tooltip-tip>
+                    Soakaway testing shall be in accordance with BRE 365(?) and designed in accordance with MDCSFR
+                </span>
+            </a>
+        </span> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
 </div>
 
+<div class="example" style="overflow:visible;">
+    <span class="example-title">Example 2</span>
+    <div class="accordion" data-aria-accordion="true" data-multi="true" data-default="none" id="acc_9131">
+        <h3 class="accordion__heading"><button type="button" aria-controls="acc_9131_panel_1"
+                id="acc_9131_panel_1_trigger" class="accordion__trigger" aria-expanded="true" data-current="true">
+                On-site standards </button></h3>
+        <div class="accordion__panel" id="acc_9131_panel_1" aria-hidden="false">
+            <h3>Impact of climate change allowance</h3>
+            <p>See climate change allowance (enter anchor link)</p>
+            <h3>Finished floor levels</h3>
+            <p>See climate change allowances [anchor link to the bottom section on climate change]</p>
+            <h3>Surface water drainage strategy</h3>
+            <p>You must show your development meets
+                <a href="https://www.planningportal.co.uk/info/200135/approved_documents/71/part_h_-_drainage_and_waste_disposal"
+                    rel="external">Buidling Regulations H<span class="sr-only"> external link</span></a>.</p>
+            <p>This guidance includes:</p>
+            <ul class="list list-bullet">
+                <li>checking infiltrations feasbility</li>
+                <li>giving preference to <span data-tooltip>
+                    <a href="#!" data-tooltip-trigger>
+                        Soakaways.
+                        <span data-tooltip-tip>
+                            A soakaway is essentially a hole in the ground of your property's perimeter –usually the back garden – that is filled with rubble. Soakaways are designed to drain away excess water caused by heavy rainfall if the drainage system of your home struggles to keep up with demand.
+                        </span>
+                    </a>
+                </span></li>
+            </ul>
+            <p>Exception to soakways - where there is a history of groundwater flooding or a high water table where
+                flows could re-emerge to flood lower levels or basements.</p>
+            <h3>Surface water drainage design</h3>
+            <p>This needs to meet Yorkshire Water standards. See
+                <a href="https://www.yorkshirewater.com/developers/sewerage/sewer-adoptions/" rel="external">information
+                    on sewers for adoption<span class="sr-only"> external link</span></a>.</p>
+            <ul class="list list-bullet">
+                <li>50 per cent Annual Exceedance Probability (AEP) [have a pop out to explain what this is?] event</li>
+                <li>3.33 per cent AEP event</li>
+                <li>1 per cent event and climate change = no property flooding</li>
+            </ul>
+            <p>Surface water flooding from events more than 3.33 per cent AEP can be within the site, including car
+                parks and public open spaces. The associated risk needs to be managed so there is flooding on
+                properties. </p>
+            <h3>Allowable discharge</h3>
+            <p>What is this exactly? To exisisting or new watercourse or sewer</p>
+            <h4>Greenfield</h4>
+            <ul class="list list-bullet">
+                <li>Up to 1 per cent of AEP event and climate change</li>
+            </ul>
+            <p>Volume control – peak flow capped at QBAR[?] to conform to no increase of 100 year 6 hour event volume
+                (of flooding??). Additional downstream improvement works may be needed</p>
+            <details class="details">
+                <summary role="button" aria-expanded="false">Discharge rates</summary>
+                <div class="details__container">
+                    <p>For sites with less than 1 ha (what is a ha), a max discharge rate of 4 l/s can be used for all
+                        storms up to the 1per cent AEP event and climate change.</p>
+                    <p>Alternatively, IH 124, ICP SUDS and FEH methods in ICOP can be used.</p>
+                </div>
+            </details>
+            <h4>Brownfield </h4>
+            <ul class="list list-bullet">
+                <li>Minor development – a minimum 30 per cent reduction to peak flow rates up to the 1 per cent AEP
+                    event and climate change</li>
+                <li>Major development – if drainage survey can prove the existing site drains to a sewer or watercourse,
+                    a 50 per cent reduction can be applied (reduction of what?). If no proof, then Greenfield discharge
+                    rates will apply</li>
+            </ul>
+            <details class="details">
+                <summary role="button" aria-expanded="false">Discharge rates</summary>
+                <div class="details__container">
+                    <p>The existing discharge shall be the lesser of the capacity of the existing none sur charged pipe
+                        full capacity of the existing outfall, or can be taken as 140 l/s/ha of connected roofs and
+                        paving, provided that in both cases the existing drainage is still functional and point of
+                        discharge confirmed by Drainage survey.</p>
+                </div>
+            </details>
+        </div>
+        <h3 class="accordion__heading"><button type="button" aria-controls="acc_9131_panel_2"
+                id="acc_9131_panel_2_trigger" class="accordion__trigger" aria-expanded="false" data-current="false"> Off
+                site impacts </button></h3>
+        <div class="accordion__panel" id="acc_9131_panel_2">
+            <p></p>
+            <p>For surface water drainage, there has to be no increase in flood risk off site, up to and during the
+                critical 1 per cent Annual Exceedance Probability (AEP) event [link to Climate change???]</p>
+            <p></p>
+        </div>
+        <h3 class="accordion__heading"><button type="button" aria-controls="acc_9131_panel_3"
+                id="acc_9131_panel_3_trigger" class="accordion__trigger" aria-expanded="false" data-current="false">
+                Climate change allowances </button></h3>
+        <div class="accordion__panel" id="acc_9131_panel_3">
+            <p>Flood mitigation measures are needed for all developments that are at risk of flooding.</p>
+            <p>The height of the measures will be based on the </p>
+            <ul class="list list-bullet">
+                <li>design fluvial flood level</li>
+                <li>freeboard</li>
+            </ul>
+            <p>Where sites are considered as ‘defended’, the developer shall make an assessment of the [this need a pop
+                out explanation or hidden text]residual risk[pop out explanation] of flooding. </p>
+            <details class="details">
+                <summary role="button" aria-expanded="false">Residual risk</summary>
+                <div class="details__container">
+                    <p>These need to have appropriate measures in drainage design including breach analysis, pumping
+                        station failure, culvert blockage, surface water conveyance system failure, safe access and
+                        egress).</p>
+                </div>
+            </details>
+            <h4>Design fluvial flood level</h4>
+            <p>This level is the 1 per cent Annual Exceedance Probability (AEP) and climate change modelled flood level.
+            </p>
+            <p>See more information on the
+                <a href="http://evidence.environment-agency.gov.uk/FCERM/en/FluvialDesignGuide/Chapter9.aspx?pagenum=4"
+                    rel="external">design fluvial flood level<span class="sr-only"> external link</span></a>. </p>
+            <h4>Freeboard</h4>
+            <p>Freeboard is the height of the top of a bank, floodwall or other flood defence structure. This is above
+                the design water level. This is a safety margin that also allows for uncertainties.</p>
+            <p>The freeboard above the design level flood for should be:</p>
+            <ul class="list list-bullet">
+                <li>300mm or more for industrial developments(?)</li>
+                <li>300mm or more for underground car parks</li>
+                <li>400mm or more for offices and commercial developents</li>
+                <li>600mm or more for residential developments</li>
+            </ul>
+            <div class="table-responsive">
+                <table>
+                    <caption class="sr-only">Vulnerability and flood zone matrix </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Essential Infrastructure</th>
+                            <th scope="col">Highly Vulnerable</th>
+                            <th scope="col">More Vulnerable</th>
+                            <th scope="col">Less Vulnerable</th>
+                            <th scope="col">Water Compatible</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Flood Zone 2</td>
+                            <td>Use Upper End Allowance</td>
+                            <td>Use Higher Central (A) and check Upper End (B)</td>
+                            <td>Use Higher Central (A) and check Upper End (B)</td>
+                            <td>Use Central (A) and check Higher Central (B)</td>
+                            <td>Use the Central Allowance</td>
+                        </tr>
+                        <tr>
+                            <td>Flood Zone 3(a)</td>
+                            <td>Use Upper End Allowance</td>
+                            <td>Use Higher Central (A) and check Upper End (B)</td>
+                            <td>Use Higher Central (A) and check Upper End (B)</td>
+                            <td>Use Central (A) and check Higher Central (B)</td>
+                            <td>Use the Central Allowance</td>
+                        </tr>
+                        <tr>
+                            <td>Flood Zone 3(b)</td>
+                            <td>Use Upper End Allowance</td>
+                            <td>Development should not be Permitted*</td>
+                            <td>Development should not be Permitted*</td>
+                            <td>Development should not be Permitted*</td>
+                            <td>Use the Central Allowance</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 {% endblock %}

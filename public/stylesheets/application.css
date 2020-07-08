@@ -15006,6 +15006,70 @@ aside.col-md-4 {
     width: 100%;
     height: 100%; }
 
+[data-tooltip] {
+  display: inline-block;
+  position: relative; }
+
+[data-tooltip-block] {
+  display: block; }
+
+[data-tooltip-trigger] {
+  text-decoration: none;
+  border-bottom: dotted; }
+  [data-tooltip-trigger]:hover {
+    text-decoration: none;
+    border-bottom: solid; }
+
+.tooltip {
+  left: 0;
+  min-width: 300px;
+  max-width: 450px;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  z-index: 2; }
+
+.push-up .tooltip {
+  bottom: 100%;
+  top: auto; }
+
+.push-right .tooltip {
+  left: auto;
+  right: 0; }
+
+.tooltip__content {
+  background: #fafafa;
+  border-radius: 3px;
+  border: 5px solid #007299;
+  display: inline-block;
+  opacity: 0;
+  padding: 1em 1.25em;
+  visibility: hidden;
+  font-family: "Open Sans", sans-serif, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 18px;
+  border-radius: 0; }
+
+.tooltip__content > * {
+  margin: .5em 0; }
+
+.tooltip__content :last-child {
+  margin-bottom: 0; }
+
+.tooltip__content :first-child {
+  margin-top: 0; }
+
+.tooltip--show .tooltip__content {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity .15s .8s ease-in;
+  visibility: visible; }
+
+.tooltip--show .tooltip {
+  opacity: 1;
+  display: block; }
+
 .campaign {
   margin-bottom: -50px; }
   .campaign .campaign-margin-bottom {
