@@ -15015,7 +15015,8 @@ aside.col-md-4 {
 
 [data-tooltip-trigger] {
   text-decoration: none;
-  border-bottom: dotted; }
+  border-bottom: dotted;
+  color: #007299; }
   [data-tooltip-trigger]:hover {
     text-decoration: none;
     border-bottom: solid; }
