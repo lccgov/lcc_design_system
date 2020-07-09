@@ -15019,6 +15019,11 @@ aside.col-md-4 {
   [data-tooltip-trigger]:hover {
     text-decoration: none;
     border-bottom: solid; }
+  [data-tooltip-trigger]:focus {
+    background-color: #FFBF47 !important;
+    color: #212224 !important;
+    text-decoration: none;
+    outline: 0; }
 
 .tooltip {
   left: 0;
