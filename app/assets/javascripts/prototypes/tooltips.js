@@ -184,7 +184,7 @@ var util = {
       // If you want to reveal the tips anyway,
       // set the ariaHiddenTip config to false.
       if ( _options.ariaHiddenTip ) {
-        tipInner.setAttribute('aria-hidden', 'true');
+        // tipInner.setAttribute('aria-hidden', 'true');
       }
 
       tipOuter.appendChild(tipInner);
