@@ -1,4 +1,64 @@
-[data-tooltip] {
+.toggletip-container {
+	position: relative;
+	display: inline-block;
+  }
+  
+  /* the bubble element, added inside the toggletip live region */
+
+.tooltip__button {
+	background: no-repeat;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    border-bottom: dotted;
+	color: #007299;
+	&:focus {
+		background-color: #FFBF47 !important;
+        color: #212224 !important;
+        text-decoration: none;
+        outline: 0;
+	}
+}
+
+.toggletip-bubble {
+	// display: inline-block;
+	// position: absolute;
+	// left: 100%;
+	// top: 0;
+	// width: 10em;
+	// padding: 0.5rem;
+	// background: #000;
+	// color: #fff;
+
+	display: inline-block;
+	position: absolute;
+	background: #fafafa;
+	border-radius: 3px;
+	border: 5px solid #007299;
+	padding: 1em 1.25em;
+    font-family: "Open Sans", sans-serif, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 18px;
+	border-radius: 0;
+	min-width:250px;
+	z-index:1;
+}
+
+//   button {
+// 	width: 2em;
+// 	height: 2em;
+// 	border-radius: 50%;
+// 	border: 0;
+// 	background: #000;
+// 	font-family: serif;
+// 	font-weight: bold;
+// 	color: #fff;
+//   } 
+
+
+
+/*[data-tooltip] {
 	display: inline-block;
 	position: relative;
 }
@@ -113,3 +173,4 @@
 	border-radius: 0;
 	position: absolute;
 }
+*/

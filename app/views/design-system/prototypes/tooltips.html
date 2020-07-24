@@ -28,6 +28,19 @@
 <h2 class="heading-large" id="tooltips">Tooltips</h2>
 <div class="example" style="overflow: visible;">
     <span class="example-title">Example</span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <span class="toggletip-container">
+            <button class="tooltip__button" type="button" aria-label="more info" data-toggletip-content="Soakaway testing shall be in accordance with BRE 365(?) and designed in accordance with MDCSFR">Soakaways</button>
+            <span role="status"></span>
+          </span>
+
+    </p>
+</div>
+
+
+<h2 class="heading-large" id="tooltips">Tooltips</h2>
+<div class="example" style="overflow: visible;">
+    <span class="example-title">Example</span>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
         <div tabindex="0" role="button" id="mytooltipdiv" aria-expanded="false" aria-labelledby="mytooltipdiv mytooltip4" onmouseover="document.getElementById(&#39;mytooltip4&#39;).style.visibility = &#39;visible&#39;; document.getElementById(&#39;mytooltipdiv&#39;).setAttribute(&#39;aria-expanded&#39;, &#39;true&#39;);" onmouseout="document.getElementById(&#39;mytooltip4&#39;).style.visibility = &#39;hidden&#39;; document.getElementById(&#39;mytooltipdiv&#39;).setAttribute(&#39;aria-expanded&#39;, &#39;false&#39;);" onfocus="document.getElementById(&#39;mytooltip4&#39;).style.visibility = &#39;visible&#39;; document.getElementById(&#39;mytooltipdiv&#39;).setAttribute(&#39;aria-expanded&#39;, &#39;true&#39;);" onblur="document.getElementById(&#39;mytooltip4&#39;).style.visibility = &#39;hidden&#39;; document.getElementById(&#39;mytooltiplink&#39;).setAttribute(&#39;aria-expanded&#39;, &#39;false&#39;);" onkeydown="if(event.keyCode==27){document.getElementById(&#39;mytooltip4&#39;).style.visibility = &#39;hidden&#39;; document.getElementById(&#39;mytooltipdiv&#39;).setAttribute(&#39;aria-expanded&#39;, &#39;false&#39;);};">I am a div with button role.</div>
@@ -220,5 +233,42 @@
     </div>
 
 </div>
+
+<script>
+    (function() {
+  // Get all the toggletip buttons
+  var toggletips = document.querySelectorAll('[data-toggletip-content]');
+
+  // Iterate over them
+  Array.prototype.forEach.call(toggletips, function (toggletip) {
+    // Get the message from the data-content element
+    var message = toggletip.getAttribute('data-toggletip-content');
+
+    // Get the live region element
+    var liveRegion = toggletip.nextElementSibling;
+
+    // Toggle the message
+    toggletip.addEventListener('click', function () {
+        liveRegion.innerHTML = '';
+        window.setTimeout(function() {
+          liveRegion.innerHTML = '<span class="toggletip-bubble">'+ message +'</span>';
+        }, 100);
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function (e) {
+      if (toggletip !== e.target) {
+        liveRegion.innerHTML = '';
+      }                        
+    });
+
+    // Remove toggletip on ESC
+    toggletip.addEventListener('keydown', function(e) {
+      if ((e.keyCode || e.which) === 27)
+      liveRegion.innerHTML = '';
+    });
+  });
+}());
+</script>
 
 {% endblock %}

@@ -15006,79 +15006,27 @@ aside.col-md-4 {
     width: 100%;
     height: 100%; }
 
-[data-tooltip] {
-  display: inline-block;
-  position: relative; }
+.toggletip-container {
+  position: relative;
+  display: inline-block; }
 
-[data-tooltip-block] {
-  display: block; }
-
-[data-tooltip-trigger], #mytooltipdiv {
-  text-decoration: none;
+/* the bubble element, added inside the toggletip live region */
+.tooltip__button {
+  background: no-repeat;
+  border: 0;
+  margin: 0;
+  padding: 0;
   border-bottom: dotted;
   color: #007299; }
-  [data-tooltip-trigger]:hover, #mytooltipdiv:hover {
-    text-decoration: none;
-    border-bottom: solid; }
-  [data-tooltip-trigger]:focus, #mytooltipdiv:focus {
+  .tooltip__button:focus {
     background-color: #FFBF47 !important;
     color: #212224 !important;
     text-decoration: none;
     outline: 0; }
 
-.tooltip {
-  left: 0;
-  min-width: 300px;
-  max-width: 450px;
-  pointer-events: none;
-  position: absolute;
-  top: 100%;
-  z-index: 2; }
-
-.push-up .tooltip {
-  bottom: 100%;
-  top: auto; }
-
-.push-right .tooltip {
-  left: auto;
-  right: 0; }
-
-.tooltip__content {
-  background: #fafafa;
-  border-radius: 3px;
-  border: 5px solid #007299;
+.toggletip-bubble {
   display: inline-block;
-  opacity: 0;
-  padding: 1em 1.25em;
-  font-family: "Open Sans", sans-serif, sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 18px;
-  border-radius: 0; }
-
-.tooltip__content > * {
-  margin: .5em 0; }
-
-.tooltip__content :last-child {
-  margin-bottom: 0; }
-
-.tooltip__content :first-child {
-  margin-top: 0; }
-
-.tooltip--show .tooltip__content {
-  opacity: 1;
-  pointer-events: auto;
-  transition: opacity .15s .8s ease-in;
-  visibility: visible; }
-
-.tooltip--show .tooltip {
-  opacity: 1;
-  display: block; }
-
-#mytooltipdiv {
-  display: inline-block; }
-
-.tooltip__v2 {
+  position: absolute;
   background: #fafafa;
   border-radius: 3px;
   border: 5px solid #007299;
@@ -15088,8 +15036,125 @@ aside.col-md-4 {
   text-transform: none;
   font-size: 18px;
   border-radius: 0;
-  position: absolute; }
+  min-width: 250px;
+  z-index: 1; }
 
+/*[data-tooltip] {
+	display: inline-block;
+	position: relative;
+}
+
+[data-tooltip-block] {
+	display: block;
+}
+
+[data-tooltip-trigger], #mytooltipdiv {
+    text-decoration: none;
+    border-bottom: dotted;
+    color:#007299;
+
+    &:hover {
+        text-decoration: none;
+        border-bottom:solid;
+    }
+
+    &:focus {
+        background-color: #FFBF47 !important;
+        color: #212224 !important;
+        text-decoration: none;
+        outline: 0;
+    }
+}
+
+.tooltip {
+    left: 0;
+    min-width: 300px;
+	max-width: 450px;
+	// min-width: 20ch;
+	// max-width: 44ch;
+	pointer-events: none;
+	position: absolute;
+	top: 100%;
+	z-index: 2;
+}
+
+.push-up .tooltip {
+	bottom: 100%;
+	top: auto;
+}
+
+.push-right .tooltip {
+	left: auto;
+	right: 0;
+}
+
+.tooltip__content {
+	background: #fafafa;
+	border-radius: 3px;
+	border: 5px solid #007299;
+	display: inline-block;
+	opacity: 0;
+	padding: 1em 1.25em;
+    // visibility: hidden;
+
+    font-family: "Open Sans", sans-serif, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 18px;
+    border-radius: 0;
+}
+
+.tooltip__content > * {
+	margin: .5em 0;
+}
+
+.tooltip__content :last-child {
+	margin-bottom: 0;
+}
+
+.tooltip__content :first-child {
+	margin-top: 0;
+}
+
+.tooltip--show .tooltip__content {
+	opacity: 1;
+	pointer-events: auto;
+	transition: opacity .15s .8s ease-in;
+	visibility: visible;
+}
+
+.tooltip--show .tooltip {
+    opacity: 1;
+    display:block;
+}
+
+//button version
+#mytooltipdiv {
+    display:inline-block;
+}
+
+.tooltip__v2 {
+	// position: absolute;
+	// top: 100%;
+	// left:0;
+    // border: 2px solid black;
+    // margin: 1em;
+    // padding: .2em;
+    // outline-offset: 3px;
+	// max-width: 200px;
+	
+	background: #fafafa;
+	border-radius: 3px;
+	border: 5px solid #007299;
+	padding: 1em 1.25em;
+    font-family: "Open Sans", sans-serif, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 18px;
+	border-radius: 0;
+	position: absolute;
+}
+*/
 .campaign {
   margin-bottom: -50px; }
   .campaign .campaign-margin-bottom {
