@@ -15078,6 +15078,18 @@ aside.col-md-4 {
 #mytooltipdiv {
   display: inline-block; }
 
+.tooltip__v2 {
+  background: #fafafa;
+  border-radius: 3px;
+  border: 5px solid #007299;
+  padding: 1em 1.25em;
+  font-family: "Open Sans", sans-serif, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 18px;
+  border-radius: 0;
+  position: absolute; }
+
 .campaign {
   margin-bottom: -50px; }
   .campaign .campaign-margin-bottom {

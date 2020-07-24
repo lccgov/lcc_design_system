@@ -91,3 +91,25 @@
 #mytooltipdiv {
     display:inline-block;
 }
+
+.tooltip__v2 {
+	// position: absolute;
+	// top: 100%;
+	// left:0;
+    // border: 2px solid black;
+    // margin: 1em;
+    // padding: .2em;
+    // outline-offset: 3px;
+	// max-width: 200px;
+	
+	background: #fafafa;
+	border-radius: 3px;
+	border: 5px solid #007299;
+	padding: 1em 1.25em;
+    font-family: "Open Sans", sans-serif, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 18px;
+	border-radius: 0;
+	position: absolute;
+}

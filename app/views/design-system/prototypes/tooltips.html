@@ -31,7 +31,9 @@
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
         <div tabindex="0" role="button" id="mytooltipdiv" aria-expanded="false" aria-labelledby="mytooltipdiv mytooltip4" onmouseover="document.getElementById(&#39;mytooltip4&#39;).style.visibility = &#39;visible&#39;; document.getElementById(&#39;mytooltipdiv&#39;).setAttribute(&#39;aria-expanded&#39;, &#39;true&#39;);" onmouseout="document.getElementById(&#39;mytooltip4&#39;).style.visibility = &#39;hidden&#39;; document.getElementById(&#39;mytooltipdiv&#39;).setAttribute(&#39;aria-expanded&#39;, &#39;false&#39;);" onfocus="document.getElementById(&#39;mytooltip4&#39;).style.visibility = &#39;visible&#39;; document.getElementById(&#39;mytooltipdiv&#39;).setAttribute(&#39;aria-expanded&#39;, &#39;true&#39;);" onblur="document.getElementById(&#39;mytooltip4&#39;).style.visibility = &#39;hidden&#39;; document.getElementById(&#39;mytooltiplink&#39;).setAttribute(&#39;aria-expanded&#39;, &#39;false&#39;);" onkeydown="if(event.keyCode==27){document.getElementById(&#39;mytooltip4&#39;).style.visibility = &#39;hidden&#39;; document.getElementById(&#39;mytooltipdiv&#39;).setAttribute(&#39;aria-expanded&#39;, &#39;false&#39;);};">I am a div with button role.</div>
-        <div id="mytooltip4" role="tooltip" style="visibility: hidden;">The div has tabindex=0 to allow focus.</div>
+        <div id="mytooltip4" role="tooltip" class="tooltip__v2" style="visibility: hidden;">
+            <div class="">The div has tabindex=0 to allow focus.</div>
+        </div>
         sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
         consequat. <span data-tooltip>
