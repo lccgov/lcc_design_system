@@ -15013,14 +15013,14 @@ aside.col-md-4 {
 [data-tooltip-block] {
   display: block; }
 
-[data-tooltip-trigger] {
+[data-tooltip-trigger], #mytooltipdiv {
   text-decoration: none;
   border-bottom: dotted;
   color: #007299; }
-  [data-tooltip-trigger]:hover {
+  [data-tooltip-trigger]:hover, #mytooltipdiv:hover {
     text-decoration: none;
     border-bottom: solid; }
-  [data-tooltip-trigger]:focus {
+  [data-tooltip-trigger]:focus, #mytooltipdiv:focus {
     background-color: #FFBF47 !important;
     color: #212224 !important;
     text-decoration: none;
@@ -15074,6 +15074,9 @@ aside.col-md-4 {
 .tooltip--show .tooltip {
   opacity: 1;
   display: block; }
+
+#mytooltipdiv {
+  display: inline-block; }
 
 .campaign {
   margin-bottom: -50px; }

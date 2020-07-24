@@ -7,7 +7,7 @@
 	display: block;
 }
 
-[data-tooltip-trigger] {
+[data-tooltip-trigger], #mytooltipdiv {
     text-decoration: none;
     border-bottom: dotted;
     color:#007299;
@@ -85,4 +85,9 @@
 .tooltip--show .tooltip {
     opacity: 1;
     display:block;
+}
+
+//button version
+#mytooltipdiv {
+    display:inline-block;
 }
