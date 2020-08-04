@@ -12,11 +12,17 @@
     padding: 0;
     border-bottom: dotted;
 	color: #007299;
+	font-size:1em;
 	&:focus {
 		background-color: #FFBF47 !important;
         color: #212224 !important;
         text-decoration: none;
         outline: 0;
+	}
+	&:hover {
+		background:none !important;
+		border-style:solid;
+		border-color:#007299 !important;
 	}
 }
 
@@ -43,6 +49,20 @@
 	border-radius: 0;
 	min-width:250px;
 	z-index:1;
+
+	@media screen and (min-width:400px) {
+		&.push-right {
+			right: 0;
+			left: auto;
+			top: 100%;
+		}
+	}
+
+	@media screen and (max-width:400px) {
+		bottom:0;
+		position:fixed;
+		top:auto;
+	}
 }
 
 //   button {

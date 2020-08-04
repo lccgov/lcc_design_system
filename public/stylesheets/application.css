@@ -15017,12 +15017,17 @@ aside.col-md-4 {
   margin: 0;
   padding: 0;
   border-bottom: dotted;
-  color: #007299; }
+  color: #007299;
+  font-size: 1em; }
   .tooltip__button:focus {
     background-color: #FFBF47 !important;
     color: #212224 !important;
     text-decoration: none;
     outline: 0; }
+  .tooltip__button:hover {
+    background: none !important;
+    border-style: solid;
+    border-color: #007299 !important; }
 
 .toggletip-bubble {
   display: inline-block;
@@ -15038,6 +15043,16 @@ aside.col-md-4 {
   border-radius: 0;
   min-width: 250px;
   z-index: 1; }
+  @media screen and (min-width: 400px) {
+    .toggletip-bubble.push-right {
+      right: 0;
+      left: auto;
+      top: 100%; } }
+  @media screen and (max-width: 400px) {
+    .toggletip-bubble {
+      bottom: 0;
+      position: fixed;
+      top: auto; } }
 
 /*[data-tooltip] {
 	display: inline-block;
