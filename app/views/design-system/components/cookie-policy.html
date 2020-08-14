@@ -1,0 +1,52 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "cookie-policy" %} <!-- Page id var for side nav --> 
+{% set page_title = "Cookie Policy" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+</div>
+
+<div class="example">
+    <span class="example-title">Example</span>
+
+    <div id="containerSiteStatement">
+        <div id="siteStatement">
+            <div id="global-cookie-message" class="container-fluid">
+                <p>Cookies - We use cookies to help improve your experience of using our website. For more information about the cookies we use see our <a href="#">privacy page</a>. If you continue without changing your cookie settings we assume that you are happy with our use of cookies. You can change your cookie settings at any time by following the instructions on our <a href="#">privacy page</a>.</p>
+                <a class="submit" href="">Don't show this message again</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for Cookie Policy</span></h3>
+    <pre>
+        <code id="snippet-cookie-policy" class="line-numbers language-markup">
+            &lt;div id="containerSiteStatement">
+                &lt;div id="siteStatement">
+                    &lt;div id="global-cookie-message" class="container-fluid">
+                        &lt;p>Cookies - We use cookies to help improve your experience of using our website. For more information about the cookies we use see our &lt;a href="#">privacy page&lt;/a>. If you continue without changing your cookie settings we assume that you are happy with our use of cookies. You can change your cookie settings at any time by following the instructions on our &lt;a href="#">privacy page&lt;/a>.&lt;/p>
+                        &lt;a class="submit" href="">Don't show this message again&lt;/a>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-cookie-policy">
+        Copy <span class="sr-only">HTML snippet for Cookie Policy</span>
+    </button>
+</div>
+
+{% endblock %}
