@@ -1,0 +1,92 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
+{% set page_id = "easy-read" %} <!-- Page id var for side nav --> 
+{% set page_title = "Easy Read" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+</div>
+
+<div class="example">
+    <span class="example-title">Example</span>
+    <div class="col-md-8">
+        <div class="easy-read">
+            <p class="lead">Find out how to stay safe from coronavirus.<br/></p>
+            <div class="panel panel-border">
+                <p>If you need to stay at home and have no family or friends for support, ring 0113 376 0330.<br/></p> 
+                <img class="img-content" src="https://www.leeds.gov.uk/PublishingImages/Easy%20read/If-you-need-to-stay-at-home1.jpg" alt="Picture of calling the council if you need support"/>
+            </div>
+            <div class="panel panel-border">
+                <p>If you have symptoms, stay at home and book a free test from the 
+                <a rel="external" href="https://www.nhs.uk/conditions/coronavirus-covid-19/testing-and-tracing/get-a-test-to-check-if-you-have-coronavirus/">NHS website</a> or ring 119.</p> 
+                <img class="img-content" src="https://www.leeds.gov.uk/PublishingImages/Easy%20read/If-you-have-symptoms1.jpg" alt="Picture of people with coronavirus symptoms like a cough, fever and loss of smell or taste"/> 
+            </div>
+                <div class="panel panel-border">
+                <p>Keep a safe distance from others.</p> 
+                <img class="img-content" src="https://www.leeds.gov.uk/PublishingImages/Easy%20read/Keep-a-safe-distance-from-others1.jpg" alt="Picture of people keeping two metres apart"/> 
+            </div>
+            <div class="panel panel-border">
+                <p>No one in your house should leave home if anyone has symptoms.</p> 
+                <img class="img-content" src="https://www.leeds.gov.uk/PublishingImages/Easy%20read/No-one-in-your-household-should-leave-home1.jpg" alt="Picture of people staying at home if they have coronavirus symptoms"/> 
+            </div>
+            <div class="panel panel-border">
+                <p>Wash your hands regularly, for 20 seconds.<br/></p> 
+                <img class="img-content" src="https://www.leeds.gov.uk/PublishingImages/Easy%20read/Wash-your-hands-regularly-for-20-seconds1.jpg" alt="Picture of hands being washed"/> 
+            </div>
+            <div class="panel panel-border">
+                <p>You must wear a face covering on public transport, in shops and in healthcare buildings.</p> 
+                <img class="img-content" src="https://www.leeds.gov.uk/PublishingImages/Easy%20read/You-must-wear-a-face-covering1.jpg" alt="Picture of people wearing face masks"/> 
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for description list</span></h3>
+    <pre>
+        <code id="snippet-description-list" class="line-numbers language-markup">
+            &lt;div class="easy-read">
+                &lt;p class="lead">Find out how to stay safe from coronavirus.&lt;br/>&lt;/p>
+                &lt;div class="panel panel-border">
+                    &lt;p>If you need to stay at home and have no family or friends for support, ring 0113 376 0330.&lt;br/>&lt;/p> 
+                    &lt;img class="img-content" src="https://www.leeds.gov.uk/PublishingImages/Easy%20read/If-you-need-to-stay-at-home1.jpg" alt="Picture of calling the council if you need support"/>
+                &lt;/div>
+                &lt;div class="panel panel-border">
+                    &lt;p>If you have symptoms, stay at home and book a free test from the 
+                    &lt;a rel="external" href="https://www.nhs.uk/conditions/coronavirus-covid-19/testing-and-tracing/get-a-test-to-check-if-you-have-coronavirus/">NHS website&lt;/a> or ring 119.&lt;/p> 
+                    &lt;img class="img-content" src="https://www.leeds.gov.uk/PublishingImages/Easy%20read/If-you-have-symptoms1.jpg" alt="Picture of people with coronavirus symptoms like a cough, fever and loss of smell or taste"/> 
+                &lt;/div>
+                    &lt;div class="panel panel-border">
+                    &lt;p>Keep a safe distance from others.&lt;/p> 
+                    &lt;img class="img-content" src="https://www.leeds.gov.uk/PublishingImages/Easy%20read/Keep-a-safe-distance-from-others1.jpg" alt="Picture of people keeping two metres apart"/> 
+                &lt;/div>
+                &lt;div class="panel panel-border">
+                    &lt;p>No one in your house should leave home if anyone has symptoms.&lt;/p> 
+                    &lt;img class="img-content" src="https://www.leeds.gov.uk/PublishingImages/Easy%20read/No-one-in-your-household-should-leave-home1.jpg" alt="Picture of people staying at home if they have coronavirus symptoms"/> 
+                &lt;/div>
+                &lt;div class="panel panel-border">
+                    &lt;p>Wash your hands regularly, for 20 seconds.&lt;br/>&lt;/p> 
+                    &lt;img class="img-content" src="https://www.leeds.gov.uk/PublishingImages/Easy%20read/Wash-your-hands-regularly-for-20-seconds1.jpg" alt="Picture of hands being washed"/> 
+                &lt;/div>
+                &lt;div class="panel panel-border">
+                    &lt;p>You must wear a face covering on public transport, in shops and in healthcare buildings.&lt;/p> 
+                    &lt;img class="img-content" src="https://www.leeds.gov.uk/PublishingImages/Easy%20read/You-must-wear-a-face-covering1.jpg" alt="Picture of people wearing face masks"/> 
+                &lt;/div>
+            &lt;/div>
+        </code>
+    </pre>
+    <button class="clipboard" data-clipboard-target="#snippet-description-list">
+        Copy <span class="sr-only">HTML snippet for description list"</span>
+    </button>
+</div>
+
+{% endblock %}

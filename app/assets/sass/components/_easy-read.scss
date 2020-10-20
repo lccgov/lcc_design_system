@@ -1,0 +1,52 @@
+//------------------------ Easy read font increase ------------------------//
+  
+@media (max-width: 640px){
+    .easy-read {
+        font-size: 19px;
+        .phase-banner p {
+            font-size: 19px;
+        }
+        h2 {
+            font-size: 27px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+        h4 {
+            font-size: 19px;
+        }
+    }
+}
+
+@media print {
+
+    .easy-read {
+        * {
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+        .panel-border {
+            page-break-inside: avoid;
+            break-inside: avoid;
+            display:flex;
+            flex-direction:row-reverse;
+
+            p {
+                width:50%;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            img {
+                width:50%;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            table, img, svg {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+        }
+    }
+}
