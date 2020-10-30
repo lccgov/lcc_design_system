@@ -1,0 +1,67 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "prototypes" %} <!-- Section id var for main nav --> 
+{% set page_id = "input" %} <!-- Page id var for side nav --> 
+{% set page_title = "Do don't" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+</div>
+
+<h2 class="heading-large">Do Don't</h2>
+<div class="example">
+    <span class="example-title">Example</span>
+    <div class="col-md-8">
+        <div class="panel panel-border panel__dodont panel__dodont--do">
+            <h2>Organisations that offer debt advice</h2>
+            <ul class="list list-bullet">
+                <li><a href="#" rel="external">Citizens Advice <span class="sr-only">External link</span></a> provides free, independent and confidential advice on debt and money problems</li>
+                <li><a href="#" rel="external">Debt Advice Foundation <span class="sr-only">External link</span></a> offer free, confidential support and advice about debt</li>
+            </ul>
+        </div>
+        
+        <div class="panel panel-border panel__dodont panel__dodont--dont">
+                <h2>Organisations that offer debt advice</h2>
+                <ul class="list list-bullet">
+                    <li><a href="#" rel="external">Citizens Advice <span class="sr-only">External link</span></a> provides free, independent and confidential advice on debt and money problems</li>
+                    <li><a href="#" rel="external">Debt Advice Foundation <span class="sr-only">External link</span></a> offer free, confidential support and advice about debt</li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for do dont</span></h3>
+    <pre>
+        <code id="snippet-textarea" class="line-numbers language-markup">
+            &lt;div class="panel panel-border panel__dodont panel__dodont--do">
+                &lt;h2>Organisations that offer debt advice&lt;/h2>
+                &lt;ul class="list list-bullet">
+                    &lt;li>&lt;a href="#" rel="external">Citizens Advice &lt;span class="sr-only">External link&lt;/span>&lt;/a> provides free, independent and confidential advice on debt and money problems&lt;/li>
+                    &lt;li>&lt;a href="#" rel="external">Debt Advice Foundation &lt;span class="sr-only">External link&lt;/span>&lt;/a> offer free, confidential support and advice about debt&lt;/li>
+                &lt;/ul>
+            &lt;/div>
+            
+            &lt;div class="panel panel-border panel__dodont panel__dodont--dont">
+                    &lt;h2>Organisations that offer debt advice&lt;/h2>
+                    &lt;ul class="list list-bullet">
+                        &lt;li>&lt;a href="#" rel="external">Citizens Advice &lt;span class="sr-only">External link&lt;/span>&lt;/a> provides free, independent and confidential advice on debt and money problems&lt;/li>
+                        &lt;li>&lt;a href="#" rel="external">Debt Advice Foundation &lt;span class="sr-only">External link&lt;/span>&lt;/a> offer free, confidential support and advice about debt&lt;/li>
+                    &lt;/ul>
+                &lt;/div>
+            &lt;/div>
+        </code>
+    </pre>
+</div>
+
+
+
+{% endblock %}
