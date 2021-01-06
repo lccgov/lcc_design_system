@@ -5916,7 +5916,7 @@ p.sharepoint,
     background: rgba(46, 125, 50, 0.1); }
   .text-highlight.text-highlight--red,
   .text-block.text-highlight--red {
-    border-color: #d32f2f !important;
+    border-color: #d32f2f;
     background: rgba(211, 47, 47, 0.1); }
 
 @media (min-width: 641px) {
@@ -7699,36 +7699,6 @@ p + .panel {
 .panel.panel-border--alert {
   border-color: #FFBF47;
   color: #000; }
-
-.panel.panel__dodont {
-  position: relative;
-  margin: 30px 0 60px; }
-  .panel.panel__dodont:before {
-    content: '';
-    display: block;
-    position: absolute;
-    background-size: cover;
-    width: 44px;
-    height: 44px;
-    left: -24px;
-    top: -24px; }
-    @media only screen and (min-width: 1314px) {
-      .panel.panel__dodont:before {
-        width: 78px;
-        height: 78px;
-        left: -39px;
-        top: -39px; } }
-  .panel.panel__dodont--do {
-    border-color: #34804E; }
-    .panel.panel__dodont--do:before {
-      background-image: url("../images/icon-do.svg"); }
-  .panel.panel__dodont--dont {
-    border-color: #CC5353; }
-    .panel.panel__dodont--dont:before {
-      background-image: url("../images/icon-dont.svg"); }
-  .panel.panel__dodont h2 {
-    margin-top: 20px;
-    margin-bottom: 30px; }
 
 hr.ms-rteElement-spacer {
   -ms-name: "spacer";
@@ -12435,7 +12405,7 @@ div a .ms-ref-name, div .details summary:focus .ms-ref-name, .details div summar
       float: none;
       display: inline-block;
       vertical-align: top;
-      width: calc(20% - 15px);
+      width: calc(20% - 14px);
       padding-top: 110px;
       padding-left: 10px;
       padding-right: 10px;
