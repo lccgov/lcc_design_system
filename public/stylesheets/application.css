@@ -5916,7 +5916,7 @@ p.sharepoint,
     background: rgba(46, 125, 50, 0.1); }
   .text-highlight.text-highlight--red,
   .text-block.text-highlight--red {
-    border-color: #d32f2f;
+    border-color: #d32f2f !important;
     background: rgba(211, 47, 47, 0.1); }
 
 @media (min-width: 641px) {
@@ -7700,6 +7700,36 @@ p + .panel {
   border-color: #FFBF47;
   color: #000; }
 
+.panel.panel__dodont {
+  position: relative;
+  margin: 30px 0 60px; }
+  .panel.panel__dodont:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-size: cover;
+    width: 44px;
+    height: 44px;
+    left: -24px;
+    top: -24px; }
+    @media only screen and (min-width: 1314px) {
+      .panel.panel__dodont:before {
+        width: 78px;
+        height: 78px;
+        left: -39px;
+        top: -39px; } }
+  .panel.panel__dodont--do {
+    border-color: #34804E; }
+    .panel.panel__dodont--do:before {
+      background-image: url("../images/icon-do.svg"); }
+  .panel.panel__dodont--dont {
+    border-color: #CC5353; }
+    .panel.panel__dodont--dont:before {
+      background-image: url("../images/icon-dont.svg"); }
+  .panel.panel__dodont h2 {
+    margin-top: 20px;
+    margin-bottom: 30px; }
+
 hr.ms-rteElement-spacer {
   -ms-name: "spacer";
   display: block;
@@ -8515,6 +8545,15 @@ footer.main {
   .alert a, .alert .details summary:focus, .details .alert summary:focus {
     font-weight: bold;
     color: #007299; }
+  .alert h2 {
+    font-size: 27px;
+    padding-right: 35px; }
+    @media (max-width: 641px) {
+      .alert h2 {
+        font-size: 21px; } }
+  .alert h2,
+  .alert p {
+    margin: 0 0 7px !important; }
   .alert .alertInner {
     position: relative;
     padding: 30px 15px 23px;
@@ -8557,50 +8596,6 @@ footer.main {
     .alert .alertInner ol {
       list-style-type: decimal;
       padding-left: 20px; }
-  .alert.alert-warning {
-    background: #FFBF47; }
-    .alert.alert-warning a:focus, .alert.alert-warning .details summary:focus, .details .alert.alert-warning summary:focus {
-      background: #d79b04 !important; }
-  .alert.alert-info {
-    background: #B3D9E6; }
-    .alert.alert-info a, .alert.alert-info .details summary:focus, .details .alert.alert-info summary:focus {
-      color: #007299; }
-      .alert.alert-info a:hover, .alert.alert-info .details summary:hover:focus, .details .alert.alert-info summary:hover:focus {
-        color: #0085b3; }
-  .alert-permanent {
-    background: #FFBF47; }
-    .alert-permanent .alertInner {
-      padding: 15px !important;
-      line-height: 1em; }
-    .alert-permanent h2 {
-      display: none !important; }
-      .alert-permanent h2 a, .alert-permanent h2 .details summary:focus, .details .alert-permanent h2 summary:focus {
-        color: black;
-        font-size: 20px;
-        display: block; }
-        .alert-permanent h2 a:hover, .alert-permanent h2 .details summary:hover:focus, .details .alert-permanent h2 summary:hover:focus {
-          text-decoration: none; }
-    .alert-permanent p {
-      display: none !important; }
-    .alert-permanent a.btn-default, .alert-permanent .details summary.btn-default:focus, .details .alert-permanent summary.btn-default:focus {
-      color: black;
-      font-size: 16px;
-      display: block;
-      background: none;
-      padding: 0;
-      margin: 0;
-      line-height: 1.3em;
-      border: 0;
-      text-decoration: underline !important; }
-      @media (min-width: 641px) {
-        .alert-permanent a.btn-default, .alert-permanent .details summary.btn-default:focus, .details .alert-permanent summary.btn-default:focus {
-          line-height: 1em; } }
-      .alert-permanent a.btn-default:hover, .alert-permanent .details summary.btn-default:hover:focus, .details .alert-permanent summary.btn-default:hover:focus {
-        text-decoration: none !important;
-        background: none; }
-    .alert-permanent .close {
-      display: none;
-      visibility: hidden; }
   .alert .close {
     opacity: 1;
     filter: alpha(opacity=100);
@@ -8612,17 +8607,16 @@ footer.main {
       color: #393b3f; }
       .alert .close:hover span {
         background: transparent; }
-    .alert .close:focus span {
-      background: #fbc02d; }
-  .alert h2 {
-    font-size: 27px;
-    padding-right: 35px; }
-    @media (max-width: 641px) {
-      .alert h2 {
-        font-size: 21px; } }
-  .alert h2,
-  .alert p {
-    margin: 0 0 7px !important; }
+    .alert .close .glyphicon {
+      border: 2px solid transparent; }
+    .alert .close:focus {
+      outline: none; }
+      .alert .close:focus span {
+        background: #fbc02d; }
+      .alert .close:focus .glyphicon {
+        background: #000000 !important;
+        color: #ffffff !important;
+        border: 2px solid #000000; }
   .alert .btn-default {
     border-color: #212224;
     color: #212224;
@@ -8636,9 +8630,49 @@ footer.main {
       .alert .btn-default {
         font-size: 19px; } }
     .alert .btn-default:hover {
-      background: rgba(0, 0, 0, 0.1);
+      background: rgba(0, 0, 0, 0.7);
       border-color: transparent;
-      color: #212224; }
+      color: #ffffff; }
+    .alert .btn-default:focus {
+      background: #000000 !important;
+      color: #ffffff !important;
+      border: 1px solid #000000 !important;
+      box-shadow: none; }
+  .alert-warning {
+    background: #FFBF47; }
+  .alert-info {
+    background: #B3D9E6; }
+  .alert-permanent {
+    background: #FFBF47; }
+    .alert-permanent .alertInner {
+      padding: 15px !important;
+      line-height: 1em; }
+    .alert-permanent h2, .alert-permanent p {
+      display: none !important; }
+    .alert-permanent a.btn-default, .alert-permanent .details summary.btn-default:focus, .details .alert-permanent summary.btn-default:focus {
+      color: #000000;
+      font-size: 16px;
+      display: block;
+      background: none;
+      padding: 0;
+      margin: 0;
+      line-height: 1.3em;
+      border: 2px solid transparent;
+      text-decoration: underline !important; }
+      @media (min-width: 641px) {
+        .alert-permanent a.btn-default, .alert-permanent .details summary.btn-default:focus, .details .alert-permanent summary.btn-default:focus {
+          line-height: 1em; } }
+      .alert-permanent a.btn-default:hover, .alert-permanent .details summary.btn-default:hover:focus, .details .alert-permanent summary.btn-default:hover:focus {
+        background: none;
+        color: #000000; }
+      .alert-permanent a.btn-default:focus, .alert-permanent .details summary.btn-default:focus, .details .alert-permanent summary.btn-default:focus {
+        border: 2px solid #000000 !important;
+        border-radius: 0;
+        background: transparent !important;
+        color: #000000 !important; }
+    .alert-permanent .close {
+      display: none;
+      visibility: hidden; }
 
 .sectionOne .alert,
 .sectionTwo .alert,
@@ -12405,7 +12439,7 @@ div a .ms-ref-name, div .details summary:focus .ms-ref-name, .details div summar
       float: none;
       display: inline-block;
       vertical-align: top;
-      width: calc(20% - 14px);
+      width: calc(20% - 15px);
       padding-top: 110px;
       padding-left: 10px;
       padding-right: 10px;
