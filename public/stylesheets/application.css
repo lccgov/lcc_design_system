@@ -15755,3 +15755,35 @@ html {
 
 .campaign {
   margin-bottom: 0; }
+
+footer .lcc-footer ul {
+  margin: 0;
+  padding: 0; }
+  footer .lcc-footer ul li a, footer .lcc-footer ul li .details summary:focus, .details footer .lcc-footer ul li summary:focus {
+    display: block; }
+    footer .lcc-footer ul li a .fa, footer .lcc-footer ul li .details summary:focus .fa, .details footer .lcc-footer ul li summary:focus .fa {
+      padding-right: 10px;
+      min-width: 27px; }
+
+footer .lcc-footer p, footer .lcc-footer p a, footer .lcc-footer p .details summary:focus, .details footer .lcc-footer p summary:focus, footer .lcc-footer p .font-xsmall, footer .lcc-footer .font-xsmall, footer .lcc-footer h2, footer .lcc-footer h3, footer .lcc-footer h3.heading-small, footer .lcc-footer ul li, footer .lcc-footer ul li a, footer .lcc-footer ul li .details summary:focus, .details footer .lcc-footer ul li summary:focus {
+  color: #ffffff; }
+
+footer .lcc-footer p a:hover, footer .lcc-footer p .details summary:hover:focus, .details footer .lcc-footer p summary:hover:focus, footer .lcc-footer ul li a:hover, footer .lcc-footer ul li .details summary:hover:focus, .details footer .lcc-footer ul li summary:hover:focus {
+  opacity: .7; }
+
+footer .lcc-footer .footer-row-two {
+  border-top: 1px solid #ffffff;
+  padding-top: 30px;
+  margin-top: 30px; }
+  footer .lcc-footer .footer-row-two > div {
+    margin-bottom: 30px; }
+
+footer .lcc-footer .footer-lcc-logo {
+  height: 52px;
+  margin-bottom: 10px; }
+
+footer .footer-marg-bottom {
+  margin-bottom: 30px; }
+  @media (min-width: 992px) {
+    footer .footer-marg-bottom {
+      margin-bottom: 0px; } }
