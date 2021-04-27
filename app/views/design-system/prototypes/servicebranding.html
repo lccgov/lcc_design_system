@@ -1,0 +1,107 @@
+{% extends "design-system-page-layout-guide.html" %}
+
+{% set section_id = "prototypes" %} <!-- Section id var for main nav --> 
+{% set page_id = "servicebranding" %} <!-- Page id var for side nav --> 
+{% set page_title = "Service branding" %} <!-- Page title var for page header (H1) and page title -->    
+
+{% block sectionOneTop %}{% endblock %}
+
+{% block sectionLeftHandColumn %}
+    <!-- Side nav include -->  
+    {% include "includes/design-system/design-system-side-nav.html" %}
+{% endblock %}
+
+{% block sectionOneRightContent %}
+<div class="page-header-section">
+    <h1>{{ page_title }}</h1>
+</div>
+<div class="contents-box">
+    <h2 class="heading-contents">Contents</h2>
+    <ul class="list list-contents">
+        <li><a href="#landingpage">Landing page</a></li>
+        <li><a href="#subpage">Sub page</a></li>
+    </ul>
+</div>
+
+<h2 id="landingpage" class="heading-large">Landing page</h2>
+<div class="example">
+    <span class="example-title">Example</span>
+
+    <div class="serv-brand serv-brand--cfl serv-brand__landing">
+        <div class="serv-brand__container">
+            <img src="https://www-at.leeds.gov.uk/PublishingImages/cfl-banner.jpg" alt="" />
+        </div>
+        <div class="serv-brand__container serv-brand__container--meta">
+            <div class="meta">
+                <h1 class="heading-xlarge">Child Friendly Leeds</h1>
+                <p class="lead">Working together to make Leeds a child friendly city.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for landing page branding</span></h3>
+    <pre>
+        <code id="snippet-textarea" class="line-numbers language-markup">
+            &lt;div class="serv-brand serv-brand--cfl serv-brand__landing">
+                &lt;div class="serv-brand__container">
+                    &lt;img src="https://www-at.leeds.gov.uk/PublishingImages/cfl-banner.jpg" alt="" />
+                &lt;/div>
+                &lt;div class="serv-brand__container serv-brand__container--meta">
+                    &lt;div class="meta">
+                        &lt;h1 class="heading-xlarge">Child Friendly Leeds&lt;/h1>
+                        &lt;p class="lead">Working together to make Leeds a child friendly city.&lt;/p>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        </code>
+    </pre>
+</div>
+
+<h2 class="heading-large">Sub page</h2>
+<div class="example">
+    <span class="example-title">Example</span>
+
+    <div class="serv-brand serv-brand--cfl serv-brand__border">
+        <div class="serv-brand__container">
+            <div class="serv-brand__wrapper">
+                <span>Child Friendly Leeds</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for sub page</span></h3>
+    <pre>
+        <code id="snippet-textarea" class="line-numbers language-markup">
+            &lt;div class="serv-brand serv-brand--cfl serv-brand__border">
+                &lt;div class="serv-brand__container">
+                    &lt;div class="serv-brand__wrapper">
+                        &lt;span>Child Friendly Leeds&lt;/span>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        </code>
+    </pre>
+</div>
+
+<h2 class="heading-large">Panel</h2>
+<p><strong>Note:</strong> This panel styling is currently only available for Leeds MIC.</p>
+<div class="example">
+    <span class="example-title">Example</span>
+
+    <div class="panel panel-border panel__brand panel__brand--lmic">
+        <img src="https://www.leeds.gov.uk/_catalogs/masterpage/public/leedsmic_subsite/images/logo.png" alt="Leeds Money Information Centre" />
+        <h2>Organisations that offer debt advice</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+</div>
+https://www.leeds.gov.uk/_catalogs/masterpage/public/leedsmic_subsite/images/logo.png
+
+{% endblock %}
