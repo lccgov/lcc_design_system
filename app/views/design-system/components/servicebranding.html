@@ -1,6 +1,6 @@
 {% extends "design-system-page-layout-guide.html" %}
 
-{% set section_id = "prototypes" %} <!-- Section id var for main nav --> 
+{% set section_id = "components" %} <!-- Section id var for main nav --> 
 {% set page_id = "servicebranding" %} <!-- Page id var for side nav --> 
 {% set page_title = "Service branding" %} <!-- Page title var for page header (H1) and page title -->    
 
@@ -20,6 +20,17 @@
     <ul class="list list-contents">
         <li><a href="#landingpage">Landing page</a></li>
         <li><a href="#subpage">Sub page</a></li>
+        <li><a href="#brandedpanel">Branded panel</a></li>
+    </ul>
+</div>
+
+<div>
+    <p>Branding is changed by swapping the classes attached to each component. Available branding colours:</p>
+    <ul>
+        <li>Child Friendly Leeds: <code>serv-brand--cfl</code></li>
+        <li>Leeds Money Information Centre: <code>serv-brand--lmic</code></li>
+        <li>Connecting Leeds: <code>serv-brand--conl</code></li>
+        <li>Clean Air Leeds: <code>serv-brand--cal</code></li>
     </ul>
 </div>
 
@@ -60,7 +71,7 @@
     </pre>
 </div>
 
-<h2 class="heading-large">Sub page</h2>
+<h2 id="subpage" class="heading-large">Sub page</h2>
 <div class="example">
     <span class="example-title">Example</span>
 
@@ -90,7 +101,7 @@
     </pre>
 </div>
 
-<h2 class="heading-large">Panel</h2>
+<h2 id="brandedpanel" class="heading-large">Branded panel</h2>
 <p><strong>Note:</strong> This panel styling is currently only available for Leeds MIC.</p>
 <div class="example">
     <span class="example-title">Example</span>
@@ -102,6 +113,18 @@
     </div>
 
 </div>
-https://www.leeds.gov.uk/_catalogs/masterpage/public/leedsmic_subsite/images/logo.png
+
+<div class="code-snippet">
+    <h3 class="heading-mark-up">HTML Snippet <span class="sr-only">for branded panel</span></h3>
+    <pre>
+        <code id="snippet-textarea" class="line-numbers language-markup">
+            &lt;div class="panel panel-border panel__brand panel__brand--lmic">
+                &lt;img src="https://www.leeds.gov.uk/_catalogs/masterpage/public/leedsmic_subsite/images/logo.png" alt="Leeds Money Information Centre" />
+                &lt;h2>Organisations that offer debt advice&lt;/h2>
+                &lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p>
+            &lt;/div>
+        </code>
+    </pre>
+</div>
 
 {% endblock %}
