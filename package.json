@@ -31,7 +31,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "lcc_frontend_toolkit": "^0.353.0",
     "lcc_templates_nunjucks": "1.1.128",
-    "minimist": "0.0.8",
+    "minimist": "1.2.6",
     "portscanner": "^1.0.0",
     "prompt": "^0.2.14",
     "readdir": "0.0.6",
